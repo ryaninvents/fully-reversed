@@ -134,19 +134,28 @@ A generic point on the surface of the subject is labeled
 \end_layout
 
 \begin_layout Standard
-A point on a reference plane is labeled 
-\begin_inset Formula $R$
+A point on a reference plane is labeled as the point used to find its position,
+ with the prime symbol (
+\begin_inset Formula $^{\prime}$
 \end_inset
 
-, with a subscript indicating its origin.
- For instance, the intersection of the camera's optical axis with the reference
- plane is 
-\begin_inset Formula $R_{Z_{C}}$
+).
+ For instance: the projection of the point 
+\begin_inset Formula $M$
 \end_inset
 
-; the intersection of a ray from the projector through a measured point
- is 
-\begin_inset Formula $R_{M_{P}}$
+ onto the reference plane is called 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+.
+ If the projection is not perpendicular to the plane but uses one of the
+ origins, then use a subscript; e.g., the intersection of ray 
+\begin_inset Formula $\overline{O_{P}M}$
+\end_inset
+
+ with the reference plane is called 
+\begin_inset Formula $M_{P}^{\prime}$
 \end_inset
 
 .
