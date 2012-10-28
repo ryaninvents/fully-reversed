@@ -125,8 +125,8 @@ By similar triangles,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{D}{L-Z} & = & \frac{\overline{M_{P}^{\prime}M_{C}^{\prime}}}{Z}\label{eq:sim-tri:D/(L-Z)}\\
-Z & = & \frac{L\cdot\overline{M_{P}^{\prime}M_{C}^{\prime}}}{D+\overline{M_{P}^{\prime}M_{C}^{\prime}}}\label{eq:Z-def}
+\frac{D}{L-Z} & = & \frac{\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{Z}\label{eq:sim-tri:D/(L-Z)}\\
+Z & = & \frac{L\cdot\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{D+\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}\label{eq:Z-def}
 \end{eqnarray}
 
 \end_inset
@@ -148,7 +148,7 @@ This means that if we can figure out the distance between the projections
  A quick inspection of the diagram yields
 \begin_inset Formula 
 \begin{eqnarray}
-\overline{M_{P}^{\prime}M_{C}^{\prime}} & = & \overline{M_{C}^{\prime}O_{C}^{\prime}}+\overline{M_{P}^{\prime}O_{P}^{\prime}}-D\label{eq:MpMc}
+\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right) & = & \left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right)+\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right)-D\label{eq:MpMc}
 \end{eqnarray}
 
 \end_inset
@@ -172,8 +172,8 @@ Knowing
 , we can find these lengths:
 \begin_inset Formula 
 \begin{eqnarray}
-\overline{M_{C}^{\prime}O_{C}^{\prime}} & = & L\tan\left(\pi+\theta_{C}-\beta\right)\\
-\overline{M_{P}^{\prime}O_{P}^{\prime}} & = & L\tan\theta_{P}
+\left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right) & = & L\tan\left(\pi+\theta_{C}-\beta\right)\\
+\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right) & = & L\tan\theta_{P}
 \end{eqnarray}
 
 \end_inset

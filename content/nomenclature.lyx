@@ -75,20 +75,20 @@ Coordinate systems
 
 \begin_layout Standard
 Any point that is the center of a logical coordinate system is labeled 
-\begin_inset Formula $O$
+\begin_inset Formula $\mathbf{O}$
 \end_inset
 
 , with a subscript denoting which coordinate system it represents.
  Specifically, 
-\begin_inset Formula $O_{P}$
+\begin_inset Formula $\mathbf{O_{P}}$
 \end_inset
 
  is the pinhole-model projector location, 
-\begin_inset Formula $O_{C}$
+\begin_inset Formula $\mathbf{O_{C}}$
 \end_inset
 
  is the pinhole-model camera location, and 
-\begin_inset Formula $O_{R}$
+\begin_inset Formula $\mathbf{O_{R}}$
 \end_inset
 
  is the point on the rotary stage's axis of rotation where it intersects
@@ -127,7 +127,7 @@ Points
 
 \begin_layout Standard
 A generic point on the surface of the subject is labeled 
-\begin_inset Formula $M$
+\begin_inset Formula $\mathbf{M}$
 \end_inset
 
 .
@@ -141,21 +141,21 @@ A point on a reference plane is labeled as the point used to find its position,
 
 ).
  For instance: the projection of the point 
-\begin_inset Formula $M$
+\begin_inset Formula $\mathbf{M}$
 \end_inset
 
  onto the reference plane is called 
-\begin_inset Formula $M^{\prime}$
+\begin_inset Formula $\mathbf{M}^{\prime}$
 \end_inset
 
 .
- If the projection is not perpendicular to the plane but uses one of the
- origins, then use a subscript; e.g., the intersection of ray 
-\begin_inset Formula $\overline{O_{P}M}$
+ If the projection is not perpendicular to the plane but passes through
+ one of the origins, then use a subscript; e.g., the intersection of ray 
+\begin_inset Formula $\overrightarrow{\mathbf{O_{P}M}}$
 \end_inset
 
  with the reference plane is called 
-\begin_inset Formula $M_{P}^{\prime}$
+\begin_inset Formula $\mathbf{M_{P}^{\prime}}$
 \end_inset
 
 .
@@ -169,25 +169,36 @@ Vectors
 In general, a vector is either named for the axis it lies on, or for the
  point it defines.
  Unit vectors are denoted by a circumflex (^).
+ Augmented vectors (a vector with a size one larger than the given vector
+ whose last element is 1) are denoted by a tilde (~).
 \end_layout
 
 \begin_layout Standard
 Since vectors are commonly drawn from an origin to a point, the vector name
  consists of the point name with the coordinate system as a subscript.
  For instance, a vector from 
-\begin_inset Formula $O_{P}$
+\begin_inset Formula $\mathbf{O_{P}}$
 \end_inset
 
  to a point 
-\begin_inset Formula $X$
+\begin_inset Formula $\mathbf{X}$
 \end_inset
 
  is named 
-\begin_inset Formula $\vec{X}_{P}$
+\begin_inset Formula $\mathbf{X_{P}}$
 \end_inset
 
 ; its unit vector is denoted 
-\begin_inset Formula $\hat{X}_{P}$
+\begin_inset Formula $\mathbf{\hat{X}_{P}}$
+\end_inset
+
+.
+ The augmented 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ vector is denoted 
+\begin_inset Formula $\mathbf{\tilde{X}}$
 \end_inset
 
 .
@@ -247,17 +258,17 @@ reference "sub:Points-and-coordinate"
 \end_inset
 
 , the optical axis of the camera is defined by the unit vector 
-\begin_inset Formula $\hat{Z}_{C}$
+\begin_inset Formula $\mathbf{\hat{Z}_{C}}$
 \end_inset
 
 .
  A vector from the camera position to the measured point position is denoted
  
-\begin_inset Formula $\vec{M}_{C}$
+\begin_inset Formula $\mathbf{M_{C}}$
 \end_inset
 
 ; its corresponding unit vector is 
-\begin_inset Formula $\hat{M}_{C}$
+\begin_inset Formula $\mathbf{\hat{M}_{C}}$
 \end_inset
 
 .
