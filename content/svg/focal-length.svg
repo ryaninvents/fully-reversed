@@ -14,7 +14,7 @@
    id="svg3036"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="focal-length.svg">
   <defs
      id="defs3038" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="58.4989"
-     inkscape:cy="78.325603"
+     inkscape:cx="73.506297"
+     inkscape:cy="70.58873"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -39,7 +39,8 @@
      inkscape:window-height="775"
      inkscape:window-x="0"
      inkscape:window-y="-34"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:object-nodes="true" />
   <metadata
      id="metadata3041">
     <rdf:RDF>
@@ -107,5 +108,19 @@
          id="tspan3060"
          x="205.06096"
          y="227.06755">x</tspan></text>
+    <rect
+       y="394.66202"
+       x="157.00006"
+       height="6.310164"
+       width="6.310164"
+       id="rect3085"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3087"
+       width="6.310164"
+       height="6.310164"
+       x="163.31023"
+       y="233.98019" />
   </g>
 </svg>
