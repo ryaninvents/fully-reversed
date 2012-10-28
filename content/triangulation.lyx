@@ -207,5 +207,169 @@ Z=\frac{-D+L\left\{ \tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}\right\}
 
 \end_layout
 
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Z-complete"
+
+\end_inset
+
+ requires knowledge of 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+, the angle the incoming ray creates with the camera's optical axis.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Converting-camera-coordinates"
+
+\end_inset
+
+ demonstrates the geometry involved in this operation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svg/focal-length.svg
+	width 20text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Converting-camera-coordinates"
+
+\end_inset
+
+Converting camera coordinates to real-world coordinates.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By itself, the camera can directly measure neither 
+\begin_inset Formula $x$
+\end_inset
+
+ nor 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ (If it could, this project would be rather pointless.) However, figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Converting-camera-coordinates"
+
+\end_inset
+
+ demonstrates that
+\begin_inset Formula 
+\begin{equation}
+\frac{x}{z}=\frac{x^{\star}}{f}\label{eq:x/z}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ is the distance between the focal point and the camera sensor.
+ The sensor is composed of many tiny pixel sensors.
+ These sensors give the camera sensor a resolution 
+\begin_inset Formula $R$
+\end_inset
+
+, measured in 
+\begin_inset Formula $\unitfrac{px}{mm}$
+\end_inset
+
+.
+ These sensors convert the image into pixel coordinates with the following
+ relationship:
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}=Rx^{\star}\label{eq:u-prime}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combining 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:x/z"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:u-prime"
+
+\end_inset
+
+ and defining a scale factor 
+\begin_inset Formula $s=Rf$
+\end_inset
+
+, we get
+\begin_inset Formula 
+\begin{equation}
+u^{\prime}=s\frac{x}{z}\label{eq:u-prime-complete}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly,
+\begin_inset Formula 
+\begin{equation}
+v^{\prime}=s\frac{y}{z}\label{eq:v-prime-complete}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
