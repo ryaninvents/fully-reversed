@@ -263,5 +263,22 @@ reference "sub:Points-and-coordinate"
 .
 \end_layout
 
+\begin_layout Subsection
+Angles
+\end_layout
+
+\begin_layout Standard
+Horizontal and vertical optical angles are called 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+, respectively, with a subscript to indicate the instrument the angle is
+ relative to.
+\end_layout
+
 \end_body
 \end_document

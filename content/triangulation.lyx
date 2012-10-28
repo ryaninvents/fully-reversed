@@ -158,11 +158,11 @@ This means that if we can figure out the distance between the projections
 
 \begin_layout Standard
 Knowing 
-\begin_inset Formula $\alpha_{P}$
+\begin_inset Formula $\theta_{P}$
 \end_inset
 
 , 
-\begin_inset Formula $\alpha_{C}$
+\begin_inset Formula $\theta_{C}$
 \end_inset
 
 , and 
@@ -172,8 +172,8 @@ Knowing
 , we can find these lengths:
 \begin_inset Formula 
 \begin{eqnarray}
-\overline{M_{C}^{\prime}O_{C}^{\prime}} & = & L\tan\left(\pi+\alpha_{C}-\beta\right)\\
-\overline{M_{P}^{\prime}O_{P}^{\prime}} & = & L\tan\alpha_{P}
+\overline{M_{C}^{\prime}O_{C}^{\prime}} & = & L\tan\left(\pi+\theta_{C}-\beta\right)\\
+\overline{M_{P}^{\prime}O_{P}^{\prime}} & = & L\tan\theta_{P}
 \end{eqnarray}
 
 \end_inset
@@ -199,7 +199,7 @@ reference "eq:MpMc"
 , we come up with
 \begin_inset Formula 
 \begin{equation}
-Z=\frac{-D+L\left\{ \tan\left(\pi+\alpha_{C}-\beta\right)+\tan\alpha_{P}\right\} }{\tan\left(\pi+\alpha_{C}-\beta\right)+\tan\alpha_{P}}\label{eq:Z-complete}
+Z=\frac{-D+L\left\{ \tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}\right\} }{\tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}}\label{eq:Z-complete}
 \end{equation}
 
 \end_inset
