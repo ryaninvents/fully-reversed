@@ -63,6 +63,10 @@
 Triangulation
 \end_layout
 
+\begin_layout Subsection
+Basic geometry
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -212,6 +216,10 @@ Z=\frac{DL}{\tan\left(\pi+\theta_{P}-\beta\right)+\tan\theta_{C}}\label{eq:Z-com
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Relating image coordinates to world coordinates
 \end_layout
 
 \begin_layout Standard
@@ -391,8 +399,126 @@ Knowing the scale factor
 \begin_inset Formula 
 \begin{eqnarray}
 \tan\theta_{C} & = & \frac{x}{z}\\
-\tan\theta_{C} & = & \frac{u^{\prime}}{s}
+\tan\theta_{C} & = & \frac{u^{\prime}}{s}\label{eq:tan-theta-c}
 \end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Extending to 3D
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Z-complete"
+
+\end_inset
+
+ gives us 
+\begin_inset Formula $Z$
+\end_inset
+
+, but only if the camera optical axis, projector optical axis, and measured
+ point all lie in the same plane.
+ In theory, this is a very nice result, but in practice, we will want to
+ measure points in different planes.
+ In addition, the requirement that the optical axes intersect would be difficult
+ to ensure in practice.
+ It would be much easier if we could generalize this geometry.
+ (In addition, we need a more general form in order to calculate uncertainty.
+ For instance, there will be uncertainty in 
+\begin_inset Formula $z$
+\end_inset
+
+-position of the projector.
+ The given equations leave no room to take this into account.)
+\end_layout
+
+\begin_layout Standard
+Define the 
+\emph on
+working plane
+\emph default
+ to be the plane containing 
+\begin_inset Formula $\mathbf{O_{C}}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{O_{P}}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+.
+ The normal 
+\begin_inset Formula $\mathbf{\hat{n}_{w}}$
+\end_inset
+
+ can be found by:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\hat{n}_{w}}=\mathbf{\hat{D}_{C}}\times\mathbf{\hat{M}_{C}}\label{eq:working-plane-normal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{\hat{D}_{C}}$
+\end_inset
+
+ is the unit vector pointing from the camera to the projector.
+ 
+\begin_inset Formula $\mathbf{\hat{M}_{C}}$
+\end_inset
+
+ is the unit vector pointing from the camera to the measured point 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ and is equal to
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\hat{M}_{C}}=\begin{pmatrix}\sin\theta_{C}\\
+\sin\phi_{C}\\
+\cos\theta_{C}\cos\phi_{C}
+\end{pmatrix}\label{eq:m-hat-c}
+\end{equation}
+
+\end_inset
+
+from basic spherical coordinate equations.
+\end_layout
+
+\begin_layout Standard
+Knowing 
+\begin_inset Formula $\mathbf{\hat{n}_{w}}$
+\end_inset
+
+ is useful, since we can now project each of our working vectors onto the
+ working plane.
+ The projection of a vector 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ onto a plane with normal 
+\begin_inset Formula $\mathbf{\hat{n}}$
+\end_inset
+
+ is given by:
+\begin_inset Formula 
+\[
+\mathbf{x_{||P}}=\mathbf{x}-\left(\mathbf{x}\cdot\mathbf{\hat{n}}\right)\mathbf{\hat{n}}
+\]
 
 \end_inset
 
