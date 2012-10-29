@@ -116,6 +116,13 @@ reference "fig:Triangulation-geometry."
 \end_inset
 
 .
+ This figure is assuming that the optical axes of the camera and projector
+ converge at point 
+\begin_inset Formula $\mathbf{O_{P}^{\prime}}$
+\end_inset
+
+ on the reference plane, which is defined as perpendicular to the projector's
+ optical axis.
 \end_layout
 
 \begin_layout Standard
@@ -126,7 +133,7 @@ By similar triangles,
 \begin_inset Formula 
 \begin{eqnarray}
 \frac{D}{L-Z} & = & \frac{\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{Z}\label{eq:sim-tri:D/(L-Z)}\\
-Z & = & \frac{L\cdot\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{D+\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}\label{eq:Z-def}
+Z & = & \frac{DL}{D+\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}\label{eq:Z-def}
 \end{eqnarray}
 
 \end_inset
@@ -199,7 +206,7 @@ reference "eq:MpMc"
 , we come up with
 \begin_inset Formula 
 \begin{equation}
-Z=\frac{-D+L\left\{ \tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}\right\} }{\tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}}\label{eq:Z-complete}
+Z=\frac{DL}{\tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}}\label{eq:Z-complete}
 \end{equation}
 
 \end_inset
