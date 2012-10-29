@@ -480,10 +480,11 @@ working plane
  is the unit vector pointing from the camera to the projector.
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbf{D} & = & \begin{pmatrix}D_{x}\\
+\mathbf{D} & = & \left(\begin{array}{c}
+D_{x}\\
 D_{y}\\
 D_{z}
-\end{pmatrix}\\
+\end{array}\right)\\
 \mathbf{\hat{D}_{C}} & = & \frac{\mathbf{D}}{D}
 \end{eqnarray*}
 
@@ -520,10 +521,11 @@ To make further equations involving
  and is equal to
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\hat{M}_{C}}=\begin{pmatrix}\sin\theta_{C}\\
+\mathbf{\hat{M}_{C}}=\left(\begin{array}{c}
+\sin\theta_{C}\\
 \sin\phi_{C}\\
 \cos\theta_{C}\cos\phi_{C}
-\end{pmatrix}\label{eq:m-hat-c}
+\end{array}\right)\label{eq:m-hat-c}
 \end{equation}
 
 \end_inset
@@ -532,10 +534,15 @@ from basic spherical coordinate equations.
  This gives
 \begin_inset Formula 
 \[
-\mathbf{\hat{n}_{w}}=\frac{1}{D}\begin{pmatrix}D_{y}\cos\theta_{C}\cos\phi_{C}-D_{z}\sin\theta_{C}\\
+\mathbf{\hat{n}_{w}}=\frac{1}{D}\left(\begin{array}{c}
+D_{y}\cos\theta_{C}\cos\phi_{C}-D_{z}\sin\theta_{C}\\
 D_{z}\sin\theta_{C}-D_{x}\cos\theta_{C}\cos\phi_{C}\\
 D_{x}\sin\phi_{C}-D_{y}\sin\theta_{C}
-\end{pmatrix}
+\end{array}\right)\equiv\left(\begin{array}{c}
+n_{x}\\
+n_{y}\\
+n_{z}
+\end{array}\right)
 \]
 
 \end_inset
@@ -573,14 +580,16 @@ Knowing
 Given
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbf{\hat{Z}_{P}} & = & \begin{pmatrix}\sin\beta\\
+\mathbf{\hat{Z}_{P}} & = & \left(\begin{array}{c}
+\sin\beta\\
 0\\
 \cos\beta
-\end{pmatrix}\\
-\mathbf{\hat{Z}_{C}} & = & \begin{pmatrix}0\\
+\end{array}\right)\\
+\mathbf{\hat{Z}_{C}} & = & \left(\begin{array}{c}
+0\\
 0\\
 1
-\end{pmatrix}
+\end{array}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -594,6 +603,100 @@ we can calculate
 \end_inset
 
 .
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{\hat{Z}_{Pw}} & = & \mathbf{\hat{Z}_{P}}-\left(\mathbf{\hat{Z}_{P}}\cdot\mathbf{\hat{n}_{w}}\right)\mathbf{\hat{n}_{w}}\\
+ & = & \left(\begin{array}{c}
+\sin\beta-n_{x}\left(n_{x}\sin\beta+n_{z}\cos\beta\right)\\
+-n_{y}\left(n_{x}\sin\beta+n_{z}\cos\beta\right)\\
+\cos\beta-n_{z}\left(n_{x}\sin\beta+n_{z}\cos\beta\right)
+\end{array}\right)\\
+\mathbf{\hat{Z}_{Cw}} & = & \mathbf{\hat{Z}_{C}}-\left(\mathbf{\hat{Z}_{C}}\cdot\mathbf{\hat{n}_{w}}\right)\mathbf{\hat{n}_{w}}\\
+ & = & \left(\begin{array}{c}
+-n_{x}n_{z}\\
+-n_{y}n_{z}\\
+1-n_{z}^{2}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{\hat{M}_{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{\hat{D}}$
+\end_inset
+
+ are already in the plane, obviating the need for projection.
+\end_layout
+
+\begin_layout Standard
+To find 
+\begin_inset Formula $\mathbf{O_{C}^{\prime}}$
+\end_inset
+
+, we need to find the intersection of the projector and camera rays.
+\begin_inset Formula 
+\[
+\mathbf{D}+k_{1}\mathbf{\hat{M}_{Pw}}=k_{2}\mathbf{\hat{M}_{C}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To do this, we need a mathematical definition of the projector ray.
+ Since we're projecting vertical fringes, we don't know the vertical angle
+ the projector ray makes with the projector's optical axis---only the horizontal
+ angle.
+ However, if we did know the vertical angle it would actually overconstrain
+ the system.
+ The projected fringe actually forms a plane in 3D space; this plane forms
+ a 2D contour where it intersects the subject.
+ If we can construct a mathematical definition for this plane, then its
+ intersection with the working plane will give us a definition of our projector
+ ray.
+\end_layout
+
+\begin_layout Standard
+Any point on the fringe plane may be identified uniquely and parametrically
+ in terms of parameters 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Assuming the fringe plane entirely contains the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis,
+\begin_inset Formula 
+\[
+F\left(i,j\right)=\left(\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right)i+\left(\begin{array}{c}
+\cos\left(\pi-\beta+\theta_{P}\right)\\
+0\\
+\sin\left(\pi-\beta+\theta_{P}\right)
+\end{array}\right)j
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
