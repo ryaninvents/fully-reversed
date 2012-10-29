@@ -682,7 +682,7 @@ Any point on the fringe plane may be identified uniquely and parametrically
 
 -axis,
 \begin_inset Formula 
-\[
+\begin{equation}
 F\left(i,j\right)=\left(\begin{array}{c}
 0\\
 1\\
@@ -691,12 +691,24 @@ F\left(i,j\right)=\left(\begin{array}{c}
 \cos\left(\pi-\beta+\theta_{P}\right)\\
 0\\
 \sin\left(\pi-\beta+\theta_{P}\right)
-\end{array}\right)j
-\]
+\end{array}\right)j\label{eq:fringe-eqn}
+\end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The upshot of representing a fringe with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:fringe-eqn"
+
+\end_inset
+
+ is that the two components are perpendicular and of unit length.
+ This makes it simple to compute a unit vector in any direction.
 \end_layout
 
 \end_body
