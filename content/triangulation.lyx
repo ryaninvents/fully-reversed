@@ -375,18 +375,6 @@ u^{\prime}=s\frac{x}{z}\label{eq:u-prime-complete}
 \end_layout
 
 \begin_layout Standard
-Similarly,
-\begin_inset Formula 
-\begin{equation}
-v^{\prime}=s\frac{y}{z}\label{eq:v-prime-complete}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Knowing the scale factor 
 \begin_inset Formula $s$
 \end_inset
@@ -400,6 +388,19 @@ Knowing the scale factor
 \begin{eqnarray}
 \tan\theta_{C} & = & \frac{x}{z}\\
 \tan\theta_{C} & = & \frac{u^{\prime}}{s}\label{eq:tan-theta-c}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly,
+\begin_inset Formula 
+\begin{eqnarray}
+v^{\prime} & = & s\frac{y}{z}\label{eq:v-prime-complete}\\
+\tan\phi_{C} & = & \frac{v^{\prime}}{s}\label{eq:tan-phi-c}
 \end{eqnarray}
 
 \end_inset
@@ -477,7 +478,38 @@ working plane
 \end_inset
 
  is the unit vector pointing from the camera to the projector.
- 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{D} & = & \begin{pmatrix}D_{x}\\
+D_{y}\\
+D_{z}
+\end{pmatrix}\\
+\mathbf{\hat{D}_{C}} & = & \frac{\mathbf{D}}{D}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To make further equations involving 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ simpler, we will define
+\begin_inset Formula 
+\begin{eqnarray*}
+\tan\theta_{D} & \equiv & \frac{D_{y}}{D_{x}}\\
+\cos\phi_{D} & \equiv & \frac{D_{z}}{D}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\mathbf{\hat{M}_{C}}$
 \end_inset
 
@@ -497,6 +529,18 @@ working plane
 \end_inset
 
 from basic spherical coordinate equations.
+ This gives
+\begin_inset Formula 
+\[
+\mathbf{\hat{n}_{w}}=\frac{1}{D}\begin{pmatrix}D_{y}\cos\theta_{C}\cos\phi_{C}-D_{z}\sin\theta_{C}\\
+D_{z}\sin\theta_{C}-D_{x}\cos\theta_{C}\cos\phi_{C}\\
+D_{x}\sin\phi_{C}-D_{y}\sin\theta_{C}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -523,6 +567,33 @@ Knowing
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Given
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{\hat{Z}_{P}} & = & \begin{pmatrix}\sin\beta\\
+0\\
+\cos\beta
+\end{pmatrix}\\
+\mathbf{\hat{Z}_{C}} & = & \begin{pmatrix}0\\
+0\\
+1
+\end{pmatrix}
+\end{eqnarray*}
+
+\end_inset
+
+we can calculate 
+\begin_inset Formula $\mathbf{\hat{Z}_{Pw}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{\hat{Z}_{Cw}}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
