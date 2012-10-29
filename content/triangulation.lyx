@@ -179,8 +179,8 @@ Knowing
 , we can find these lengths:
 \begin_inset Formula 
 \begin{eqnarray}
-\left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right) & = & L\tan\left(\pi+\theta_{C}-\beta\right)\\
-\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right) & = & L\tan\theta_{P}
+\left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right) & = & L\tan\theta_{C}\\
+\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right) & = & L\tan\left(\pi+\theta_{C}-\beta\right)
 \end{eqnarray}
 
 \end_inset
@@ -206,7 +206,7 @@ reference "eq:MpMc"
 , we come up with
 \begin_inset Formula 
 \begin{equation}
-Z=\frac{DL}{\tan\left(\pi+\theta_{C}-\beta\right)+\tan\theta_{P}}\label{eq:Z-complete}
+Z=\frac{DL}{\tan\left(\pi+\theta_{P}-\beta\right)+\tan\theta_{C}}\label{eq:Z-complete}
 \end{equation}
 
 \end_inset
@@ -372,6 +372,27 @@ Similarly,
 \begin{equation}
 v^{\prime}=s\frac{y}{z}\label{eq:v-prime-complete}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Knowing the scale factor 
+\begin_inset Formula $s$
+\end_inset
+
+, we can easily calculate 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\tan\theta_{C} & = & \frac{x}{z}\\
+\tan\theta_{C} & = & \frac{u^{\prime}}{s}
+\end{eqnarray}
 
 \end_inset
 
