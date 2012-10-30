@@ -136,7 +136,7 @@ By similar triangles,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{D}{L-Z} & = & \frac{\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{Z}\label{eq:sim-tri:D/(L-Z)}\\
+\frac{D}{Z} & = & \frac{\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{L-Z}\label{eq:sim-tri:D/(L-Z)}\\
 Z & = & \frac{DL}{D+\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}\label{eq:Z-def}
 \end{eqnarray}
 
@@ -184,12 +184,24 @@ Knowing
 \begin_inset Formula 
 \begin{eqnarray}
 \left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right) & = & L\tan\theta_{C}\\
-\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right) & = & L\tan\left(\pi+\theta_{C}-\beta\right)
+\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right) & = & L\tan\left(\pi+\theta_{P}-\beta\right)
 \end{eqnarray}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Since the combination 
+\begin_inset Formula $\left(\pi+\theta_{P}-\beta\right)$
+\end_inset
+
+ is a common sum, we will denote it with 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -210,7 +222,7 @@ reference "eq:MpMc"
 , we come up with
 \begin_inset Formula 
 \begin{equation}
-Z=\frac{DL}{\tan\left(\pi+\theta_{P}-\beta\right)+\tan\theta_{C}}\label{eq:Z-complete}
+Z=\frac{DL}{\tan\psi+\tan\theta_{C}}\label{eq:Z-complete}
 \end{equation}
 
 \end_inset
@@ -643,7 +655,7 @@ To find
 , we need to find the intersection of the projector and camera rays.
 \begin_inset Formula 
 \[
-\mathbf{D}+k_{1}\mathbf{\hat{M}_{Pw}}=k_{2}\mathbf{\hat{M}_{C}}
+\mathbf{D}+k_{0}\mathbf{\hat{M}_{Pw}}=k_{1}\mathbf{\hat{M}_{C}}
 \]
 
 \end_inset
@@ -683,14 +695,14 @@ Any point on the fringe plane may be identified uniquely and parametrically
 -axis,
 \begin_inset Formula 
 \begin{equation}
-F\left(i,j\right)=\left(\begin{array}{c}
+\mathbf{F}\left(i,j\right)=\left(\begin{array}{c}
 0\\
 1\\
 0
 \end{array}\right)i+\left(\begin{array}{c}
-\cos\left(\pi-\beta+\theta_{P}\right)\\
+\cos\psi\\
 0\\
-\sin\left(\pi-\beta+\theta_{P}\right)
+\sin\psi
 \end{array}\right)j\label{eq:fringe-eqn}
 \end{equation}
 
@@ -708,7 +720,69 @@ reference "eq:fringe-eqn"
 \end_inset
 
  is that the two components are perpendicular and of unit length.
- This makes it simple to compute a unit vector in any direction.
+ This means that the normal is
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{\hat{n}_{F}} & = & \left(\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right)\times\left(\begin{array}{c}
+\cos\psi\\
+0\\
+\sin\psi
+\end{array}\right)\\
+ & = & \left(\begin{array}{c}
+\sin\psi\\
+0\\
+-\cos\psi
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our desired ray 
+\begin_inset Formula $\mathbf{\hat{M}_{Pw}}$
+\end_inset
+
+ is perpendicular to both 
+\begin_inset Formula $\mathbf{\hat{n}_{F}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{\hat{n}_{w}}$
+\end_inset
+
+, giving
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M_{Pw}} & = & \left(\begin{array}{c}
+n_{y}\cos\psi\\
+-n_{z}\sin\psi-n_{x}\cos\psi\\
+n_{y}\sin\psi
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since this is well-defined, we can save an expensive step in the computation
+ by redefining
+\begin_inset Formula 
+\[
+\mathbf{D}+k_{2}\mathbf{M_{Pw}}=k_{1}\mathbf{\hat{M}_{C}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
