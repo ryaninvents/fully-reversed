@@ -708,7 +708,19 @@ Any point on the fringe plane may be identified uniquely and parametrically
 
 \end_inset
 
+If we wanted to project 
+\begin_inset Quotes eld
+\end_inset
 
+tilted
+\begin_inset Quotes erd
+\end_inset
+
+ fringes, we would only need to update our definition of 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ and carry the calculations through.
 \end_layout
 
 \begin_layout Standard
