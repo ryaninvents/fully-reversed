@@ -835,7 +835,7 @@ Now that we have our constants
  is simply
 \begin_inset Formula 
 \begin{equation}
-\mathbf{M}=k_{1}\mathbf{\hat{M}_{C}}\label{eq:M-equals-k1-M-hat-c}
+\mathbf{M_{C}}=k_{1}\mathbf{\hat{M}_{C}}\label{eq:M-equals-k1-M-hat-c}
 \end{equation}
 
 \end_inset
