@@ -63,45 +63,42 @@
 Nomenclature
 \end_layout
 
-\begin_layout Subsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Points-and-coordinate"
-
-\end_inset
-
-Coordinate systems
-\end_layout
-
 \begin_layout Standard
-Any point that is the center of a logical coordinate system is labeled 
-\begin_inset Formula $\mathbf{O}$
-\end_inset
-
-, with a subscript denoting which coordinate system it represents.
- Specifically, 
+Most 3D work is done in the camera's coordinate system, assuming the pinhole
+ model for projector and camera.
+ The projector's location is denoted 
 \begin_inset Formula $\mathbf{O_{P}}$
 \end_inset
 
- is the pinhole-model projector location, 
+; the camera's location is similarly denoted 
 \begin_inset Formula $\mathbf{O_{C}}$
 \end_inset
 
- is the pinhole-model camera location, and 
+.
+ The rotary-stage origin 
 \begin_inset Formula $\mathbf{O_{R}}$
 \end_inset
 
- is the point on the rotary stage's axis of rotation where it intersects
- the stage surface.
+ is arbitrarily defined as the point on the stage's axis of rotation where
+ it intersects the stage surface.
+ 
 \end_layout
 
 \begin_layout Standard
-The positive 
+A generic point on the surface of the subject is labeled 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
 \begin_inset Formula $z$
 \end_inset
 
--axis of the camera and projector coordinate systems is defined as the optical
- axis of their respective components.
+-axis of the camera coordinate system is defined as positive along the camera's
+ optical axis.
  The 
 \begin_inset Formula $y$
 \end_inset
@@ -118,164 +115,13 @@ The positive
 \begin_inset Formula $z$
 \end_inset
 
- by ensuring the preservation of the right-hand rule (positive to the left).
-\end_layout
-
-\begin_layout Subsection
-Points
+ by ensuring the preservation of the right-hand rule (positive to the right).
 \end_layout
 
 \begin_layout Standard
-A generic point on the surface of the subject is labeled 
-\begin_inset Formula $\mathbf{M}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-A point on a reference plane is labeled as the point used to find its position,
- with the prime symbol (
-\begin_inset Formula $^{\prime}$
-\end_inset
-
-).
- For instance: the projection of the point 
-\begin_inset Formula $\mathbf{M}$
-\end_inset
-
- onto the reference plane is called 
-\begin_inset Formula $\mathbf{M}^{\prime}$
-\end_inset
-
-.
- If the projection is not perpendicular to the plane but passes through
- one of the origins, then use a subscript; e.g., the intersection of ray 
-\begin_inset Formula $\overrightarrow{\mathbf{O_{P}M}}$
-\end_inset
-
- with the reference plane is called 
-\begin_inset Formula $\mathbf{M_{P}^{\prime}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Vectors
-\end_layout
-
-\begin_layout Standard
-In general, a vector is either named for the axis it lies on, or for the
- point it defines.
- Unit vectors are denoted by a circumflex (^).
- Augmented vectors (a vector with a size one larger than the given vector
- whose last element is 1) are denoted by a tilde (~).
-\end_layout
-
-\begin_layout Standard
-Since vectors are commonly drawn from an origin to a point, the vector name
- consists of the point name with the coordinate system as a subscript.
- For instance, a vector from 
-\begin_inset Formula $\mathbf{O_{P}}$
-\end_inset
-
- to a point 
-\begin_inset Formula $\mathbf{X}$
-\end_inset
-
- is named 
-\begin_inset Formula $\mathbf{X_{P}}$
-\end_inset
-
-; its unit vector is denoted 
-\begin_inset Formula $\mathbf{\hat{X}_{P}}$
-\end_inset
-
-.
- The augmented 
-\begin_inset Formula $\mathbf{X}$
-\end_inset
-
- vector is denoted 
-\begin_inset Formula $\mathbf{\tilde{X}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Any point in 3D space is denoted with 
-\begin_inset Formula $x$
-\end_inset
-
-, 
-\begin_inset Formula $y$
-\end_inset
-
-, and 
-\begin_inset Formula $z$
-\end_inset
-
- coordinates, with a subscript to denote which coordinate system identifies
- this point.
- This subscript may be omitted if it is clear from context in which system
- we are working.
- Any point in Cartesian coordinates may also be represented in 
-\begin_inset Formula $r$
-\end_inset
-
-, 
-\begin_inset Formula $\theta$
-\end_inset
-
-, and 
-\begin_inset Formula $z$
-\end_inset
-
- coordinates, with 
-\begin_inset Formula $z$
-\end_inset
-
- equal to its Cartesian counterpart and 
-\begin_inset Formula $\theta$
-\end_inset
-
- measured counterclockwise from the 
-\begin_inset Formula $x$
-\end_inset
-
--axis.
- These cylindrical coordinates follow the same rules for subscripts.
-\end_layout
-
-\begin_layout Standard
-For instance, according to section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Points-and-coordinate"
-
-\end_inset
-
-, the optical axis of the camera is defined by the unit vector 
-\begin_inset Formula $\mathbf{\hat{Z}_{C}}$
-\end_inset
-
-.
- A vector from the camera position to the measured point position is denoted
- 
-\begin_inset Formula $\mathbf{M_{C}}$
-\end_inset
-
-; its corresponding unit vector is 
-\begin_inset Formula $\mathbf{\hat{M}_{C}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsection
-Angles
+Vectors are denoted with the same notation as points.
+ Unit vectors are denoted by a circumflex (^), and augmented vectors are
+ denoted by a tilde (~).
 \end_layout
 
 \begin_layout Standard
@@ -287,8 +133,157 @@ Horizontal and vertical optical angles are called
 \begin_inset Formula $\phi$
 \end_inset
 
-, respectively, with a subscript to indicate the instrument the angle is
- relative to.
+, respectively, with a subscript to indicate the instrument forming the
+ vertex of the angle.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Definitions-of-optical-angles"
+
+\end_inset
+
+ shows the definitions of these angles.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename svg/optical-angles.svg
+	height 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename svg/optical-angles-x-z.svg
+	height 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename svg/optical-angles-y-z.svg
+	height 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(c)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Definitions-of-optical-angles"
+
+\end_inset
+
+Definitions of optical angles.
+ (a) three-dimensional overview, (b) angle in 
+\begin_inset Formula $x-z$
+\end_inset
+
+ plane defines 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+, (c) angle in 
+\begin_inset Formula $y-z$
+\end_inset
+
+ plane defines 
+\begin_inset Formula $\phi_{C}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -64,185 +64,11 @@ Triangulation
 \end_layout
 
 \begin_layout Subsection
-Basic geometry
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename svg/triangulation.svg
-	width 75col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Triangulation-geometry."
-
-\end_inset
-
-Triangulation geometry.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Refer to figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Triangulation-geometry."
-
-\end_inset
-
-.
- This figure is assuming that the optical axes of the camera and projector
- converge at point 
-\begin_inset Formula $\mathbf{O_{P}^{\prime}}$
-\end_inset
-
- on the reference plane, which is defined as perpendicular to the projector's
- optical axis.
-\end_layout
-
-\begin_layout Standard
-By similar triangles,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray}
-\frac{D}{Z} & = & \frac{\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}{L-Z}\label{eq:sim-tri:D/(L-Z)}\\
-Z & = & \frac{DL}{D+\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right)}\label{eq:Z-def}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This means that if we can figure out the distance between the projections
- of 
-\begin_inset Formula $M$
-\end_inset
-
- on the reference plane, we can very easily calculate 
-\begin_inset Formula $Z$
-\end_inset
-
-.
- A quick inspection of the diagram yields
-\begin_inset Formula 
-\begin{eqnarray}
-\left(\mathbf{M_{P}^{\prime}M_{C}^{\prime}}\right) & = & \left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right)+\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right)-D\label{eq:MpMc}
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Knowing 
-\begin_inset Formula $\theta_{P}$
-\end_inset
-
-, 
-\begin_inset Formula $\theta_{C}$
-\end_inset
-
-, and 
-\begin_inset Formula $\beta$
-\end_inset
-
-, we can find these lengths:
-\begin_inset Formula 
-\begin{eqnarray}
-\left(\mathbf{M_{C}^{\prime}O_{C}^{\prime}}\right) & = & L\tan\theta_{C}\\
-\left(\mathbf{M_{P}^{\prime}O_{P}^{\prime}}\right) & = & L\tan\left(\pi+\theta_{P}-\beta\right)
-\end{eqnarray}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Since the combination 
-\begin_inset Formula $\left(\pi+\theta_{P}-\beta\right)$
-\end_inset
-
- is a common sum, we will denote it with 
-\begin_inset Formula $\psi$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Combining these with 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Z-def"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:MpMc"
-
-\end_inset
-
-, we come up with
-\begin_inset Formula 
-\begin{equation}
-Z=\frac{DL}{\tan\psi+\tan\theta_{C}}\label{eq:Z-complete}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
 Relating image coordinates to world coordinates
 \end_layout
 
 \begin_layout Standard
-Equation 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Z-complete"
-
-\end_inset
-
- requires knowledge of 
+Solving the system requires knowledge of 
 \begin_inset Formula $\theta_{C}$
 \end_inset
 
@@ -303,11 +129,11 @@ Converting camera coordinates to real-world coordinates.
 
 \begin_layout Standard
 By itself, the camera can directly measure neither 
-\begin_inset Formula $x$
+\begin_inset Formula $x_{C}$
 \end_inset
 
  nor 
-\begin_inset Formula $z$
+\begin_inset Formula $z_{C}$
 \end_inset
 
 .
@@ -321,7 +147,7 @@ reference "fig:Converting-camera-coordinates"
  demonstrates that
 \begin_inset Formula 
 \begin{equation}
-\frac{x}{z}=\frac{x^{\star}}{f}\label{eq:x/z}
+\frac{x_{C}}{z_{C}}=\frac{x_{C}^{\star}}{f_{C}}\label{eq:x/z}
 \end{equation}
 
 \end_inset
@@ -330,13 +156,13 @@ reference "fig:Converting-camera-coordinates"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $f$
+\begin_inset Formula $f_{C}$
 \end_inset
 
  is the distance between the focal point and the camera sensor.
  The sensor is composed of many tiny pixel sensors.
  These sensors give the camera sensor a resolution 
-\begin_inset Formula $R$
+\begin_inset Formula $R_{C}$
 \end_inset
 
 , measured in 
@@ -348,7 +174,7 @@ reference "fig:Converting-camera-coordinates"
  relationship:
 \begin_inset Formula 
 \begin{equation}
-u^{\prime}=Rx^{\star}\label{eq:u-prime}
+u_{C}^{\prime}=R_{C}x_{C}^{\star}\label{eq:u-prime}
 \end{equation}
 
 \end_inset
@@ -372,13 +198,13 @@ reference "eq:u-prime"
 \end_inset
 
  and defining a scale factor 
-\begin_inset Formula $s=Rf$
+\begin_inset Formula $S_{C}=R_{C}f_{C}$
 \end_inset
 
 , we get
 \begin_inset Formula 
 \begin{equation}
-u^{\prime}=s\frac{x}{z}\label{eq:u-prime-complete}
+u_{C}^{\prime}=S_{C}\frac{x_{C}}{z_{C}}\label{eq:u-prime-complete}
 \end{equation}
 
 \end_inset
@@ -388,7 +214,7 @@ u^{\prime}=s\frac{x}{z}\label{eq:u-prime-complete}
 
 \begin_layout Standard
 Knowing the scale factor 
-\begin_inset Formula $s$
+\begin_inset Formula $S_{C}$
 \end_inset
 
 , we can easily calculate 
@@ -398,8 +224,8 @@ Knowing the scale factor
 :
 \begin_inset Formula 
 \begin{eqnarray}
-\tan\theta_{C} & = & \frac{x}{z}\\
-\tan\theta_{C} & = & \frac{u^{\prime}}{s}\label{eq:tan-theta-c}
+\tan\theta_{C} & = & \frac{x_{C}}{z_{C}}\\
+\tan\theta_{C} & = & \frac{u_{C}^{\prime}}{S_{C}}\label{eq:tan-theta-c}
 \end{eqnarray}
 
 \end_inset
@@ -411,8 +237,9 @@ Knowing the scale factor
 Similarly,
 \begin_inset Formula 
 \begin{eqnarray}
-v^{\prime} & = & s\frac{y}{z}\label{eq:v-prime-complete}\\
-\tan\phi_{C} & = & \frac{v^{\prime}}{s}\label{eq:tan-phi-c}
+\tan\phi_{C} & = & \frac{v_{C}^{\prime}}{S_{C}}\label{eq:tan-phi-c}\\
+\tan\theta_{P} & = & \frac{u_{P}^{\prime}}{S_{P}}\label{eq:tan-theta-p}\\
+\tan\phi_{P} & = & \frac{v_{P}^{\prime}}{S_{P}}\label{eq:tan-phi-p}
 \end{eqnarray}
 
 \end_inset
@@ -421,64 +248,41 @@ v^{\prime} & = & s\frac{y}{z}\label{eq:v-prime-complete}\\
 \end_layout
 
 \begin_layout Subsection
-Extending to 3D
+Recovering 3D information
 \end_layout
 
 \begin_layout Standard
-Equation 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Z-complete"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svg/triangulation.svg
+	width 75col%
 
 \end_inset
 
- gives us 
-\begin_inset Formula $Z$
-\end_inset
 
-, but only if the camera optical axis, projector optical axis, and measured
- point all lie in the same plane.
- In theory, this is a very nice result, but in practice, we will want to
- measure points in different planes.
- In addition, the requirement that the optical axes intersect would be difficult
- to ensure in practice.
- It would be much easier if we could generalize this geometry.
- (In addition, we need a more general form in order to calculate uncertainty.
- For instance, there will be uncertainty in 
-\begin_inset Formula $z$
-\end_inset
-
--position of the projector.
- The given equations leave no room to take this into account.)
 \end_layout
 
-\begin_layout Standard
-Define the 
-\emph on
-working plane
-\emph default
- to be the plane containing 
-\begin_inset Formula $\mathbf{O_{C}}$
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Triangulation geometry.
+\end_layout
+
 \end_inset
 
-, 
-\begin_inset Formula $\mathbf{O_{P}}$
-\end_inset
 
-, and 
-\begin_inset Formula $\mathbf{M}$
-\end_inset
+\end_layout
 
-.
- The normal 
-\begin_inset Formula $\mathbf{\hat{n}_{w}}$
-\end_inset
+\begin_layout Plain Layout
 
- can be found by:
-\begin_inset Formula 
-\begin{equation}
-\mathbf{\hat{n}_{w}}=\mathbf{\hat{D}_{C}}\times\mathbf{\hat{M}_{C}}\label{eq:working-plane-normal}
-\end{equation}
+\end_layout
 
 \end_inset
 
@@ -486,35 +290,17 @@ working plane
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathbf{\hat{D}_{C}}$
-\end_inset
-
- is the unit vector pointing from the camera to the projector.
+All 3D work in this section is performed using the camera's coordinate system.
+ We start by assuming a distance vector measured from the camera to the
+ projector.
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbf{D} & = & \left(\begin{array}{c}
 D_{x}\\
 D_{y}\\
 D_{z}
-\end{array}\right)\\
-\mathbf{\hat{D}_{C}} & = & \frac{\mathbf{D}}{D}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To make further equations involving 
-\begin_inset Formula $\mathbf{D}$
-\end_inset
-
- simpler, we will define
-\begin_inset Formula 
-\begin{eqnarray*}
-\tan\theta_{D} & \equiv & \frac{D_{y}}{D_{x}}\\
-\cos\phi_{D} & \equiv & \frac{D_{z}}{D}
+\end{array}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -542,212 +328,46 @@ To make further equations involving
 
 \end_inset
 
-from basic spherical coordinate equations.
- This gives
-\begin_inset Formula 
-\[
-\mathbf{\hat{n}_{w}}=\frac{1}{D}\left(\begin{array}{c}
-D_{y}\cos\theta_{C}\cos\phi_{C}-D_{z}\sin\theta_{C}\\
-D_{z}\sin\theta_{C}-D_{x}\cos\theta_{C}\cos\phi_{C}\\
-D_{x}\sin\phi_{C}-D_{y}\sin\theta_{C}
-\end{array}\right)\equiv\left(\begin{array}{c}
-n_{x}\\
-n_{y}\\
-n_{z}
-\end{array}\right)
-\]
-
-\end_inset
-
-
+using basic spherical coordinate equations.
 \end_layout
 
 \begin_layout Standard
-Knowing 
-\begin_inset Formula $\mathbf{\hat{n}_{w}}$
-\end_inset
-
- is useful, since we can now project each of our working vectors onto the
- working plane.
- The projection of a vector 
-\begin_inset Formula $\mathbf{x}$
-\end_inset
-
- onto a plane with normal 
-\begin_inset Formula $\mathbf{\hat{n}}$
-\end_inset
-
- is given by:
-\begin_inset Formula 
-\[
-\mathbf{x_{||P}}=\mathbf{x}-\left(\mathbf{x}\cdot\mathbf{\hat{n}}\right)\mathbf{\hat{n}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Given
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathbf{\hat{Z}_{P}} & = & \left(\begin{array}{c}
-\sin\beta\\
-0\\
-\cos\beta
-\end{array}\right)\\
-\mathbf{\hat{Z}_{C}} & = & \left(\begin{array}{c}
-0\\
-0\\
-1
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-we can calculate 
-\begin_inset Formula $\mathbf{\hat{Z}_{Pw}}$
+Even though the fringe appears as a contour where it illuminates a surface,
+ it may be conceptualized as a plane extending from the projector through
+ every possible point of illumination.
+ Any point on the fringe plane may be identified uniquely and parametrically
+ as a linear combination of two vectors 
+\begin_inset Formula $\mathbf{F_{1}}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{\hat{Z}_{Cw}}$
+\begin_inset Formula $\mathbf{F_{2}}$
 \end_inset
 
 .
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathbf{\hat{Z}_{Pw}} & = & \mathbf{\hat{Z}_{P}}-\left(\mathbf{\hat{Z}_{P}}\cdot\mathbf{\hat{n}_{w}}\right)\mathbf{\hat{n}_{w}}\\
- & = & \left(\begin{array}{c}
-\sin\beta-n_{x}\left(n_{x}\sin\beta+n_{z}\cos\beta\right)\\
--n_{y}\left(n_{x}\sin\beta+n_{z}\cos\beta\right)\\
-\cos\beta-n_{z}\left(n_{x}\sin\beta+n_{z}\cos\beta\right)
-\end{array}\right)\\
-\mathbf{\hat{Z}_{Cw}} & = & \mathbf{\hat{Z}_{C}}-\left(\mathbf{\hat{Z}_{C}}\cdot\mathbf{\hat{n}_{w}}\right)\mathbf{\hat{n}_{w}}\\
- & = & \left(\begin{array}{c}
--n_{x}n_{z}\\
--n_{y}n_{z}\\
-1-n_{z}^{2}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbf{\hat{M}_{C}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{\hat{D}}$
-\end_inset
-
- are already in the plane, obviating the need for projection.
-\end_layout
-
-\begin_layout Standard
-To find 
-\begin_inset Formula $\mathbf{O_{C}^{\prime}}$
-\end_inset
-
-, we need to find the intersection of the projector and camera rays.
-\begin_inset Formula 
-\[
-k_{0}\mathbf{\hat{M}_{Pw}}+k_{1}\mathbf{\hat{M}_{C}}=\mathbf{D}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To do this, we need a mathematical definition of the projector ray.
- Since we're projecting vertical fringes, we don't know the vertical angle
- the projector ray makes with the projector's optical axis---only the horizontal
- angle.
- However, if we did know the vertical angle it would actually overconstrain
- the system.
- The projected fringe actually forms a plane in 3D space; this plane forms
- a 2D contour where it intersects the subject.
- If we can construct a mathematical definition for this plane, then its
- intersection with the working plane will give us a definition of our projector
- ray.
-\end_layout
-
-\begin_layout Standard
-Any point on the fringe plane may be identified uniquely and parametrically
- in terms of parameters 
-\begin_inset Formula $i$
-\end_inset
-
- and 
-\begin_inset Formula $j$
-\end_inset
-
-.
- Assuming the fringe plane entirely contains the 
-\begin_inset Formula $y$
-\end_inset
-
--axis,
+ 
 \begin_inset Formula 
 \begin{equation}
-\mathbf{F}\left(i,j\right)=\left(\begin{array}{c}
-0\\
-1\\
-0
-\end{array}\right)i+\left(\begin{array}{c}
-\cos\psi\\
-0\\
-\sin\psi
-\end{array}\right)j\label{eq:fringe-eqn}
+\mathbf{F}\left(t_{1},t_{2}\right)=t_{1}\mathbf{F_{1}}+t_{2}\mathbf{F_{2}}\label{eq:fringe-eqn}
 \end{equation}
 
 \end_inset
 
-If we wanted to project 
-\begin_inset Quotes eld
-\end_inset
 
-tilted
-\begin_inset Quotes erd
-\end_inset
-
- fringes, we would only need to update our definition of 
-\begin_inset Formula $\mathbf{F}$
-\end_inset
-
- and carry the calculations through.
 \end_layout
 
 \begin_layout Standard
-The upshot of representing a fringe with 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:fringe-eqn"
-
+Vertical fringes will always pass through the 
+\begin_inset Formula $y$
 \end_inset
 
- is that the two components are perpendicular and of unit length.
- This means that the normal is
+-axis, meaning 
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbf{\hat{n}_{F}} & = & \left(\begin{array}{c}
+\mathbf{F_{1}} & = & \left(\begin{array}{c}
 0\\
 1\\
 0
-\end{array}\right)\times\left(\begin{array}{c}
-\cos\psi\\
-0\\
-\sin\psi
-\end{array}\right)\\
- & = & \left(\begin{array}{c}
-\sin\psi\\
-0\\
--\cos\psi
 \end{array}\right)
 \end{eqnarray*}
 
@@ -757,60 +377,49 @@ reference "eq:fringe-eqn"
 \end_layout
 
 \begin_layout Standard
-Our desired ray 
-\begin_inset Formula $\mathbf{\hat{M}_{Pw}}$
+To define the other vector, we can use an angle 
+\begin_inset Formula $\psi$
 \end_inset
 
- is perpendicular to both 
-\begin_inset Formula $\mathbf{\hat{n}_{F}}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{\hat{n}_{w}}$
-\end_inset
-
-, giving
-\begin_inset Formula 
-\begin{eqnarray*}
-\mathbf{M_{Pw}} & = & \left(\begin{array}{c}
-n_{y}\cos\psi\\
--n_{z}\sin\psi-n_{x}\cos\psi\\
-n_{y}\sin\psi
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Since this is well-defined, we can save an expensive step in the computation
- by redefining
-\end_layout
-
-\begin_layout Standard
+, defined as
 \begin_inset Formula 
 \[
-k_{2}\mathbf{M_{Pw}}+k_{1}\mathbf{\hat{M}_{C}}=\mathbf{D}
+\psi\equiv\pi+\theta_{P}-\beta
 \]
 
 \end_inset
 
-which may be solved by using the equation
+
+\end_layout
+
+\begin_layout Standard
+The physical significance of 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is that it is the angle formed in the 
+\begin_inset Formula $y=0$
+\end_inset
+
+ plane by the fringe plane's trace and the camera's optical axis 
+\begin_inset Formula $\left(x=y=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can now relate 
+\begin_inset Formula $\mathbf{F_{2}}$
+\end_inset
+
+ to the projector's image coordinates: 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left(\begin{array}{cc}
-\mathbf{M_{Pw}} & \mathbf{\hat{M}_{C}}\end{array}\right)\left(\begin{array}{c}
-k_{2}\\
-k_{1}
-\end{array}\right) & = & \left(\begin{array}{c}
-\mathbf{D}\end{array}\right)\\
-\left(\begin{array}{cc}
-\mathbf{M_{Pw}} & \mathbf{\hat{M}_{C}}\end{array}\right)^{-1}\left(\begin{array}{c}
-\mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
-k_{2}\\
-k_{1}
+\mathbf{F_{2}} & = & \left(\begin{array}{c}
+\cos\psi\\
+0\\
+\sin\psi
 \end{array}\right)
 \end{eqnarray*}
 
@@ -820,7 +429,12 @@ k_{1}
 \end_layout
 
 \begin_layout Standard
-Now that we have our constants 
+Now we have three vectors which sum to 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ in some linear combination.
+ 
 \begin_inset Formula $k_{1}$
 \end_inset
 
@@ -828,14 +442,54 @@ Now that we have our constants
 \begin_inset Formula $k_{2}$
 \end_inset
 
-, the point 
+ are not necessarily positive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{0}\mathbf{\hat{M}_{C}}+k_{1}\mathbf{F_{1}}+k_{2}\mathbf{F_{2}}=\mathbf{D}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This may be solved by using the equation
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}_{C}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)\left(\begin{array}{c}
+k_{0}\\
+k_{1}\\
+k_{2}
+\end{array}\right) & = & \left(\begin{array}{c}
+\mathbf{D}\end{array}\right)\\
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}_{C}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
+k_{0}\\
+k_{1}\\
+k_{2}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now that we have our constants, the point 
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
  is simply
 \begin_inset Formula 
 \begin{equation}
-\mathbf{M_{C}}=k_{1}\mathbf{\hat{M}_{C}}\label{eq:M-equals-k1-M-hat-c}
+\mathbf{M_{C}}=k_{0}\mathbf{\hat{M}_{C}}\label{eq:M-equals-k0-M-hat-c}
 \end{equation}
 
 \end_inset
