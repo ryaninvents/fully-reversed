@@ -77,7 +77,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename svg/triangulation.svg
-	width 75text%
+	width 75col%
 
 \end_inset
 
@@ -261,13 +261,13 @@ reference "fig:Converting-camera-coordinates"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename svg/focal-length.svg
-	width 20text%
+	width 20col%
 
 \end_inset
 
@@ -655,7 +655,7 @@ To find
 , we need to find the intersection of the projector and camera rays.
 \begin_inset Formula 
 \[
-\mathbf{D}+k_{0}\mathbf{\hat{M}_{Pw}}=k_{1}\mathbf{\hat{M}_{C}}
+k_{0}\mathbf{\hat{M}_{Pw}}+k_{1}\mathbf{\hat{M}_{C}}=\mathbf{D}
 \]
 
 \end_inset
@@ -775,14 +775,60 @@ n_{y}\sin\psi
 \begin_layout Standard
 Since this is well-defined, we can save an expensive step in the computation
  by redefining
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\mathbf{D}+k_{2}\mathbf{M_{Pw}}=k_{1}\mathbf{\hat{M}_{C}}
+k_{2}\mathbf{M_{Pw}}+k_{1}\mathbf{\hat{M}_{C}}=\mathbf{D}
 \]
 
 \end_inset
 
+which may be solved by using the equation
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{cc}
+\mathbf{M_{Pw}} & \mathbf{\hat{M}_{C}}\end{array}\right)\left(\begin{array}{c}
+k_{2}\\
+k_{1}
+\end{array}\right) & = & \left(\begin{array}{c}
+\mathbf{D}\end{array}\right)\\
+\left(\begin{array}{cc}
+\mathbf{M_{Pw}} & \mathbf{\hat{M}_{C}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
+k_{2}\\
+k_{1}
+\end{array}\right)
+\end{eqnarray*}
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now that we have our constants 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+, the point 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ is simply
+\begin_inset Formula 
+\begin{equation}
+\mathbf{M}=k_{1}\mathbf{\hat{M}_{C}}\label{eq:M-equals-k1-M-hat-c}
+\end{equation}
+
+\end_inset
+
+in the camera's coordinate space.
 \end_layout
 
 \end_body
