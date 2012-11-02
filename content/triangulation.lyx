@@ -319,7 +319,7 @@ D_{z}
 .
 \begin_inset Formula 
 \begin{eqnarray}
-\hat{M}_{x}^{2}+\hat{M}_{y}^{2}+\hat{M}_{z}^{2} & = & 1\label{eq:m-hat-unit}\\
+1 & = & \hat{M}_{x}^{2}+\hat{M}_{y}^{2}+\hat{M}_{z}^{2}\label{eq:m-hat-unit}\\
 \hat{M}_{z} & = & \left[\tan^{2}\theta_{C}+\tan^{2}\phi_{C}+1\right]^{-\frac{1}{2}}\\
 \mathbf{\hat{M}} & = & \left(\begin{array}{c}
 \hat{M}_{z}\tan\theta_{C}\\
