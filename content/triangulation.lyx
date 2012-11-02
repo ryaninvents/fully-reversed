@@ -309,26 +309,28 @@ D_{z}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\mathbf{\hat{M}_{C}}$
+\begin_inset Formula $\mathbf{\hat{M}}$
 \end_inset
 
  is the unit vector pointing from the camera to the measured point 
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
- and is equal to
+.
 \begin_inset Formula 
-\begin{equation}
-\mathbf{\hat{M}_{C}}=\left(\begin{array}{c}
-\sin\theta_{C}\\
-\sin\phi_{C}\\
-\cos\theta_{C}\cos\phi_{C}
-\end{array}\right)\label{eq:m-hat-c}
-\end{equation}
+\begin{eqnarray}
+\sqrt{\hat{M}_{x}^{2}+\hat{M}_{y}^{2}+\hat{M}_{z}^{2}} & = & 1\label{eq:m-hat-unit}\\
+\hat{M}_{z} & = & \left[\tan^{2}\theta_{C}+\tan^{2}\phi_{C}+1\right]^{-\frac{1}{2}}\\
+\mathbf{\hat{M}} & = & \left(\begin{array}{c}
+\hat{M}_{z}\tan\theta_{C}\\
+\hat{M}_{z}\tan\phi_{C}\\
+\hat{M}_{z}
+\end{array}\right)\label{eq:m-hat}
+\end{eqnarray}
 
 \end_inset
 
-using basic spherical coordinate equations.
+
 \end_layout
 
 \begin_layout Standard
@@ -448,7 +450,7 @@ Now we have three vectors which sum to
 \begin_layout Standard
 \begin_inset Formula 
 \[
-k_{0}\mathbf{\hat{M}_{C}}+k_{1}\mathbf{F_{1}}+k_{2}\mathbf{F_{2}}=\mathbf{D}
+k_{0}\mathbf{\hat{M}}+k_{1}\mathbf{F_{1}}+k_{2}\mathbf{F_{2}}=\mathbf{D}
 \]
 
 \end_inset
@@ -461,14 +463,14 @@ This may be solved by using the equation
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(\begin{array}{ccc}
-\mathbf{\hat{M}_{C}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)\left(\begin{array}{c}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)\left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
 k_{2}
 \end{array}\right) & = & \left(\begin{array}{c}
 \mathbf{D}\end{array}\right)\\
 \left(\begin{array}{ccc}
-\mathbf{\hat{M}_{C}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
 \mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
@@ -489,7 +491,7 @@ Now that we have our constants, the point
  is simply
 \begin_inset Formula 
 \begin{equation}
-\mathbf{M_{C}}=k_{0}\mathbf{\hat{M}_{C}}\label{eq:M-equals-k0-M-hat-c}
+\mathbf{M}=k_{0}\mathbf{\hat{M}}\label{eq:M-equals-k0-M-hat-c}
 \end{equation}
 
 \end_inset
