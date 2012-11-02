@@ -1,0 +1,553 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+2.0 Background 
+\end_layout
+
+\begin_layout Subsection
+2.1 3-Dimensional Optical Shape Measurement Techniques 
+\end_layout
+
+\begin_layout Standard
+There are many different optical techniques for 3-Dimensional shape measurement.
+ The different techniques each have their advantages and disadvantages,
+ and are utilized in different professional fields.
+ This section will give a brief overview of some of the many techniques
+ available for 3D shape measurement.
+\end_layout
+
+\begin_layout Subsubsection
+2.1.1 Photogrammetry 
+\end_layout
+
+\begin_layout Standard
+Photogrammetry is a technique to construct a 3D image from several 2D photos.
+ In order to achieve this, photogrammetry utilizes feature, pattern, or
+ color matching.
+ Algorithms frequently use reflectivity, shading, and focus to recover shape
+ information.
+ The advantage of this system is that it can create 3D reconstructions without
+ knowledge of the location of the cameras.
+ However this method has much lower accuracy than most other methods, and
+ therefore is generally not used in engineering or medical fields.
+ (cite)
+\end_layout
+
+\begin_layout Subsubsection
+2.1.2 Time of Flight
+\end_layout
+
+\begin_layout Standard
+This method directly measures the time of flight of a laser or light source.
+ The amount of time between the light being emitted, reflected off the object,
+ and then received by the sensor is used to calculate the distance to the
+ object.
+ Time of flight techniques have an advantage of being longer ranged than
+ most other shape measurement techniques, but they are also lower resolution.
+ This makes it useful for surveying, and other long range purposes.
+ (cite) 
+\end_layout
+
+\begin_layout Subsubsection
+2.1.3 Triangulation 
+\end_layout
+
+\begin_layout Standard
+Optical Triangulation techniques utilize the geometry of the system to calculate
+ the distance from the camera to the object being measured.
+ In most cases a projector and a camera are positioned a known distance
+ apart.
+ The central axis of the camera is angled by a known amount relative to
+ the central axis of the projector.
+ This angle is known as the triangulation angle.
+ Triangulation techniques use these known values, along with a measured
+ value extracted from the image data, to compute the 3D data.
+ The most common measured values are displacement and optical phase.
+ Laser Scanning Laser scanning techniques work by projecting one or more
+ laser lines on the object to be measured.
+ The line(s) are scanned across the object while a camera captures images
+ of the object.
+ The camera is positioned in a known triangulation geometry with the projector.
+ The distance to the object at each point along the line is calculated to
+ generate a profile of the object illuminated by the line.
+ The profiles of the line at every location as it scans across the object
+ are combined to create a full image.
+ In order to have a resolution greater than the thickness of the laser line,
+ an algorithm to find the center of the line can be used.
+ (cite) (image)
+\end_layout
+
+\begin_layout Paragraph
+Structured Light 
+\end_layout
+
+\begin_layout Standard
+Structured Light is a category of optical imaging techniques that use a
+ coded pattern in projected light in conjunction with a camera to perform
+ triangulation.
+ There are two main categories of structured light techniques, which are
+ continuous coding and discrete coding.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Continuous Coding 
+\end_layout
+
+\begin_layout Standard
+Continuous coding is a term for any structured light technique that projects
+ a continuous pattern in order to code the shape data into an image.
+ Most continuous coding techniques utilize a sinusoidal pattern, but there
+ are some that use other forms of continuous information.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+Sinusoidal Fringe Projection 
+\end_layout
+
+\begin_layout Standard
+Sinusoidal Fringe Projection is the most commonly used form of continuous
+ coding.
+ This method utilizes a Digital Light Projector (DLP) to project vertical
+ fringes that vary sinusoidally in intensity.
+ To achieve this sinusoidal pattern the projector and CCD camera must be
+ synched so that the fringes start at their maximum size and shrink to a
+ single pixel wide during a single exposure of the camera.
+ The intensity at each point is averaged over the exposure time so that
+ a sinusoid is created.
+ Four frames of data are captured, each phase shifted by a quarter of the
+ wavelength of the sinusoid.
+ The multiple phase shifted images are used to calculate the wrapped phase
+ map of the object.
+ An unwrapping algorithm gives the unwrapped phase map, and the actual size
+ data is calculated using the triangulation geometry.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+Binary Fringe Projection 
+\end_layout
+
+\begin_layout Standard
+Instead of a sinusoidal pattern, a binary fringe pattern is projected.
+ This pattern is defocused to approximate a sinusoidal pattern.
+ The phase can then be found through phase shifting in the same manner as
+ standard sinusoidal fringe projection.
+ (cite) 
+\end_layout
+
+\begin_layout Subparagraph
+Fourier Transform Profilometry 
+\end_layout
+
+\begin_layout Standard
+Fourier Transform Profilometry is a method for calculating the wrapped phase
+ map of the object in a single frame.
+ The method takes the Fourier transform of the intensity and isolates the
+ shape containing phase information.
+ When the Fourier transform is performed, 3 distinct peaks result in the
+ Fourier domain.
+ The central peak is the brightness information and can be masked out.
+ The two remaining peaks are symmetric about the origin and contain the
+ shape information.
+ One of these peaks is masked out, and the remaining one is shifted by the
+ carrier frequency so it is located on the origin.
+ The inverse FFT is calculated and the phase data is separated from the
+ contrast by taking the arc tangent of the imaginary components over the
+ real components.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+Color Coded Fringe Projection
+\end_layout
+
+\begin_layout Standard
+Instead of a single fringe pattern being phase shifted between several pictures,
+ three phase shifted patterns are projected simultaneously for single frame
+ acquisition.
+ These three patterns are different colors, typically RGB.
+ The three patterns are separated and used to generate a wrapped phase map.
+ The main limitation of this method is that it is sensitive to the transmittance
+, reflectivity, and absorption of the object being measured.
+ To compensate for this the exact wavelengths used can be chosen based on
+ the color and material of the object, or some form of coating can be applied
+ to the object to improve the conditions.
+ (cite) (Image)
+\end_layout
+
+\begin_layout Subparagraph
+Continuous Spatial Grading
+\end_layout
+
+\begin_layout Standard
+A continuous grayscale or color scale is projected onto the object.
+ Every X coordinate in the undistorted projection has a unique intensity
+ value, allowing for triangulation similar to a line scanner.
+ This method is extremely sensitive to the color of the target object and
+ shadowing on the object.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+Discrete Coding 
+\end_layout
+
+\begin_layout Standard
+Discrete coding consists of projecting non-continuous patterns onto an object.
+ These patterns are designed such that every part of the image is uniquely
+ identified by the pattern.
+ This identification is referred to as the “codeword” for that location.
+ The locations identified by codewords can either be lines or pixels, depending
+ on whether the patter is 1D or 2D.
+ Since the location of each “codeword” is known in the projected image the
+ displacement of the “codeword” when the pattern is projected on the object
+ can be measured.
+ This displacement can be used to triangulate the distance to the object
+ for each location, thus giving the 3-dimensional shape.
+ The two methods of discrete coding are spatial multiplexing and time multiplexi
+ng (cite) 
+\end_layout
+
+\begin_layout Subparagraph
+Spatial Multiplexing 
+\end_layout
+
+\begin_layout Standard
+Spatial multiplexing methods project only a single pattern.
+ In order to identify the “codewords” for that pattern, the surroundings
+ are used.
+ For a 1-D pattern this means the sequence of lines two either side of any
+ given line are unique and thus identify that line.
+ In a 2-D case it the surroundings in all directions within the plane are
+ taken into account.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+De Bruijn Coding 
+\end_layout
+
+\begin_layout Standard
+A pattern is constructed using a pseudorandom sequence known as a De Bruijn
+ sequence.
+ The properties of a De Bruijn sequence ensure that any projected line can
+ be identified by the bordering lines, allowing for triangulation.
+ This pattern can be binary (similar to bar code), grayscale, or color.
+ (cite) (image)
+\end_layout
+
+\begin_layout Subparagraph
+M-Arrays 
+\end_layout
+
+\begin_layout Standard
+M-arrays are a 2D equivalent to the 1-D De Bruijn patterns.
+ An array of pseudorandom dots is projected onto the target object.
+ Any dot can be identified by the adjacent dots, allowing for triangulation.
+ This method can utilize both binary, color or grayscale.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+codeword
+\begin_inset Quotes erd
+\end_inset
+
+ of the dot can be identified not only by the type of dots around it, but
+ by the relative density of the dots as well.
+ (cite) (image)
+\end_layout
+
+\begin_layout Subparagraph
+Non-Formal Coding 
+\end_layout
+
+\begin_layout Standard
+Non-formal coding is a term used to categorize any number of spatial multiplexin
+g methods that use unique patterns for specific purposes.
+ These patterns do not necessarily directly uniquely identify the line or
+ pixel as the previous methods do.
+ Instead non-formal coding usually serves a more specific purpose such as
+ calibration patterns.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+Time Multiplexing 
+\end_layout
+
+\begin_layout Standard
+Time multiplexing captures successive images with different patterns in
+ order to generate the necessary “codeword” for each location.
+ The patterns a generated such that each location has a unique sequence
+ of values throughout the series of images.
+ Since multiple frames are needed to generate a 3D image, this method is
+ not viable for high speed applications that require single frame acquisition.
+ (cite)
+\end_layout
+
+\begin_layout Subparagraph
+Binary Codes 
+\end_layout
+
+\begin_layout Standard
+Binary codes function by projecting a series of binary patterns.
+ These patterns are typically vertical of varying thicknesses or densities,
+ similar to a bar code.
+ A single pattern alone does nothing, but by taking into account the binary
+ value of each line or pixel over the entire series of projected patterns,
+ uniqueness is established.
+ (cite) (Image) 
+\end_layout
+
+\begin_layout Subparagraph
+N-Array Codes 
+\end_layout
+
+\begin_layout Standard
+N-Array codes utilize the same basic concept as binary codes, except they
+ are not restricted to binary patterns.
+ They can utilize color or grayscale patterns to greatly reduce the number
+ of frames necessary to uniquely identify each location in the image.
+ (cite) (Image)
+\end_layout
+
+\begin_layout Subparagraph
+Hybrid Coding 
+\end_layout
+
+\begin_layout Standard
+Hybrid coding consists of a combination of spatial and time multiplexing.
+ Several spatial multiplexing patterns are displayed in series so as to
+ create a time multiplex with them.
+ This method achieves the high accuracy of time multiplexing, while greatly
+ reducing the number of patterns necessary.
+ (cite)
+\end_layout
+
+\begin_layout Subsubsection
+2.1.4 Interferometry 
+\end_layout
+
+\begin_layout Standard
+Interferometry utilizes beam splitter to separate a single beam into two
+ beams.
+ One of the beams, the sample beam, is reflected off the target object and
+ then into sensor.
+ This beam then meets with the other beam, the reference beam, in an interferome
+ter.
+ The interference between these two beams gives the phase difference of
+ the lasers.
+ The phases from all the points on the object are generated into a wrapped
+ phase map image of the object.
+ The phase maps are unwrapped, giving the shape of the object.
+ (cite) 
+\end_layout
+
+\begin_layout Standard
+There are many advanced imaging techniques that use interferometry as a
+ basis to generate absolute 3D measurements.
+ One such technique is called laser speckle pattern sectioning.
+ This method projects a speckle pattern on the target object which is measured
+ using a CCD array.
+ The pattern is scanned through a range of wavelengths.
+ Each wavelength corresponds to a 2D slice of the 3D object.
+ By adding these slices together into a 3D data array, and then performing
+ a 3D Fourier transform, the 3D shape can be found.
+ (cite) 
+\end_layout
+
+\begin_layout Standard
+Interferometry has higher resolution and accuracy than many of the other
+ techniques, and can be performed on a large range of object sizes depending
+ on the setup.
+ For this reason it can be used in a large variety fields, making it a versatile
+ technique.
+ (Cite)
+\end_layout
+
+\begin_layout Subsection
+2.2 Existing Commercial Products 
+\end_layout
+
+\begin_layout Standard
+There are many different commercial scanners currently on the market.
+ Most of them cater to different professional fields and have specifications
+ that those fields find desirable.
+ A few of these products will be discussed in this section.
+\end_layout
+
+\begin_layout Paragraph
+Kinect
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+The Kinect is a 3D imaging device made by Microsoft for use with their Xbox
+ 360 gaming console.
+ The Kinect works based on a fixed pseudorandom array of dots projected
+ on an infrared wavelength.
+ The dots are formed by an array of small micro lenses, each with a slightly
+ different focal length.
+ The included infrared camera picks up the projection of these dots on their
+ environment.
+ Groups of dots are then compared against an image taken on a reference
+ plane.
+ Due to the pseudorandom nature of the dot array, each group is unique enough
+ to allow identification of a particular dot based on the relative positions
+ of neighboring dots.
+ Furthermore, due to the different focal lengths of the micro lenses, the
+ pattern itself will vary based on the distance between the camera and the
+ object 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KinectPatent"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+Microsoft has kept its specific algorithms for calculating the depth proprietary.
+ However, the open-source community has had some success in reverse-engineering
+ the Kinect.
+ In its operating range between 0.8 and 3.5 meters, the Kinect can resolve
+ depth with about 10 mm accuracy along the optical axis, and position to
+ about 3 mm perpendicular to the optical axis 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OpenKinect:ImagingInfo"
+
+\end_inset
+
+.
+ (image)
+\end_layout
+
+\begin_layout Paragraph
+Next Engine 
+\end_layout
+
+\begin_layout Standard
+Next engine is a device that projects multiple laser lines onto the target
+ object.
+ To construct a 3D image of an object it performs line scanning in both
+ the vertical and horizontal directions.
+ It takes about two minutes to create a single 3D point cloud of the object.
+ The software that is bundled with this product has the capacity to stitch
+ together multiple views to create full 3D images.
+ The 3D images are in full color and can be output to several common CAD
+ formats.
+ The Next Engine Scanner is marketed for use in design, manufacturing, CGI,
+ art, and medical applications.
+ This system boasts accuracy to 0.005inches in macro mode and to 0.015inches
+ in wide mode.
+ (cite) (image)
+\end_layout
+
+\begin_layout Paragraph
+David 3D Laser Scanner 
+\end_layout
+
+\begin_layout Standard
+David 3D Laser Scanners come in two types.
+ The first is a line scanning method that uses a line laser pointer and
+ a digital camera.
+ The laser pointer is scanned across the object by hand while the camera
+ captures the image data.
+ The other scanner is a sinusoidal fringe projection system.
+ This scanner comes with calibration patterns and a software program capable
+ of creating and stitching 3D point clouds.
+ The scanner has a object size range from 10mm-600mm with a accuracy up
+ to 2% of the object size.
+ It takes 2-4 seconds per scan and generates grayscale images.
+ (cite) (image)
+\end_layout
+
+\begin_layout Paragraph
+Handy Scan 3D 
+\end_layout
+
+\begin_layout Standard
+The Handy Scan 3D scanner is a portable line scanner.
+ It boasts an accuracy of up to 40 microns.
+ The Handy Scan projects a cross hair onto the target object and scans in
+ both x and y simultaneously.
+ The device has a camera built into it so the triangulation geometry remains
+ constant as the laser is scanned along the object.
+ The technology requires several sensors to be placed on the object.
+ These sensors are randomly placed on the object and are triangulated by
+ two cameras on the scanner.
+ This allows the scanner to know its location relative to the object, making
+ the freehand scanning possible.
+ This product is marketed for reverse engineering, design, and part inspection.
+ (cite) (image)
+\end_layout
+
+\end_body
+\end_document

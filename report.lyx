@@ -136,6 +136,16 @@ filename "Introduction.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "Background.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
 filename "Structured light projection.lyx"
 
 \end_inset
