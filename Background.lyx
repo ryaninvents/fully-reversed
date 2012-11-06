@@ -2,7 +2,7 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass book
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -25,6 +25,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -59,12 +60,12 @@
 
 \begin_body
 
-\begin_layout Section
-2.0 Background 
+\begin_layout Chapter
+Background 
 \end_layout
 
-\begin_layout Subsection
-2.1 3-Dimensional Optical Shape Measurement Techniques 
+\begin_layout Section
+3-Dimensional Optical Shape Measurement Techniques 
 \end_layout
 
 \begin_layout Standard
@@ -75,8 +76,8 @@ There are many different optical techniques for 3-Dimensional shape measurement.
  available for 3D shape measurement.
 \end_layout
 
-\begin_layout Subsubsection
-2.1.1 Photogrammetry 
+\begin_layout Subsection
+Photogrammetry 
 \end_layout
 
 \begin_layout Standard
@@ -85,15 +86,21 @@ Photogrammetry is a technique to construct a 3D image from several 2D photos.
  color matching.
  Algorithms frequently use reflectivity, shading, and focus to recover shape
  information.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Snavely"
+
+\end_inset
+
  The advantage of this system is that it can create 3D reconstructions without
  knowledge of the location of the cameras.
  However this method has much lower accuracy than most other methods, and
  therefore is generally not used in engineering or medical fields.
- (cite)
+ 
 \end_layout
 
-\begin_layout Subsubsection
-2.1.2 Time of Flight
+\begin_layout Subsection
+Time of Flight
 \end_layout
 
 \begin_layout Standard
@@ -101,14 +108,20 @@ This method directly measures the time of flight of a laser or light source.
  The amount of time between the light being emitted, reflected off the object,
  and then received by the sensor is used to calculate the distance to the
  object.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1117/1.602438"
+
+\end_inset
+
  Time of flight techniques have an advantage of being longer ranged than
  most other shape measurement techniques, but they are also lower resolution.
  This makes it useful for surveying, and other long range purposes.
- (cite) 
+ 
 \end_layout
 
-\begin_layout Subsubsection
-2.1.3 Triangulation 
+\begin_layout Subsection
+Triangulation 
 \end_layout
 
 \begin_layout Standard
@@ -122,8 +135,15 @@ Optical Triangulation techniques utilize the geometry of the system to calculate
  Triangulation techniques use these known values, along with a measured
  value extracted from the image data, to compute the 3D data.
  The most common measured values are displacement and optical phase.
- Laser Scanning Laser scanning techniques work by projecting one or more
- laser lines on the object to be measured.
+\end_layout
+
+\begin_layout Subsubsection
+Laser Scanning 
+\end_layout
+
+\begin_layout Standard
+Laser scanning techniques work by projecting one or more laser lines on
+ the object to be measured.
  The line(s) are scanned across the object while a camera captures images
  of the object.
  The camera is positioned in a known triangulation geometry with the projector.
@@ -131,12 +151,18 @@ Optical Triangulation techniques utilize the geometry of the system to calculate
  generate a profile of the object illuminated by the line.
  The profiles of the line at every location as it scans across the object
  are combined to create a full image.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1117/1.602438"
+
+\end_inset
+
  In order to have a resolution greater than the thickness of the laser line,
  an algorithm to find the center of the line can be used.
- (cite) (image)
+ (image)
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Structured Light 
 \end_layout
 
@@ -149,7 +175,7 @@ Structured Light is a category of optical imaging techniques that use a
  
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 Continuous Coding 
 \end_layout
 
@@ -158,7 +184,14 @@ Continuous coding is a term for any structured light technique that projects
  a continuous pattern in order to code the shape data into an image.
  Most continuous coding techniques utilize a sinusoidal pattern, but there
  are some that use other forms of continuous information.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -181,7 +214,14 @@ Sinusoidal Fringe Projection is the most commonly used form of continuous
  map of the object.
  An unwrapping algorithm gives the unwrapped phase map, and the actual size
  data is calculated using the triangulation geometry.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zervas"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -193,7 +233,17 @@ Instead of a sinusoidal pattern, a binary fringe pattern is projected.
  This pattern is defocused to approximate a sinusoidal pattern.
  The phase can then be found through phase shifting in the same manner as
  standard sinusoidal fringe projection.
- (cite) 
+ The advantage of this method is that near sinusoidal fringes can be created
+ without long exposure times and dynamic projectors.
+ This allows for faster applications such as single frame acquisition, but
+ reduces the accuracy of the system by introducing higher order noise.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lei2010digital"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -212,10 +262,23 @@ Fourier Transform Profilometry is a method for calculating the wrapped phase
  shape information.
  One of these peaks is masked out, and the remaining one is shifted by the
  carrier frequency so it is located on the origin.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Takeda:83"
+
+\end_inset
+
  The inverse FFT is calculated and the phase data is separated from the
  contrast by taking the arc tangent of the imaginary components over the
  real components.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zervas"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -233,7 +296,14 @@ Instead of a single fringe pattern being phase shifted between several pictures,
  To compensate for this the exact wavelengths used can be chosen based on
  the color and material of the object, or some form of coating can be applied
  to the object to improve the conditions.
- (cite) (Image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "huang1999color"
+
+\end_inset
+
+ (Image)
 \end_layout
 
 \begin_layout Subparagraph
@@ -246,10 +316,17 @@ A continuous grayscale or color scale is projected onto the object.
  value, allowing for triangulation similar to a line scanner.
  This method is extremely sensitive to the color of the target object and
  shadowing on the object.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 Discrete Coding 
 \end_layout
 
@@ -266,10 +343,17 @@ Discrete coding consists of projecting non-continuous patterns onto an object.
  This displacement can be used to triangulate the distance to the object
  for each location, thus giving the 3-dimensional shape.
  The two methods of discrete coding are spatial multiplexing and time multiplexi
-ng (cite) 
+ng 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+ 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 Spatial Multiplexing 
 \end_layout
 
@@ -281,7 +365,14 @@ Spatial multiplexing methods project only a single pattern.
  given line are unique and thus identify that line.
  In a 2-D case it the surroundings in all directions within the plane are
  taken into account.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2004pattern"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -294,7 +385,14 @@ A pattern is constructed using a pseudorandom sequence known as a De Bruijn
  The properties of a De Bruijn sequence ensure that any projected line can
  be identified by the bordering lines, allowing for triangulation.
  This pattern can be binary (similar to bar code), grayscale, or color.
- (cite) (image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2004pattern"
+
+\end_inset
+
+ (image)
 \end_layout
 
 \begin_layout Subparagraph
@@ -316,7 +414,14 @@ codeword
 
  of the dot can be identified not only by the type of dots around it, but
  by the relative density of the dots as well.
- (cite) (image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+ (image)
 \end_layout
 
 \begin_layout Subparagraph
@@ -330,10 +435,17 @@ g methods that use unique patterns for specific purposes.
  pixel as the previous methods do.
  Instead non-formal coding usually serves a more specific purpose such as
  calibration patterns.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2004pattern"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 Time Multiplexing 
 \end_layout
 
@@ -344,7 +456,14 @@ Time multiplexing captures successive images with different patterns in
  of values throughout the series of images.
  Since multiple frames are needed to generate a 3D image, this method is
  not viable for high speed applications that require single frame acquisition.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -358,7 +477,14 @@ Binary codes function by projecting a series of binary patterns.
  A single pattern alone does nothing, but by taking into account the binary
  value of each line or pixel over the entire series of projected patterns,
  uniqueness is established.
- (cite) (Image) 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2004pattern"
+
+\end_inset
+
+ (Image) 
 \end_layout
 
 \begin_layout Subparagraph
@@ -370,7 +496,14 @@ N-Array codes utilize the same basic concept as binary codes, except they
  are not restricted to binary patterns.
  They can utilize color or grayscale patterns to greatly reduce the number
  of frames necessary to uniquely identify each location in the image.
- (cite) (Image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2004pattern"
+
+\end_inset
+
+ (Image)
 \end_layout
 
 \begin_layout Subparagraph
@@ -383,11 +516,18 @@ Hybrid coding consists of a combination of spatial and time multiplexing.
  create a time multiplex with them.
  This method achieves the high accuracy of time multiplexing, while greatly
  reducing the number of patterns necessary.
- (cite)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsubsection
-2.1.4 Interferometry 
+\begin_layout Subsection
+Interferometry 
 \end_layout
 
 \begin_layout Standard
@@ -401,8 +541,15 @@ ter.
  the lasers.
  The phases from all the points on the object are generated into a wrapped
  phase map image of the object.
- The phase maps are unwrapped, giving the shape of the object.
- (cite) 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1117/1.602438"
+
+\end_inset
+
+The phase maps are unwrapped, giving the shape of the object.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -415,7 +562,14 @@ There are many advanced imaging techniques that use interferometry as a
  Each wavelength corresponds to a 2D slice of the 3D object.
  By adding these slices together into a 3D data array, and then performing
  a 3D Fourier transform, the 3D shape can be found.
- (cite) 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "doi:10.1117/1.602438"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -424,11 +578,17 @@ Interferometry has higher resolution and accuracy than many of the other
  on the setup.
  For this reason it can be used in a large variety fields, making it a versatile
  technique.
- (Cite)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ZCorp"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-2.2 Existing Commercial Products 
+\begin_layout Section
+Existing Commercial Products 
 \end_layout
 
 \begin_layout Standard
@@ -438,7 +598,7 @@ There are many different commercial scanners currently on the market.
  A few of these products will be discussed in this section.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Kinect
 \end_layout
 
@@ -489,7 +649,7 @@ key "OpenKinect:ImagingInfo"
  (image)
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Next Engine 
 \end_layout
 
@@ -507,10 +667,17 @@ Next engine is a device that projects multiple laser lines onto the target
  art, and medical applications.
  This system boasts accuracy to 0.005inches in macro mode and to 0.015inches
  in wide mode.
- (cite) (image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NextEngine"
+
+\end_inset
+
+ (image)
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 David 3D Laser Scanner 
 \end_layout
 
@@ -526,10 +693,17 @@ David 3D Laser Scanners come in two types.
  The scanner has a object size range from 10mm-600mm with a accuracy up
  to 2% of the object size.
  It takes 2-4 seconds per scan and generates grayscale images.
- (cite) (image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "David3d"
+
+\end_inset
+
+ (image)
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Handy Scan 3D 
 \end_layout
 
@@ -546,7 +720,14 @@ The Handy Scan 3D scanner is a portable line scanner.
  This allows the scanner to know its location relative to the object, making
  the freehand scanning possible.
  This product is marketed for reverse engineering, design, and part inspection.
- (cite) (image)
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HandyScan"
+
+\end_inset
+
+ (image)
 \end_layout
 
 \end_body
