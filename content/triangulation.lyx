@@ -1,0 +1,503 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Triangulation
+\end_layout
+
+\begin_layout Subsection
+Relating image coordinates to world coordinates
+\end_layout
+
+\begin_layout Standard
+Solving the system requires knowledge of 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+, the angle the incoming ray creates with the camera's optical axis.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Converting-camera-coordinates"
+
+\end_inset
+
+ demonstrates the geometry involved in this operation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svg/focal-length.svg
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Converting-camera-coordinates"
+
+\end_inset
+
+Converting camera coordinates to real-world coordinates.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By itself, the camera can directly measure neither 
+\begin_inset Formula $x_{C}$
+\end_inset
+
+ nor 
+\begin_inset Formula $z_{C}$
+\end_inset
+
+.
+ (If it could, this project would be rather pointless.) However, figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Converting-camera-coordinates"
+
+\end_inset
+
+ demonstrates that
+\begin_inset Formula 
+\begin{equation}
+\frac{x_{C}}{z_{C}}=\frac{x_{C}^{\star}}{f_{C}}\label{eq:x/z}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{C}$
+\end_inset
+
+ is the distance between the focal point and the camera sensor.
+ The sensor is composed of many tiny pixel sensors.
+ These sensors give the camera sensor a resolution 
+\begin_inset Formula $R_{C}$
+\end_inset
+
+, measured in 
+\begin_inset Formula $\unitfrac{px}{mm}$
+\end_inset
+
+.
+ These sensors convert the image into pixel coordinates with the following
+ relationship:
+\begin_inset Formula 
+\begin{equation}
+u_{C}^{\prime}=R_{C}x_{C}^{\star}\label{eq:u-prime}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combining 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:x/z"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:u-prime"
+
+\end_inset
+
+ and defining a scale factor 
+\begin_inset Formula $S_{C}=R_{C}f_{C}$
+\end_inset
+
+, we get
+\begin_inset Formula 
+\begin{equation}
+u_{C}^{\prime}=S_{C}\frac{x_{C}}{z_{C}}\label{eq:u-prime-complete}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Knowing the scale factor 
+\begin_inset Formula $S_{C}$
+\end_inset
+
+, we can easily calculate 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray}
+\tan\theta_{C} & = & \frac{x_{C}}{z_{C}}\\
+\tan\theta_{C} & = & \frac{u_{C}^{\prime}}{S_{C}}\label{eq:tan-theta-c}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly,
+\begin_inset Formula 
+\begin{eqnarray}
+\tan\phi_{C} & = & \frac{v_{C}^{\prime}}{S_{C}}\label{eq:tan-phi-c}\\
+\tan\theta_{P} & = & \frac{u_{P}^{\prime}}{S_{P}}\label{eq:tan-theta-p}\\
+\tan\phi_{P} & = & \frac{v_{P}^{\prime}}{S_{P}}\label{eq:tan-phi-p}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Recovering 3D information
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svg/triangulation.svg
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Triangulation geometry.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All 3D work in this section is performed using the camera's coordinate system.
+ We start by assuming a distance vector measured from the camera to the
+ projector.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{D} & = & \left(\begin{array}{c}
+D_{x}\\
+D_{y}\\
+D_{z}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{\hat{M}}$
+\end_inset
+
+ is the unit vector pointing from the camera to the measured point 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray}
+1 & = & \hat{M}_{x}^{2}+\hat{M}_{y}^{2}+\hat{M}_{z}^{2}\label{eq:m-hat-unit}\\
+\hat{M}_{z} & = & \left[\tan^{2}\theta_{C}+\tan^{2}\phi_{C}+1\right]^{-\frac{1}{2}}\\
+\mathbf{\hat{M}} & = & \left(\begin{array}{c}
+\hat{M}_{z}\tan\theta_{C}\\
+\hat{M}_{z}\tan\phi_{C}\\
+\hat{M}_{z}
+\end{array}\right)\label{eq:m-hat}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Even though the fringe appears as a contour where it illuminates a surface,
+ it may be conceptualized as a plane extending from the projector through
+ every possible point of illumination.
+ Any point on the fringe plane may be identified uniquely and parametrically
+ as a linear combination of two vectors 
+\begin_inset Formula $\mathbf{F_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{F_{2}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}\left(t_{1},t_{2}\right)=t_{1}\mathbf{F_{1}}+t_{2}\mathbf{F_{2}}\label{eq:fringe-eqn}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vertical fringes will always pass through the 
+\begin_inset Formula $y$
+\end_inset
+
+-axis, meaning 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{F_{1}} & = & \left(\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To define the other vector, we can use an angle 
+\begin_inset Formula $\psi$
+\end_inset
+
+, defined as
+\begin_inset Formula 
+\[
+\psi\equiv\pi+\theta_{P}-\beta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The physical significance of 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is that it is the angle formed in the 
+\begin_inset Formula $y=0$
+\end_inset
+
+ plane by the fringe plane's trace and the camera's optical axis 
+\begin_inset Formula $\left(x=y=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can now relate 
+\begin_inset Formula $\mathbf{F_{2}}$
+\end_inset
+
+ to the projector's image coordinates: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{F_{2}} & = & \left(\begin{array}{c}
+\cos\psi\\
+0\\
+\sin\psi
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we have three vectors which sum to 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ in some linear combination.
+ 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ are not necessarily positive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k_{0}\mathbf{\hat{M}}+k_{1}\mathbf{F_{1}}+k_{2}\mathbf{F_{2}}=\mathbf{D}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This may be solved by using the equation
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)\left(\begin{array}{c}
+k_{0}\\
+k_{1}\\
+k_{2}
+\end{array}\right) & = & \left(\begin{array}{c}
+\mathbf{D}\end{array}\right)\\
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
+k_{0}\\
+k_{1}\\
+k_{2}
+\end{array}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now that we have our constants, the point 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ is simply
+\begin_inset Formula 
+\begin{equation}
+\mathbf{M}=k_{0}\mathbf{\hat{M}}\label{eq:M-equals-k0-M-hat-c}
+\end{equation}
+
+\end_inset
+
+in the camera's coordinate space.
+\end_layout
+
+\end_body
+\end_document
