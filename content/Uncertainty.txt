@@ -1,0 +1,105 @@
+1 Uncertainty Analysis
+
+\mathbf{M}=k_{0}\mathbf{\hat{M}}
+
+
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{D}\end{array}\right)=\left(\begin{array}{c}
+k_{0}\\
+k_{1}\\
+k_{2}
+\end{array}\right)
+
+
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}=\begin{array}{ccc}
+\frac{-\cos(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi)}{\mathbf{\hat{M}}_{Z}} & 0 & \frac{\cos(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)}{\mathbf{\hat{M}}_{Z}}\\
+\sin(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi) & 1 & -\sin(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)\\
+\cos(\theta_{C})\sec(\theta_{C}+\psi) & 0 & -\sin(\theta_{C})\sec(\theta_{C}+\psi)
+\end{array}
+
+
+k_{0}=\frac{-\cos(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi)}{\mathbf{\hat{M}}_{Z}}D_{x}+\frac{\cos(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)}{\mathbf{\hat{M}}_{Z}}D_{z}
+
+
+
+\mathbf{M}_{x}=\sin(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})
+
+
+\mathbf{\delta M_{\mathrm{x}}=\sqrt{A^{2}+B^{2}+C^{2}+E^{2}}}
+
+
+\mathbf{A}=[\delta\theta_{C}(\cos(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))]
+
+
+\mathbf{B}=[\delta\psi(\sin(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{z}\sin(\theta_{C})-D_{x}\cos(\theta_{c})))]
+
+
+\mathbf{C}=[\delta D_{z}(\sin(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)]
+
+
+\mathbf{E}=[\delta D_{x}(-\sin(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)]
+
+
+
+\mathbf{\delta M_{\mathrm{y}}=\sqrt{A^{2}+B^{2}+C^{2}+E^{2}+F^{2}}}
+
+
+\mathbf{A}=[\delta\theta_{C}(\tan(\phi_{C})\sin(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))]
+
+
+\mathbf{B}=[\delta\psi(-\tan(\phi_{C})\cos(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{x}\cos(\theta_{C})-D_{x}\sin(\theta_{c})))]
+
+
+\mathbf{C}=[\delta D_{z}(\tan(\phi_{C})\cos(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)]
+
+
+\mathbf{E}=[\delta D_{x}(-\tan(\phi_{C})\cos(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)]
+
+
+\mathbf{F=\mathrm{[\delta\phi_{C}(\sec^{2}(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))]}}
+
+
+
+\mathbf{M_{\mathbf{\mathrm{z}}}}=\cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})
+
+
+\mathbf{\delta M_{\mathrm{z}}=\sqrt{A^{2}+B^{2}+C^{2}+E^{2}}}
+\mathbf{A}=[\delta\theta_{C}(\sin(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))]
+
+
+\mathbf{B}=[\delta\psi(-\cos(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{x}\cos(\theta_{C})-D_{x}\sin(\theta_{c})))]
+
+
+\mathbf{C}=[\delta D_{z}(\cos(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)]
+
+
+\mathbf{E}=[\delta D_{x}(-\cos(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)]
+
+
+\mathbf{M}_{y}=\tan(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})
+
+
+
+\psi=\pi+\theta_{p}+\beta
+
+
+\delta\psi=\sqrt{[\delta\theta_{p}^{2}+\delta\beta^{2}}
+
+
+
+\theta_{C}=\arctan\frac{u_{C}^{\prime}}{S_{C}}
+
+
+\delta\theta_{C}=\sqrt{[\delta u_{C}^{\prime}(\frac{S_{C}}{u_{C}^{\prime2}+S_{C}^{2}})]^{2}+[\delta S_{C}(\frac{u_{C}^{\prime}}{u_{C}^{\prime2}+S_{C}^{2}})]^{2}}
+
+
+
+\phi_{C}=\arctan\frac{v_{C}^{\prime}}{S_{C}}
+
+
+\delta\phi_{C}=\sqrt{[\delta v_{C}^{\prime}(\frac{S_{C}}{v_{C}^{\prime2}+S_{C}^{2}})]^{2}+[\delta S_{C}(\frac{v_{C}^{\prime}}{v_{C}^{\prime2}+S_{C}^{2}})]^{2}}
+
+
+
