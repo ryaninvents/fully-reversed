@@ -84,20 +84,6 @@ Finding
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
 
 \family roman
 \series medium
@@ -122,17 +108,12 @@ k_{2}
 \end{array}\right)\\
 \left(\begin{array}{ccc}
 \mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1} & = & \left(\begin{array}{ccc}
-\frac{-\cos(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi)}{\mathbf{\hat{M}}_{Z}} & 0 & \frac{\cos(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)}{\mathbf{\hat{M}}_{Z}}\\
-\sin(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi) & 1 & -\sin(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)\\
-\cos(\theta_{C})\sec(\theta_{C}+\psi) & 0 & -\sin(\theta_{C})\sec(\theta_{C}+\psi)
+\frac{-\cos\theta_{C}\sec(\theta_{C}+\psi)\sin\psi}{\hat{M}_{Z}} & 0 & \frac{\cos\theta_{C}\sec(\theta_{C}+\psi)\cos\psi}{\hat{M}_{Z}}\\
+\sin\theta_{C}\sec(\theta_{C}+\psi)\sin\psi & 1 & -\sin\theta_{C}\sec(\theta_{C}+\psi)\cos\psi\\
+\cos\theta_{C}\sec(\theta_{C}+\psi) & 0 & -\sin\theta_{C}\sec(\theta_{C}+\psi)
 \end{array}\right)\\
-k_{0} & = & \frac{-\cos(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi)}{\mathbf{\hat{M}}_{Z}}D_{x}+\frac{\cos(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)}{\mathbf{\hat{M}}_{Z}}D_{z}
+k_{0} & = & \frac{-\cos\theta_{C}\sec(\theta_{C}+\psi)\sin\psi}{\hat{M}_{Z}}D_{x}+\frac{\cos\theta_{C}\sec(\theta_{C}+\psi)\cos\psi}{\hat{M}_{Z}}D_{z}
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -148,34 +129,15 @@ Uncertainty in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbf{M}_{x} & = & \sin(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
-\delta\mathbf{M}_{\mathrm{x}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
-A & = & \left[\delta\theta_{C}(\cos(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]\\
-B & = & \left[\delta\psi(\sin(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{z}\sin(\theta_{C})-D_{x}\cos(\theta_{c})))\right]\\
-C & = & \left[\delta D_{z}(\sin(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)\right]\\
-E & = & \left[\delta\psi(\sin(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{z}\sin(\theta_{C})-D_{x}\cos(\theta_{c})))\right]
+M_{x} & = & \sin\theta_{C}\sec(\theta_{C}+\psi)(D_{z}\cos\psi-D_{x}\sin\psi)\\
+\sigma M_{\mathrm{x}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
+A & = & \sigma\theta_{C}\,\cos\psi\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
+B & = & \sigma\psi\,\sin\theta_{c}\,\sec^{2}\left(\theta_{C}+\psi\right)\left(D_{z}\sin\theta_{C}-D_{x}\cos\theta_{c}\right)\\
+C & = & \sigma D_{z}\,\sin\theta_{C}\,\cos\psi\,\sec\left(\theta_{C}+\psi\right)\\
+E & = & \sigma\psi\,\sin\theta_{c}\,\sec^{2}\left(\theta_{C}+\psi\right)\left(D_{z}\sin\theta_{C}-D_{x}\cos\theta_{c}\right)
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -191,35 +153,16 @@ Uncertainty in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbf{M}_{y} & = & \tan(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
-\delta\mathbf{M}_{\mathrm{y}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}+F^{2}}\\
-A & = & \left[\delta\theta_{C}(\tan(\phi_{C})\sin(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]\\
-B & = & \left[\delta\psi(-\tan(\phi_{C})\cos(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{x}\cos(\theta_{C})-D_{x}\sin(\theta_{c})))\right]\\
-C & = & \left[\delta D_{z}(\tan(\phi_{C})\cos(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)\right]\\
-E & = & \left[\delta D_{x}(-\tan(\phi_{C})\cos(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)\right]\\
-F & = & \left[\delta\phi_{C}(\sec^{2}(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]
+M_{y} & = & \tan(\phi_{C})\cos\theta_{C}\sec(\theta_{C}+\psi)(D_{z}\cos\psi-D_{x}\sin\psi)\\
+\sigma M_{\mathrm{y}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}+F^{2}}\\
+A & = & \sigma\theta_{C}\,\tan\phi_{C}\,\sin\psi\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
+B & = & \sigma\psi\,\tan\phi_{C}\,\cos\theta_{c}\,\sec^{2}\left(\theta_{C}+\psi\right)\left(D_{x}\cos\theta_{C}-D_{x}\sin\theta_{c}\right)\\
+C & = & \sigma D_{z}\,\tan\phi_{C}\,\cos\theta_{C}\,\cos\psi\,\sec\left(\theta_{C}+\psi\right)\\
+E & = & \sigma D_{x}\,\tan\phi_{C}\,\cos\theta_{C}\,\sin\psi\,\sec\left(\theta_{C}+\psi\right)\\
+F & = & \sigma\phi_{C}\,\sec^{2}\phi_{C}\,\cos\theta_{C}\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -235,34 +178,15 @@ Uncetainty in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathbf{M_{\mathbf{\mathrm{z}}}} & = & \cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
-\delta\mathbf{M}_{\mathrm{z}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
-A & = & \left[\delta\theta_{C}(\sin(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]\\
-B & = & \left[\delta\psi(-\cos(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{x}\cos(\theta_{C})-D_{x}\sin(\theta_{c})))\right]\\
-C & = & \left[\delta D_{z}(\cos(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)\right]\\
-E & = & \left[\delta D_{x}(-\cos(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)\right]
+M_{\mathbf{\mathrm{z}}} & = & \cos\theta_{C}\sec(\theta_{C}+\psi)(D_{z}\cos\psi-D_{x}\sin\psi)\\
+\sigma M_{\mathrm{z}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
+A & = & \sigma\theta_{C}\,\sin\psi\,\sec(\theta_{C}+\psi)\,(D_{z}\cos\psi-D_{x}\sin\psi)\\
+B & = & \sigma\psi\,\cos\theta_{C}\,\sec^{2}(\theta_{C}+\psi)\,(D_{x}\cos\theta_{C}-D_{x}\sin\theta_{C})\\
+C & = & \sigma D_{z}\,\cos\theta_{C}\,\cos\psi\,\sec(\theta_{C}+\psi)\\
+E & = & \sigma D_{x}\,\cos\theta_{C}\,\sin\psi\,\sec(\theta_{C}+\psi)
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -278,30 +202,11 @@ Uncertainty in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 \psi & = & \pi+\theta_{p}+\beta\\
-\delta\psi & = & \sqrt{[\delta\theta_{p}^{2}+\delta\beta^{2}}
+\sigma\psi & = & \sqrt{\sigma\theta_{p}^{2}+\sigma\beta^{2}}
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -317,30 +222,11 @@ Uncertainty in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 \theta_{C} & = & \arctan\left(\frac{u_{C}^{\prime}R_{C}}{f_{c}}\right)\\
-\delta\theta_{C} & = & \sqrt{\left[\delta u_{C}^{\prime}\left(\frac{R_{C}f_{C}}{u_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\delta R_{C}\left(\frac{u_{C}^{\prime}f_{C}}{u_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\delta f_{c}\left(-\frac{u_{C}^{\prime}R_{C}}{u_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}}
+\sigma\theta_{C} & = & \sqrt{\left[\sigma u_{C}^{\prime}\left(\frac{R_{C}f_{C}}{u_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\sigma R_{C}\left(\frac{u_{C}^{\prime}f_{C}}{u_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\sigma f_{c}\left(-\frac{u_{C}^{\prime}R_{C}}{u_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}}
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -356,30 +242,11 @@ Uncertainty in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
-
-\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
 \phi_{C} & = & \arctan\left(\frac{v_{C}^{\prime}R_{C}}{f_{c}}\right)\\
-\delta\phi_{C} & = & \sqrt{\left[\delta v_{C}^{\prime}\left(\frac{R_{C}f_{C}}{v_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\delta R_{C}\left(\frac{v_{C}^{\prime}f_{C}}{v_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\delta f_{c}\left(-\frac{v_{C}^{\prime}R_{C}}{v_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}}
+\sigma\phi_{C} & = & \sqrt{\left[\sigma v_{C}^{\prime}\left(\frac{R_{C}f_{C}}{v_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\sigma R_{C}\left(\frac{v_{C}^{\prime}f_{C}}{v_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}+\left[\sigma f_{c}\left(-\frac{v_{C}^{\prime}R_{C}}{v_{C}^{\prime2}R_{C}^{2}+f_{C}^{2}}\right)\right]^{2}}
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
