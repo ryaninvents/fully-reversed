@@ -131,7 +131,7 @@ Uncertainty in
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-M_{x} & = & \sin\theta_{C}\sec(\theta_{C}+\psi)(D_{z}\cos\psi-D_{x}\sin\psi)\\
+M_{x} & = & \sin\theta_{C}\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
 \sigma M_{\mathrm{x}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
 A & = & \sigma\theta_{C}\,\cos\psi\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
 B & = & \sigma\psi\,\sin\theta_{c}\,\sec^{2}\left(\theta_{C}+\psi\right)\left(D_{z}\sin\theta_{C}-D_{x}\cos\theta_{c}\right)\\
@@ -155,7 +155,7 @@ Uncertainty in
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-M_{y} & = & \tan(\phi_{C})\cos\theta_{C}\sec(\theta_{C}+\psi)(D_{z}\cos\psi-D_{x}\sin\psi)\\
+M_{y} & = & \tan\phi_{C}\,\cos\theta_{C}\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
 \sigma M_{\mathrm{y}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}+F^{2}}\\
 A & = & \sigma\theta_{C}\,\tan\phi_{C}\,\sin\psi\,\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
 B & = & \sigma\psi\,\tan\phi_{C}\,\cos\theta_{c}\,\sec^{2}\left(\theta_{C}+\psi\right)\left(D_{x}\cos\theta_{C}-D_{x}\sin\theta_{c}\right)\\
@@ -180,12 +180,12 @@ Uncetainty in
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-M_{\mathbf{\mathrm{z}}} & = & \cos\theta_{C}\sec(\theta_{C}+\psi)(D_{z}\cos\psi-D_{x}\sin\psi)\\
+M_{\mathbf{\mathrm{z}}} & = & \cos\theta_{C}\sec\left(\theta_{C}+\psi\right)\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
 \sigma M_{\mathrm{z}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
-A & = & \sigma\theta_{C}\,\sin\psi\,\sec(\theta_{C}+\psi)\,(D_{z}\cos\psi-D_{x}\sin\psi)\\
-B & = & \sigma\psi\,\cos\theta_{C}\,\sec^{2}(\theta_{C}+\psi)\,(D_{x}\cos\theta_{C}-D_{x}\sin\theta_{C})\\
-C & = & \sigma D_{z}\,\cos\theta_{C}\,\cos\psi\,\sec(\theta_{C}+\psi)\\
-E & = & \sigma D_{x}\,\cos\theta_{C}\,\sin\psi\,\sec(\theta_{C}+\psi)
+A & = & \sigma\theta_{C}\,\sin\psi\,\sec\left(\theta_{C}+\psi\right)\,\left(D_{z}\cos\psi-D_{x}\sin\psi\right)\\
+B & = & \sigma\psi\,\cos\theta_{C}\,\sec^{2}\left(\theta_{C}+\psi\right)\,\left(D_{x}\cos\theta_{C}-D_{x}\sin\theta_{C}\right)\\
+C & = & \sigma D_{z}\,\cos\theta_{C}\,\cos\psi\,\sec\left(\theta_{C}+\psi\right)\\
+E & = & \sigma D_{x}\,\cos\theta_{C}\,\sin\psi\,\sec\left(\theta_{C}+\psi\right)
 \end{eqnarray*}
 
 \end_inset

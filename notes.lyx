@@ -52,7 +52,7 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 2
+\papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -78,6 +78,13 @@ filename "content/nomenclature.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "content/triangulation.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "content/Uncertainty.lyx"
 
 \end_inset
 

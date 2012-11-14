@@ -93,7 +93,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename svg/focal-length.svg
-	width 20col%
+	width 10col%
 
 \end_inset
 
@@ -261,7 +261,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename svg/triangulation.svg
-	width 75col%
+	width 50col%
 
 \end_inset
 
@@ -419,9 +419,9 @@ We can now relate
 \begin_inset Formula 
 \begin{eqnarray*}
 \mathbf{F_{2}} & = & \left(\begin{array}{c}
-\cos\psi\\
+\sin\psi\\
 0\\
-\sin\psi
+\cos\psi
 \end{array}\right)
 \end{eqnarray*}
 
