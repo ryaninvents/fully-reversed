@@ -162,6 +162,13 @@ filename "Structured light projection.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
+filename "Simulation.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
 filename "Structure from motion.lyx"
 
 \end_inset
