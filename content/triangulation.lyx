@@ -261,7 +261,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename svg/triangulation.svg
-	width 50col%
+	width 30col%
 
 \end_inset
 
