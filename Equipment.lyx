@@ -380,7 +380,7 @@ The projector controller is a D4100 Explorer FPGA
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "FPGA"
-description "field-programmable date array"
+description "field-programmable gate array"
 
 \end_inset
 

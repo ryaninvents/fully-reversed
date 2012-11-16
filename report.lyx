@@ -152,16 +152,6 @@ filename "Background.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "Structured light projection.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
 filename "Simulation.lyx"
 
 \end_inset
@@ -178,13 +168,6 @@ filename "Structure from motion.lyx"
 
 \begin_layout Standard
 \start_of_appendix
-\begin_inset CommandInset include
-LatexCommand include
-filename "Uncertainty calculation results.lyx"
-
-\end_inset
-
-
 \begin_inset CommandInset include
 LatexCommand include
 filename "Equipment.lyx"
