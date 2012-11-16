@@ -147,6 +147,13 @@ filename "Background.lyx"
 \end_inset
 
 
+\begin_inset CommandInset include
+LatexCommand include
+filename "triangulation.lyx"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
