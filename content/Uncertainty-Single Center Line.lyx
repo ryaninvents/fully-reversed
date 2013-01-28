@@ -1,0 +1,314 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Uncertainty Analysis - Single Central Line
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\mathbf{M}_{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M}_{x} & = & \sin(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
+\delta\mathbf{M}_{\mathrm{x}} & = & \sqrt{A_{x}^{2}+B_{x}^{2}+C_{x}^{2}+E_{x}^{2}}\\
+A_{x} & = & \left[0.296\delta\theta_{C}\right]\\
+B_{x} & = & \left[-.034\delta\psi\right]\\
+C_{x} & = & \left[-.010\delta D_{z}\right]\\
+E_{x} & = & \left[.031\delta\psi\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\mathbf{M}_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M}_{y} & = & \tan(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
+\delta\mathbf{M}_{\mathrm{y}} & = & \sqrt{A_{y}^{2}+B_{y}^{2}+C_{y}^{2}+E_{y}^{2}+F_{y}^{2}}\\
+A_{y} & = & \left[.447\delta\theta_{C}\right]\\
+B_{y} & = & \left[1.72\delta\psi\right]\\
+C_{y} & = & \left[0.477\delta D_{z}\right]\\
+E_{y} & = & \left[-1.559\delta D_{x}\right]\\
+F_{y} & = & \left[-1.227\delta\phi_{C}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncetainty in 
+\begin_inset Formula $\mathbf{M}_{z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M_{\mathbf{\mathrm{z}}}} & = & \cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
+\delta\mathbf{M}_{\mathrm{z}} & = & \sqrt{A_{z}^{2}+B_{z}^{2}+C_{z}^{2}+E_{z}^{2}}\\
+A_{z} & = & \left[0.967\delta\theta_{C}\right]\\
+B_{z} & = & \left[3.730\delta\psi\right]\\
+C_{z} & = & \left[1.031\delta D_{z}\right]\\
+E_{z} & = & \left[-3.372\delta D_{x}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi & = & \pi+\theta_{p}+\beta\\
+\delta\psi & = & \sqrt{[\delta\theta_{p}^{2}+\delta\beta^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\theta_{C} & = & \arctan\left(\frac{u_{C}^{\prime}R_{C}}{f_{c}}\right)\\
+\delta\theta_{C} & = & \sqrt{\left[\delta u_{C}^{\prime}\left(0.001\right)\right]^{2}+\left[\delta R_{C}\left(1249.893\right)+\right]^{2}+\left[\delta f_{c}\left(-1.156\right)\right]^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\phi_{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\phi_{C} & = & \arctan\left(\frac{v_{C}^{\prime}R_{C}}{f_{c}}\right)\\
+\delta\phi_{C} & = & \sqrt{\left[\delta v_{C}^{\prime}\left(0.001\right)\right]^{2}+\left[\delta R_{C}\left(51486.678\right)\right]^{2}+\left[\delta f_{C}\left(-47.625\right)\right]^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
