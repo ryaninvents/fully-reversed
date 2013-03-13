@@ -1,0 +1,390 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Uncertainty Analysis
+\end_layout
+
+\begin_layout Subsection
+Finding 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M} & = & k_{0}\mathbf{\hat{M}}\\
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
+k_{0}\\
+k_{1}\\
+k_{2}
+\end{array}\right)\\
+\left(\begin{array}{ccc}
+\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1} & = & \left(\begin{array}{ccc}
+\frac{-\cos(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi)}{\mathbf{\hat{M}}_{Z}} & 0 & \frac{\cos(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)}{\mathbf{\hat{M}}_{Z}}\\
+\sin(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi) & 1 & -\sin(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)\\
+\cos(\theta_{C})\sec(\theta_{C}+\psi) & 0 & -\sin(\theta_{C})\sec(\theta_{C}+\psi)
+\end{array}\right)\\
+k_{0} & = & \frac{-\cos(\theta_{C})\sec(\theta_{C}+\psi)\sin(\psi)}{\mathbf{\hat{M}}_{Z}}D_{x}+\frac{\cos(\theta_{C})\sec(\theta_{C}+\psi)\cos(\psi)}{\mathbf{\hat{M}}_{Z}}D_{z}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\mathbf{M}_{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M}_{x} & = & \sin(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
+\delta\mathbf{M}_{\mathrm{x}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
+A & = & \left[\delta\theta_{C}(\cos(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]\\
+B & = & \left[\delta\psi(\sin(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{z}\sin(\theta_{C})-D_{x}\cos(\theta_{c})))\right]\\
+C & = & \left[\delta D_{z}(\sin(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)\right]\\
+E & = & \left[\delta\psi(\sin(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{z}\sin(\theta_{C})-D_{x}\cos(\theta_{c})))\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\mathbf{M}_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M}_{y} & = & \tan(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
+\delta\mathbf{M}_{\mathrm{y}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}+F^{2}}\\
+A & = & \left[\delta\theta_{C}(\tan(\phi_{C})\sin(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]\\
+B & = & \left[\delta\psi(-\tan(\phi_{C})\cos(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{x}\cos(\theta_{C})-D_{x}\sin(\theta_{c})))\right]\\
+C & = & \left[\delta D_{z}(\tan(\phi_{C})\cos(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)\right]\\
+E & = & \left[\delta D_{x}(-\tan(\phi_{C})\cos(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)\right]\\
+F & = & \left[\delta\phi_{C}(\sec^{2}(\phi_{C})\cos(\theta_{C})\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncetainty in 
+\begin_inset Formula $\mathbf{M}_{z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{M_{\mathbf{\mathrm{z}}}} & = & \cos(\theta_{C})\sec(\theta_{C}+\psi)(\cos(\psi)D_{z}-\sin(\psi)D_{x})\\
+\delta\mathbf{M}_{\mathrm{z}} & = & \sqrt{A^{2}+B^{2}+C^{2}+E^{2}}\\
+A & = & \left[\delta\theta_{C}(\sin(\psi)\sec(\theta_{C}+\psi)(D_{z}\cos(\psi)-D_{x}\sin(\psi)))\right]\\
+B & = & \left[\delta\psi(-\cos(\theta_{c})\sec^{2}(\theta_{C}+\psi)(D_{x}\cos(\theta_{C})-D_{x}\sin(\theta_{c})))\right]\\
+C & = & \left[\delta D_{z}(\cos(\theta_{C})\cos(\psi)\sec(\theta_{C}+\psi)\right]\\
+E & = & \left[\delta D_{x}(-\cos(\theta_{C})\sin(\psi)\sec(\theta_{C}+\psi)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi & = & \pi+\theta_{p}+\beta\\
+\delta\psi & = & \sqrt{[\delta\theta_{p}^{2}+\delta\beta^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\theta_{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\theta_{C} & = & \arctan\frac{u_{C}^{\prime}}{S_{C}}\\
+\delta\theta_{C} & = & \sqrt{[\delta u_{C}^{\prime}(\frac{S_{C}}{u_{C}^{\prime2}+S_{C}^{2}})]^{2}+[\delta S_{C}(\frac{u_{C}^{\prime}}{u_{C}^{\prime2}+S_{C}^{2}})]^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Uncertainty in 
+\begin_inset Formula $\phi_{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\phi_{C} & = & \arctan\frac{v_{C}^{\prime}}{S_{C}}\\
+\delta\phi_{C} & = & \sqrt{[\delta v_{C}^{\prime}(\frac{S_{C}}{v_{C}^{\prime2}+S_{C}^{2}})]^{2}+[\delta S_{C}(\frac{v_{C}^{\prime}}{v_{C}^{\prime2}+S_{C}^{2}})]^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

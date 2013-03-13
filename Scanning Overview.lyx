@@ -1,0 +1,204 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Overview of Scanning Process
+\end_layout
+
+\begin_layout Standard
+The process of scanning a real world object and using it to make a new object
+ can be broken into 4 distinct steps.
+ These steps are digitization, conversion to mesh, manipulating in CAD software,
+ and manufacturing.
+ Each of these steps will be explained in further detail below.
+\end_layout
+
+\begin_layout Subsection
+Digitization
+\end_layout
+
+\begin_layout Standard
+Digitization refers to the process of converting the dimensions of the 3-dimensi
+onal object into data to be used by computer software.
+ This process can be broken into three distinct sections; setup, data capture,
+ and repositioning.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Setup
+\end_layout
+
+\begin_layout Standard
+The setup process for scanning is the preparation of the equipment.
+ For this scanning process the necessary equipment are an active projector
+ and two or more digital cameras.
+ The quality of these pieces of equipment are determined by the quality
+ of the results required.
+ The cameras and projector must be placed in a triangulation geometry.
+ Optimal positioning will improve results and is determined by size of the
+ object and the desired accuracy and precision.
+ 
+\end_layout
+
+\begin_layout Standard
+Once the equipment is positioned it is necessary to calibrate it.
+ Calibration is used to determine both the intrinsic and extrinsic parameters
+ of the cameras and projector.
+ This means that the calibration serves to both remove the distortions from
+ the lenses of the devices, but also to establish the relative locations
+ and orientations of the different pieces of equipment relative to each
+ other.
+ First the cameras are calibrated simultaneously, and then the projector
+ is calibrated.
+ Detailed descriptions of the calibration procedure can be found ________
+\end_layout
+
+\begin_layout Subsubsection
+Data Capture
+\end_layout
+
+\begin_layout Standard
+Data capture can be broken into three distinct steps; data aquisition, data
+ processing, and point cloud generation.
+ The data aquisition is achieved by taking images with the two cameras.
+ In the case of this method 20 frames of data are needed for each data capture
+ view.
+ Once the data is aquired the images are correct for distortions using the
+ calibration data and are then processed using the triangulation algorythm.
+ Once each pixel is processed a point cloud is constructed using the x,
+ y, and z information obtained from the calibration and processing.
+ Each pixel in the picture equates to one point in the point cloud.
+ Background points can be filtered out either before or after the processing
+ into point cloud form.
+\end_layout
+
+\begin_layout Subsubsection
+Repositioning
+\end_layout
+
+\begin_layout Standard
+After each data capture view is complete it is necessary to reposition the
+ target object to capture another view.
+ Photogrammetry tracking using ORB matching algorythms is employed to automatica
+lly rotate the point cloud to match the object rotation.
+ In this way the next point cloud can be added to the existing in proper
+ alignment.
+ The process of data capture and repositioning is repeated until the point
+ cloud is completed with no holes from shadowing or lack of views.
+\end_layout
+
+\begin_layout Subsection
+Meshing
+\end_layout
+
+\begin_layout Standard
+The point cloud obtained during digitization needs to be converted into
+ a mesh in order to be used by other software and for manufacturing.
+ 
+\end_layout
+
+\begin_layout Subsection
+CAD software
+\end_layout
+
+\begin_layout Standard
+Once the STL mesh is created it is possible to create a CAD model from it.
+ Commercially available CAD packages such as SolidWorks have the capability
+ of creating a CAD file from an STL automatically.(Cite) Depending on the
+ CAD packages algorithm and the complexity of the part there will be a varying
+ level of 
+\begin_inset Quotes eld
+\end_inset
+
+intelligence
+\begin_inset Quotes erd
+\end_inset
+
+ to the part.
+ This means that the CAD software may have recognized editable features
+ such as holes or extrudes in the model.
+ Once a CAD file is created, the CAD software can be used to heal the geometry
+ of the part in any regions that lacked data, such as the insides of holes.
+ Additionally changes can be made to specific aspects of the part, and new
+ features can be added.
+ Finally analysis software such as FEA can be used with the CAD model.
+\end_layout
+
+\begin_layout Subsection
+Manufacture
+\end_layout
+
+\begin_layout Standard
+Once all changes have been made to the 3D model or mesh it can be used to
+ manufacture new parts.
+ The two simplest ways of manufacturing parts from a 3D scan are using rapid
+ prototyping machines, or CNC machining.
+ CNC machining requires additional creating of tool paths in CAM software
+ before the part to be manufactured.
+ Rapid Prototyping machines on the other hand are capable of creating parts
+ from a mesh file, most commonly an STL(cite).
+ 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,102 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+OpenCV
+\end_layout
+
+\begin_layout Standard
+OpenCV is an open source computer vision library created by Intel in 1999
+ for the purpose of advancing the computer vision field(cite).
+ OpenCV has a BSD software license, which is a minimally restricting license.
+ OpenCV source code is free to use for academic and commercial purposes
+ so long as the proper acknowledgments and copyrights are used.
+ The OpenCV library contains a vast amount of source code for various computer
+ vision application, and is supported by a large open source community.
+\end_layout
+
+\begin_layout Standard
+OpenCV code was used in this project as part of the scanning program.
+ The main use of OpenCV is in the calibration software.
+ The camera calibration code for locating the corners on a checkerboard
+ pattern was created using OpenCV source code.
+ The other optional calibration patterns supported by the software also
+ use OpenCV code.
+ Additionally the solvePNP code used to match features for stereo calibration
+ also utilizes OpenCV.
+ The use of existing OpenCV source code to perform these complicated and
+ vital tasks allowed for time to be focused on other areas of the development.
+ This of course freed up vital time and allowed for other areas of the software
+ to be more robust.
+ The OpenCV stereo calibration code was also modified and re-purposed for
+ the projector calibration.
+ In this way the OpenCV library is responsible for most of the calibration
+ code.
+ Additionally, OpenCV code is used for the photogrammetry tracking used
+ to track the orientation of the object being measured.
+ In this way the OpenCV libraries form a crucial backbone for our software,
+ working in support of our triangulation algorithm and binary projection
+ code.
+\end_layout
+
+\end_body
+\end_document

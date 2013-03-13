@@ -1,0 +1,162 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Calibration
+\end_layout
+
+\begin_layout Standard
+Calibration is a necessary step for initial setup of any piece of measuring
+ equpiment.
+ In the case of our scanner, it is necessary to calibrate both the cameras
+ and the projector.
+ Without calibration non of the necessary parameters for triangulation are
+ known, and thus the algorithm cannot be run.
+ Calibration must be performed any time any changes are made to the positions
+ or focal properties of the cameras and projector.
+ If the cameras and projector are in a fixed position relative to each other,
+ but are moved relative to some other reference, then calibration does not
+ need to be performed.
+\end_layout
+
+\begin_layout Subsection
+Camera Calibration
+\end_layout
+
+\begin_layout Subsubsection
+Calibration Process
+\end_layout
+
+\begin_layout Standard
+Camera calibration consists of determining the intrinsic and extrinsic propertie
+s of the cameras.
+ The intrinsic properties of the camera are the focal length and lens distortion
+s.
+ The focal length is a crucial parameter to triangulation, so even if it
+ is a known value it still must be calculated during calibration in order
+ to ensure the accuracy of the given value.
+ Correcting for lens distortions is crucial for having an accurate image
+ from which to triangulate, and doing so removes distortions from the resulting
+ mesh, vastly improving results.
+ The extrinsic parameters are the location and orientition of the cameras.
+ For simplicity the coordinate system is always defined such that the theoretica
+l pinhole of one of the cameras is at the origin, with the optical axis
+ of that camera aligned with the z-axis of the system.
+ Extrinsic calibration of the cameras allows for stereovision, which adds
+ to the accuracy of the measurments being taken.
+\end_layout
+
+\begin_layout Standard
+Both intrinsic and extrinsic calibration are carried out simultaneously.
+ To do so it is necessary to have a calibration board, which is a flat board
+ or panel with a calibration pattern on it.
+ The calibration pattern we utilize is a simple checkerboard pattern with
+ a known square size.
+ This square size is input into the software as the only parameter for calibrati
+on.
+ Then pictures of the pattern are taken at several different orientations.
+ It is important to use many orientations, and to fill every portion of
+ the image with the pattern at least once if possible.
+ These calibration images are then batched processed by the camera calibration
+ algorithm to generate the camera calibration parameters.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration Algorithms 
+\end_layout
+
+\begin_layout Subsection
+Projector Calibration
+\end_layout
+
+\begin_layout Subsubsection
+Calibration Process
+\end_layout
+
+\begin_layout Standard
+After the camera calibration is complete, the projector calibration can
+ be carried out.
+ Just like with camera calibration, projector calibration consists of determinin
+g both intrinsic and extrinsic parameters.
+ The intrinsic parameters are once again focal length and distortion, while
+ the extrinsic parameters are the position and orientation of the projector
+ relative to the coordinate system established during camera calibration.
+\end_layout
+
+\begin_layout Standard
+In order to perform projector calibration the calibration board needs to
+ be in a fixed position where it can be seen by both cameras.
+ Then a series of binary patterns are projected onto the calibration board
+ with the stereo camera system taking an image of each pattern.
+ The patterns consist of first verticle stripes and then horizontal stripes.
+ These images are then batch processesed by the projector calibration algorithm
+ in order to generate the projector calibration parameters.
+ These parameters are used in conjunction with the camera calibration parameters
+ when processing any images taken with the sytem into meshes.
+\end_layout
+
+\begin_layout Subsubsection
+Calibration Algorithms
+\end_layout
+
+\end_body
+\end_document
