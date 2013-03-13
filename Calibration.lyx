@@ -60,29 +60,30 @@
 
 \begin_body
 
-\begin_layout Section
+\begin_layout Chapter
 Calibration
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Calibration"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Calibration is a necessary step for initial setup of any piece of measuring
- equpiment.
- In the case of our scanner, it is necessary to calibrate both the cameras
- and the projector.
- Without calibration non of the necessary parameters for triangulation are
- known, and thus the algorithm cannot be run.
- Calibration must be performed any time any changes are made to the positions
- or focal properties of the cameras and projector.
- If the cameras and projector are in a fixed position relative to each other,
- but are moved relative to some other reference, then calibration does not
- need to be performed.
+The techniques outlined in the previous sections rely on calibration for
+ accurate reconstruction of a single view.
+ Calibration allows the system to measure both intrinsic parameters (such
+ as focal length) and extrinsic parameters (such as relative position and
+ orientation) of the cameras and projector.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Camera Calibration
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calibration Process
 \end_layout
 
@@ -91,17 +92,17 @@ Camera calibration consists of determining the intrinsic and extrinsic propertie
 s of the cameras.
  The intrinsic properties of the camera are the focal length and lens distortion
 s.
- The focal length is a crucial parameter to triangulation, so even if it
- is a known value it still must be calculated during calibration in order
- to ensure the accuracy of the given value.
- Correcting for lens distortions is crucial for having an accurate image
- from which to triangulate, and doing so removes distortions from the resulting
- mesh, vastly improving results.
+ The focal length is a very important parameter to triangulation, so even
+ if the manufacturer gives this value it still must be calculated during
+ calibration in order to ensure the accuracy of the given value.
+ Correcting for lens distortions is critical for obtaining accurate input,
+ and doing so removes distortions from the resulting mesh, vastly improving
+ results.
  The extrinsic parameters are the location and orientition of the cameras.
  For simplicity the coordinate system is always defined such that the theoretica
 l pinhole of one of the cameras is at the origin, with the optical axis
  of that camera aligned with the z-axis of the system.
- Extrinsic calibration of the cameras allows for stereovision, which adds
+ Extrinsic calibration of the cameras allows for stereo vision, which adds
  to the accuracy of the measurments being taken.
 \end_layout
 
@@ -120,15 +121,15 @@ on.
  algorithm to generate the camera calibration parameters.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calibration Algorithms 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Projector Calibration
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calibration Process
 \end_layout
 
@@ -147,14 +148,14 @@ In order to perform projector calibration the calibration board needs to
  be in a fixed position where it can be seen by both cameras.
  Then a series of binary patterns are projected onto the calibration board
  with the stereo camera system taking an image of each pattern.
- The patterns consist of first verticle stripes and then horizontal stripes.
- These images are then batch processesed by the projector calibration algorithm
+ The patterns consist of first vertical stripes and then horizontal stripes.
+ These images are then batch processed by the projector calibration algorithm
  in order to generate the projector calibration parameters.
  These parameters are used in conjunction with the camera calibration parameters
  when processing any images taken with the sytem into meshes.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Calibration Algorithms
 \end_layout
 

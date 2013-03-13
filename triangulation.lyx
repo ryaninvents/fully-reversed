@@ -61,13 +61,27 @@
 \begin_body
 
 \begin_layout Chapter
+Triangulation
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Triangulation"
 
 \end_inset
 
-Triangulation
+
+\end_layout
+
+\begin_layout Standard
+Once an encoded image has been captured, this encoding must be translated
+ from 
+\begin_inset Formula $\left(u_{c},\, v_{c},\, u_{p}\right)$
+\end_inset
+
+ to 
+\begin_inset Formula $\left(x,\, y,\, z\right)$
+\end_inset
+
+ coordinates.
 \end_layout
 
 \begin_layout Section
@@ -526,6 +540,100 @@ in the camera's coordinate space.
 
 \begin_layout Section
 Converting to surfels
+\end_layout
+
+\begin_layout Standard
+Applying the above techniques to an input image results in a two-dimensional
+ sparse matrix of three-dimensional points.
+ This group of points may be immediately exported as a point cloud for quick
+ verification and visualization of results.
+ However, to be most useful in a CAD package, these points must be merged
+ into a mesh.
+ This merging is best done in the scanning software, as the input image
+ implicitly describes relationships between adjacent points.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Scan Studio
+\emph default
+ uses surfels
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+surfels
+\end_layout
+
+\end_inset
+
+ to represent the surface.
+ A surfel, short for 
+\emph on
+surf
+\emph default
+ace 
+\emph on
+el
+\emph default
+ement, represents a small patch of the object's surface in much the same
+ way that a pixel represents a small patch of a computer screen.
+ A surfel stores location, normal, color, and size.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svg/surfel.svg
+	width 25col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A surfel, with location 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+, normal 
+\begin_inset Formula $\mathbf{\hat{n}}$
+\end_inset
+
+, color 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+, and radius 
+\begin_inset Formula $r$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
