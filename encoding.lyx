@@ -77,7 +77,7 @@ name "chap:Encoding"
 Scan Studio
 \emph default
  combines two methods to obtain high-quality results.
- First, the scanner collects high-order data via 
+ First, the scanner collects low-frequency data via 
 \begin_inset Index idx
 status collapsed
 
@@ -109,8 +109,8 @@ binary encoding!reflected
 \end_inset
 
 reflected binary.
- Then, the system projects and decodes sinusoidal fringes to collect low-order
- data.
+ Then, the system projects and decodes sinusoidal fringes to collect high-freque
+ncy data.
  This gives the system subpixel accuracy with inexpensive equipment.
 \end_layout
 
@@ -194,6 +194,102 @@ binary encoding!ordinary
  A positive difference indicates a binary zero; a negative difference indicates
  a binary one.
  These bits are summed for all frames to recover the encoded frame.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/binary-progression.png
+	width 33text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/gray-code-progression.png
+	width 33text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Progression of (a) a binary sequence and (b) a reflected-binary sequence,
+ both of width 640.
+ Each row represents a projected frame; time advances as you move down the
+ figure.
+ Notice that in the ordinary binary sequence, a pixel on a bit boundary
+ in a given frame will change between every subsequent frame.
+ The reflected binary sequence does not have this property.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -206,33 +302,13 @@ binary encoding!ordinary!issues with
 
 \end_inset
 
-A problem of binary encoding is that pixels on the edge of high-order bits
- are susceptible to noise.
+A problem of binary encoding is that pixels on the edge of higher bits are
+ susceptible to noise.
  This noise can cause the decoded pixel index to vary far from its actual
  value.
-\end_layout
-
-\begin_layout Standard
-The use of reflected binary solves this issue.
- A pixel on the edge of a high-order bit, if resolved incorrectly, will
- only differ from its ideal value by one.
- This prevents catastrophic failure during decoding.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-binary encoding!issues with
-\end_layout
-
-\end_inset
-
-Another issue with binary encoding is that the lowest bits are often unresolvabl
-e.
- If the projector's spatial resolution at working distance is higher than
- that of the camera, then the camera will register either 
+ In addition, projecting the lowest bit results in a pattern of alternating
+ black-and-white stripes 1 pixel wide.
+ This can cause 
 \begin_inset ERT
 status open
 
@@ -245,7 +321,53 @@ Moir
 
 \end_inset
 
- patterns or flat gray.
+ issues if the camera and projector are mismatched.
+\end_layout
+
+\begin_layout Standard
+The use of reflected binary solves these issues.
+ A pixel on the edge of a wider binary band, if resolved incorrectly, will
+ only differ from its ideal value by one.
+ This prevents catastrophic failure during decoding.
+ In addition, the lowest bit of the pattern is a series of stripes 2 pixels
+ wide, reducing the effects of 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Moir
+\backslash
+'e
+\end_layout
+
+\end_inset
+
+!in binary encoding
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Moir
+\backslash
+'e
+\end_layout
+
+\end_inset
+
+.
+ These effects may still be present, though, requiring the application of
+ another technique for resolution of finer details.
 \end_layout
 
 \begin_layout Section
