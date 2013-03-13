@@ -61,6 +61,12 @@
 \begin_body
 
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Triangulation"
+
+\end_inset
+
 Triangulation
 \end_layout
 

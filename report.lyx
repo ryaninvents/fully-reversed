@@ -13,9 +13,9 @@
 \inputencoding auto
 \fontencoding 
 \font_roman cmr
-\font_sans default
+\font_sans helvet
 \font_typewriter lmtt
-\font_default_family rmdefault
+\font_default_family sfdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -163,6 +163,13 @@ filename "triangulation.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "Simulation.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Workflow.lyx"
 
 \end_inset
 
