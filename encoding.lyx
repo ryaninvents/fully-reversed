@@ -1,0 +1,310 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Encoding
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Scan Studio
+\emph default
+ combines two methods to obtain high-quality results.
+ First, the scanner collects high-order data via 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Gray code|
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+see{binary}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Gray code, also known as 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+binary encoding!reflected
+\end_layout
+
+\end_inset
+
+reflected binary.
+ Then, the system projects and decodes sinusoidal fringes to collect low-order
+ data.
+ This gives the system subpixel accuracy with inexpensive equipment.
+\end_layout
+
+\begin_layout Standard
+The software uses a method called 
+\emph on
+direct coding
+\emph default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+direct coding
+\end_layout
+
+\end_inset
+
+, in which every pixel of a camera image is encoded with the coordinates
+ of the projector pixel that originated that ray of light.
+ This is a very flexible approach that can be applied to any setup geometry.
+ The patterns are 
+\emph on
+temporally multiplexed
+\emph default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+multiplexing, temporal
+\end_layout
+
+\end_inset
+
+, meaning that a single frame is not enough for a measurement; a series
+ of frames is used to compute the result.
+\end_layout
+
+\begin_layout Section
+Reflected binary encoding
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+multiplexing, temporal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+|seealso{binary, phase shifting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The easiest method of temporal multiplexing to understand is binary
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+binary encoding!ordinary
+\end_layout
+
+\end_inset
+
+ encoding.
+ First, each projector-pixel index is broken down into the ones and zeros
+ that represent it in software.
+ Next, each bit of the resulting number is projected twice, once as a positive
+ and again as a negative.
+ Finally, for each bit, the two frames are subtracted.
+ A positive difference indicates a binary zero; a negative difference indicates
+ a binary one.
+ These bits are summed for all frames to recover the encoded frame.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+binary encoding!ordinary!issues with
+\end_layout
+
+\end_inset
+
+A problem of binary encoding is that pixels on the edge of high-order bits
+ are susceptible to noise.
+ This noise can cause the decoded pixel index to vary far from its actual
+ value.
+\end_layout
+
+\begin_layout Standard
+The use of reflected binary solves this issue.
+ A pixel on the edge of a high-order bit, if resolved incorrectly, will
+ only differ from its ideal value by one.
+ This prevents catastrophic failure during decoding.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+binary encoding!issues with
+\end_layout
+
+\end_inset
+
+Another issue with binary encoding is that the lowest bits are often unresolvabl
+e.
+ If the projector's spatial resolution at working distance is higher than
+ that of the camera, then the camera will register either 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Moir
+\backslash
+'e
+\end_layout
+
+\end_inset
+
+ patterns or flat gray.
+\end_layout
+
+\begin_layout Section
+Phase-shifted fringes
+\end_layout
+
+\begin_layout Standard
+Another method of encoding a pixel's value is through 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+phase shifting
+\end_layout
+
+\end_inset
+
+phase shifting.
+ This projects a pattern whose intensity varies sinusoidally from left to
+ right.
+ This pattern is projected multiple times, shifting to the right each time.
+\end_layout
+
+\begin_layout Standard
+Decoding this requires a least-squares approach.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+phase shifting!issues with
+\end_layout
+
+\end_inset
+
+One issue with phase-shifting is that it is susceptible to noise.
+ Adding more shift steps can reduce the impact of noise but increases the
+ number of patterns required.
+ In addition, phase shifting requires phase unwrapping.
+\end_layout
+
+\begin_layout Section
+Hybrid approach
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+multiplexing, temporal!hybrid approach
+\end_layout
+
+\end_inset
+
+Our method uses a hybrid binary-encoding/phase-shifting approach.
+ 
+\emph on
+Scan Studio
+\emph default
+ uses binary encoding to quickly capture high-order data.
+ Then, it uses phase shifting to enhance this binary data down to subpixel
+ levels.
+\end_layout
+
+\end_body
+\end_document

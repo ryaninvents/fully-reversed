@@ -12,10 +12,10 @@
 \language_package default
 \inputencoding auto
 \fontencoding 
-\font_roman cmr
+\font_roman utopia
 \font_sans helvet
 \font_typewriter lmtt
-\font_default_family sfdefault
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -150,6 +150,19 @@ filename "Background.lyx"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "encoding.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "triangulation.lyx"
@@ -188,6 +201,16 @@ filename "Structure from motion.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "Equipment.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
 
 \end_inset
 

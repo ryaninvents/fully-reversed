@@ -100,6 +100,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename svg/focal-length.svg
+	display false
 	width 10col%
 
 \end_inset
@@ -284,6 +285,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename svg/triangulation.svg
+	display false
 	width 30col%
 
 \end_inset
@@ -520,6 +522,14 @@ Now that we have our constants, the point
 \end_inset
 
 in the camera's coordinate space.
+\end_layout
+
+\begin_layout Section
+Converting to surfels
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
