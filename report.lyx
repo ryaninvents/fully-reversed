@@ -82,8 +82,11 @@ pagenumbering{roman}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "Abstract.lyx"
 
 \end_inset
@@ -144,7 +147,7 @@ pagenumbering{arabic}
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "Background.lyx"
 
 \end_inset
@@ -154,7 +157,8 @@ filename "Background.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
+preview true
 filename "encoding.lyx"
 
 \end_inset
@@ -164,7 +168,7 @@ filename "encoding.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "triangulation.lyx"
 
 \end_inset
@@ -174,7 +178,7 @@ filename "triangulation.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "Calibration.lyx"
 
 \end_inset
@@ -184,14 +188,17 @@ filename "Calibration.lyx"
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "orientation.lyx"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "surface.lyx"
 
 \end_inset
@@ -202,7 +209,7 @@ filename "surface.lyx"
 \begin_layout Standard
 \start_of_appendix
 \begin_inset CommandInset include
-LatexCommand include
+LatexCommand input
 filename "Equipment.lyx"
 
 \end_inset
