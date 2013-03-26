@@ -67,53 +67,29 @@ Abstract
 \begin_layout Standard
 
 \lang english
-The system under development will combine reflected binary patterns, stereo
+The system under development combines reflected binary patterns, stereo
  vision, and photogrammetry to create a rapid, high-resolution method for
  scanning entire three-dimensional components of a wide range of sizes.
- Projecting a sequence of binary patterns on a subject will yield a mesh
- of a single view of the three-dimensional object.
+ Projecting a sequence of binary patterns on a subject yields a mesh of
+ a single view of the three-dimensional object.
  This mesh will then be combined with other views through the use of photogramme
 try tracking.
- With the software in development a simple calibration process will allow
- for one click measurement for each object view.
+ With the software in development a simple calibration process allows for
+ one click measurement for each object view.
  The streamlined system utilizes two Logitech C905 webcams and a Optima
  PK201 Pico Pocket Projector on a custom mounting system.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\lang english
-needs more emphasis on streamlining
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 
 \lang english
-The system's generated object geometry will be compatible with all major
- CAD packages, allowing for true reverse-engineering in one step.
+The system's generated meshes are compatible with all major CAD packages,
+ allowing for true reverse-engineering a few easy steps.
  The ability to modify and rapid-prototype a version of the original part
  will greatly streamline the product development process.
  Additionally this process is ideal for use in the creation of custom mechanical
  accessories for existing parts and systems.
  
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\lang english
-describe implications of this project
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body
