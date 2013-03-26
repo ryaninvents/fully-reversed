@@ -5,7 +5,7 @@
 \textclass book
 \use_default_options true
 \maintain_unincluded_children false
-\language american
+\language english
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -65,30 +65,41 @@ Abstract
 \end_layout
 
 \begin_layout Standard
+The system under development combines temporal binary multiplexing, sinusoidal
+ phase-shifting, stereo vision, and photogrammetry to create a low-cost,
+ rapid, high-resolution method for scanning entire three-dimensional components
+ of a wide range of sizes.
+ Projecting a sequence of patterns on a subject yields a mesh of a single
+ view of the three-dimensional object.
+ Feature-tracking is then used to calculate the object's orientation change
+ between views so the entire object can be reconstructed.
+ The software's interface allows the user to generate a scan with a single
+ click.
+ 
+\begin_inset Note Note
+status open
 
-\lang english
-The system under development combines reflected binary patterns, stereo
- vision, and photogrammetry to create a rapid, high-resolution method for
- scanning entire three-dimensional components of a wide range of sizes.
- Projecting a sequence of binary patterns on a subject yields a mesh of
- a single view of the three-dimensional object.
- This mesh will then be combined with other views through the use of photogramme
-try tracking.
- With the software in development a simple calibration process allows for
- one click measurement for each object view.
- The streamlined system utilizes two Logitech C905 webcams and a Optima
- PK201 Pico Pocket Projector on a custom mounting system.
+\begin_layout Plain Layout
+*** does this really belong here? ***
+\end_layout
+
+\begin_layout Plain Layout
+The streamlined system utilizes two Logitech C905 webcams and a Optima PK201
+ Pico Pocket Projector on a custom mounting system.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 The system's generated meshes are compatible with all major CAD packages,
  allowing for true reverse-engineering a few easy steps.
  The ability to modify and rapid-prototype a version of the original part
- will greatly streamline the product development process.
- Additionally this process is ideal for use in the creation of custom mechanical
- accessories for existing parts and systems.
+ greatly streamlines the product development process.
+ Additionally, this process is ideal for use in the creation of custom mechanica
+l accessories for existing parts and systems.
  
 \end_layout
 
