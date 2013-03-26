@@ -67,19 +67,19 @@ Abstract
 \begin_layout Standard
 
 \lang english
-The system under development will combine elements of fringe projection
- and line scanning to create a rapid, high-resolution method for scanning
- entire three-dimensional components of a wide range of sizes.
- Projecting sinusoidal fringes on a rotating subject will yield a rapid
- approximation of a three- dimensional object; this approximation will then
- be used to combine the results of a more thorough fringe-projection scan
- to obtain high resolutions.
- Such a technique yields all of the benefits of fringe-projection without
- the need to perform time-consuming calculations such as phase unwrapping
- or point cloud stitching.
- 
+The system under development will combine reflected binary patterns, stereo
+ vision, and photogrammetry to create a rapid, high-resolution method for
+ scanning entire three-dimensional components of a wide range of sizes.
+ Projecting a sequence of binary patterns on a subject will yield a mesh
+ of a single view of the three-dimensional object.
+ This mesh will then be combined with other views through the use of photogramme
+try tracking.
+ With the software in development a simple calibration process will allow
+ for one click measurement for each object view.
+ The streamlined system utilizes two Logitech C905 webcams and a Optima
+ PK201 Pico Pocket Projector on a custom mounting system.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -99,9 +99,11 @@ The system's generated object geometry will be compatible with all major
  CAD packages, allowing for true reverse-engineering in one step.
  The ability to modify and rapid-prototype a version of the original part
  will greatly streamline the product development process.
+ Additionally this process is ideal for use in the creation of custom mechanical
+ accessories for existing parts and systems.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
