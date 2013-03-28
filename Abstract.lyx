@@ -65,6 +65,21 @@ Abstract
 \end_layout
 
 \begin_layout Standard
+There exists in the field a need for rapid digitization of existing components.
+ Missing CAD files, hand-modified components, and biological element
+\end_layout
+
+\begin_layout Standard
+a new method for creating three-dimensional scans for easy digitization
+ of mechanical parts.
+ These scans are intended to be accurate and precise enough to meet engineering
+ standards.
+ The three-dimensional scans are intended to aid in the mechaincal design
+ process, through reverse engineering or other methods.
+ 
+\end_layout
+
+\begin_layout Standard
 The system under development combines temporal binary multiplexing, sinusoidal
  phase-shifting, stereo vision, and photogrammetry to create a low-cost,
  rapid, high-resolution method for scanning entire three-dimensional components
@@ -76,8 +91,11 @@ The system under development combines temporal binary multiplexing, sinusoidal
  The software's interface allows the user to generate a scan with a single
  click.
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 *** does this really belong here? ***
