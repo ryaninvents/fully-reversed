@@ -65,21 +65,23 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-This paper describes a low-cost method for rapid digitization of existing
- components.
- Missing CAD files, hand-modified components, and biological elements present
- special challenges for those who need to either create accesories for or
- modify items in the field.
+
 \end_layout
 
 \begin_layout Standard
-a new method for creating three-dimensional scans for easy digitization
- of mechanical parts.
- These scans are intended to be accurate and precise enough to meet engineering
+There exists a need for low-cost rapid digitization of existing components.
+ Whether because of missing CAD files or hand-modified components, the ability
+ to quickly obtain a three-dimensional scan of a part is a growing concern.Missin
+g CAD files, hand-modified components, and biological elements present special
+ challenges for those who need to either create accessories for or modify
+ items in the field.
+ With the increasing popularity and accessibility of rapid prototyping,
+ there is need for a streamlined and cost effective process for scanning,
+ modifying, and rapid prototyping existing parts.
+ We propose a new method for creating three-dimensional scans for easy digitizat
+ion of mechanical parts.
+  These scans are intended to be accurate and precise enough to meet engineering
  standards.
- The three-dimensional scans are intended to aid in the mechaincal design
- process, through reverse engineering or other methods.
- 
 \end_layout
 
 \begin_layout Standard
@@ -94,24 +96,6 @@ The system under development combines temporal binary multiplexing, sinusoidal
  The software's interface allows the user to generate a scan with a single
  click.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-*** does this really belong here? ***
-\end_layout
-
-\begin_layout Plain Layout
-The streamlined system utilizes two Logitech C905 webcams and a Optima PK201
- Pico Pocket Projector on a custom mounting system.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
