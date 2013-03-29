@@ -70,17 +70,15 @@ Abstract
 
 \begin_layout Standard
 There exists a need for low-cost rapid digitization of existing components.
- Whether because of missing CAD files or hand-modified components, the ability
- to quickly obtain a three-dimensional scan of a part is a growing concern.Missin
-g CAD files, hand-modified components, and biological elements present special
- challenges for those who need to either create accessories for or modify
- items in the field.
+ Missing CAD files, hand-modified components, and biological elements present
+ special challenges for those who need to either create accessories for
+ or modify items in the field.
  With the increasing popularity and accessibility of rapid prototyping,
  there is need for a streamlined and cost effective process for scanning,
  modifying, and rapid prototyping existing parts.
  We propose a new method for creating three-dimensional scans for easy digitizat
 ion of mechanical parts.
-  These scans are intended to be accurate and precise enough to meet engineering
+ These scans are intended to be accurate and precise enough to meet engineering
  standards.
 \end_layout
 
