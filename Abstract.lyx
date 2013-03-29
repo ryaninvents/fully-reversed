@@ -65,16 +65,12 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 There exists a need for low-cost rapid digitization of existing components.
  Missing CAD files, hand-modified components, and biological elements present
  special challenges for those who need to either create accessories for
  or modify items in the field.
  With the increasing popularity and accessibility of rapid prototyping,
- there is need for a streamlined and cost effective process for scanning,
+ there is need for a streamlined and cost-effective process for scanning,
  modifying, and rapid prototyping existing parts.
  We propose a new method for creating three-dimensional scans for easy digitizat
 ion of mechanical parts.
@@ -83,11 +79,10 @@ ion of mechanical parts.
 \end_layout
 
 \begin_layout Standard
-The system under development combines temporal binary multiplexing, sinusoidal
- phase-shifting, stereo vision, and photogrammetry to create a low-cost,
- rapid, high-resolution method for scanning entire three-dimensional components
- of a wide range of sizes.
- Projecting a sequence of patterns on a subject yields a mesh of a single
+The system under development combines multiple structured-light techniques
+ with feature tracking to create a low-cost, rapid, high-resolution method
+ for scanning entire three-dimensional components of a wide range of sizes.
+ Projecting a sequence of patterns on a subject yields a model of a single
  view of the three-dimensional object.
  Feature-tracking is then used to calculate the object's orientation change
  between views so the entire object can be reconstructed.
@@ -103,7 +98,8 @@ The system's generated meshes are compatible with all major CAD packages,
  greatly streamlines the product development process.
  Additionally, this process is ideal for use in the creation of custom mechanica
 l accessories for existing parts and systems.
- 
+ The resolution of the mesh is acceptable for limited use with room for
+ improvement in the future.
 \end_layout
 
 \end_body
