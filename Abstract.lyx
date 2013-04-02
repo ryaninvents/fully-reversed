@@ -65,41 +65,31 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-There exists a need for low-cost rapid digitization of existing components.
- Missing CAD files, hand-modified components, and biological elements present
- special challenges for those who need to either create accessories for
- or modify items in the field.
- With the increasing popularity and accessibility of rapid prototyping,
- there is need for a streamlined and cost-effective process for scanning,
- modifying, and rapid prototyping existing parts.
- We propose a new method for creating three-dimensional scans for easy digitizat
-ion of mechanical parts.
- These scans are intended to be accurate and precise enough to meet engineering
- standards.
+The availability of rapid prototyping enhances a designer’s creativity and
+ speed, enabling quicker development of new products.
+ However, because this process relies heavily on computer-aided design (CAD)
+ models it can often be time costly and inefficient when a component is
+ needed urgently in the field.
+ This paper proposes a method to seamlessly integrate the digitization of
+ existing objects with the rapid prototyping process.
+ Our technique makes use of multiple structured-light techniques in conjunction
+ with photogrammetry to build a more efficient means of product development.
+ This combination of methods allows our developed application to rapidly
+ scan an entire object using inexpensive hardware.
+ Single views obtained by projecting binary and sinusoidal patterns are
+ combined using photogrammetric feature tracking to create a computer model
+ of the subject.
 \end_layout
 
 \begin_layout Standard
-The system under development combines multiple structured-light techniques
- with feature tracking to create a low-cost, rapid, high-resolution method
- for scanning entire three-dimensional components of a wide range of sizes.
- Projecting a sequence of patterns on a subject yields a model of a single
- view of the three-dimensional object.
- Feature-tracking is then used to calculate the object's orientation change
- between views so the entire object can be reconstructed.
- The software's interface allows the user to generate a scan with a single
- click.
- 
-\end_layout
-
-\begin_layout Standard
-The system's generated meshes are compatible with all major CAD packages,
- allowing for true reverse-engineering a few easy steps.
- The ability to modify and rapid-prototype a version of the original part
- greatly streamlines the product development process.
- Additionally, this process is ideal for use in the creation of custom mechanica
-l accessories for existing parts and systems.
- The resolution of the mesh is acceptable for limited use with room for
- improvement in the future.
+We present also the results of the application of these concepts, as applied
+ to several familiar objects--these objects have been scanned, modified,
+ and sent to a rapid prototyping machine to demonstrate the power of this
+ tool.
+ This technique is useful in a wide range of engineering applications, both
+ in the field and in the lab.
+ Future projects may improve the accuracy of the scans through better calibratio
+n and meshing, and test the accuracy of the digitized models more thoroughly.
 \end_layout
 
 \end_body
