@@ -166,6 +166,16 @@ filename "Methods.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "results.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \start_of_appendix
 \begin_inset CommandInset include
 LatexCommand input
