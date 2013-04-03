@@ -150,7 +150,7 @@ multiplexing, temporal
  of frames is used to compute the result.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Reflected binary encoding
 \end_layout
 
@@ -370,7 +370,7 @@ Moir
  another technique for resolution of finer details.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Phase-shifted fringes
 \end_layout
 
@@ -411,7 +411,7 @@ One issue with phase-shifting is that it is susceptible to noise.
  In addition, phase shifting requires phase unwrapping.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Hybrid approach
 \end_layout
 
