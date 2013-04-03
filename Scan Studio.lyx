@@ -60,7 +60,7 @@
 
 \begin_body
 
-\begin_layout Chapter
+\begin_layout Section
 Scan Studio
 \end_layout
 
@@ -72,7 +72,7 @@ Scan studio is the custom software created for this project.
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Calibration
 \end_layout
 
@@ -86,7 +86,7 @@ Scan Studio has a built in camera and projector calibration process that
  overwritten with a new calibration.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Scanning
 \end_layout
 
@@ -113,7 +113,7 @@ In addition to generating point clouds directly from a scan, Scan Studio
  These images are then processed in the same way as real scan data.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Object View
 \end_layout
 
@@ -136,7 +136,7 @@ Object view is capable of displaying multiple point clouds simultaneously.
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Meshing
 \end_layout
 

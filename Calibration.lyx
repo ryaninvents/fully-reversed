@@ -60,7 +60,7 @@
 
 \begin_body
 
-\begin_layout Chapter
+\begin_layout Section
 Calibration
 \begin_inset CommandInset label
 LatexCommand label
@@ -79,11 +79,11 @@ The techniques outlined in the previous sections rely on calibration for
  orientation) of the cameras and projector.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Camera Calibration
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Process
 \end_layout
 
@@ -121,15 +121,15 @@ on.
  algorithm to generate the camera calibration parameters.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Algorithms 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Projector Calibration
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Process
 \end_layout
 
@@ -155,7 +155,7 @@ In order to perform projector calibration the calibration board needs to
  when processing any images taken with the sytem into meshes.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Algorithms
 \end_layout
 
