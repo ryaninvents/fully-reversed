@@ -97,6 +97,16 @@ filename "Scanning Overview.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
+filename "OpenCV.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
 filename "Calibration.lyx"
 
 \end_inset
