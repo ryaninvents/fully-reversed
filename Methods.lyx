@@ -87,6 +87,16 @@ filename "triangulation.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
+filename "Hardware.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
 filename "Scanning Overview.lyx"
 
 \end_inset

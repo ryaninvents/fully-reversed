@@ -148,6 +148,16 @@ pagenumbering{arabic}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
+filename "Intro.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
 filename "Background.lyx"
 
 \end_inset
@@ -169,6 +179,16 @@ filename "Methods.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "results.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "conclusion.lyx"
 
 \end_inset
 
