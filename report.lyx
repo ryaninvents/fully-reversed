@@ -209,7 +209,7 @@ filename "Equipment.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "OpenCV.lyx"
+filename "Open Source Libraries.lyx"
 
 \end_inset
 
