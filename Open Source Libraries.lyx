@@ -60,6 +60,10 @@
 
 \begin_body
 
+\begin_layout Chapter
+Open Source Libraries
+\end_layout
+
 \begin_layout Section
 OpenCV
 \end_layout
@@ -96,6 +100,14 @@ OpenCV code was used in this project as part of the scanning program.
  In this way the OpenCV libraries form a crucial backbone for our software,
  working in support of our triangulation algorithm and binary projection
  code.
+\end_layout
+
+\begin_layout Section
+OpenGL
+\end_layout
+
+\begin_layout Section
+PCL
 \end_layout
 
 \end_body
