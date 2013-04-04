@@ -159,7 +159,61 @@ key "doi:10.1117/1.602438"
 
  In order to have a resolution greater than the thickness of the laser line,
  an algorithm to find the center of the line can be used.
- (image)
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/line scanner.gif
+	display false
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Laser Scanner
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LineScanner"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Laser-Scanner"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -218,6 +272,60 @@ Sinusoidal Fringe Projection is the most commonly used form of continuous
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zervas"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Zervas Fringe.png
+	display false
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sinosoidal Fringe Projection 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zervas"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sinosoidal-Fringe-Projection"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -303,7 +411,61 @@ key "huang1999color"
 
 \end_inset
 
- (Image)
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/color coded sinusoidal.png
+	display false
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Color Coded Fringes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "huang1999color"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Color-Coded-Fringes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -392,7 +554,60 @@ key "salvi2004pattern"
 
 \end_inset
 
- (image)
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/de brujin.jpg
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+De Bruijn Patterns
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:De-Bruijn-Patterns"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -421,7 +636,61 @@ key "salvi2010state"
 
 \end_inset
 
- (image)
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/M-array.jpg
+	display false
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+M-Array
+\begin_inset CommandInset citation
+LatexCommand cite
+key "salvi2010state"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:M-Array"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -484,7 +753,7 @@ key "salvi2004pattern"
 
 \end_inset
 
- (Image) 
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -503,7 +772,7 @@ key "salvi2004pattern"
 
 \end_inset
 
- (Image)
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -646,7 +915,78 @@ key "OpenKinect:ImagingInfo"
 \end_inset
 
 .
- (image)
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang american
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/kinect.jpg
+	display false
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/kinect pattern.png
+	display false
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang american
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:a)-Microsoft-Kinect"
+
+\end_inset
+
+a) Microsoft Kinect
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KinectImg"
+
+\end_inset
+
+ b) Projected pattern as seen through an infrared camera
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kinectPattern"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
