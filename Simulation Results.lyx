@@ -489,7 +489,7 @@ Simulated Results
 \end_layout
 
 \begin_layout Standard
-This reveals that the system has an overall accuracy of around +/- 32µm
+This reveals that the system has an overall accuracy of around +/- 3.2µm
  and a precision of +/- 20.7µm.
  These results are suitable for many engineering applications, and thus
  the method has merit to continue developing.
