@@ -204,7 +204,15 @@ Once the equipment is positioned it is necessary to calibrate it.
  other.
  First the cameras are calibrated simultaneously, and then the projector
  is calibrated.
- Detailed descriptions of the calibration procedure can be found ________
+ Detailed descriptions of the calibration procedure can be found in section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Calibration"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
