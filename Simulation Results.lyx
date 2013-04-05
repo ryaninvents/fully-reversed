@@ -64,5 +64,443 @@
 Simulation Results
 \end_layout
 
+\begin_layout Standard
+In order to prove the viability of our scanning method, simulated testing
+ was performed.
+ For this testing the software POV-Ray was utilized.
+ POV-Ray is capable of generating images that simulate the camera and projector
+ in our system.
+ By giving the software the series of patterns to project and the specifications
+ of the camera, projector, and target object, the images can be produced.
+\end_layout
+
+\begin_layout Standard
+For our testing we modeled a theoretically perfect sphere within POV-Ray,
+ which had a diameter of 30cm.
+ The center of the sphere was located exactly 40cm from the pinhole of the
+ camera.
+ The modeled camera had a focal length of 8cm, a resolution of 1080p, and
+ a sensor cell size of 7.9µm.
+ After the simulated images were produced, they were analyzed into a point
+ cloud.
+ This point cloud was exported as an .obj file and further analyzed in Matlab.
+ A Matlab script was written to take cross sections of data from various
+ angles.
+ All of the cross sections passed through the center of the sphere, so theoretic
+ally they should all have a radius of 15cm.
+ Cross sections were taken by rotating the sphere around each of the three
+ major axis, at an interval of every 5 degrees.
+ Since the point cloud is composed of discrete points the cross sections
+ needed to have a tolerance of 1/2 the spatial resolution in order to ensure
+ data points would fall in the cross section.
+ An existing Matlab function was incorporated into the script to calculate
+ the radii of the cross sections.
+ Additionally the standard deviation of the data points within each cross
+ section was calculated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/30cm sphere radii.png
+	display false
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Cross Sectional Radii of sphere.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:a)-Cross-Sectional"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/30cm sphere deviation.png
+	display false
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Standard Deviation of cross sections.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Standard-Deviation-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One of the first pieces of information this data reveals is that the results
+ are worse near the edges of the scan.
+ This is expected and there are two reasons for it.
+ From the camera's perspective the edges of the scan appear to be at nearly
+ a 0 degree angle, greatly reducing the accuracy of the triangulation.
+ To compensate for this a quality map was used to remove extraneous points.
+ However this reduced the point cloud density at the edges, which reduced
+ the sampling size for the cross sections.
+ This in turn produced inaccurate radii for those cross sections.
+ In order to more accurately analyze the data, the erroneous points were
+ removed using Chauvenet's criterion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/radii after outlier removal.png
+	display false
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Radii after outlier removal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This chart shows what appears to be a random scattering of data points within
+ a small range about the expected radius.
+ There is no clear directionality to the quality of the results, which indicates
+ that the method is equally accurate in all directions.
+ Further analysis was done upon these results to find the average radius
+ and standard deviation for each rotation direction, and for the whole data
+ set.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data Set
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mean Radius (m)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Standard Deviation (µm)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error (µm)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.149992076
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21.12482822
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-7.923981
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.150001938
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16.12103637
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9382459
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+z
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.149996368
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24.99879969
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3.615363
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1499968
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.74822143
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3.200366
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Simulated Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This reveals that the system has an overall accuracy of around +/- 32µm
+ and a precision of +/- 20.7µm.
+ These results are suitable for many engineering applications, and thus
+ the method has merit to continue developing.
+ It should be noted that no decimals were dropped for significant figures
+ in these calculations because the limitations of the measuring method were
+ unknown.
+ In fact these calcualtations were preliminary testing to find those very
+ limitations.
+ Additonally these results are with a single simulated camera rather than
+ a stereo system, and with only the binary pattern being projected.
+\end_layout
+
 \end_body
 \end_document
