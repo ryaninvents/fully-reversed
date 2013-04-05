@@ -72,6 +72,53 @@ The process of scanning a real world object and using it to make a new object
  Each of these steps will be explained in further detail below.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Process Overview.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Scanning Process Overview
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Scanning-Process-Overview"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Digitization
 \end_layout
@@ -82,6 +129,53 @@ onal object into data to be used by computer software.
  This process can be broken into three distinct sections; setup, data capture,
  and repositioning.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/scanning overview.png
+	display false
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Digitization Process Overview
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Digitization-Process-Overview"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -110,7 +204,15 @@ Once the equipment is positioned it is necessary to calibrate it.
  other.
  First the cameras are calibrated simultaneously, and then the projector
  is calibrated.
- Detailed descriptions of the calibration procedure can be found ________
+ Detailed descriptions of the calibration procedure can be found in section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Calibration"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection

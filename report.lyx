@@ -148,6 +148,16 @@ pagenumbering{arabic}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
+filename "Intro.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
 filename "Background.lyx"
 
 \end_inset
@@ -158,8 +168,7 @@ filename "Background.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-preview true
-filename "encoding.lyx"
+filename "Methods.lyx"
 
 \end_inset
 
@@ -169,7 +178,7 @@ filename "encoding.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "triangulation.lyx"
+filename "results.lyx"
 
 \end_inset
 
@@ -179,27 +188,7 @@ filename "triangulation.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Calibration.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "orientation.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "surface.lyx"
+filename "conclusion.lyx"
 
 \end_inset
 
@@ -211,6 +200,16 @@ filename "surface.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "Equipment.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Open Source Libraries.lyx"
 
 \end_inset
 

@@ -60,8 +60,42 @@
 
 \begin_body
 
-\begin_layout Section
-Surface reconstruction
+\begin_layout Chapter
+Results
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Scan Studio.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Simulation Results.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "scanning results.lyx"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

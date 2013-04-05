@@ -60,8 +60,212 @@
 
 \begin_body
 
-\begin_layout Chapter
-Hardware selection
+\begin_layout Section
+Hardware Selection
+\end_layout
+
+\begin_layout Subsection
+Projector
+\end_layout
+
+\begin_layout Standard
+The projector was selected to be low cost, compact, and have a high resolution.
+ The spatial resolution of the scanning system is limited by the resolution
+ of the projector.
+ Additionally the spatial resolution is affected by the distance to the
+ target object, so projectors with a short minimum throw distance were favored.
+ In order to ensure a large field of view at the close range, the projector
+ also needed to have a large throw ratio.
+ Taking all of these parameters into account, the projector that was selected
+ is the Optoma PK201 Pico Pocket Projector.
+ See Appendix A for technical specifications of the projector.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/projector.jpg
+	display false
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Optima-PK201-Projector"
+
+\end_inset
+
+Optoma PK201 Pico Pocket Projector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cameras
+\end_layout
+
+\begin_layout Standard
+The cameras for the scanning system were selected to be low cost and high
+ resolution.
+ The resolution of the cameras needs to be equal to or greater than the
+ resolution of the projector.
+ Since cost was a main factor webcams were chosen for the cameras.
+ The specific model selected is the Logitech C905 webcam.
+ Full specifications on the cameras can be found in Appendix A.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/webcam.jpg
+	display false
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Logitech C905 Webcam
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Logitech-C905-Webcam"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mounting System
+\end_layout
+
+\begin_layout Standard
+In order to secure the cameras and projector in triangulation geometry a
+ mounting system was created.
+ It was important to be able to adjust the distance between the projector
+ and cameras and the triangulation angle of the system.
+ Additionally it was critical that the cameras and projector be able to
+ be locked in place so that they would not move relative to each other after
+ calibration.
+ 
+\end_layout
+
+\begin_layout Standard
+The mounting system utilized an L-beam as a mounting rail which the cameras
+ and projector could slide along.
+ A custom mount was designed to hold the projector, and the mount was fixed
+ in place on the rail by a hole drilled through the L-beam.
+ The projector mount had a countersunk screw hole for holding the projector
+ in place, and another one for attaching the assembly to a tripod.
+\end_layout
+
+\begin_layout Standard
+Next the existing camera casings were removed so that only the lenses and
+ circuitry remained.
+ New casings were designed that had holes to mount from the bottom.
+ Two mounts were designed to slide on to the L-beam and clamp into place
+ with a screw hole.
+ The mounts had a hole on top for the new camera casings, which could pivot
+ about the hole until tightened into place.
+ The custom mounts and caseings were then rapid prototyped.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/mount assembly.png
+	display false
+	width 75col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:CAD-Mounting-Assembly"
+
+\end_inset
+
+CAD Mounting Assembly
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

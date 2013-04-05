@@ -60,7 +60,7 @@
 
 \begin_body
 
-\begin_layout Chapter
+\begin_layout Section
 Calibration
 \begin_inset CommandInset label
 LatexCommand label
@@ -79,57 +79,86 @@ The techniques outlined in the previous sections rely on calibration for
  orientation) of the cameras and projector.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Camera Calibration
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Process
 \end_layout
 
 \begin_layout Standard
 Camera calibration consists of determining the intrinsic and extrinsic propertie
 s of the cameras.
- The intrinsic properties of the camera are the focal length and lens distortion
-s.
+ The intrinsic properties of the camera are the focal length, image format,
+ principal point, and lens distortions.
  The focal length is a very important parameter to triangulation, so even
  if the manufacturer gives this value it still must be calculated during
  calibration in order to ensure the accuracy of the given value.
  Correcting for lens distortions is critical for obtaining accurate input,
  and doing so removes distortions from the resulting mesh, vastly improving
  results.
- The extrinsic parameters are the location and orientition of the cameras.
+ The extrinsic parameters are the location and orientation of the cameras.
  For simplicity the coordinate system is always defined such that the theoretica
 l pinhole of one of the cameras is at the origin, with the optical axis
  of that camera aligned with the z-axis of the system.
  Extrinsic calibration of the cameras allows for stereo vision, which adds
- to the accuracy of the measurments being taken.
+ to the accuracy of the measurements being taken.
 \end_layout
 
 \begin_layout Standard
-Both intrinsic and extrinsic calibration are carried out simultaneously.
- To do so it is necessary to have a calibration board, which is a flat board
- or panel with a calibration pattern on it.
- The calibration pattern we utilize is a simple checkerboard pattern with
- a known square size.
- This square size is input into the software as the only parameter for calibrati
-on.
- Then pictures of the pattern are taken at several different orientations.
- It is important to use many orientations, and to fill every portion of
- the image with the pattern at least once if possible.
- These calibration images are then batched processed by the camera calibration
- algorithm to generate the camera calibration parameters.
+In order to calibrate the cameras it necessary to have a calibration board,
+ which is a flat board or panel with a calibration pattern on it.
+ The calibration pattern is a simple checkerboard pattern with uniform square
+ size.
+ The calibration board is moved to several different orientations, and a
+ picture is captured at each orientation.
+ For intrinsic calibration it is important to have the calibration pattern
+ cover every section of the image throughout the process in order to lens
+ distortion to be characterized.
+ For extrinsic calibration it is essential for both the whole calibration
+ pattern to be captured by both of the cameras in order to properly calibrate
+ for a stereo system.
+ For this reason intrinsic and extrinsic calibration are carried out separately
+ instead of simultaneously as is the norm.
+ First each camera is calibrated for intrinsic parameters, and then the
+ extrinsic calibration is performed for both cameras simultaneously.
+ 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Algorithms 
 \end_layout
 
-\begin_layout Section
-Projector Calibration
+\begin_layout Standard
+The technique used for camera calibration is known as the Zhang method.
+ This technique relies on observing a plane from multiple orientations.
+ Simply translating the plane does not provide any new information for calculati
+ons, and thus is useless for calibration.
+ The method utilizes a corner detection algorithm to find points on the
+ plane.
+ Then the transformations of the points between images in 3D space are calculate
+d.
+ From this information it is possible to recover the non-distortion intrinsic
+ and extrinsic parameters of the camera in a closed-form solution.
+ The radial distortion can be calculated with linear least square.
+ Finally, all parameters are refined to minimize reprojection errors using
+ a Levenberg-Marquardt method.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang2000flexible"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+Projector Calibration
+\end_layout
+
+\begin_layout Subsubsection
 Calibration Process
 \end_layout
 
@@ -152,11 +181,34 @@ In order to perform projector calibration the calibration board needs to
  These images are then batch processed by the projector calibration algorithm
  in order to generate the projector calibration parameters.
  These parameters are used in conjunction with the camera calibration parameters
- when processing any images taken with the sytem into meshes.
+ when processing any images taken with the stem into meshes.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Calibration Algorithms
+\end_layout
+
+\begin_layout Standard
+The method used for projector calibration is an existing method that utilizes
+ the Zhang's method.
+ First the cameras must be calibrated using Zhang's method as described
+ above.
+ Next the calibration board is placed in a stationary position and its coordinat
+es are calculated using a captured image and the calibration parameters.
+ Next a checkerboard pattern is projected on top of the existing pattern
+ on the calibration board, and the corner locations are found using the
+ same method as in camera calibration.
+ By calcualting the camera rays that pass through the corners of the projection
+ pattern, the location of the corners in 3D space can be found.
+ The projector is treated as the inverse as a camera, and then calibrated
+ through the Zhang's method.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "falcao2008plane"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

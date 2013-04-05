@@ -60,7 +60,7 @@
 
 \begin_body
 
-\begin_layout Chapter
+\begin_layout Section
 Triangulation
 \begin_inset CommandInset label
 LatexCommand label
@@ -84,7 +84,7 @@ Once an encoded image has been captured, this encoding must be translated
  coordinates.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Relating image coordinates to world coordinates
 \end_layout
 
@@ -285,7 +285,7 @@ Similarly,
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Recovering 3D information
 \end_layout
 
@@ -538,7 +538,7 @@ Now that we have our constants, the point
 in the camera's coordinate space.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Converting to surfels
 \end_layout
 
