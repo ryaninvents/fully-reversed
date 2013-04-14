@@ -222,10 +222,10 @@ Structured Light
 
 \begin_layout Standard
 Structured Light is a category of optical imaging techniques that use a
- coded pattern in projected light in conjunction with a camera to perform
+ coded pattern of projected light in conjunction with a camera to perform
  triangulation.
- There are two main categories of structured light techniques, which are
- continuous coding and discrete coding.
+ There are two main categories of structured light techniques; continuous
+ coding and discrete coding.
  
 \end_layout
 
@@ -365,11 +365,12 @@ Fourier Transform Profilometry is a method for calculating the wrapped phase
  shape containing phase information.
  When the Fourier transform is performed, 3 distinct peaks result in the
  Fourier domain.
- The central peak is the brightness information and can be masked out.
+ The central peak contains the brightness information and can be masked
+ out.
  The two remaining peaks are symmetric about the origin and contain the
  shape information.
  One of these peaks is masked out, and the remaining one is shifted by the
- carrier frequency so it is located on the origin.
+ carrier frequency to the origin.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Takeda:83"
@@ -476,8 +477,8 @@ Continuous Spatial Grading
 A continuous grayscale or color scale is projected onto the object.
  Every X coordinate in the undistorted projection has a unique intensity
  value, allowing for triangulation similar to a line scanner.
- This method is extremely sensitive to the color of the target object and
- shadowing on the object.
+ This method is extremely sensitive to shadowing and the color of the target
+ object.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -496,11 +497,11 @@ Discrete Coding
 Discrete coding consists of projecting non-continuous patterns onto an object.
  These patterns are designed such that every part of the image is uniquely
  identified by the pattern.
- This identification is referred to as the “codeword” for that location.
+ This identification is referred to as the codeword for that location.
  The locations identified by codewords can either be lines or pixels, depending
- on whether the patter is 1D or 2D.
- Since the location of each “codeword” is known in the projected image the
- displacement of the “codeword” when the pattern is projected on the object
+ on whether the pattern is 1D or 2D.
+ Since the location of each codeword is known in the projected image the
+ displacement of the codeword when the pattern is projected on the object
  can be measured.
  This displacement can be used to triangulate the distance to the object
  for each location, thus giving the 3-dimensional shape.
@@ -521,9 +522,16 @@ Spatial Multiplexing
 
 \begin_layout Standard
 Spatial multiplexing methods project only a single pattern.
- In order to identify the “codewords” for that pattern, the surroundings
- are used.
- For a 1-D pattern this means the sequence of lines two either side of any
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+codeword
+\begin_inset Quotes erd
+\end_inset
+
+ for any given section of the pattern is based on the surrounding region.
+ For a 1-D pattern this means the sequence of lines to either side of any
  given line are unique and thus identify that line.
  In a 2-D case it the surroundings in all directions within the plane are
  taken into account.
@@ -618,17 +626,9 @@ M-Arrays
 M-arrays are a 2D equivalent to the 1-D De Bruijn patterns.
  An array of pseudorandom dots is projected onto the target object.
  Any dot can be identified by the adjacent dots, allowing for triangulation.
- This method can utilize both binary, color or grayscale.
- The 
-\begin_inset Quotes eld
-\end_inset
-
-codeword
-\begin_inset Quotes erd
-\end_inset
-
- of the dot can be identified not only by the type of dots around it, but
- by the relative density of the dots as well.
+ This method can utilize binary, color or grayscale.
+ The codeword of the dot can be identified not only by the type of dots
+ around it, but by the relative density of the dots as well.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -700,8 +700,8 @@ Non-Formal Coding
 \begin_layout Standard
 Non-formal coding is a term used to categorize any number of spatial multiplexin
 g methods that use unique patterns for specific purposes.
- These patterns do not necessarily directly uniquely identify the line or
- pixel as the previous methods do.
+ These patterns do not necessarily directly identify the line or pixel as
+ the previous methods do.
  Instead non-formal coding usually serves a more specific purpose such as
  calibration patterns.
  
@@ -720,8 +720,8 @@ Time Multiplexing
 
 \begin_layout Standard
 Time multiplexing captures successive images with different patterns in
- order to generate the necessary “codeword” for each location.
- The patterns a generated such that each location has a unique sequence
+ order to generate the necessary codeword for each location.
+ The patterns are generated such that each location has a unique sequence
  of values throughout the series of images.
  Since multiple frames are needed to generate a 3D image, this method is
  not viable for high speed applications that require single frame acquisition.
@@ -741,8 +741,8 @@ Binary Codes
 
 \begin_layout Standard
 Binary codes function by projecting a series of binary patterns.
- These patterns are typically vertical of varying thicknesses or densities,
- similar to a bar code.
+ These patterns are typically vertical lines of varying thicknesses or densities
+, similar to a bar code.
  A single pattern alone does nothing, but by taking into account the binary
  value of each line or pixel over the entire series of projected patterns,
  uniqueness is established.
@@ -782,7 +782,7 @@ Hybrid Coding
 \begin_layout Standard
 Hybrid coding consists of a combination of spatial and time multiplexing.
  Several spatial multiplexing patterns are displayed in series so as to
- create a time multiplex with them.
+ create a time multiplex.
  This method achieves the high accuracy of time multiplexing, while greatly
  reducing the number of patterns necessary.
  
@@ -800,15 +800,15 @@ Interferometry
 \end_layout
 
 \begin_layout Standard
-Interferometry utilizes beam splitter to separate a single beam into two
+Interferometry utilizes a beam splitter to separate a single beam into two
  beams.
  One of the beams, the sample beam, is reflected off the target object and
- then into sensor.
+ into a sensor.
  This beam then meets with the other beam, the reference beam, in an interferome
 ter.
  The interference between these two beams gives the phase difference of
  the lasers.
- The phases from all the points on the object are generated into a wrapped
+ The phases from all the points on the object are combined into a wrapped
  phase map image of the object.
  
 \begin_inset CommandInset citation
@@ -817,7 +817,7 @@ key "doi:10.1117/1.602438"
 
 \end_inset
 
-The phase maps are unwrapped, giving the shape of the object.
+The phase maps are then unwrapped, giving the shape of the object.
  
 \end_layout
 
@@ -863,7 +863,7 @@ Existing Commercial Products
 \begin_layout Standard
 There are many different commercial scanners currently on the market.
  Most of them cater to different professional fields and have specifications
- that those fields find desirable.
+ that fit their application.
  A few of these products will be discussed in this section.
 \end_layout
 
@@ -980,10 +980,6 @@ key "kinectPattern"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1059,10 +1055,6 @@ name "fig:Next-Engine-3D"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
