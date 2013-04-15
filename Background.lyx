@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -61,19 +61,68 @@
 \begin_body
 
 \begin_layout Chapter
-Background 
-\end_layout
-
-\begin_layout Section
-3-Dimensional Optical Shape Measurement Techniques 
+Introduction
 \end_layout
 
 \begin_layout Standard
-There are many different optical techniques for 3-Dimensional shape measurement.
- The different techniques each have their advantages and disadvantages,
- and are utilized in different professional fields.
- This section will give a brief overview of some of the many techniques
- available for 3D shape measurement.
+Many engineering applications require digitized knowledge of the shape of
+ a component or surface.
+ The traditional method for obtaining this information, by use of a coordinate
+ measuring machine (CMM), is costly, time consuming, and only provides a
+ sparse data set.
+ Accordingly, there has been a proliferation of techniques, devices, and
+ software allowing users to generate a computer model by quickly 
+\begin_inset Quotes eld
+\end_inset
+
+scanning
+\begin_inset Quotes erd
+\end_inset
+
+ a component by optical techniques.
+\end_layout
+
+\begin_layout Standard
+These techniques still present challenges to small companies and hobbyists,
+ since they are generally proprietary and often costly.
+ This paper details the construction and use of an inexpensive, full field-of-vi
+ew measuring system using easily obtained, commercially available components.
+\end_layout
+
+\begin_layout Section
+Importance of full field-of-view digitization
+\end_layout
+
+\begin_layout Standard
+There are many reasons why a designer or operator may wish to obtain a CAD
+ model from an existing physical component.
+ To demonstrate the need for this technology, we will present three cases
+ which represent a cross-section of the application of this type of system.
+\end_layout
+
+\begin_layout Subsection
+Restoration of antique machinery
+\end_layout
+
+\begin_layout Subsection
+In-the-field analysis of structural integrity
+\end_layout
+
+\begin_layout Subsection
+Repairing or replacing components in space
+\end_layout
+
+\begin_layout Section
+Three-dimensional optical shape measurement techniques 
+\end_layout
+
+\begin_layout Standard
+There are many different optical techniques for three-dimensional shape
+ measurement.
+ The techniques vary in range and applicability, and consequently are used
+ in different professional fields.
+ This section will give a brief overview of the most common techniques available
+ for three-dimensional shape measurement.
 \end_layout
 
 \begin_layout Subsection
@@ -81,20 +130,22 @@ Photogrammetry
 \end_layout
 
 \begin_layout Standard
-Photogrammetry is a technique to construct a 3D image from several 2D photos.
- In order to achieve this, photogrammetry utilizes feature, pattern, or
- color matching.
+Photogrammetry is a passive technique that constructs a three-dimensional
+ image from several two-dimensional photos.
+ In order to achieve this, photogrammetry correlates features, colors, or
+ patterns between photos.
  Algorithms frequently use reflectivity, shading, and focus to recover shape
- information.
+ information
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Snavely"
 
 \end_inset
 
- The advantage of this system is that it can create 3D reconstructions without
- knowledge of the location of the cameras.
- However this method has much lower accuracy than most other methods, and
+.
+ The advantage of this system is that it can create three-dimensional reconstruc
+tions without prior knowledge of the location or focal length of the cameras.
+ However, this method has much lower accuracy than most other methods, and
  therefore is generally not used in engineering or medical fields.
  
 \end_layout
@@ -107,13 +158,14 @@ Time of Flight
 This method directly measures the time of flight of a laser or light source.
  The amount of time between the light being emitted, reflected off the object,
  and then received by the sensor is used to calculate the distance to the
- object.
+ object
 \begin_inset CommandInset citation
 LatexCommand cite
 key "doi:10.1117/1.602438"
 
 \end_inset
 
+.
  Time of flight techniques have an advantage of being longer ranged than
  most other shape measurement techniques, but they are also lower resolution.
  This makes it useful for surveying, and other long range purposes.
@@ -267,15 +319,14 @@ Sinusoidal Fringe Projection is the most commonly used form of continuous
  The multiple phase shifted images are used to calculate the wrapped phase
  map of the object.
  An unwrapping algorithm gives the unwrapped phase map, and the actual size
- data is calculated using the triangulation geometry.
- 
+ data is calculated using the triangulation geometry
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zervas"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
