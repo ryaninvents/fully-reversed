@@ -134,8 +134,8 @@ Photogrammetry is a passive technique that constructs a three-dimensional
  image from several two-dimensional photos.
  In order to achieve this, photogrammetry correlates features, colors, or
  patterns between photos.
- Algorithms frequently use reflectivity, shading, and focus to recover shape
- information
+ Photogrammetry techniques may take advantage of reflectivity, shading,
+ and focus to recover shape information
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Snavely"
@@ -143,8 +143,8 @@ key "Snavely"
 \end_inset
 
 .
- The advantage of this system is that it can create three-dimensional reconstruc
-tions without prior knowledge of the location or focal length of the cameras.
+ Being a passive technique, photogrammetry may be performed in ambient light
+ without any illumination equipment.
  However, this method has much lower accuracy than most other methods, and
  therefore is generally not used in engineering or medical fields.
  
@@ -155,10 +155,11 @@ Time of Flight
 \end_layout
 
 \begin_layout Standard
-This method directly measures the time of flight of a laser or light source.
+This method directly measures the time of flight of a light source, typically
+ a laser.
  The amount of time between the light being emitted, reflected off the object,
- and then received by the sensor is used to calculate the distance to the
- object
+ and then received by the sensor is used to calculate the distance from
+ the camera to each point on the object
 \begin_inset CommandInset citation
 LatexCommand cite
 key "doi:10.1117/1.602438"
@@ -166,8 +167,8 @@ key "doi:10.1117/1.602438"
 \end_inset
 
 .
- Time of flight techniques have an advantage of being longer ranged than
- most other shape measurement techniques, but they are also lower resolution.
+ Time of flight techniques have a much longer range than most other shape
+ measurement techniques, but they are also lower resolution.
  This makes it useful for surveying, and other long range purposes.
  
 \end_layout
@@ -177,16 +178,13 @@ Triangulation
 \end_layout
 
 \begin_layout Standard
-Optical Triangulation techniques utilize the geometry of the system to calculate
- the distance from the camera to the object being measured.
- In most cases a projector and a camera are positioned a known distance
- apart.
- The central axis of the camera is angled by a known amount relative to
- the central axis of the projector.
- This angle is known as the triangulation angle.
- Triangulation techniques use these known values, along with a measured
- value extracted from the image data, to compute the 3D data.
- The most common measured values are displacement and optical phase.
+Triangulation techniques use the geometry of a projector and camera to reconstru
+ct a three-dimensional object as a computer model.
+ In its simplest form, a system projects a pattern and then views that pattern
+ from a different angle as it deforms on the object.
+ Using the focal lengths of the camera and projector as well as their relative
+ positions and orientations, such a system can recover the original shape
+ through processing of the distorted pattern.
 \end_layout
 
 \begin_layout Subsubsection
@@ -194,24 +192,22 @@ Laser Scanning
 \end_layout
 
 \begin_layout Standard
-Laser scanning techniques work by projecting one or more laser lines on
- the object to be measured.
- The line(s) are scanned across the object while a camera captures images
- of the object.
- The camera is positioned in a known triangulation geometry with the projector.
- The distance to the object at each point along the line is calculated to
- generate a profile of the object illuminated by the line.
- The profiles of the line at every location as it scans across the object
- are combined to create a full image.
+In its simplest form, a laser scanner operates by projecting a dot onto
+ the subject and calculating the three-dimensional position of that dot
+ from its captured camera image.
+ Typically, this process is accelerated through the use of a laser line
+ instead of a dot, and occasionally multiple lines are used to speed the
+ process further
 \begin_inset CommandInset citation
 LatexCommand cite
 key "doi:10.1117/1.602438"
 
 \end_inset
 
- In order to have a resolution greater than the thickness of the laser line,
- an algorithm to find the center of the line can be used.
- 
+.
+ Image processing techniques, such as derivative filters, may be used to
+ locate the center of brightness of the laser line and allow resolutions
+ greater than the thickness of the line would allow.
 \end_layout
 
 \begin_layout Standard
@@ -269,57 +265,132 @@ name "fig:Laser-Scanner"
 \end_layout
 
 \begin_layout Subsubsection
-Structured Light 
+Structured light 
 \end_layout
 
 \begin_layout Standard
-Structured Light is a category of optical imaging techniques that use a
- coded pattern of projected light in conjunction with a camera to perform
- triangulation.
- There are two main categories of structured light techniques; continuous
- coding and discrete coding.
- 
+Structured light techniques use a coded pattern of projected light in conjunctio
+n with a camera to quickly perform full field-of-view triangulation.
+ Depending on the patterns used, a technique may be classified as either
+ continuous or discrete.
 \end_layout
 
 \begin_layout Paragraph
-Continuous Coding 
+Continuous coding 
 \end_layout
 
 \begin_layout Standard
-Continuous coding is a term for any structured light technique that projects
- a continuous pattern in order to code the shape data into an image.
- Most continuous coding techniques utilize a sinusoidal pattern, but there
- are some that use other forms of continuous information.
- 
+Continuously-coded images contain information about the projected pattern
+ at every pixel of the camera image
 \begin_inset CommandInset citation
 LatexCommand cite
 key "salvi2010state"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subparagraph
-Sinusoidal Fringe Projection 
+Sinusoidal fringe projection 
 \end_layout
 
 \begin_layout Standard
-Sinusoidal Fringe Projection is the most commonly used form of continuous
- coding.
- This method utilizes a Digital Light Projector (DLP) to project vertical
- fringes that vary sinusoidally in intensity.
- To achieve this sinusoidal pattern the projector and CCD camera must be
- synched so that the fringes start at their maximum size and shrink to a
- single pixel wide during a single exposure of the camera.
- The intensity at each point is averaged over the exposure time so that
- a sinusoid is created.
- Four frames of data are captured, each phase shifted by a quarter of the
- wavelength of the sinusoid.
- The multiple phase shifted images are used to calculate the wrapped phase
- map of the object.
- An unwrapping algorithm gives the unwrapped phase map, and the actual size
- data is calculated using the triangulation geometry
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Don't just describe a single implementation; first describe the overall,
+ general technique.
+ If you want to describe the specifics of an implementation that's fine
+ but first make sure your overall description is applicable to any technique
+ in that category.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sinusoidal fringe projection is a category of techniques that use a projection
+ pattern that varies sinusoidally in intensity.
+ A static fringe pattern may be used when rapid image acquisition is necessary,
+ as in analysis of a moving assembly.
+ These frames may be analyzed using Fourier transformation theory to very
+ quickly reconstruct an approximate model.
+ This method suffers from errors when the subject's profile contains step
+ discontinuities, however, and therefore is best used to characterize a
+ single surface.
+\end_layout
+
+\begin_layout Standard
+Fourier transform profilometry is a method for calculating the wrapped phase
+ map of the object in a single frame.
+ The method takes the Fourier transform of the intensity and isolates the
+ shape containing phase information.
+ When the Fourier transform is performed, 3 distinct peaks result in the
+ Fourier domain.
+ The central peak contains the brightness information and can be masked
+ out.
+ The two remaining peaks are symmetric about the origin and contain the
+ shape information.
+ One of these peaks is masked out, and the remaining one is shifted by the
+ carrier frequency to the origin.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Takeda:83"
+
+\end_inset
+
+ The inverse FFT is calculated and the phase data is separated from the
+ contrast by taking the arc tangent of the imaginary components over the
+ real components.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zervas"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When speed of scanning is not paramount, another commonly-used technique
+ is phase shifting, which involves projecting multiple fringe patterns with
+ a specific phase difference between them.
+ When these images are captured, they may be transformed using a least-squares
+ equation at every point in the image to capture the original phase data,
+ corresponding to the angle between the projector's optical axis and the
+ projected pixel.
+ This phase map, containing what is known as 
+\begin_inset Quotes eld
+\end_inset
+
+wrapped
+\begin_inset Quotes erd
+\end_inset
+
+ data, must be 
+\begin_inset Quotes eld
+\end_inset
+
+unwrapped
+\begin_inset Quotes erd
+\end_inset
+
+ before three-dimensional data can be extracted.
+ This can be accomplished through a 
+\begin_inset Quotes eld
+\end_inset
+
+flood-fill
+\begin_inset Quotes erd
+\end_inset
+
+ method, through Fourier transformation, or through use of multiple fringe
+ densities
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zervas"
@@ -327,6 +398,20 @@ key "Zervas"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+It is important when using either of these techniques that the fringes be
+ as close to sinusoidal as possible.
+ One technique to ensure accurate sinusoids is to use a digital light processor
+ (DLP) projector with a high frame rate.
+ Such a system can rapidly project multiple binary patterns during the exposure
+ of one frame of the camera and very accurately recreate a sinusoidal pattern.
+ To reduce costs, other systems approximate sinusoidal fringes by using
+ a single, defocused binary pattern.
+ This simplifies implementation, as the hardware need only be capable of
+ projecting binary patterns, but introduces errors as the approximation
+ deviates from a true sinusoid.
 \end_layout
 
 \begin_layout Standard
@@ -384,86 +469,40 @@ name "fig:Sinosoidal-Fringe-Projection"
 \end_layout
 
 \begin_layout Subparagraph
-Binary Fringe Projection 
-\end_layout
-
-\begin_layout Standard
-Instead of a sinusoidal pattern, a binary fringe pattern is projected.
- This pattern is defocused to approximate a sinusoidal pattern.
- The phase can then be found through phase shifting in the same manner as
- standard sinusoidal fringe projection.
- The advantage of this method is that near sinusoidal fringes can be created
- without long exposure times and dynamic projectors.
- This allows for faster applications such as single frame acquisition, but
- reduces the accuracy of the system by introducing higher order noise.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "lei2010digital"
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Subparagraph
-Fourier Transform Profilometry 
-\end_layout
-
-\begin_layout Standard
-Fourier Transform Profilometry is a method for calculating the wrapped phase
- map of the object in a single frame.
- The method takes the Fourier transform of the intensity and isolates the
- shape containing phase information.
- When the Fourier transform is performed, 3 distinct peaks result in the
- Fourier domain.
- The central peak contains the brightness information and can be masked
- out.
- The two remaining peaks are symmetric about the origin and contain the
- shape information.
- One of these peaks is masked out, and the remaining one is shifted by the
- carrier frequency to the origin.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Takeda:83"
-
-\end_inset
-
- The inverse FFT is calculated and the phase data is separated from the
- contrast by taking the arc tangent of the imaginary components over the
- real components.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Zervas"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subparagraph
-Color Coded Fringe Projection
+Color-coded fringe projection
 \end_layout
 
 \begin_layout Standard
 Instead of a single fringe pattern being phase shifted between several pictures,
  three phase shifted patterns are projected simultaneously for single frame
  acquisition.
- These three patterns are different colors, typically RGB.
+ These three patterns are different colors, typically red, green, and blue
+ as these are the primary colors of any commercial projection system.
  The three patterns are separated and used to generate a wrapped phase map.
  The main limitation of this method is that it is sensitive to the transmittance
 , reflectivity, and absorption of the object being measured.
  To compensate for this the exact wavelengths used can be chosen based on
  the color and material of the object, or some form of coating can be applied
- to the object to improve the conditions.
- 
+ to the object to improve the conditions
 \begin_inset CommandInset citation
 LatexCommand cite
 key "huang1999color"
 
 \end_inset
 
+.
  
+\end_layout
+
+\begin_layout Subparagraph
+Binary encoding
+\end_layout
+
+\begin_layout Standard
+A temporally-multiplexed binary method takes the binary value for each projector
+ pixel and projects each bit in sequence.
+ This is the primary technique used in our approach and will be used in
+ later sections.
 \end_layout
 
 \begin_layout Standard
@@ -521,23 +560,26 @@ name "fig:Color-Coded-Fringes"
 \end_layout
 
 \begin_layout Subparagraph
-Continuous Spatial Grading
+Continuous spatial grading
 \end_layout
 
 \begin_layout Standard
 A continuous grayscale or color scale is projected onto the object.
- Every X coordinate in the undistorted projection has a unique intensity
- value, allowing for triangulation similar to a line scanner.
+ Every 
+\begin_inset Formula $x$
+\end_inset
+
+-coordinate in the undistorted projection has a unique intensity value,
+ allowing for triangulation similar to a line scanner.
  This method is extremely sensitive to shadowing and the color of the target
- object.
- 
+ object
 \begin_inset CommandInset citation
 LatexCommand cite
 key "salvi2010state"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -557,14 +599,14 @@ Discrete coding consists of projecting non-continuous patterns onto an object.
  This displacement can be used to triangulate the distance to the object
  for each location, thus giving the 3-dimensional shape.
  The two methods of discrete coding are spatial multiplexing and time multiplexi
-ng 
+ng
 \begin_inset CommandInset citation
 LatexCommand cite
 key "salvi2010state"
 
 \end_inset
 
- 
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -582,18 +624,17 @@ codeword
 \end_inset
 
  for any given section of the pattern is based on the surrounding region.
- For a 1-D pattern this means the sequence of lines to either side of any
- given line are unique and thus identify that line.
+ For a one-dimensional pattern this means the sequence of lines to either
+ side of any given line are unique and thus identify that line.
  In a 2-D case it the surroundings in all directions within the plane are
- taken into account.
- 
+ taken into account
 \begin_inset CommandInset citation
 LatexCommand cite
 key "salvi2004pattern"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subparagraph
