@@ -94,7 +94,7 @@ s of the cameras.
  principal point, and lens distortions.
  The focal length is a very important parameter to triangulation, so even
  if the manufacturer gives this value it still must be calculated during
- calibration in order to ensure the accuracy of the given value.
+ calibration in order to ensure accuracy.
  Correcting for lens distortions is critical for obtaining accurate input,
  and doing so removes distortions from the resulting mesh, vastly improving
  results.
@@ -139,15 +139,164 @@ ons, and thus is useless for calibration.
  plane.
  Then the transformations of the points between images in 3D space are calculate
 d.
- From this information it is possible to recover the non-distortion intrinsic
+ The relationship between the 2D points and 3D points is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+s\left[\begin{array}{ccc}
+u & v & 1\end{array}\right]^{T}=\left[\begin{array}{ccc}
+\alpha & \gamma & u_{o}\\
+0 & \beta & v_{o}\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{cc}
+R & t\end{array}\right]\left[\begin{array}{cccc}
+X & Y & Z & 1\end{array}\right]\label{eq:}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this equation 
+\begin_inset Formula $s$
+\end_inset
+
+ is an arbritray scale factor, 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ are the coordinates of a point in the camera coordinate system, and 
+\begin_inset Formula $X$
+\end_inset
+
+,
+\begin_inset Formula $Y$
+\end_inset
+
+,
+\begin_inset Formula $Z$
+\end_inset
+
+ is the coordinate of the point in the 3D coordinate system.
+ The matrix 
+\begin_inset Formula $\left[\begin{array}{cc}
+R & t\end{array}\right]$
+\end_inset
+
+contains the extrinsic parameters, where 
+\begin_inset Formula $R$
+\end_inset
+
+ is the rotation matrix relating the two coordinate systems and 
+\begin_inset Formula $T$
+\end_inset
+
+ is the translation matrix for the same relation.
+ The remaining variables are the nondistortion intrinsic parameters.
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are the scale factors for 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+ respectively.
+ 
+\begin_inset Formula $u_{o}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{o}$
+\end_inset
+
+are the coordinates of the principle point of the camera.
+ Finally 
+\begin_inset Formula $\gamma$
+\end_inset
+
+is the scew of the two images axes.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang2000flexible"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From this information it is possible to recover the non-distortion intrinsic
  and extrinsic parameters of the camera in a closed-form solution.
- The radial distortion can be calculated with linear least square.
+ The radial distortion can be calculated using linear least squares.
  Finally, all parameters are refined to minimize reprojection errors using
  a Levenberg-Marquardt method.
  
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zhang2000flexible"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/camera calibration.png
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Camera Calibration 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Camera-Calibration"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -195,9 +344,9 @@ The method used for projector calibration is an existing method that utilizes
  above.
  Next the calibration board is placed in a stationary position and its coordinat
 es are calculated using a captured image and the calibration parameters.
- Next a checkerboard pattern is projected on top of the existing pattern
- on the calibration board, and the corner locations are found using the
- same method as in camera calibration.
+ A checkerboard pattern is projected on top of the existing pattern on the
+ calibration board, and the corner locations are found using the same method
+ as in camera calibration.
  By calcualting the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated

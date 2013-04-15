@@ -84,7 +84,57 @@ For our testing we modeled a theoretically perfect sphere within POV-Ray,
  After the simulated images were produced, they were analyzed into a point
  cloud.
  This point cloud was exported as an .obj file and further analyzed in Matlab.
- A Matlab script was written to take cross sections of data from various
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/simulation point cloud.png
+	display false
+	width 25col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Downscaled image of point cloud
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Downscaled-Image-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Matlab script was written to take cross sections of data from various
  angles.
  All of the cross sections passed through the center of the sphere, so theoretic
 ally they should all have a radius of 15cm.
@@ -122,7 +172,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Cross Sectional Radii of sphere.
+Cross sectional radii of the sphere.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -170,7 +220,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Standard Deviation of cross sections.
+Standard deviation of cross sections.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Standard-Deviation-of"
@@ -471,7 +521,7 @@ All
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Simulated Results
+Simulated results
 \end_layout
 
 \end_inset

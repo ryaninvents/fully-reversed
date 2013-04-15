@@ -77,7 +77,7 @@ The projector was selected to be low cost, compact, and have a high resolution.
  In order to ensure a large field of view at the close range, the projector
  also needed to have a large throw ratio.
  Taking all of these parameters into account, the projector that was selected
- is the Optoma PK201 Pico Pocket Projector.
+ is the Optoma PK201 pico pocket projector.
  See Appendix A for technical specifications of the projector.
 \end_layout
 
@@ -110,7 +110,7 @@ name "fig:Optima-PK201-Projector"
 
 \end_inset
 
-Optoma PK201 Pico Pocket Projector
+Optoma PK201 pico pocket projector
 \end_layout
 
 \end_inset
@@ -164,7 +164,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Logitech C905 Webcam
+Logitech C905 webcam
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Logitech-C905-Webcam"
@@ -220,7 +220,7 @@ Next the existing camera casings were removed so that only the lenses and
  with a screw hole.
  The mounts had a hole on top for the new camera casings, which could pivot
  about the hole until tightened into place.
- The custom mounts and caseings were then rapid prototyped.
+ The custom mounts and casings were then rapid prototyped.
 \end_layout
 
 \begin_layout Standard
@@ -232,9 +232,17 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename img/mount assembly.png
+	filename img/cad-render.png
 	display false
-	width 75col%
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/scanning system.png
+	display false
+	width 55col%
 
 \end_inset
 
@@ -247,11 +255,11 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:CAD-Mounting-Assembly"
+name "fig:Scanner-assembly"
 
 \end_inset
 
-CAD Mounting Assembly
+Scanner assembly
 \end_layout
 
 \end_inset
