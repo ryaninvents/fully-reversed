@@ -109,7 +109,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Downscaled Image of Point Cloud
+Downscaled image of point cloud
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Downscaled-Image-of"
@@ -172,7 +172,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Cross Sectional Radii of sphere.
+Cross sectional radii of the sphere.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -220,7 +220,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Standard Deviation of cross sections.
+Standard deviation of cross sections.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Standard-Deviation-of"
@@ -521,7 +521,7 @@ All
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Simulated Results
+Simulated results
 \end_layout
 
 \end_inset

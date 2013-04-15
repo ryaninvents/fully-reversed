@@ -185,7 +185,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Laser Scanner
+Laser scanner
 \begin_inset CommandInset citation
 LatexCommand cite
 key "LineScanner"
@@ -301,7 +301,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Sinosoidal Fringe Projection 
+Sinosoidal fringe projection 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Zervas"
@@ -438,7 +438,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Color Coded Fringes
+Color coded fringes
 \begin_inset CommandInset citation
 LatexCommand cite
 key "huang1999color"
@@ -587,7 +587,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-De Bruijn Patterns
+De Bruijn patterns
 \begin_inset CommandInset citation
 LatexCommand cite
 key "salvi2010state"
@@ -1036,7 +1036,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Next Engine 3D Scanner
+Next Engine 3D scanner
 \begin_inset CommandInset citation
 LatexCommand cite
 key "NextEngine"
@@ -1112,7 +1112,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-David 3D Laser Scanners
+David 3D Laser scanners
 \begin_inset CommandInset citation
 LatexCommand cite
 key "David3d"

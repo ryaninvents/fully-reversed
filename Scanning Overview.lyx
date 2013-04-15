@@ -95,7 +95,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Scanning Process Overview
+Scanning process overview
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Scanning-Process-Overview"
@@ -154,7 +154,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Digitization Process Overview
+Digitization process overview
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Digitization-Process-Overview"
