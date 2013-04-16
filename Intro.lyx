@@ -64,5 +64,53 @@
 Introduction
 \end_layout
 
+\begin_layout Standard
+Many engineering applications require digitized knowledge of the shape of
+ a component or surface.
+ The traditional method for obtaining this information, by use of a coordinate
+ measuring machine (CMM), is costly, time consuming, and only provides a
+ sparse data set.
+ Accordingly, there has been a proliferation of techniques, devices, and
+ software allowing users to generate a computer model by quickly 
+\begin_inset Quotes eld
+\end_inset
+
+scanning
+\begin_inset Quotes erd
+\end_inset
+
+ a component by optical techniques.
+\end_layout
+
+\begin_layout Standard
+These techniques still present challenges to small companies and hobbyists,
+ since they are generally proprietary and often costly.
+ This paper details the construction and use of an inexpensive, full field-of-vi
+ew measuring system using easily obtained, commercially available components.
+\end_layout
+
+\begin_layout Section
+Importance of full field-of-view digitization
+\end_layout
+
+\begin_layout Standard
+There are many reasons why a designer or operator may wish to obtain a CAD
+ model from an existing physical component.
+ To demonstrate the need for this technology, we will present three cases
+ which represent a cross-section of the application of this type of system.
+\end_layout
+
+\begin_layout Subsection
+Restoration of antique machinery
+\end_layout
+
+\begin_layout Subsection
+In-the-field analysis of structural integrity
+\end_layout
+
+\begin_layout Subsection
+Repairing or replacing components in space
+\end_layout
+
 \end_body
 \end_document
