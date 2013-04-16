@@ -572,7 +572,7 @@ A continuous grayscale or color scale is projected onto the object.
 -coordinate in the undistorted projection has a unique intensity value,
  allowing for triangulation similar to a line scanner.
  This method is extremely sensitive to shadowing and the color of the target
- object
+ object 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "salvi2010state"
@@ -583,7 +583,7 @@ key "salvi2010state"
 \end_layout
 
 \begin_layout Paragraph
-Discrete Coding 
+Discrete coding 
 \end_layout
 
 \begin_layout Standard
@@ -610,7 +610,7 @@ key "salvi2010state"
 \end_layout
 
 \begin_layout Paragraph
-Spatial Multiplexing 
+Spatial multiplexing 
 \end_layout
 
 \begin_layout Standard
@@ -638,7 +638,7 @@ key "salvi2004pattern"
 \end_layout
 
 \begin_layout Subparagraph
-De Bruijn Coding 
+De Bruijn coding 
 \end_layout
 
 \begin_layout Standard
@@ -711,7 +711,7 @@ name "fig:De-Bruijn-Patterns"
 \end_layout
 
 \begin_layout Subparagraph
-M-Arrays 
+M-arrays 
 \end_layout
 
 \begin_layout Standard
@@ -786,7 +786,7 @@ name "fig:M-Array"
 \end_layout
 
 \begin_layout Subparagraph
-Non-Formal Coding 
+Non-formal coding 
 \end_layout
 
 \begin_layout Standard
@@ -807,7 +807,7 @@ key "salvi2004pattern"
 \end_layout
 
 \begin_layout Paragraph
-Time Multiplexing 
+Time multiplexing 
 \end_layout
 
 \begin_layout Standard
@@ -828,7 +828,7 @@ key "salvi2010state"
 \end_layout
 
 \begin_layout Subparagraph
-Binary Codes 
+Binary codes 
 \end_layout
 
 \begin_layout Standard
@@ -849,7 +849,7 @@ key "salvi2004pattern"
 \end_layout
 
 \begin_layout Subparagraph
-N-Array Codes 
+N-Array codes 
 \end_layout
 
 \begin_layout Standard
@@ -868,7 +868,7 @@ key "salvi2004pattern"
 \end_layout
 
 \begin_layout Subparagraph
-Hybrid Coding 
+Hybrid coding 
 \end_layout
 
 \begin_layout Standard
@@ -964,8 +964,6 @@ Kinect
 \end_layout
 
 \begin_layout Standard
-
-\lang american
 The Kinect is a 3D imaging device made by Microsoft for use with their Xbox
  360 gaming console.
  The Kinect works based on a fixed pseudorandom array of dots projected
@@ -992,8 +990,6 @@ key "KinectPatent"
 \end_layout
 
 \begin_layout Standard
-
-\lang american
 Microsoft has kept its specific algorithms for calculating the depth proprietary.
  However, the open-source community has had some success in reverse-engineering
  the Kinect.

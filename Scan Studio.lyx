@@ -65,10 +65,22 @@ Scan Studio
 \end_layout
 
 \begin_layout Standard
-Scan studio is the custom software created for this project.
- Scan studio was programmed in visual C++ and has a graphical user interface
- (GUI) that is built in the QT framework.
- Scan studio can be used to run simulations or perform scans.
+
+\emph on
+Scan Studio
+\emph default
+ is the custom software created for this project.
+ 
+\emph on
+Scan Studio
+\emph default
+ was programmed in C++ and has a graphical user interface (GUI) that is
+ built in the Qt framework.
+ 
+\emph on
+Scan Studio 
+\emph default
+can be used to run simulations or perform scans.
  
 \end_layout
 
@@ -77,8 +89,12 @@ Calibration
 \end_layout
 
 \begin_layout Standard
-Scan Studio has a built in camera and projector calibration process that
- utilizes the calibration algorithms detailed in the calibration section.
+
+\emph on
+Scan Studio
+\emph default
+ has a built in camera and projector calibration process that utilizes the
+ calibration algorithms detailed in the calibration section.
  While calibrating the cameras the real time images from both cameras is
  displayed in the program.
  Once calibration is complete the calibration results are automatically
@@ -91,8 +107,11 @@ Scanning
 \end_layout
 
 \begin_layout Standard
-Scan Studio creates a single view scan of an object with a single button
- click.
+
+\emph on
+Scan Studio
+\emph default
+ creates a single view scan of an object with a single button click.
  Once the scan button is pressed the software automatically projects the
  binary patterns and saves images from the cameras of each pattern.
  Additionally it is possible to chose how many images are taken and averaged
@@ -102,14 +121,33 @@ tion algorithm and a point cloud is generated.
 \end_layout
 
 \begin_layout Standard
-In addition to generating point clouds directly from a scan, Scan Studio
+In addition to generating point clouds directly from a scan, 
+\emph on
+Scan Studio
+\emph default
  is capable of generating point clouds from two other sources.
  The first is from a series of image files captured externally.
  The image files must contain the same reflected binary patterns, and the
- filenames must be formated correctly for Scan Studio to process them.
- The other source Scan Studio can process images from is simulations.
- Scan Studio is capable of interfacing with the POV-ray simulation software
- to generate images of an object with the same projected patterns.
+ filenames must be formated correctly for 
+\emph on
+Scan Studio
+\emph default
+ to process them.
+ The other source 
+\emph on
+Scan Studio
+\emph default
+ can process images from is simulations.
+ 
+\emph on
+Scan Studio
+\emph default
+ is capable of interfacing with the 
+\emph on
+POV-Ray
+\emph default
+ simulation software to generate images of an object with the same projected
+ patterns.
  These images are then processed in the same way as real scan data.
 \end_layout
 
@@ -118,7 +156,11 @@ Object View
 \end_layout
 
 \begin_layout Standard
-Scan studio renders point cloud data in a virtual 3D environment.
+
+\emph on
+Scan Studio 
+\emph default
+renders point cloud data in a virtual three-dimensional environment.
  The point cloud can be viewed from any angle as the coordinate system is
  rotated.
  Additionally wire-frame models of the cameras and projector are displayed
