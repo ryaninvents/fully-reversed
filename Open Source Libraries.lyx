@@ -76,6 +76,13 @@ OpenCV is an open source computer vision library created by Intel in 1999
  so long as the proper acknowledgments and copyrights are used.
  The OpenCV library contains a vast amount of source code for various computer
  vision application, and is supported by a large open source community.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "opencv"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -104,6 +111,28 @@ OpenCV code was used in this project as part of the scanning program.
 
 \begin_layout Section
 OpenGL
+\end_layout
+
+\begin_layout Standard
+OpenGl is an open source library for developing 2D and 3D graphical applications.
+ It was created in 1992 and has become the industry standard for graphical
+ programming.
+ It is used in a variety of applications from animation to CAD software.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "opengl"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this project OpenGL was used to create the 3D viewing environment for
+ the point cloud data.
+ This environment includes a coordinate system with the three major axes
+ visable, as well as wireframe models of the cameras and projector, located
+ in their calibrated positions and orientations.
 \end_layout
 
 \begin_layout Section
