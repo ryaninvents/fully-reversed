@@ -103,11 +103,20 @@ OpenCV code was used in this project as part of the scanning program.
 \end_layout
 
 \begin_layout Section
+PCL
+\end_layout
+
+\begin_layout Section
 OpenGL
 \end_layout
 
 \begin_layout Section
-PCL
+Qt
+\end_layout
+
+\begin_layout Standard
+Qt is an extensive framework for object-to-object communication and user
+ interface construction.
 \end_layout
 
 \end_body
