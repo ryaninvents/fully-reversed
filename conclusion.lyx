@@ -64,6 +64,45 @@
 Conclusions
 \end_layout
 
+\begin_layout Standard
+This project set out to create a low cost system to digitize existing objects
+ in full 3D for the purpose of enhancing the engineering design cycle.
+ At the end the results we achieved showed that this is indeed possible
+ with current technology and that with only a little more work these goals
+ could have been fully satisfied.
+ The hardware that was selected met the needs of the system and were sufficient
+ to achieve engineering quality scans.
+ Additionally the hybrid method that was proposed produced results that
+ met the goals of the project.
+ The only holdup was with the sofware development.
+ The entire framework has been set up to complete the goal of accurate,
+ precise, and fully three-dimensional scans, but the software implementation
+ is as of yet incomplete.
+ With the current state projector calibration is currently incomplete preventing
+ perfectly accurate scans.
+ Additionally this prevented the implementation of the photgrammetry tracking
+ for automated stitching of the meshes.
+ For this reason it is reccomeneded that future iterations of this project
+ contain at least one computer science major to facilitate the implementation
+ of software improvements.
+\end_layout
+
+\begin_layout Standard
+Despite the fact that the software is not yet capable to realizing the full
+ goal of the project, the theory is sound.
+ The project was still an amazing success because it proved that low cost
+ hardware was in fact capable of achieving measurements that could be used
+ for engineering design or analysis.
+ Additonally the current system is capable of producing the desired results,
+ just not in an automated mannor.
+ Through carefull measurements of the projector location accurate scans
+ can still be achieved without the calibration being fully functional.
+ Cleaning of the stray noise can be done manually, and with great effort
+ multiple views can be aligned and stitched.
+ The work left to be done will only serve to further improve and validate
+ this already functional system.
+\end_layout
+
 \begin_layout Section
 Future Work
 \end_layout
@@ -99,8 +138,14 @@ nearest neighbor
 
  filter should be implemented to automatically clean up the extraneous points
  caused by stray light.
- Finally the meshing algorithm needs to be improved, perhaps through the
- use of the open source library Point Cloud Library (PCL).
+ The meshing algorithm needs to be improved, perhaps through the use of
+ the open source library Point Cloud Library (PCL).
+ Finally, the whole program needs to be optimized for speed and processing
+ efficiency.
+ Specifically multithreading needs to be implemented so that the program
+ can perform multiple taks at once, and the actual data aquisition process
+ needs to be speed up through improvements in the camera-projector synchronizati
+on.
 \end_layout
 
 \begin_layout Standard
