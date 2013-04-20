@@ -61,7 +61,58 @@
 \begin_body
 
 \begin_layout Chapter
-Conclusion
+Conclusions
+\end_layout
+
+\begin_layout Section
+Future Work
+\end_layout
+
+\begin_layout Standard
+The entire scanning system was researched and designed from start to finish,
+ however there are many components that were not implemented due to time
+ constraints.
+ Future MQPs can pick up where we left off and finish these components.
+ The projector calibration is currently incomplete, thus current scans use
+ calibrated cameras and manually measured projector parameters.
+ Furthermore stereo vision requires precise projector calibration to be
+ implemented properly.
+ The reason for this is that the two point clouds from the separate cameras
+ will be distorted differently from the inaccurate projector position depending
+ on their relative locations.
+ Stereo vision will greatly improve results by automatically removing noise
+ data that is only seen by one of the cameras.
+ Additionally it will allow for averaging of the actual shape data in regions
+ that both cameras can see.
+ Photogrammetry tracking also requires the projector calibration in order
+ to function properly.
+ The addition of photogrammetry tracking will allow for the automated alignment
+ and stitching of meshes, and thus is essential for creating full 3D CAD
+ files in a timely manner.
+ Additional measures to automatically remove noise such as a 
+\begin_inset Quotes eld
+\end_inset
+
+nearest neighbor
+\begin_inset Quotes erd
+\end_inset
+
+ filter should be implemented to automatically clean up the extraneous points
+ caused by stray light.
+ Finally the meshing algorithm needs to be improved, perhaps through the
+ use of the open source library Point Cloud Library (PCL).
+\end_layout
+
+\begin_layout Standard
+In addition to the incomplete components of the project future work needs
+ to be done in order to characterize the quality of results obtained by
+ the system.
+ Detailed analysis on the recovered images should be performed on several
+ different standardized gauges in order to determine the accuracy and precision
+ of the system.
+ These analyses should include cross section plots of the shape information
+ and comparisons of the quality of the binary and hybrid methods, both with
+ and without stereo cameras.
 \end_layout
 
 \end_body
