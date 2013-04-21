@@ -186,6 +186,17 @@ Additionally digitization can be used on a part that has already failed
 Art conservation
 \end_layout
 
+\begin_layout Standard
+Artwork is often created without any special attention paid to making it
+ resistant to the flow of time.
+ Even when preserved in mesuseams with controlled conditions it is impossible
+ to completely stop the slow detereoration of paintings and sculptures.
+ With digitization technology it is possible to preserve sculptures in digital
+ archives for viewing online by future patrons.
+ Additionally having a record of the current state of artwork would allow
+ for restoration efforts to more accurately recreate the original.
+\end_layout
+
 \begin_layout Subsection
 Custom accessories 
 \end_layout
@@ -195,7 +206,21 @@ Sometimes rather than modifying an existing part it is easier to create
  an accessory to enhance its function.
  In these senarios it is often necessary to know the precise geometry of
  the existing part to which the accessory will be attached.
- For example the company 
+ For example the company WeatherTech uses digitization technology to create
+ custum floor liners for cars.
+ These floor liners are created to be form fitting in order to not allow
+ any water to harm to car interior.
+ Thus the company first digitizes the region of the interior that the liners
+ will be installed in, and uses this information to generate the exact geometry
+ of the mats themselves.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WeatherTech"
+
+\end_inset
+
+ A similar process could be applied to any situation where a form fittting
+ accessory is required.
 \end_layout
 
 \begin_layout Subsection
