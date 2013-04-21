@@ -65,6 +65,28 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+Engineers are constantly seeking new tools to allow them to innovate more
+ efficiently and effectively.
+ The process of rapid digitization of an existing object, modification of
+ that object in CAD software, and fabrication of the new object through
+ rapid-prototyping is one such tool.
+ Presently there are low cost options for both CAD packages and rapid prototypin
+g.
+ For example the open source software FreeCAD can be acquired free of charge.
+ Additionally the RepRap project is a movement designed to make self replicating
+ 3D printers so that as many people as possible can own one.(cite) While
+ there are still some parts that can not be printed such as the extrusion
+ head, the fact that people are able to print the majority of parts for
+ their 3D printers makes them readily accessible.
+ However one part of this process is currently lacking.
+ There does not presently exist a low cost solution for rapid-digitization
+ of existing objects.
+ Therefore the goal of this project is to create a cost effective system
+ for rapid digitization that is easily integrable with existing CAD packages
+ and 3D printers.
+\end_layout
+
+\begin_layout Standard
 Many engineering applications require digitized knowledge of the shape of
  a component or surface.
  The traditional method for obtaining this information, by use of a coordinate
@@ -96,20 +118,97 @@ Importance of full field-of-view digitization
 \begin_layout Standard
 There are many reasons why a designer or operator may wish to obtain a CAD
  model from an existing physical component.
- To demonstrate the need for this technology, we will present three cases
+ To demonstrate the need for this technology, we will present several cases
  which represent a cross-section of the application of this type of system.
 \end_layout
 
 \begin_layout Subsection
-Restoration of antique machinery
+Replication or modification of existing parts
+\end_layout
+
+\begin_layout Standard
+There are many situations where CAD files are not available for an existing
+ component.
+ In these situations sometimes it is infeasible to create a CAD through
+ CAD software due to time constraints or complex geometry.
+ In the situation of complex geometry in particular it is difficult to get
+ precise measurements of 3D curves even with the use of a CMM.
+ For example, Jay Leno uses an expensive 3D scanner to generate CAD models
+ of antique car parts that are no longer commercially available.
+ He is then able to create new replacement parts based on these models.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Leno"
+
+\end_inset
+
+ There may also be situations where the component to be replicated needs
+ to be modified in some way.
+ Perhaps the whole part needs to be scaled to another size, or an additional
+ feature is required.
+ Digitization of the part allows for the CAD file to be modified, meaning
+ that such changes are possible.
 \end_layout
 
 \begin_layout Subsection
 In-the-field analysis of structural integrity
 \end_layout
 
+\begin_layout Standard
+Sometimes there are situations where a part is damaged and a replacement
+ is not readily available.
+ In these scenarios it is often unclear as to whether or not it is safe
+ to continue using the damaged part.
+ A well trained engineer will air on the side of caution and choose to wait
+ for a replacement even if it means delays and lose of profit.
+ However sometimes the opposite choice is made which can have disastrous
+ consequences.
+ However, rapid-digitization techniques can be used to alleviate this problem.
+ By digitizing a damaged part with extensive detail on the damaged portion
+ it is possible to create a CAD file with the damaged geometry.
+ Finite element analysis (FEA) can then be performed on the model to see
+ whether it is still safe to use or needs to be replaced immediately.
+\end_layout
+
+\begin_layout Standard
+Additionally digitization can be used on a part that has already failed
+ catastrophically.
+ In this case the only important information is the digitized surface of
+ the damaged region.
+ By conducting a detailed analysis on the data obtained information can
+ be gained on the failure mode.
+ This will assist in avoiding repeated failure of replacement parts through
+ either part redesign or maintenance and environmental changes.
+ 
+\end_layout
+
 \begin_layout Subsection
-Repairing or replacing components in space
+Art conservation
+\end_layout
+
+\begin_layout Subsection
+Custom accessories 
+\end_layout
+
+\begin_layout Standard
+Sometimes rather than modifying an existing part it is easier to create
+ an accessory to enhance its function.
+ In these senarios it is often necessary to know the precise geometry of
+ the existing part to which the accessory will be attached.
+ For example the company 
+\end_layout
+
+\begin_layout Subsection
+Quality Assurance
+\end_layout
+
+\begin_layout Standard
+Digitization technology can be implemented in the manufacturing process.
+ Rapid digitization can be used on an assembly line to scan parts.
+ Basic feature recognition can be used on the digitized parts to check for
+ defects.
+ Even if the process is not fast enough to scan a part as its moving on
+ a conveyor, it can still be used on a sampling of parts for batch checking.
 \end_layout
 
 \end_body
