@@ -92,9 +92,19 @@ Camera calibration consists of determining the intrinsic and extrinsic propertie
 s of the cameras.
  The intrinsic properties of the camera are the focal length, image format,
  principal point, and lens distortions.
- The focal length is a very important parameter to triangulation, so even
- if the manufacturer gives this value it still must be calculated during
- calibration in order to ensure accuracy.
+ The focal length
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+define
+\end_layout
+
+\end_inset
+
+ is a very important parameter to triangulation, so even if the manufacturer
+ gives this value it still must be calculated during calibration in order
+ to ensure accuracy.
  Correcting for lens distortions is critical for obtaining accurate input,
  and doing so removes distortions from the resulting mesh, vastly improving
  results.
