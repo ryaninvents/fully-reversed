@@ -84,7 +84,7 @@ status open
 \begin_inset Graphics
 	filename img/Process Overview.png
 	display false
-	scale 80
+	width 50col%
 
 \end_inset
 
