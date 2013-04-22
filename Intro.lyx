@@ -74,8 +74,14 @@ Engineers are constantly seeking new tools to allow them to innovate more
 g.
  For example the open source software FreeCAD can be acquired free of charge.
  Additionally the RepRap project is a movement designed to make self replicating
- 3D printers so that as many people as possible can own one.(cite) While
- there are still some parts that can not be printed such as the extrusion
+ 3D printers so that as many people as possible can own one.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RepRap"
+
+\end_inset
+
+ While there are still some parts that can not be printed such as the extrusion
  head, the fact that people are able to print the majority of parts for
  their 3D printers makes them readily accessible.
  However one part of this process is currently lacking.
@@ -221,6 +227,60 @@ key "WeatherTech"
 
  A similar process could be applied to any situation where a form fittting
  accessory is required.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/weathertech.JPG
+	display false
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+WeatherTech Liners
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:WeatherTech-Liners"
+
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WeatherTech"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
