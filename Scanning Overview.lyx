@@ -266,9 +266,9 @@ CAD software
 \begin_layout Standard
 Once the STL mesh is created it is possible to create a CAD model from it.
  Commercially available CAD packages such as SolidWorks have the capability
- of creating a CAD file from an STL automatically.(Cite) Depending on the
- CAD packages algorithm and the complexity of the part there will be a varying
- level of 
+ of creating a CAD file from an STL automatically.
+ Depending on the CAD packages algorithm and the complexity of the part
+ there will be a varying level of 
 \begin_inset Quotes eld
 \end_inset
 
@@ -298,7 +298,7 @@ Once all changes have been made to the 3D model or mesh it can be used to
  CNC machining requires additional creating of tool paths in CAM software
  before the part to be manufactured.
  Rapid Prototyping machines on the other hand are capable of creating parts
- from a mesh file, most commonly an STL(cite).
+ from a mesh file, most commonly an STL.
  
 \end_layout
 
