@@ -430,7 +430,7 @@ Our method uses a hybrid binary-encoding/phase-shifting approach.
 \emph on
 Scan Studio
 \emph default
- uses binary encoding to quickly capture high-order data.
+ uses binary encoding to quickly capture high-level data.
  Then, it uses phase shifting to enhance this binary data down to subpixel
  levels.
 \end_layout

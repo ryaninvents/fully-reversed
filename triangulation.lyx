@@ -398,7 +398,7 @@ Even though the fringe appears as a contour where it illuminates a surface,
 \end_layout
 
 \begin_layout Standard
-Vertical fringes will always pass through the 
+Vertical fringes will always pass through the projector's local 
 \begin_inset Formula $y$
 \end_inset
 
@@ -484,12 +484,21 @@ Now we have three vectors which sum to
 \end_inset
 
  are not necessarily positive.
+ Combining this with the projector's arbitrary rotation 
+\begin_inset Formula $\mathbf{R}_{p}$
+\end_inset
+
+ and the camera's arbitrary rotation 
+\begin_inset Formula $\mathbf{R}_{c}$
+\end_inset
+
+ allows for triangulation of any relative positioning of camera and projector.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-k_{0}\mathbf{\hat{M}}+k_{1}\mathbf{F_{1}}+k_{2}\mathbf{F_{2}}=\mathbf{D}
+k_{0}\mathbf{R}_{c}\mathbf{\hat{M}}+k_{1}\mathbf{R}_{p}\mathbf{F_{1}}+k_{2}\mathbf{R}_{p}\mathbf{F_{2}}=\mathbf{D}
 \]
 
 \end_inset
@@ -502,14 +511,14 @@ This may be solved by using the equation
 \begin_inset Formula 
 \begin{eqnarray*}
 \left(\begin{array}{ccc}
-\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)\left(\begin{array}{c}
+\mathbf{R_{c}\hat{M}} & \mathbf{R_{p}F_{1}} & \mathbf{R_{p}F_{2}}\end{array}\right)\left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
 k_{2}
 \end{array}\right) & = & \left(\begin{array}{c}
 \mathbf{D}\end{array}\right)\\
 \left(\begin{array}{ccc}
-\mathbf{\hat{M}} & \mathbf{F_{1}} & \mathbf{F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
+\mathbf{R_{c}\hat{M}} & \mathbf{R_{p}F_{1}} & \mathbf{R_{p}F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
 \mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
@@ -530,12 +539,12 @@ Now that we have our constants, the point
  is simply
 \begin_inset Formula 
 \begin{equation}
-\mathbf{M}=k_{0}\mathbf{\hat{M}}\label{eq:M-equals-k0-M-hat-c}
+\mathbf{M}=k_{0}\mathbf{R_{c}\hat{M}}\label{eq:M-equals-k0-M-hat-c}
 \end{equation}
 
 \end_inset
 
-in the camera's coordinate space.
+with the system origin defined as the origin of the camera's pinhole model.
 \end_layout
 
 \begin_layout Subsection
@@ -554,11 +563,7 @@ Applying the above techniques to an input image results in a two-dimensional
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-Scan Studio
-\emph default
- uses surfels
+Our proposed meshing method uses surfels
 \begin_inset Index idx
 status collapsed
 
@@ -580,13 +585,10 @@ el
 ement, represents a small patch of the object's surface in much the same
  way that a pixel represents a small patch of a computer screen.
  A surfel stores location, normal, color, and size.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -637,7 +639,8 @@ A surfel, with location
 \end_layout
 
 \begin_layout Standard
-
+There exist many methods and software packages capable of translating surfels
+ into a fully healed mesh.
 \end_layout
 
 \end_body

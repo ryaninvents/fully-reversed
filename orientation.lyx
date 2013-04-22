@@ -64,5 +64,26 @@
 Orientation tracking
 \end_layout
 
+\begin_layout Standard
+To follow the orientation of the object as it rotates between frames, our
+ proposed method is to reconstruct a sparse point cloud using ORB feature
+ tracking, then use least-squares techniques to estimate rotation and translatio
+n of this sparse cloud.
+ The movement of this cloud matches the movement of the subject, allowing
+ an implementation of this technique to 
+\begin_inset Quotes eld
+\end_inset
+
+stitch
+\begin_inset Quotes erd
+\end_inset
+
+ multiple single-view scans into a representation of the entire object.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document

@@ -80,11 +80,11 @@ The techniques outlined in the previous sections rely on calibration for
 \end_layout
 
 \begin_layout Subsection
-Camera Calibration
+Camera calibration
 \end_layout
 
 \begin_layout Subsubsection
-Calibration Process
+Calibration process
 \end_layout
 
 \begin_layout Standard
@@ -137,11 +137,11 @@ In order to calibrate the cameras it necessary to have a calibration board,
 \end_layout
 
 \begin_layout Subsubsection
-Calibration Algorithms 
+Calibration algorithms 
 \end_layout
 
 \begin_layout Standard
-The technique used for camera calibration is known as the Zhang method.
+The technique used for camera calibration is known as Zhang's method.
  This technique relies on observing a plane from multiple orientations.
  Simply translating the plane does not provide any new information for calculati
 ons, and thus is useless for calibration.
@@ -348,8 +348,8 @@ Calibration Algorithms
 \end_layout
 
 \begin_layout Standard
-The method used for projector calibration is an existing method that utilizes
- the Zhang's method.
+The method proposed for projector calibration is an existing method that
+ utilizes Zhang's method.
  First the cameras must be calibrated using Zhang's method as described
  above.
  Next the calibration board is placed in a stationary position and its coordinat
@@ -360,7 +360,7 @@ es are calculated using a captured image and the calibration parameters.
  By calcualting the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated
- through the Zhang's method.
+ through Zhang's method.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "falcao2008plane"
@@ -368,6 +368,11 @@ key "falcao2008plane"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+By the time of the conclusion of the project, projector calibration had
+ not yet been implemented.
 \end_layout
 
 \end_body
