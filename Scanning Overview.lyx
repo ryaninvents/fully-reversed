@@ -74,7 +74,6 @@ The process of scanning a real world object and using it to make a new object
 
 \begin_layout Standard
 \begin_inset Float figure
-placement h
 wide false
 sideways false
 status open
@@ -133,7 +132,6 @@ onal object into data to be used by computer software.
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
