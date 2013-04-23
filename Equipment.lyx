@@ -82,7 +82,6 @@ reference "tab:Camera-properties."
 
 \begin_layout Standard
 \begin_inset Float table
-placement h
 wide false
 sideways false
 status open
@@ -246,7 +245,6 @@ reference "tab:Projector-properties."
 
 \begin_layout Standard
 \begin_inset Float table
-placement h
 wide false
 sideways false
 status open
