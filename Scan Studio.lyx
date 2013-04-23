@@ -166,7 +166,7 @@ status open
 \begin_inset Graphics
 	filename img/Screenshot from 2013-04-22 18:00:13.png
 	lyxscale 30
-	width 75text%
+	width 5in
 
 \end_inset
 
@@ -271,7 +271,7 @@ Object view
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center

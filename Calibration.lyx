@@ -175,7 +175,7 @@ In this equation
 \begin_inset Formula $s$
 \end_inset
 
- is an arbritray scale factor, 
+ is an arbitrary scale factor, 
 \begin_inset Formula $u$
 \end_inset
 
@@ -201,7 +201,7 @@ In this equation
 R & t\end{array}\right]$
 \end_inset
 
-contains the extrinsic parameters, where 
+ contains the extrinsic parameters, where 
 \begin_inset Formula $R$
 \end_inset
 
@@ -210,12 +210,13 @@ contains the extrinsic parameters, where
 \end_inset
 
  is the translation matrix for the same relation.
- The remaining variables are the nondistortion intrinsic parameters.
+ The remaining variables are the intrinsic parameters, excluding distortion
+ which, due to its nonlinear nature, must be modeled separately.
  
 \begin_inset Formula $\alpha$
 \end_inset
 
-and 
+ and 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -236,26 +237,27 @@ and
 \begin_inset Formula $v_{o}$
 \end_inset
 
-are the coordinates of the principle point of the camera.
+ are the coordinates of the principal point of the camera.
  Finally 
 \begin_inset Formula $\gamma$
 \end_inset
 
-is the scew of the two images axes.
+ is the skew of the camera, representing a shift from a rectangular pixel
+ array to a parallelogram-shaped one
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zhang2000flexible"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
 From this information it is possible to recover the non-distortion intrinsic
  and extrinsic parameters of the camera in a closed-form solution.
  The radial distortion can be calculated using linear least squares.
- Finally, all parameters are refined to minimize reprojection errors using
+ Finally, all parameters are refined to minimize re-projection errors using
  a Levenberg-Marquardt method.
  
 \begin_inset CommandInset citation
@@ -357,7 +359,7 @@ es are calculated using a captured image and the calibration parameters.
  A checkerboard pattern is projected on top of the existing pattern on the
  calibration board, and the corner locations are found using the same method
  as in camera calibration.
- By calcualting the camera rays that pass through the corners of the projection
+ By calculating the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated
  through Zhang's method.

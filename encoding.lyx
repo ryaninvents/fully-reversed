@@ -111,7 +111,7 @@ binary encoding!reflected
 reflected binary.
  Then, the system projects and decodes sinusoidal fringes to collect high-freque
 ncy data.
- This gives the system subpixel accuracy with inexpensive equipment.
+ This gives the system sub-pixel accuracy with inexpensive equipment.
 \end_layout
 
 \begin_layout Standard
@@ -431,7 +431,7 @@ Our method uses a hybrid binary-encoding/phase-shifting approach.
 Scan Studio
 \emph default
  uses binary encoding to quickly capture high-level data.
- Then, it uses phase shifting to enhance this binary data down to subpixel
+ Then, it uses phase shifting to enhance this binary data down to sub-pixel
  levels.
 \end_layout
 
