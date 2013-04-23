@@ -156,15 +156,29 @@ Encoding view
 \end_layout
 
 \begin_layout Standard
+
+\emph on
+Scan Studio
+\emph default
+ allows the user to inspect the coding data after decoding has occurred
+ but before the 3D meshing process takes place.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-screenshot-of-encoding"
+
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename img/Screenshot from 2013-04-22 18:00:13.png
+	filename img/Screenshot encoding.png
 	lyxscale 30
 	width 5in
 
@@ -222,23 +236,6 @@ reference "fig:A-screenshot-of-3D-view"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-Scan Studio
-\emph default
- allows the user to inspect the coding data after decoding has occurred
- but before the 3D meshing process takes place.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:A-screenshot-of-encoding"
-
-\end_inset
-
  shows the 
 \begin_inset Quotes eld
 \end_inset
@@ -268,10 +265,30 @@ Object view
 \end_layout
 
 \begin_layout Standard
+
+\emph on
+Scan Studio 
+\emph default
+renders point cloud data in a virtual three-dimensional environment.
+ The point cloud can be viewed from any angle as the coordinate system is
+ rotated.
+ Additionally wire-frame models of the cameras and projector are displayed
+ in this view and are located at the positions indicated by the extrinsic
+ calibration.
+ Object view utilizes OpenGL, which is an open source library for rendering
+ 2D and 3D graphics.
+ Refer to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-screenshot-of-3D-view"
+
+\end_inset
+
+ 
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -319,36 +336,9 @@ background
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-Scan Studio 
-\emph default
-renders point cloud data in a virtual three-dimensional environment.
- The point cloud can be viewed from any angle as the coordinate system is
- rotated.
- Additionally wire-frame models of the cameras and projector are displayed
- in this view and are located at the positions indicated by the extrinsic
- calibration.
- Object view utilizes OpenGL, which is an open source library for rendering
- 2D and 3D graphics.
- Refer to Figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:A-screenshot-of-3D-view"
-
-\end_inset
-
- and for screenshots of the program.
+for a screenshot of the program.
 \end_layout
 
 \end_body
