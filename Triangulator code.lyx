@@ -1,0 +1,731 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Algorithms
+\end_layout
+
+\begin_layout Section
+Reflected binary pattern generation
+\end_layout
+
+\begin_layout Standard
+These four functions describe how the binary projection patterns are encoded
+ and decoded, from binary to reflected binary and back.
+ Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:binary-to-gray"
+
+\end_inset
+
+ converts ordinary binary into reflected binary, while Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:gray-to-binary"
+
+\end_inset
+
+ performs the inverse operation.
+ Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:binary-pattern-gen-plain"
+
+\end_inset
+
+ demonstrates how to generate projection patterns for the ordinary binary
+ sequence.
+ Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:binary-pattern-gen"
+
+\end_inset
+
+ describes how to use the encoding and decoding functions to generate the
+ improved reflected-binary projection patterns, and Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:binary-decode"
+
+\end_inset
+
+ describes how to process a reflected binary-coded image into an ordinary
+ binary-coded image.
+ Using the reflected-binary method, as described in Subsection 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Reflected-binary-encoding"
+
+\end_inset
+
+, offers several advantages over the ordinary binary format.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+int binaryToGray(int num) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return (num >> 1) ^ num; 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Algorithm in C for converting ordinary binary to reflected binary.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:binary-to-gray"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\begin_layout Plain Layout
+
+int grayToBinary(int num)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+    int numBits = 8 * sizeof(num);
+\end_layout
+
+\begin_layout Plain Layout
+
+    int shift;
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (shift = 1; shift < numBits; shift = 2 * shift)
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+        num = num ^ (num >> shift);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    return num;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Algorithm in C for converting reflected binary to ordinary binary.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:gray-to-binary"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+function 
+\begin_inset Formula $createOrdinaryBinaryPattern\left(rows,\, columns,\, bit\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+create a 
+\begin_inset Formula $rows\times columns$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+loop 
+\begin_inset Formula $u$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $columns$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $orValue$
+\end_inset
+
+ = 
+\begin_inset Formula $u\,|\,\left(1\ll bit\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $\left(orValue=0\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $binaryValue=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+otherwise 
+\begin_inset Formula $binaryValue=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+loop 
+\begin_inset Formula $v$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $rows$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P_{vu}=binaryValue$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+return 
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pseudocode algorithm for generating sequential ordinary binary-encoded patterns.
+ The 
+\begin_inset Formula $|$
+\end_inset
+
+ and 
+\begin_inset Formula $\ll$
+\end_inset
+
+ operators represent the standard bitwise-or and bit-shift operators, respective
+ly, as used in the C programming language.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:binary-pattern-gen-plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+function 
+\begin_inset Formula $createReflectedBinaryPattern\left(rows,\, columns,\, bit\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+create a 
+\begin_inset Formula $rows\times columns$
+\end_inset
+
+ matrix 
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+loop 
+\begin_inset Formula $u$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $columns$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $reflectedBinary$
+\end_inset
+
+ = 
+\begin_inset Formula $binaryToGray\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $orValue$
+\end_inset
+
+ = 
+\begin_inset Formula $reflectedBinary\,|\,\left(1\ll bit\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $\left(orValue=0\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $binaryValue=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+otherwise 
+\begin_inset Formula $binaryValue=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+loop 
+\begin_inset Formula $v$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $rows$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P_{vu}=binaryValue$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+return 
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pseudocode algorithm for generating sequential reflected binary-encoded
+ patterns.
+ The 
+\begin_inset Formula $|$
+\end_inset
+
+ and 
+\begin_inset Formula $\ll$
+\end_inset
+
+ operators represent the standard bitwise-or and bit-shift operators, respective
+ly, as used in the C programming language.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:binary-pattern-gen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+function 
+\begin_inset Formula $decodeCameraImage\left(I\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+create an output matrix 
+\begin_inset Formula $E$
+\end_inset
+
+ with the same dimensions as 
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+loop 
+\begin_inset Formula $u$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $columns$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+loop 
+\begin_inset Formula $v$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $rows$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E_{vu}=grayToBinary\left(I_{vu}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+return 
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pseudocode algorithm for converting a reflected binary-coded image to an
+ ordinary binary-coded image.
+ Argument 
+\begin_inset Formula $I$
+\end_inset
+
+ is a 
+\begin_inset Formula $rows\times columns$
+\end_inset
+
+ matrix containing encoded information.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:binary-decode"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Binary capture method
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagram-of-binary"
+
+\end_inset
+
+ demonstrates how the algorithms, image capture, and output are correlated
+ to produce a single binary-coded frame in a form suitable for triangulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename block-diagrams/binary-capture.svg
+	display false
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagram-of-binary"
+
+\end_inset
+
+Diagram of binary capture method.
+ This workflow generates results for both the ordinary and reflected binary
+ techniques, depending on the patterns selected for projection.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
