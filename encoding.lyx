@@ -152,6 +152,13 @@ multiplexing, temporal
 
 \begin_layout Subsection
 Reflected binary encoding
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Reflected-binary-encoding"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -194,6 +201,22 @@ binary encoding!ordinary
  A positive difference indicates a binary zero; a negative difference indicates
  a binary one.
  These bits are summed for all frames to recover the encoded frame.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Progression-of-binary"
+
+\end_inset
+
+ displays the progression of a binary structured light sequence.
+ Each row represents a projected frame; time advances as you move down the
+ figure.
+ Notice that in the ordinary binary sequence, a pixel on a bit boundary
+ in a given frame will change between every subsequent frame.
+ The reflected binary sequence does not have this property.
 \begin_inset Float figure
 wide false
 sideways false
@@ -213,6 +236,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename img/binary-progression.png
+	lyxscale 50
 	width 33text%
 
 \end_inset
@@ -228,6 +252,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename img/gray-code-progression.png
+	lyxscale 50
 	width 33text%
 
 \end_inset
@@ -269,13 +294,14 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Progression-of-binary"
+
+\end_inset
+
 Progression of (a) a binary sequence and (b) a reflected-binary sequence,
  both of width 640.
- Each row represents a projected frame; time advances as you move down the
- figure.
- Notice that in the ordinary binary sequence, a pixel on a bit boundary
- in a given frame will change between every subsequent frame.
- The reflected binary sequence does not have this property.
 \end_layout
 
 \end_inset

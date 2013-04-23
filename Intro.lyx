@@ -215,10 +215,17 @@ Sometimes rather than modifying an existing part it is easier to create
  an accessory to enhance its function.
  In these scenarios it is often necessary to know the precise geometry of
  the existing part to which the accessory will be attached.
- For example the company WeatherTech uses digitization technology to create
+ For example, the company WeatherTech uses digitization technology to create
  custom floor liners for cars.
- These floor liners are created to be form fitting in order to not allow
- any water to harm to car interior.
+ These floor liners are created to fit the shape of the floor to prevent
+ water damage, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:WeatherTech-Liners"
+
+\end_inset
+
+.
  Thus the company first digitizes the region of the interior that the liners
  will be installed in, and uses this information to generate the exact geometry
  of the mats themselves 
@@ -230,14 +237,12 @@ key "WeatherTech"
 
 .
  A similar process could be applied to any situation where a form fitting
- accessory is required.
-\end_layout
-
-\begin_layout Standard
+ accessory is required, such as a phone case or mounting bracket.
+ 
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center

@@ -206,7 +206,7 @@ key "opengl"
 In this project OpenGL was used to create the 3D viewing environment for
  the point cloud data.
  This environment includes a coordinate system with the three major axes
- visible, as well as wireframe models of the cameras and projector, located
+ visible, as well as wire-frame models of the cameras and projector, located
  in their positions and orientations.
  When calibration is complete, these positions and orientations may be updated
  to match the new data.
