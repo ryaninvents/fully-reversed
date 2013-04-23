@@ -42,7 +42,7 @@
 \index_command default
 \float_placement t
 \paperfontsize 12
-\spacing single
+\spacing double
 \use_hyperref true
 \pdf_title "Fully Reversed Engineering: streamlining 3D component digitization, modification, and reproduction"
 \pdf_author "Ryan Muller and Chris Thomas"
