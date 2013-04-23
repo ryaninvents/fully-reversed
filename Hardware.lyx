@@ -77,8 +77,16 @@ The projector was selected to be low cost, compact, and have a high resolution.
  In order to ensure a large field of view at the close range, the projector
  also needed to have a large throw ratio.
  Taking all of these parameters into account, the projector that was selected
- is the Optoma PK201 Pico Pocket Projector.
+ is the Optoma PK201 pico pocket projector, pictured in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Optima-PK201-Projector"
+
+\end_inset
+
+.
  See Appendix A for technical specifications of the projector.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -136,7 +144,15 @@ The cameras for the scanning system were selected to be low cost and high
  The resolution of the cameras needs to be equal to or greater than the
  resolution of the projector.
  Since cost was a main factor webcams were chosen for the cameras.
- The specific model selected is the Logitech C905 webcam.
+ The specific model selected is the Logitech C905 webcam, pictured in Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Logitech-C905-Webcam"
+
+\end_inset
+
+.
  Full specifications on the cameras can be found in Appendix A.
 \end_layout
 
@@ -219,6 +235,14 @@ Next the existing camera casings were removed so that only the lenses and
  The mounts had a hole on top for the new camera casings, which could pivot
  about the hole until tightened into place.
  The custom mounts and casings were then rapid prototyped.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Scanner-assembly"
+
+\end_inset
+
+ shows this setup.
 \end_layout
 
 \begin_layout Standard
@@ -265,13 +289,18 @@ Scanner assembly
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Light Box
+\end_layout
+
+\begin_layout Standard
+In order to minimize stray light a light box was purchased for the setup.
+ 
 \end_layout
 
 \end_body
