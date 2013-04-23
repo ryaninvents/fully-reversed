@@ -89,7 +89,7 @@ Photogrammetry is a passive technique that constructs a three-dimensional
  Photogrammetry techniques may take advantage of reflectivity, shading,
  and focus to recover shape information
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "Snavely"
 
 \end_inset
@@ -113,7 +113,7 @@ This method directly measures the time of flight of a light source, typically
  and then received by the sensor is used to calculate the distance from
  the camera to each point on the object
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "doi:10.1117/1.602438"
 
 \end_inset
@@ -151,7 +151,7 @@ In its simplest form, a laser scanner operates by projecting a dot onto
  instead of a dot, and occasionally multiple lines are used to speed the
  process further
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "doi:10.1117/1.602438"
 
 \end_inset
@@ -186,7 +186,7 @@ status open
 \begin_layout Plain Layout
 Laser scanner
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "LineScanner"
 
 \end_inset
@@ -234,7 +234,7 @@ Continuous coding
 Continuously-coded images contain information about the projected pattern
  at every pixel of the camera image
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "salvi2010state"
 
 \end_inset
@@ -272,7 +272,7 @@ Fourier transform profilometry is a method for calculating the wrapped phase
  One of these peaks is masked out, and the remaining one is shifted by the
  carrier frequency to the origin.
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "Takeda:83"
 
 \end_inset
@@ -288,7 +288,7 @@ description "fast Fourier transform"
  is calculated and the phase data is separated from the contrast by taking
  the arc tangent of the imaginary components over the real components
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "Zervas"
 
 \end_inset
@@ -332,7 +332,7 @@ flood-fill
  method, through Fourier transformation, or through use of multiple fringe
  densities
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "Zervas"
 
 \end_inset
@@ -386,7 +386,7 @@ status open
 \begin_layout Plain Layout
 Sinosoidal fringe projection 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "Zervas"
 
 \end_inset
@@ -432,7 +432,7 @@ Instead of a single fringe pattern being phase shifted between several pictures,
  the color and material of the object, or some form of coating can be applied
  to the object to improve the conditions
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "huang1999color"
 
 \end_inset
@@ -476,7 +476,7 @@ status open
 \begin_layout Plain Layout
 Color coded fringes
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "huang1999color"
 
 \end_inset
@@ -520,7 +520,7 @@ A continuous grayscale or color scale is projected onto the object.
  This method is extremely sensitive to shadowing and the color of the target
  object 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "salvi2010state"
 
 \end_inset
@@ -547,7 +547,7 @@ Discrete coding consists of projecting non-continuous patterns onto an object.
  The two methods of discrete coding are spatial multiplexing and time multiplexi
 ng
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "salvi2010state"
 
 \end_inset

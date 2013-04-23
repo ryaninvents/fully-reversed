@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -76,7 +76,7 @@ g.
  Additionally the RepRap project is a movement designed to make self replicating
  3D printers so that as many people as possible can own one.
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "RepRap"
 
 \end_inset
@@ -138,16 +138,18 @@ There are many situations where CAD files are not available for an existing
  In these situations sometimes it is infeasible to create a CAD through
  CAD software due to time constraints or complex geometry.
  In the situation of complex geometry in particular it is difficult to get
- precise measurements of 3D curves even with the use of a CMM.
+ precise measurements of 3D curves even with the use of a coordinate measuring
+ machine (CMM).
  For example, Jay Leno uses an expensive 3D scanner to generate CAD models
  of antique car parts that are no longer commercially available.
- He is then able to create new replacement parts based on these models.
+ He is then able to create new replacement parts based on these models
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Leno"
 
 \end_inset
 
+.
  There may also be situations where the component to be replicated needs
  to be modified in some way.
  Perhaps the whole part needs to be scaled to another size, or an additional
@@ -220,7 +222,7 @@ Sometimes rather than modifying an existing part it is easier to create
  will be installed in, and uses this information to generate the exact geometry
  of the mats themselves.
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "WeatherTech"
 
 \end_inset
@@ -260,7 +262,7 @@ name "fig:WeatherTech-Liners"
 
 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "WeatherTech"
 
 \end_inset
