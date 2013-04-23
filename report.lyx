@@ -17,6 +17,7 @@
 \cfoot{\thepage}
 \rfoot{}
 \renewcommand\refname{References}
+\usepackage{flafter}
 \end_preamble
 \options super,sort&compress
 \use_default_options true
