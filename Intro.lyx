@@ -73,14 +73,15 @@ Engineers are constantly seeking new tools to allow them to innovate more
  Presently there are low cost options for both CAD packages and rapid prototypin
 g.
  For example the open source software FreeCAD can be acquired free of charge.
- Additionally the RepRap project is a movement designed to make self replicating
- 3D printers so that as many people as possible can own one.
+ Additionally, the RepRap project is a movement designed to make self replicatin
+g 3D printers so that as many people as possible can own one 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RepRap"
 
 \end_inset
 
+.
  While there are still some parts that can not be printed such as the extrusion
  head, the fact that people are able to print the majority of parts for
  their 3D printers makes them readily accessible.
@@ -142,7 +143,7 @@ There are many situations where CAD files are not available for an existing
  machine (CMM).
  For example, Jay Leno uses an expensive 3D scanner to generate CAD models
  of antique car parts that are no longer commercially available.
- He is then able to create new replacement parts based on these models
+ He is then able to create new replacement parts based on these models 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Leno"
@@ -197,8 +198,8 @@ Art conservation
 \begin_layout Standard
 Artwork is often created without any special attention paid to making it
  resistant to the flow of time.
- Even when preserved in mesuseams with controlled conditions it is impossible
- to completely stop the slow detereoration of paintings and sculptures.
+ Even when preserved in museums with controlled conditions it is impossible
+ to completely stop the slow deterioration of paintings and sculptures.
  With digitization technology it is possible to preserve sculptures in digital
  archives for viewing online by future patrons.
  Additionally having a record of the current state of artwork would allow
@@ -212,22 +213,23 @@ Custom accessories
 \begin_layout Standard
 Sometimes rather than modifying an existing part it is easier to create
  an accessory to enhance its function.
- In these senarios it is often necessary to know the precise geometry of
+ In these scenarios it is often necessary to know the precise geometry of
  the existing part to which the accessory will be attached.
  For example the company WeatherTech uses digitization technology to create
- custum floor liners for cars.
+ custom floor liners for cars.
  These floor liners are created to be form fitting in order to not allow
  any water to harm to car interior.
  Thus the company first digitizes the region of the interior that the liners
  will be installed in, and uses this information to generate the exact geometry
- of the mats themselves.
+ of the mats themselves 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "WeatherTech"
 
 \end_inset
 
- A similar process could be applied to any situation where a form fittting
+.
+ A similar process could be applied to any situation where a form fitting
  accessory is required.
 \end_layout
 
@@ -253,7 +255,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-WeatherTech Liners
+WeatherTech Liners 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:WeatherTech-Liners"
@@ -267,15 +269,11 @@ key "WeatherTech"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -285,7 +283,7 @@ key "WeatherTech"
 \end_layout
 
 \begin_layout Subsection
-Quality Assurance
+Quality assurance
 \end_layout
 
 \begin_layout Standard

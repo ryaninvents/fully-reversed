@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -245,7 +245,7 @@ R & t\end{array}\right]$
  is the skew of the camera, representing a shift from a rectangular pixel
  array to a parallelogram-shaped one
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "zhang2000flexible"
 
 \end_inset
@@ -261,7 +261,7 @@ From this information it is possible to recover the non-distortion intrinsic
  a Levenberg-Marquardt method.
  
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "zhang2000flexible"
 
 \end_inset
@@ -290,7 +290,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Camera Calibration 
+Camera calibration 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Camera-Calibration"
@@ -361,14 +361,14 @@ es are calculated using a captured image and the calibration parameters.
  By calculating the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated
- through Zhang's method.
+ through Zhang's method 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "falcao2008plane"
+LatexCommand citep
+key "Zhang2000"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard

@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -105,14 +105,14 @@ OpenCV is an open source computer vision library created by Intel in 1999
  OpenCV source code is free to use for academic and commercial purposes
  so long as the proper acknowledgments and copyrights are used.
  The OpenCV library contains a vast amount of source code for various computer
- vision application, and is supported by a large open source community.
+ vision application, and is supported by a large open source community 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "opencv"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -141,7 +141,6 @@ OpenCV code was used in this project as part of the scanning program.
 
 \begin_layout Standard
 The OpenCV community maintains a homepage at 
-
 \begin_inset Flex URL
 status collapsed
 
@@ -192,14 +191,15 @@ OpenGL
 OpenGL is an open source library for developing 2D and 3D graphical applications.
  It was created in 1992 and has become the industry standard for graphical
  programming.
- It is used in a variety of applications from animation to CAD software.
+ It is used in a variety of applications from animation to CAD software
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "opengl"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard

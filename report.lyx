@@ -6,6 +6,16 @@
 \begin_preamble
 \usepackage{indentfirst}
 \let\citeauthor\cite
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
 \end_preamble
 \options super,sort&compress
 \use_default_options true
@@ -29,7 +39,6 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
 \paperfontsize 10
 \spacing other 1.7
 \use_hyperref true
@@ -71,7 +80,7 @@
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \listings_params "basicstyle={\ttfamily}"
 \tracking_changes false
 \output_changes false
