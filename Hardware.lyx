@@ -93,7 +93,7 @@ reference "fig:Optima-PK201-Projector"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -160,7 +160,7 @@ reference "fig:Logitech-C905-Webcam"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -249,7 +249,7 @@ reference "fig:Scanner-assembly"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -295,12 +295,63 @@ Scanner assembly
 \end_layout
 
 \begin_layout Subsection
-Light Box
+Light box
 \end_layout
 
 \begin_layout Standard
 In order to minimize stray light a light box was purchased for the setup.
- 
+ This minimized the influence of noise on the system and improved results.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Setup-in-light"
+
+\end_inset
+
+ shows the scanning system inside the light box with the front flap open.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/light box.jpg
+	display false
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Setup in light box
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Setup-in-light"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

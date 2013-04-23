@@ -69,7 +69,15 @@ The process of scanning a real world object and using it to make a new object
  can be broken into 4 distinct steps.
  These steps are digitization, conversion to mesh, manipulating in CAD software,
  and manufacturing.
- Each of these steps will be explained in further detail below.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Scanning-Process-Overview"
+
+\end_inset
+
+ contains a flowchart detailing this process.
+ Each of the steps will be explained in further detail below.
 \end_layout
 
 \begin_layout Standard
@@ -126,7 +134,13 @@ Digitization
 Digitization refers to the process of converting the dimensions of the 3-dimensi
 onal object into data to be used by computer software.
  This process can be broken into three distinct sections; setup, data capture,
- and repositioning.
+ and repositioning, as seen in Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Digitization-Process-Overview"
+
+\end_inset
+
  
 \end_layout
 
@@ -218,13 +232,13 @@ Data Capture
 \end_layout
 
 \begin_layout Standard
-Data capture can be broken into three distinct steps; data acquisition,
- data processing, and point cloud generation.
- The data acquisition is achieved by taking images with the two cameras.
+Data capture can be broken into three distinct steps; data aquisition, data
+ processing, and point cloud generation.
+ The data aquisition is achieved by taking images with the two cameras.
  In the case of this method 20 frames of data are needed for each data capture
  view.
- Once the data is acquired the images are correct for distortions using
- the calibration data and are then processed using the triangulation algorithm.
+ Once the data is aquired the images are correct for distortions using the
+ calibration data and are then processed using the triangulation algorythm.
  Once each pixel is processed a point cloud is constructed using the x,
  y, and z information obtained from the calibration and processing.
  Each pixel in the picture equates to one point in the point cloud.
@@ -239,7 +253,7 @@ Repositioning
 \begin_layout Standard
 After each data capture view is complete it is necessary to reposition the
  target object to capture another view.
- Photogrammetry tracking using ORB matching algorithms is employed to automatica
+ Photogrammetry tracking using ORB matching algorythms is employed to automatica
 lly rotate the point cloud to match the object rotation.
  In this way the next point cloud can be added to the existing in proper
  alignment.
@@ -262,15 +276,7 @@ CAD software
 \end_layout
 
 \begin_layout Standard
-Once the STL
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "STL"
-description "STereoLithography or Standard Tesselation Language, CAD file format"
-
-\end_inset
-
- mesh is created it is possible to create a CAD model from it.
+Once the STL mesh is created it is possible to create a CAD model from it.
  Commercially available CAD packages such as SolidWorks have the capability
  of creating a CAD file from an STL automatically.
  Depending on the CAD packages algorithm and the complexity of the part
@@ -289,15 +295,7 @@ intelligence
  of the part in any regions that lacked data, such as the insides of holes.
  Additionally changes can be made to specific aspects of the part, and new
  features can be added.
- Finally analysis software such as finite element analysis (FEA)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "FEA"
-description "finite element analysis"
-
-\end_inset
-
- can be used with the CAD model.
+ Finally analysis software such as FEA can be used with the CAD model.
 \end_layout
 
 \begin_layout Subsection
@@ -308,15 +306,7 @@ Manufacture
 Once all changes have been made to the 3D model or mesh it can be used to
  manufacture new parts.
  The two simplest ways of manufacturing parts from a 3D scan are using rapid
- prototyping machines, or computer-numerically controlled (CNC)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "CNC"
-description "computer-numerically controlled"
-
-\end_inset
-
- machining.
+ prototyping machines, or CNC machining.
  CNC machining requires additional creating of tool paths in CAM software
  before the part to be manufactured.
  Rapid Prototyping machines on the other hand are capable of creating parts

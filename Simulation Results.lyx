@@ -84,11 +84,19 @@ For our testing we modeled a theoretically perfect sphere within POV-Ray,
  After the simulated images were produced, they were analyzed into a point
  cloud.
  This point cloud was exported as an .obj file and further analyzed in Matlab.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Downscaled-Image-of"
+
+\end_inset
+
+ contains a downscaled image of the point cloud so that individual points
+ can be distinguished visually.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
@@ -147,11 +155,25 @@ ally they should all have a radius of 15cm.
  the radii of the cross sections.
  Additionally the standard deviation of the data points within each cross
  section was calculated.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:a)-Cross-Sectional"
+
+\end_inset
+
+ shows the caluclated radii, while Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Standard-Deviation-of"
+
+\end_inset
+
+ shows the standard deviations.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
@@ -199,7 +221,6 @@ name "fig:a)-Cross-Sectional"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
@@ -256,11 +277,18 @@ One of the first pieces of information this data reveals is that the results
  This in turn produced inaccurate radii for those cross sections.
  In order to more accurately analyze the data, the erroneous points were
  removed using Chauvenet's criterion.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Radii-after-outlier"
+
+\end_inset
+
+ is an updated graph with the outliers removed.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
@@ -282,6 +310,13 @@ status open
 
 \begin_layout Plain Layout
 Radii after outlier removal
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Radii-after-outlier"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -302,11 +337,19 @@ This chart shows what appears to be a random scattering of data points within
  Further analysis was done upon these results to find the average radius
  and standard deviation for each rotation direction, and for the whole data
  set.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Simulated-results"
+
+\end_inset
+
+ contains this analysis.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
-placement H
 wide false
 sideways false
 status open
@@ -522,6 +565,13 @@ All
 
 \begin_layout Plain Layout
 Simulated results
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Simulated-results"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -546,9 +596,9 @@ This reveals that the system has an overall accuracy of around +/- 3.2µm
  It should be noted that no decimals were dropped for significant figures
  in these calculations because the limitations of the measuring method were
  unknown.
- In fact these calcualtations were preliminary testing to find those very
+ In fact these calculations were preliminary testing to find those very
  limitations.
- Additonally these results are with a single simulated camera rather than
+ Additionally these results are with a single simulated camera rather than
  a stereo system, and with only the binary pattern being projected.
 \end_layout
 
