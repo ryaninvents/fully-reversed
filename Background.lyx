@@ -160,6 +160,14 @@ key "doi:10.1117/1.602438"
  Image processing techniques, such as derivative filters, may be used to
  locate the center of brightness of the laser line and allow resolutions
  greater than the thickness of the line would allow.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Laser-Scanner"
+
+\end_inset
+
+ demonstrates a typical laser scanner setup.
 \end_layout
 
 \begin_layout Standard
@@ -1037,14 +1045,14 @@ name "fig:a)-Microsoft-Kinect"
 Microsoft Kinect.
  (a) image of its data acquisition device 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "KinectImg"
 
 \end_inset
 
 ; (b) projected pattern as seen through an infrared camera 
 \begin_inset CommandInset citation
-LatexCommand citeauthor
+LatexCommand citep
 key "kinectPattern"
 
 \end_inset

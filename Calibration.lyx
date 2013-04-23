@@ -245,8 +245,8 @@ R & t\end{array}\right]$
  is the skew of the camera, representing a shift from a rectangular pixel
  array to a parallelogram-shaped one
 \begin_inset CommandInset citation
-LatexCommand citep
-key "zhang2000flexible"
+LatexCommand citet
+key "Zhang2000"
 
 \end_inset
 
@@ -261,8 +261,8 @@ From this information it is possible to recover the non-distortion intrinsic
  a Levenberg-Marquardt method.
  
 \begin_inset CommandInset citation
-LatexCommand citep
-key "zhang2000flexible"
+LatexCommand citet
+key "Zhang2000"
 
 \end_inset
 

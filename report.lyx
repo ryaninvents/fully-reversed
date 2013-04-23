@@ -16,6 +16,7 @@
 \lfoot{}
 \cfoot{\thepage}
 \rfoot{}
+\renewcommand\refname{References}
 \end_preamble
 \options super,sort&compress
 \use_default_options true
@@ -278,6 +279,21 @@ type "idx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+bibname{References}
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "Bibliography"

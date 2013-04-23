@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="404.24478"
+   height="351.23505"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="binary-capture.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path3937"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3931"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="66.367413"
+     inkscape:cy="134.60966"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="741"
+     inkscape:window-x="0"
+     inkscape:window-y="-5"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-39.959711,-24.904197)">
+    <g
+       id="g5185"
+       transform="translate(-30.304576,-43.436559)">
+      <rect
+         y="80.790756"
+         x="70.714287"
+         height="338.33505"
+         width="282.14285"
+         id="rect4975"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4977"
+         width="183.57143"
+         height="20"
+         x="120"
+         y="68.790756" />
+      <g
+         id="g3856">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+           id="rect2985"
+           width="98.571426"
+           height="35"
+           x="99.009071"
+           y="105.5685" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           x="148.52916"
+           y="119.49708"
+           id="text3755"
+           sodipodi:linespacing="100%"><tspan
+             sodipodi:role="line"
+             id="tspan3757"
+             x="148.52916"
+             y="119.49708"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10">Project pattern,</tspan><tspan
+             sodipodi:role="line"
+             x="148.52916"
+             y="131.49707"
+             id="tspan3765"
+             style="line-height:100%"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+               id="tspan3767">bit </tspan><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmmi10;-inkscape-font-specification:cmmi10"
+               id="tspan3759"> n<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:cmr10;-inkscape-font-specification:cmr10"
+   id="tspan3770">, positive</tspan></tspan></tspan></text>
+      </g>
+      <g
+         id="g3847">
+        <rect
+           y="105.5685"
+           x="228.81367"
+           height="35"
+           width="98.571426"
+           id="rect3772"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1" />
+        <text
+           sodipodi:linespacing="100%"
+           id="text3774"
+           y="119.49708"
+           x="278.33377"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             y="119.49708"
+             x="278.33377"
+             id="tspan3776"
+             sodipodi:role="line">Project pattern,</tspan><tspan
+             style="line-height:100%"
+             id="tspan3778"
+             y="131.49707"
+             x="278.33377"
+             sodipodi:role="line"><tspan
+               id="tspan3780"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10">bit </tspan><tspan
+               id="tspan3782"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmmi10;-inkscape-font-specification:cmmi10"> n<tspan
+   id="tspan3784"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:cmr10;-inkscape-font-specification:cmr10">, negative</tspan></tspan></tspan></text>
+      </g>
+      <g
+         transform="translate(-3.8146973e-6,0)"
+         id="g3828">
+        <rect
+           y="152.71136"
+           x="93.254547"
+           height="43.799862"
+           width="110.0805"
+           id="rect3812"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1" />
+        <text
+           sodipodi:linespacing="100%"
+           id="text3814"
+           y="166.63994"
+           x="148.12779"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             id="tspan3818"
+             y="166.63994"
+             x="148.12779"
+             sodipodi:role="line">Capture frame and</tspan><tspan
+             id="tspan3841"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             y="178.63994"
+             x="148.12779"
+             sodipodi:role="line">store as intensity</tspan><tspan
+             id="tspan3843"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             y="190.63994"
+             x="148.12779"
+             sodipodi:role="line">matrix</tspan></text>
+      </g>
+      <g
+         id="use3845"
+         transform="translate(129.8046,0)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+           id="rect3910"
+           width="110.0805"
+           height="43.799862"
+           x="93.254547"
+           y="152.71136" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           x="148.12779"
+           y="166.63994"
+           id="text3912"
+           sodipodi:linespacing="100%"><tspan
+             sodipodi:role="line"
+             x="148.12779"
+             y="166.63994"
+             id="tspan3914"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10">Capture frame and</tspan><tspan
+             sodipodi:role="line"
+             x="148.12779"
+             y="178.63994"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             id="tspan3916">store as intensity</tspan><tspan
+             sodipodi:role="line"
+             x="148.12779"
+             y="190.63994"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             id="tspan3918">matrix</tspan></text>
+      </g>
+      <g
+         id="g3865"
+         transform="translate(61.071425,55.857143)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+           id="rect3867"
+           width="115.79478"
+           height="33.085575"
+           x="90.397408"
+           y="152.71136" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           x="148.12779"
+           y="166.63994"
+           id="text3869"
+           sodipodi:linespacing="100%"><tspan
+             sodipodi:role="line"
+             x="148.12779"
+             y="166.63994"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             id="tspan3875">Subtract negative</tspan><tspan
+             id="tspan3882"
+             sodipodi:role="line"
+             x="148.12779"
+             y="178.63994"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10">frame from positive</tspan></text>
+      </g>
+      <g
+         transform="translate(8,-2)"
+         id="g3890">
+        <text
+           sodipodi:linespacing="100%"
+           id="text3786"
+           y="83.636665"
+           x="207.19911"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:cmr10;-inkscape-font-specification:cmr10"
+             id="tspan3790"
+             y="83.636665"
+             x="207.19911"
+             sodipodi:role="line">Looping <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:cmmi10;-inkscape-font-specification:cmmi10"
+   id="tspan3800">n</tspan> from 0 to  log<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3802">2</tspan>(<tspan
+   style="font-family:cmmi10;-inkscape-font-specification:cmmi10"
+   id="tspan3804">W<tspan
+   style="font-size:65.00091553%;baseline-shift:sub"
+   id="tspan3808">p</tspan></tspan>) :</tspan></text>
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 236.48214,86.251141 0,-12.817531 2.5,0"
+           id="path3884"
+           inkscape:connector-curvature="0" />
+        <use
+           x="0"
+           y="0"
+           xlink:href="#path3884"
+           id="use3888"
+           transform="matrix(-1,0,0,1,520.92114,0)"
+           width="744.09448"
+           height="1052.3622" />
+      </g>
+      <path
+         inkscape:connection-end-point="d4"
+         inkscape:connection-end="#g3828"
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path3900"
+         d="m 148.29479,140.5685 0,12.14286"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-start="#g3856"
+         inkscape:connection-start-point="d4" />
+      <path
+         inkscape:connection-end-point="d4"
+         inkscape:connection-end="#g3865"
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path3904"
+         d="m 174.77915,196.51123 14.5813,12.05728"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-start="#g3828"
+         inkscape:connection-start-point="d4" />
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path3920"
+         d="m 278.09939,140.5685 0,12.14286"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-start="#g3847"
+         inkscape:connection-start-point="d4"
+         inkscape:connection-end="#use3845"
+         inkscape:connection-end-point="d4" />
+      <path
+         inkscape:connection-end-point="d4"
+         inkscape:connection-end="#g3865"
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path3922"
+         d="m 248.29243,196.51123 -16.4106,12.05728"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-start="#use3845"
+         inkscape:connection-start-point="d4" />
+      <g
+         transform="translate(61.071425,101.85714)"
+         id="g4554">
+        <g
+           id="g4578">
+          <rect
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+             id="rect4556"
+             width="193.57652"
+             height="62.380001"
+             x="51.506535"
+             y="152.71136" />
+          <text
+             xml:space="preserve"
+             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+             x="59.64537"
+             y="166.63994"
+             id="text4558"
+             sodipodi:linespacing="100%"><tspan
+               sodipodi:role="line"
+               x="59.64537"
+               y="166.63994"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;font-family:cmr10;-inkscape-font-specification:cmr10"
+               id="tspan4566">Compute threshold for each pixel:</tspan><tspan
+               sodipodi:role="line"
+               x="59.64537"
+               y="178.63994"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;font-family:cmr10;-inkscape-font-specification:cmr10"
+               id="tspan4570" /><tspan
+               sodipodi:role="line"
+               x="59.64537"
+               y="190.63994"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;font-family:cmr10;-inkscape-font-specification:cmr10"
+               id="tspan4572">if(input <tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:aakar;-inkscape-font-specification:aakar Medium"
+   id="tspan4576">&gt;</tspan> 0) output = 1;</tspan><tspan
+               sodipodi:role="line"
+               x="59.64537"
+               y="204.51819"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;text-anchor:start;font-family:cmr10;-inkscape-font-specification:cmr10"
+               id="tspan4574">else output = 0;</tspan></text>
+        </g>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path4587"
+         d="m 209.36622,241.65408 0,12.91442"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-end="#g4554"
+         inkscape:connection-end-point="d4"
+         inkscape:connection-start="#g3865"
+         inkscape:connection-start-point="d4" />
+      <g
+         transform="translate(61.071425,195.85714)"
+         id="g4773">
+        <rect
+           y="132.71136"
+           x="97.973549"
+           height="33.085575"
+           width="100.64249"
+           id="rect4775"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1" />
+        <text
+           sodipodi:linespacing="100%"
+           id="text4777"
+           y="146.63994"
+           x="148.12779"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             y="146.63994"
+             x="148.12779"
+             sodipodi:role="line"
+             id="tspan4781">Multiply matrix</tspan><tspan
+             id="tspan4785"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             y="158.63994"
+             x="148.12779"
+             sodipodi:role="line">by 2<tspan
+   id="tspan4787"
+   style="font-size:65.00091553%;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;baseline-shift:super;font-family:cmmi10;-inkscape-font-specification:cmmi10">n</tspan></tspan></text>
+      </g>
+      <path
+         inkscape:connection-end-point="d4"
+         inkscape:connection-end="#g4773"
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path4789"
+         d="m 209.36622,316.94851 0,11.61999"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-start="#g4554"
+         inkscape:connection-start-point="d4" />
+      <g
+         id="g4979"
+         transform="translate(61.071425,241.85714)">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+           id="rect4981"
+           width="100.64249"
+           height="33.085575"
+           x="97.973549"
+           y="132.71136" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+           x="148.12779"
+           y="146.63994"
+           id="text4983"
+           sodipodi:linespacing="100%"><tspan
+             sodipodi:role="line"
+             x="148.12779"
+             y="146.63994"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"
+             id="tspan4987">Store result as</tspan><tspan
+             id="tspan4993"
+             sodipodi:role="line"
+             x="148.12779"
+             y="158.63994"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;text-anchor:middle;font-family:cmr10;-inkscape-font-specification:cmr10"><tspan
+   id="tspan4995"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:cmmi10;-inkscape-font-specification:cmmi10">n</tspan><tspan
+   id="tspan4997"
+   style="font-size:65.00091553%;baseline-shift:super">th</tspan> bit matrix</tspan></text>
+      </g>
+      <path
+         inkscape:connection-end-point="d4"
+         inkscape:connection-end="#g4979"
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path4999"
+         d="m 209.36622,361.65408 0,12.91442"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend);display:inline"
+         inkscape:connection-start="#g4773"
+         inkscape:connection-start-point="d4" />
+    </g>
+    <g
+       id="g5266"
+       transform="translate(246.124,78.881798)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1"
+         id="rect5268"
+         width="98.571426"
+         height="32.142857"
+         x="99.009071"
+         y="105.5685" />
+      <text
+         xml:space="preserve"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+         x="148.52916"
+         y="119.49708"
+         id="text5270"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           x="148.52916"
+           y="119.49708"
+           id="tspan5274"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:cmr10;-inkscape-font-specification:cmr10">Sum all bit</tspan><tspan
+           sodipodi:role="line"
+           x="148.52916"
+           y="131.49707"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:cmr10;-inkscape-font-specification:cmr10"
+           id="tspan5483">matrices</tspan></text>
+    </g>
+    <g
+       transform="translate(246.124,135.84916)"
+       id="g5487">
+      <rect
+         y="105.5685"
+         x="109.00907"
+         height="20.714285"
+         width="78.571426"
+         id="rect5489"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="100%"
+         id="text5491"
+         y="119.49708"
+         x="148.52916"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Sans"
+         xml:space="preserve"><tspan
+           id="tspan5495"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:cmr10;-inkscape-font-specification:cmr10"
+           y="119.49708"
+           x="148.52916"
+           sodipodi:role="line">Emit result</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 322.55256,200.52172 22.58051,0"
+       id="path5499"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g5185"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g5266"
+       inkscape:connection-end-point="d4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 394.41878,216.59315 0,24.82451"
+       id="path5501"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g5266"
+       inkscape:connection-start-point="d4"
+       inkscape:connection-end="#g5487"
+       inkscape:connection-end-point="d4" />
+  </g>
+</svg>
