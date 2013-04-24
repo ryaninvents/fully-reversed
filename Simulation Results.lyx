@@ -76,11 +76,11 @@ In order to prove the viability of our scanning method, simulated testing
 
 \begin_layout Standard
 For our testing we modeled a theoretically perfect sphere within POV-Ray,
- which had a diameter of 30cm.
- The center of the sphere was located exactly 40cm from the pinhole of the
- camera.
- The modeled camera had a focal length of 8cm, a resolution of 1080p, and
- a sensor cell size of 7.9µm.
+ which had a diameter of 30 centimeters.
+ The center of the sphere was located exactly 40 centimeters from the pinhole
+ of the camera.
+ The modeled camera had a focal length of 8 centimeters, a resolution of
+ 1080p, and a sensor cell size of 7.9 micrometers.
  After the simulated images were produced, they were analyzed into a point
  cloud.
  This point cloud was exported as an .obj file and further analyzed in Matlab.

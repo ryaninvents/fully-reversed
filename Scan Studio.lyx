@@ -60,25 +60,27 @@
 
 \begin_body
 
-\begin_layout Section
-Scan Studio
+\begin_layout Standard
+
+\emph on
+Pico Scan
 \end_layout
 
 \begin_layout Standard
 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  is the custom software created for this project.
  
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  was programmed in C++ and has a graphical user interface (GUI) that is
  built in the Qt framework.
  
 \emph on
-Scan Studio 
+Pico Scan 
 \emph default
 can be used to run simulations or perform scans.
  
@@ -91,7 +93,7 @@ Calibration
 \begin_layout Standard
 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  has a built in camera and projector calibration process that utilizes the
  calibration algorithms detailed in the calibration section.
@@ -109,7 +111,7 @@ Scanning
 \begin_layout Standard
 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  creates a single view scan of an object with a single button click.
  Once the scan button is pressed the software automatically projects the
@@ -123,24 +125,24 @@ tion algorithm and a point cloud is generated.
 \begin_layout Standard
 In addition to generating point clouds directly from a scan, 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  is capable of generating point clouds from two other sources.
  The first is from a series of image files captured externally.
  The image files must contain the same reflected binary patterns, and the
  filenames must be formated correctly for 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  to process them.
  The other source 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  can process images from is simulations.
  Certain versions of 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  are capable of interfacing with the 
 \emph on
@@ -193,7 +195,7 @@ Encoding
 
  view of 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
 .
  This displays the various coded frames and allows the user to create plots
@@ -228,7 +230,7 @@ reference "fig:A-screenshot-of-3D-view"
 \begin_layout Standard
 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  allows the user to inspect the coding data after decoding has occurred
  but before the 3D meshing process takes place.
@@ -297,7 +299,7 @@ name "fig:A-screenshot-of-3D-view"
 
 A screenshot of 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
 's 3D view with data loaded.
  (1) select calibration pattern; (2) define a 
@@ -331,7 +333,7 @@ background
 \begin_layout Standard
 
 \emph on
-Scan Studio 
+Pico Scan 
 \emph default
 renders point cloud data in a virtual three-dimensional environment.
  The point cloud can be viewed from any angle as the coordinate system is

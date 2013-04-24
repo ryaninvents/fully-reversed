@@ -74,7 +74,7 @@ name "chap:Encoding"
 \begin_layout Standard
 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  combines two methods to obtain high-quality results.
  First, the scanner collects low-frequency data via 
@@ -476,7 +476,7 @@ multiplexing, temporal!hybrid approach
 Our method uses a hybrid binary-encoding/phase-shifting approach.
  
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  uses binary encoding to quickly capture high-level data.
  Then, it uses phase shifting to enhance this binary data down to sub-pixel

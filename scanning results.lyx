@@ -253,7 +253,7 @@ reference "fig:Sample-meshes-generated"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -355,7 +355,7 @@ status collapsed
 \begin_layout Plain Layout
 Sample meshes generated from 
 \emph on
-Scan Studio
+Pico Scan
 \emph default
  and post-processed.
  (a) WPI's 

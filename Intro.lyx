@@ -68,8 +68,16 @@ Introduction
 Engineers are constantly seeking new tools to allow them to innovate more
  efficiently and effectively.
  The process of rapid digitization of an existing object, modification of
- that object in CAD software, and fabrication of the new object through
- rapid-prototyping is one such tool.
+ that object in computer-aided design (CAD)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CAD"
+description "computer-aided design"
+
+\end_inset
+
+ software, and fabrication of the new object through rapid-prototyping is
+ one such tool.
  Presently there are low cost options for both CAD packages and rapid prototypin
 g.
  For example the open source software FreeCAD can be acquired free of charge.
@@ -97,8 +105,15 @@ key "RepRap"
 Many engineering applications require digitized knowledge of the shape of
  a component or surface.
  The traditional method for obtaining this information, by use of a coordinate
- measuring machine (CMM), is costly, time consuming, and only provides a
- sparse data set.
+ measuring machine (CMM)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CMM"
+description "coordinate measuring machine"
+
+\end_inset
+
+, is costly, time consuming, and only provides a sparse data set.
  Accordingly, there has been a proliferation of techniques, devices, and
  software allowing users to generate a computer model by quickly 
 \begin_inset Quotes eld
@@ -174,8 +189,16 @@ Sometimes there are situations where a part is damaged and a replacement
  However, rapid-digitization techniques can be used to alleviate this problem.
  By digitizing a damaged part with extensive detail on the damaged portion
  it is possible to create a CAD file with the damaged geometry.
- Finite element analysis (FEA) can then be performed on the model to see
- whether it is still safe to use or needs to be replaced immediately.
+ Finite element analysis (FEA)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "FEA"
+description "finite element analysis"
+
+\end_inset
+
+ can then be performed on the model to see whether it is still safe to use
+ or needs to be replaced immediately.
 \end_layout
 
 \begin_layout Standard

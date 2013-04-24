@@ -286,9 +286,16 @@ key "Takeda:83"
 \end_inset
 
 .
- The inverse FFT is calculated and the phase data is separated from the
- contrast by taking the arc tangent of the imaginary components over the
- real components 
+ The inverse fast-Fourier transform (FFT)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "FFT"
+description "fast-Fourier transform"
+
+\end_inset
+
+ is calculated and the phase data is separated from the contrast by taking
+ the arc tangent of the imaginary components over the real components 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Zervas"
@@ -346,7 +353,15 @@ key "Zervas"
 It is important when using either of these techniques that the fringes be
  as close to sinusoidal as possible.
  One technique to ensure accurate sinusoids is to use a digital light processor
- (DLP) projector with a high frame rate.
+ (DLP)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DLP"
+description "digital light processor"
+
+\end_inset
+
+ projector with a high frame rate.
  Such a system can rapidly project multiple binary patterns during the exposure
  of one frame of the camera and very accurately recreate a sinusoidal pattern.
  To reduce costs, other systems approximate sinusoidal fringes by using
@@ -579,7 +594,7 @@ codeword
  for any given section of the pattern is based on the surrounding region.
  For a one-dimensional pattern this means the sequence of lines to either
  side of any given line are unique and thus identify that line.
- In a 2-D case it the surroundings in all directions within the plane are
+ In a 2D case it the surroundings in all directions within the plane are
  taken into account 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -812,11 +827,11 @@ key "salvi2004pattern"
 \end_layout
 
 \begin_layout Subparagraph
-N-Array codes 
+N-array codes 
 \end_layout
 
 \begin_layout Standard
-N-Array codes utilize the same basic concept as binary codes, except they
+N-array codes utilize the same basic concept as binary codes, except they
  are not restricted to binary patterns.
  They can utilize color or grayscale patterns to greatly reduce the number
  of frames necessary to uniquely identify each location in the image 
@@ -879,7 +894,15 @@ There are many advanced imaging techniques that use interferometry as a
  basis to generate absolute 3D measurements.
  One such technique is called laser speckle pattern sectioning.
  This method projects a speckle pattern on the target object which is measured
- using a CCD array.
+ using a charge-coupled device (CCD)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CCD"
+description "charge-coupled device"
+
+\end_inset
+
+ array.
  The pattern is scanned through a range of wavelengths.
  Each wavelength corresponds to a 2D slice of the 3D object.
  By adding these slices together into a 3D data array, and then performing
@@ -919,7 +942,7 @@ There are many different commercial scanners currently on the market.
  A few of these products will be discussed in this section.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Kinect
 \end_layout
 
@@ -932,7 +955,7 @@ reference "fig:a)-Microsoft-Kinect"
 
 \end_inset
 
--a.
+ (a).
  The Kinect works based on a fixed pseudorandom array of dots projected
  on an infrared wavelength.
  The dots are formed by an array of small micro lenses, each with a slightly
@@ -944,7 +967,7 @@ reference "fig:a)-Microsoft-Kinect"
 
 \end_inset
 
--b.
+ (b).
  The included infrared camera picks up the projection of these dots on their
  environment.
  Groups of dots are then compared against an image taken on a reference
@@ -1097,7 +1120,7 @@ key "kinectPattern"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Next Engine 
 \end_layout
 
@@ -1113,7 +1136,7 @@ Next Engine is a device that projects multiple laser lines onto the target
  formats.
  The Next Engine Scanner is marketed for use in design, manufacturing, CGI,
  art, and medical applications.
- This system boasts accuracy to 0.005inches in macro mode and to 0.015inches
+ This system boasts accuracy to 0.005 inches in macro mode and to 0.015 inches
  in wide mode 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1181,7 +1204,7 @@ name "fig:Next-Engine-3D"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 David 3D Laser Scanner 
 \end_layout
 
@@ -1194,9 +1217,9 @@ David 3D Laser Scanners come in two types.
  The other scanner is a sinusoidal fringe projection system.
  This scanner comes with calibration patterns and a software program capable
  of creating and stitching 3D point clouds.
- The scanner has a object size range from 10mm-600mm with a accuracy up
- to 2% of the object size.
- It takes 2-4 seconds per scan and generates grayscale images 
+ The scanner has a object size range from 10 to 600 millimeters with a accuracy
+ up to 2% of the object size.
+ It takes 2 to 4 seconds per scan and generates grayscale images 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "David3d"
@@ -1259,7 +1282,7 @@ name "fig:David-3D-Laser"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Handy Scan 3D 
 \end_layout
 
@@ -1267,7 +1290,15 @@ Handy Scan 3D
 The Handy Scan 3D scanner is a portable line scanner.
  It boasts an accuracy of up to 40 microns.
  The Handy Scan projects a cross hair onto the target object and scans in
- both x and y simultaneously.
+ both 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ simultaneously.
  The device has a camera built into it so the triangulation geometry remains
  constant as the laser is scanned along the object.
  The technology requires several sensors to be placed on the object.
