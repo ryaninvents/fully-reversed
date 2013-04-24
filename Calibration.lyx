@@ -134,9 +134,6 @@ d.
  First each camera is calibrated for intrinsic parameters, and then the
  extrinsic calibration is performed for both cameras simultaneously.
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -203,14 +200,14 @@ reference "eq:23-3d relationship"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-s\left[\begin{array}{ccc}
-u & v & 1\end{array}\right]^{T}=\left[\begin{array}{ccc}
-\alpha & \gamma & u_{o}\\
-0 & \beta & v_{o}\\
+s\left(\begin{array}{ccc}
+u & v & 1\end{array}\right)^{T}=\left(\begin{array}{ccc}
+\alpha & \gamma & u_{0}\\
+0 & \beta & v_{0}\\
 0 & 0 & 1
-\end{array}\right]\left[\begin{array}{cc}
-R & t\end{array}\right]\left[\begin{array}{cccc}
-X & Y & Z & 1\end{array}\right]\label{eq:23-3d relationship}
+\end{array}\right)\left(\begin{array}{cc}
+\mathbf{R} & \mathbf{t}\end{array}\right)\left(\begin{array}{cccc}
+X & Y & Z & 1\end{array}\right)\label{eq:23-3d relationship}
 \end{equation}
 
 \end_inset
@@ -232,38 +229,31 @@ In this equation
 \end_inset
 
  are the coordinates of a point in the camera coordinate system, and 
-\begin_inset Formula $X$
-\end_inset
-
-,
-\begin_inset Formula $Y$
-\end_inset
-
-,
-\begin_inset Formula $Z$
+\begin_inset Formula $\left(X,Y,Z\right)$
 \end_inset
 
  is the coordinate of the point in the 3D coordinate system.
  The matrix 
-\begin_inset Formula $\left[\begin{array}{cc}
-R & t\end{array}\right]$
+\begin_inset Formula $\left(\begin{array}{cc}
+\mathbf{R} & \mathbf{t}\end{array}\right)$
 \end_inset
 
-contains the extrinsic parameters, where 
-\begin_inset Formula $R$
+ contains the extrinsic parameters, where 
+\begin_inset Formula $\mathbf{R}$
 \end_inset
 
  is the rotation matrix relating the two coordinate systems and 
-\begin_inset Formula $T$
+\begin_inset Formula $\mathbf{t}$
 \end_inset
 
  is the translation matrix for the same relation.
- The remaining variables are the non-distortion intrinsic parameters.
+ The remaining variables are the intrinsic parameters, excluding distortion
+ which, due to its nonlinear nature, must be modeled separately.
  
 \begin_inset Formula $\alpha$
 \end_inset
 
-and 
+ and 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -277,26 +267,27 @@ and
 
  respectively.
  
-\begin_inset Formula $u_{o}$
+\begin_inset Formula $u_{0}$
 \end_inset
 
  and 
-\begin_inset Formula $v_{o}$
+\begin_inset Formula $v_{0}$
 \end_inset
 
-are the coordinates of the principle point of the camera.
+ are the coordinates of the principal point of the camera.
  Finally 
 \begin_inset Formula $\gamma$
 \end_inset
 
-is the skew of the two images axes.
+ is the skew of the camera, representing a shift from a rectangular pixel
+ array to a parallelogram-shaped one 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "zhang2000flexible"
+LatexCommand citet
+key "Zhang2000"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -304,11 +295,10 @@ From this information it is possible to recover the non-distortion intrinsic
  and extrinsic parameters of the camera in a closed-form solution.
  The radial distortion can be calculated using linear least squares.
  Finally, all parameters are refined to minimize reprojection errors using
- a Levenberg-Marquardt method.
- 
+ a Levenberg-Marquardt method 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "zhang2000flexible"
+key "Zhang2000"
 
 \end_inset
 
@@ -371,14 +361,14 @@ es are calculated using a captured image and the calibration parameters.
  By calculating the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated
- through Zhang's method.
+ through Zhang's method
 \begin_inset CommandInset citation
 LatexCommand cite
 key "falcao2008plane"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard

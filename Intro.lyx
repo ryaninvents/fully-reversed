@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -74,13 +74,14 @@ Engineers are constantly seeking new tools to allow them to innovate more
 g.
  For example the open source software FreeCAD can be acquired free of charge.
  Additionally the RepRap project is a movement designed to make self replicating
- 3D printers so that as many people as possible can own one.
+ 3D printers so that as many people as possible can own one 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "RepRap"
 
 \end_inset
 
+.
  While there are still some parts that can not be printed such as the extrusion
  head, the fact that people are able to print the majority of parts for
  their 3D printers makes them readily accessible.
@@ -141,13 +142,14 @@ There are many situations where CAD files are not available for an existing
  precise measurements of 3D curves even with the use of a CMM.
  For example, Jay Leno uses an expensive 3D scanner to generate CAD models
  of antique car parts that are no longer commercially available.
- He is then able to create new replacement parts based on these models.
+ He is then able to create new replacement parts based on these models 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Leno"
 
 \end_inset
 
+.
  There may also be situations where the component to be replicated needs
  to be modified in some way.
  Perhaps the whole part needs to be scaled to another size, or an additional
@@ -218,13 +220,14 @@ Sometimes rather than modifying an existing part it is easier to create
  any water to harm to car interior.
  Thus the company first digitizes the region of the interior that the liners
  will be installed in, and uses this information to generate the exact geometry
- of the mats themselves.
+ of the mats themselves 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "WeatherTech"
 
 \end_inset
 
+.
  A similar process could be applied to any situation where a form fittting
  accessory is required.
  Figure 
@@ -259,7 +262,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-WeatherTech Liners
+WeatherTech Liners 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:WeatherTech-Liners"
@@ -268,7 +271,7 @@ name "fig:WeatherTech-Liners"
 
 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "WeatherTech"
 
 \end_inset

@@ -87,9 +87,9 @@ Photogrammetry is a passive technique that constructs a three-dimensional
  In order to achieve this, photogrammetry correlates features, colors, or
  patterns between photos.
  Photogrammetry techniques may take advantage of reflectivity, shading,
- and focus to recover shape information
+ and focus to recover shape information 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Snavely"
 
 \end_inset
@@ -111,9 +111,9 @@ This method directly measures the time of flight of a light source, typically
  a laser.
  The amount of time between the light being emitted, reflected off the object,
  and then received by the sensor is used to calculate the distance from
- the camera to each point on the object
+ the camera to each point on the object 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "doi:10.1117/1.602438"
 
 \end_inset
@@ -149,9 +149,9 @@ In its simplest form, a laser scanner operates by projecting a dot onto
  from its captured camera image.
  Typically, this process is accelerated through the use of a laser line
  instead of a dot, and occasionally multiple lines are used to speed the
- process further
+ process further 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "doi:10.1117/1.602438"
 
 \end_inset
@@ -240,9 +240,9 @@ Continuous coding
 
 \begin_layout Standard
 Continuously-coded images contain information about the projected pattern
- at every pixel of the camera image
+ at every pixel of the camera image 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "salvi2010state"
 
 \end_inset
@@ -278,24 +278,24 @@ Fourier transform profilometry is a method for calculating the wrapped phase
  The two remaining peaks are symmetric about the origin and contain the
  shape information.
  One of these peaks is masked out, and the remaining one is shifted by the
- carrier frequency to the origin.
+ carrier frequency to the origin 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Takeda:83"
 
 \end_inset
 
+.
  The inverse FFT is calculated and the phase data is separated from the
  contrast by taking the arc tangent of the imaginary components over the
- real components.
- 
+ real components 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Zervas"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
