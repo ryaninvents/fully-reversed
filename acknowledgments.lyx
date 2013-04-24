@@ -60,38 +60,32 @@
 
 \begin_body
 
-\begin_layout Chapter
-Results
+\begin_layout Chapter*
+Acknowledgments
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "Simulation Results.lyx"
-
-\end_inset
-
-
+The team would like to thank our Adviser, Professor Cosme Furlong, for all
+ his assistance throughout the project.
+ His ideas, support, and genuine interest and expertise helped guide us
+ throughout this long process.
+ We thank him for his patience with our setbacks as well as his enthusiasm
+ with our successes.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "Scan Studio.lyx"
-
-\end_inset
-
-
+We would also like to thank Ivo Dobrev, Ellery Harrington, Babak Aghazadeh,
+ and the rest of the members of the CHSLT Laboratory for their assistance
+ throughout the year.
+ Whether helping us find equipment in the lab, providing valuable insight
+ on key concepts, or simply encouraging us to complete our goals, the lab
+ members have been a tremendous support in our efforts.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "scanning results.lyx"
-
-\end_inset
-
-
+Finally, we would like to thank PTI Industries for their funding and support.
+ Thanks to their sponsorship we were able to purchase equipment quickly
+ and effectively without having to worry about going over budget.
 \end_layout
 
 \end_body

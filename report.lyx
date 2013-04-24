@@ -128,6 +128,26 @@ filename "Abstract.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "acknowledgments.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "exec summary.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -263,16 +283,6 @@ filename "Open Source Libraries.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "Triangulator code.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "Using Pico Scan.lyx"
 
 \end_inset
 

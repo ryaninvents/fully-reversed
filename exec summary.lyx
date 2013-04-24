@@ -1,0 +1,318 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+Executive Summary
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Engineers are constantly seeking new tools to allow them to innovate more
+ efficiently and effectively.
+ The process of rapid digitization of an existing object, modification of
+ that object in computer-aided design (CAD) software, and fabrication of
+ the new object through rapid-prototyping is one such tool.
+ Presently there are low cost options for both CAD packages and rapid prototypin
+g.
+ However, there does not presently exist a low cost solution for rapid-digitizat
+ion of existing objects.
+ Therefore the goal of this project is to create a cost effective system
+ for rapid digitization that is easily integrable with existing CAD packages
+ and 3D printers.
+\end_layout
+
+\begin_layout Standard
+There are many reasons why a designer or operator may wish to obtain a CAD
+ model from an existing physical component or other object.
+ These reasons include reproduction of an obsolete part, modification of
+ a complex existing part, analysis of a worn or damaged part, and art conservati
+on and restoration, among others.
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Standard
+To develop our system, we analyzed all major optical imaging techniques
+ that have been published, as well as the workings of some commercial scanning
+ packages.
+ Our research specifically placed emphasis on photogrammetry, a technique
+ which recovers shape based on a series of photographs; spatially-multiplexed
+ methods, a group of techniques that can reconstruct a 3D image from a single
+ camera frame; and temporally-multiplexed methods, a category of techniques
+ that use a series of projected patterns to recover 3D shape from a static
+ scene.
+ Both spatial and temporal multiplexing techniques fall under the category
+ of structured light; techniques which consist of projecting one or more
+ encoded patterns onto an object and recovering shape data through triangulation.
+\end_layout
+
+\begin_layout Section
+Methods
+\end_layout
+
+\begin_layout Standard
+Based on our goal of building a low-cost, accessible device, we decided
+ that temporal multiplexing would be appropriate.
+ This would allow us to use inexpensive hardware and yet still recover high-qual
+ity results.
+\end_layout
+
+\begin_layout Standard
+The novelty of our approach lies in the combination of two structured light
+ techniques.
+ The first uses binary-coded patterns to quickly correlate pixels in the
+ camera image to pixels in the projected pattern.
+ This allows for generation of an approximation of the mesh within a few
+ seconds.
+ This approximation, though, is very rough, and is unsuitable for most engineeri
+ng applications.
+\end_layout
+
+\begin_layout Standard
+The second technique, called phase-shifted fringe projection, uses patterns
+ that vary sinusoidally in intensity.
+ By projecting different variants of the same pattern, a computer can recover
+ the encoding with subpixel accuracy.
+ However, there are three major drawbacks to this approach.
+ First, this approach typically requires expensive hardware; second, the
+ algorithm is computationally expensive, leading to a slow program; and
+ third, the recovered information is periodic and lacks information about
+ each pixel’s absolute value, defining it only relative to other pixels
+ in the same region of the photo.
+\end_layout
+
+\begin_layout Standard
+To solve these problems, we implemented phase-shifting with a higher number
+ of samples, allowing us to correct for signal noise by averaging.
+ Once our algorithm has collected the phase information, it uses the faster
+ binary scan to “unwrap” the periodic phase map into a smooth representation
+ of the distortions of the projected pattern on the object.
+\end_layout
+
+\begin_layout Standard
+Implementation of our scanning process required an active projector and
+ two or more digital cameras, and we used simulated results to help us select
+ appropriate hardware.
+ The projector was selected to be low cost, compact, and have a high resolution
+ at the working distance.
+ This last point is important because the accuracy of the scanning system
+ is limited by the resolution of the projector; selecting a high-resolution
+ projector with a short throw and a large throw ratio optimized our ability
+ to measure accurately.
+ Taking all of these parameters into account, the projector that was selected
+ is the Optoma PK201 Pico Pocket Projector.
+\end_layout
+
+\begin_layout Standard
+The cameras for the scanning system were selected to be low-cost and high-resolu
+tion.
+ The spatial resolution of the cameras needs to be equal to or greater than
+ the spatial resolution of the projector at the working distance.
+ For this reason, the Logitech C905 webcam was selected
+\end_layout
+
+\begin_layout Standard
+A custom mounting assembly was created for the setup, consisting of an L-beam,
+ and custom designed camera and projector mounts.
+ Additionally the camera casings were redesigned to fit the system.
+ The system was designed to have flexible geometry, but also so the components
+ could be locked in place so as to not change the calibration parameters.
+ The whole assembly was placed inside a commercial light box in order to
+ reduce stray light.
+\end_layout
+
+\begin_layout Standard
+Scanning and duplicating a physical object requires digitization, format
+ conversion, revision, and manufacture.
+ Our research and implementation focus on digitization, which requires technique
+s for hardware setup, data capture, and orientation tracking.
+\end_layout
+
+\begin_layout Standard
+The setup process for scanning is the preparation of the equipment.
+ The cameras and projector must be placed in a triangulation geometry.
+ Optimal positioning will improve results and is determined by size of the
+ object and the desired accuracy and precision.
+ Calibration is then used to determine both the intrinsic and extrinsic
+ parameters of the cameras and projector.
+ First the cameras are calibrated, followed by the projector.
+\end_layout
+
+\begin_layout Standard
+Our data capture technique involves first capturing images of patterns projected
+ onto the subject.
+ Next, our algorithms process the image data into meaningful encodings.
+ Finally, using these encodings, the hardware geometry, and our newly-developed
+ “hybrid” algorithm, we reconstruct the object as a computer model.
+ This computer model is represented by a point cloud, where each point represent
+s a pixel from the camera image.
+ To export to the popular STL format, we use a simple meshing technique
+ where points are connected based on their adjacency in the captured image.
+ After export, the STL model may be used in many popular software packages
+ for the purposes previously discussed.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Before implementation, to prove the viability of our scanning method we
+ simulated the binary technique using POV-Ray raytracing software.
+ This allowed us to specify hardware characteristics and tell the computer
+ to generate an image as if we had used a particular camera and projector.
+ A theoretically perfect 15 centimeter radius sphere was modeled and processed
+ into a point cloud.
+ Cross sections of the point cloud were taken and radii were fitted to the
+ cross sections.
+ The average radius was off by 3.2 micrometers with a standard deviation
+ of 20.75 micrometers.
+ The data also revealed that the system was resistant to directional influence.
+\end_layout
+
+\begin_layout Standard
+Our most significant result is the implementation of the software itself.
+ Our software package, Pico Scan, allows the user to generate a point cloud
+ of one side of an object with a single click.
+ The point cloud is displayed in 3D within the software itself.
+ Pico Scan exports into the popular STL mesh format.
+\end_layout
+
+\begin_layout Standard
+The final results achieved by this project were actual scans.
+ These scans consisted of only a single 3D view of the object, and had noise
+ caused by stray light in the regions where the patterns were not projected.
+ For this reason the scans needed post-processing and manual stitching which
+ prevented complete automation.
+ However, the hybrid scans showed significant improvement in precision over
+ the binary scans, validating the method.
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+This project set out to create a low cost system to digitize existing objects
+ in full 3D for the purpose of enhancing the engineering design cycle.
+ At the end the results we achieved showed that this is indeed possible
+ with current technology and that with only a little more work these goals
+ could have been fully satisfied.
+ The hardware that was selected met the needs of the system and were sufficient
+ to achieve engineering quality scans.
+ Additionally the hybrid method that was proposed produced results that
+ met the goals of the project.
+ The only holdup was with the software development.
+ For this reason it is recommended that future iterations of this project
+ contain at least one computer science major to facilitate the implementation
+ of software improvements.
+\end_layout
+
+\begin_layout Standard
+Despite the fact that the software is not yet capable to realizing the full
+ goal of the project, the theory is sound.
+ The project was still an amazing success because it proved that low cost
+ hardware was in fact capable of achieving measurements that could be used
+ for engineering design or analysis.
+ Additionally the current system is capable of producing the desired results,
+ just not in an automated manner.
+\end_layout
+
+\begin_layout Subsection
+Future Work
+\end_layout
+
+\begin_layout Itemize
+Finish projector calibration
+\end_layout
+
+\begin_layout Itemize
+Implement stereo cameras
+\end_layout
+
+\begin_layout Itemize
+Implement photogrammetry feature tracking
+\end_layout
+
+\begin_layout Itemize
+Add noise filters
+\end_layout
+
+\begin_layout Itemize
+Improve meshing algorithm
+\end_layout
+
+\begin_layout Itemize
+Optimize software
+\end_layout
+
+\begin_layout Itemize
+In-depth analysis of system limitations
+\end_layout
+
+\end_body
+\end_document
