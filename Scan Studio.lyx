@@ -130,7 +130,7 @@ Pico Scan
  is capable of generating point clouds from two other sources.
  The first is from a series of image files captured externally.
  The image files must contain the same reflected binary patterns, and the
- filenames must be formated correctly for 
+ filenames must be formatted correctly for 
 \emph on
 Pico Scan
 \emph default
