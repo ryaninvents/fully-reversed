@@ -103,7 +103,11 @@ n in order to ensure accuracy.
  The extrinsic parameters are the location and orientation of the cameras.
  For simplicity the coordinate system is always defined such that the theoretica
 l pinhole of one of the cameras is at the origin, with the optical axis
- of that camera aligned with the z-axis of the system.
+ of that camera aligned with the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis of the system.
  Extrinsic calibration of the cameras allows for stereo vision, which adds
  to the accuracy of the measurements being taken.
 \end_layout
@@ -122,10 +126,10 @@ reference "fig:Camera-Calibration"
 
 \end_inset
 
- shows the calibration board as seen by both cameras.For intrinsic calibration
- it is important to have the calibration pattern cover every section of
- the image throughout the process in order to lens distortion to be characterize
-d.
+ shows the calibration board as seen by both cameras.
+ For intrinsic calibration it is important to have the calibration pattern
+ cover every section of the image throughout the process in order to lens
+ distortion to be characterized.
  For extrinsic calibration it is essential for both the whole calibration
  pattern to be captured by both of the cameras in order to properly calibrate
  for a stereo system.
@@ -361,7 +365,7 @@ es are calculated using a captured image and the calibration parameters.
  By calculating the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated
- through Zhang's method
+ through Zhang's method 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "falcao2008plane"
