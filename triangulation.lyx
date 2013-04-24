@@ -61,10 +61,20 @@
 \begin_body
 
 \begin_layout Section
-Triangulation
+Mesh calculation
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Triangulation"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+triangulation|(
+\end_layout
 
 \end_inset
 
@@ -353,6 +363,16 @@ For simplicity, we assume
 
 \begin_layout Subsection
 Defining a ray through a given pixel
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+pixel ray
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -779,10 +799,30 @@ reference "eq:M-equals-k0-M-hat-c"
 \end_inset
 
 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+triangulation|)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Converting to surfels
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+surfels
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

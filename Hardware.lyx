@@ -62,10 +62,30 @@
 
 \begin_layout Section
 Hardware selection
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hardware|(
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Projector
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hardware!projector
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -136,6 +156,16 @@ Optoma PK201 Pico Pocket Projector
 
 \begin_layout Subsection
 Cameras
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hardware!cameras
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -204,6 +234,16 @@ name "fig:Logitech-C905-Webcam"
 
 \begin_layout Subsection
 Mounting system
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hardware!mounting system
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -296,6 +336,16 @@ Scanner assembly
 
 \begin_layout Subsection
 Light box
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hardware!light box
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -347,6 +397,16 @@ name "fig:Setup-in-light"
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hardware|)
 \end_layout
 
 \end_inset

@@ -135,6 +135,16 @@ ew measuring system using easily obtained, commercially available components.
 
 \begin_layout Section
 Importance of full field-of-view digitization
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+digitization!importance of|(
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -146,6 +156,16 @@ There are many reasons why a designer or operator may wish to obtain a CAD
 
 \begin_layout Subsection
 Replication or modification of existing parts
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+digitization!use in part modification
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -175,6 +195,16 @@ key "Leno"
 
 \begin_layout Subsection
 In-the-field analysis of structural integrity
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+digitization!use in analysis
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -215,6 +245,16 @@ Additionally digitization can be used on a part that has already failed
 
 \begin_layout Subsection
 Art conservation
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+digitization!use in art conservation
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -229,7 +269,17 @@ Artwork is often created without any special attention paid to making it
 \end_layout
 
 \begin_layout Subsection
-Custom accessories 
+Custom accessories
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+digitization!use in creation of accessories
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -317,7 +367,17 @@ key "WeatherTech"
 \end_layout
 
 \begin_layout Subsection
-Quality Assurance
+Quality assurance
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+digitization!use in quality assurance
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -327,6 +387,16 @@ Digitization technology can be implemented in the manufacturing process.
  defects.
  Even if the process is not fast enough to scan a part as its moving on
  a conveyor, it can still be used on a sampling of parts for batch checking.
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+digitization!importance of|)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
