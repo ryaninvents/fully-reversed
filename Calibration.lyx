@@ -142,9 +142,10 @@ light!collimated
 \end_inset
 
  is brought into focus.
- The focal length is an important parameter to triangulation, so even if
- the manufacturer gives this value it still must be calculated during calibratio
-n in order to ensure accuracy.
+ Collimated light refers to light with its rays in parallel.The focal length
+ is an important parameter to triangulation, so even if the manufacturer
+ gives this value it still must be calculated during calibration in order
+ to ensure accuracy.
  Correcting for lens distortions is critical for obtaining accurate input,
  and doing so removes distortions from the resulting mesh, vastly improving
  results.

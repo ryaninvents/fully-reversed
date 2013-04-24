@@ -232,13 +232,13 @@ Data Capture
 \end_layout
 
 \begin_layout Standard
-Data capture can be broken into three distinct steps; data aquisition, data
- processing, and point cloud generation.
- The data aquisition is achieved by taking images with the two cameras.
+Data capture can be broken into three distinct steps; data acquisition,
+ data processing, and point cloud generation.
+ The data acquisition is achieved by taking images with the two cameras.
  In the case of this method 20 frames of data are needed for each data capture
  view.
- Once the data is aquired the images are correct for distortions using the
- calibration data and are then processed using the triangulation algorythm.
+ Once the data is squired the images are correct for distortions using the
+ calibration data and are then processed using the triangulation algorithm.
  Once each pixel is processed a point cloud is constructed using the x,
  y, and z information obtained from the calibration and processing.
  Each pixel in the picture equates to one point in the point cloud.
@@ -253,7 +253,7 @@ Repositioning
 \begin_layout Standard
 After each data capture view is complete it is necessary to reposition the
  target object to capture another view.
- Photogrammetry tracking using ORB matching algorythms is employed to automatica
+ Photogrammetry tracking using ORB matching algorithms is employed to automatica
 lly rotate the point cloud to match the object rotation.
  In this way the next point cloud can be added to the existing in proper
  alignment.

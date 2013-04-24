@@ -134,7 +134,7 @@ reference "fig:Comparison-of-scans"
  demonstrates the remarkable improvements that the hybrid technique offers.
  The left scan was generated using only the binary technique, while the
  right scan used the initial rough scan to unwrap the sinusoidal data.
- Notice in particular the hair; on the left it is barely discernable, while
+ Notice in particular the hair; on the left it is barely discernible, while
  on the right it is easily distinguished.
 \begin_inset Float figure
 wide false

@@ -94,7 +94,7 @@ The projector was selected to be low cost, compact, and have a high resolution.
  of the projector.
  Additionally the spatial resolution is affected by the distance to the
  target object, so projectors with a short minimum throw distance were favored.
- In order to ensure a high spatial resolution at the working dsitance, the
+ In order to ensure a high spatial resolution at the working distance, the
  projector also needed to have a large throw ratio.
  Taking all of these parameters into account, the projector that was selected
  is the Optoma PK201 pico pocket projector, pictured in Figure 
@@ -183,7 +183,14 @@ reference "fig:Logitech-C905-Webcam"
 \end_inset
 
 .
- Full specifications on the cameras can be found in Appendix A.
+ Full specifications on the cameras can be found in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Equipment-used"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -283,6 +290,18 @@ reference "fig:Scanner-assembly"
 \end_inset
 
  shows this setup.
+ Since the highest spatial resolution is achieved at the projector's minimum
+ throw distance, that is the recommended working distance.
+ However, for larger objects a further distance is needed to increase the
+ scan volume.
+ A detailed view of the configuration can be seen in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:CAD-Drawings"
+
+\end_inset
+
+, along with detailed CAD drawings of each of the mounting components.
 \end_layout
 
 \begin_layout Standard
