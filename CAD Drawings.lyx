@@ -62,6 +62,13 @@
 
 \begin_layout Chapter
 CAD Drawings
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:CAD-Drawings"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
