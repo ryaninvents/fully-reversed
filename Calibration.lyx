@@ -92,19 +92,11 @@ Camera calibration consists of determining the intrinsic and extrinsic propertie
 s of the cameras.
  The intrinsic properties of the camera are the focal length, image format,
  principal point, and lens distortions.
- The focal length
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-define
-\end_layout
-
-\end_inset
-
- is a very important parameter to triangulation, so even if the manufacturer
- gives this value it still must be calculated during calibration in order
- to ensure accuracy.
+ The focal length is the distance over which light initially collimated
+ light is brought into focus.
+ The focal length is an important parameter to triangulation, so even if
+ the manufacturer gives this value it still must be calculated during calibratio
+n in order to ensure accuracy.
  Correcting for lens distortions is critical for obtaining accurate input,
  and doing so removes distortions from the resulting mesh, vastly improving
  results.
@@ -231,7 +223,7 @@ In this equation
 \begin_inset Formula $s$
 \end_inset
 
- is an arbritray scale factor, 
+ is an arbitrary scale factor, 
 \begin_inset Formula $u$
 \end_inset
 
@@ -266,7 +258,7 @@ contains the extrinsic parameters, where
 \end_inset
 
  is the translation matrix for the same relation.
- The remaining variables are the nondistortion intrinsic parameters.
+ The remaining variables are the non-distortion intrinsic parameters.
  
 \begin_inset Formula $\alpha$
 \end_inset
@@ -297,7 +289,7 @@ are the coordinates of the principle point of the camera.
 \begin_inset Formula $\gamma$
 \end_inset
 
-is the scew of the two images axes.
+is the skew of the two images axes.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "zhang2000flexible"
@@ -320,7 +312,16 @@ key "zhang2000flexible"
 
 \end_inset
 
+.
+ For more detailed information on the exact solution process please see
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zhang2000"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -367,7 +368,7 @@ es are calculated using a captured image and the calibration parameters.
  A checkerboard pattern is projected on top of the existing pattern on the
  calibration board, and the corner locations are found using the same method
  as in camera calibration.
- By calcualting the camera rays that pass through the corners of the projection
+ By calculating the camera rays that pass through the corners of the projection
  pattern, the location of the corners in 3D space can be found.
  The projector is treated as the inverse as a camera, and then calibrated
  through Zhang's method.
