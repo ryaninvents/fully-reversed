@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -398,6 +398,13 @@ Moir
 
 \begin_layout Subsection
 Phase-shifted fringes
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Phase-shifted-fringes"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -415,10 +422,15 @@ phase shifting.
  This projects a pattern whose intensity varies sinusoidally from left to
  right.
  This pattern is projected multiple times, shifting to the right each time.
-\end_layout
+ Decoding this requires a least-squares approach.
+ The foundation for our technique can be found in 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zervas"
 
-\begin_layout Standard
-Decoding this requires a least-squares approach.
+\end_inset
+
+, Appendix B, and our modification is listed in Appendix.
 \end_layout
 
 \begin_layout Standard
@@ -433,8 +445,18 @@ phase shifting!issues with
 
 One issue with phase-shifting is that it is susceptible to noise.
  Adding more shift steps can reduce the impact of noise but increases the
- number of patterns required.
- In addition, phase shifting requires phase unwrapping.
+ number of patterns required 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zervas"
+
+\end_inset
+
+.
+ In addition, phase shifting requires phase unwrapping, which is computationally
+ intensive and can drastically slow the scanning process.
+ In our implementation, we found that every additional phase shift incurs
+ about 1 second of additional processing time.
 \end_layout
 
 \begin_layout Subsection
@@ -459,6 +481,166 @@ Scan Studio
  uses binary encoding to quickly capture high-level data.
  Then, it uses phase shifting to enhance this binary data down to sub-pixel
  levels.
+\end_layout
+
+\begin_layout Standard
+The algorithm proceeds as follows.
+ A number 
+\begin_inset Formula $N$
+\end_inset
+
+ is selected such that the noise in the pure binary scanning is confined
+ to the smallest 
+\begin_inset Formula $N$
+\end_inset
+
+ bits; that is, no coded value differs from its ideal value by more than
+ 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+ This value may be determined by scanning a flat plane and observing the
+ deviations.
+\end_layout
+
+\begin_layout Standard
+Next, the pure binary scan is completed, giving a rough 
+\begin_inset Quotes eld
+\end_inset
+
+first pass.
+\begin_inset Quotes erd
+\end_inset
+
+ This encoding is stored, as well as a 
+\begin_inset Quotes eld
+\end_inset
+
+clipped
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+stepped
+\begin_inset Quotes erd
+\end_inset
+
+ image in which each value is rounded down to the nearest multiple of 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The sinusoidal patterns are generated with a period of 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ projector pixels.
+ The number of shifts may be selected to optimize between speed and accuracy.
+ In our experiences, 24 phase shifts provided an acceptable balance.
+ Future projects can observe the effects of phase shifts and quantize these
+ observations.
+ The fringe images are processed using the techniques outlined in Subsection
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Phase-shifted-fringes"
+
+\end_inset
+
+, generating a phase map with values from 
+\begin_inset Formula $-\pi$
+\end_inset
+
+ to 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ To normalize this phase map into pixel coordinates, 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ is added to all negative values, and every value in the matrix is then
+ multiplied by 
+\begin_inset Formula $\frac{2^{N}}{2\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This scaled phase map gives the position in pixels, accurate to subpixel
+ levels.
+ However, this data repeats itself periodically.
+ To properly perform triangulation, we need to 
+\begin_inset Quotes eld
+\end_inset
+
+unwrap
+\begin_inset Quotes erd
+\end_inset
+
+ this 
+\begin_inset Quotes eld
+\end_inset
+
+wrapped
+\begin_inset Quotes erd
+\end_inset
+
+ data.
+ To do this, we simply compute the sum of the scaled phase map and the 
+\begin_inset Quotes eld
+\end_inset
+
+stepped
+\begin_inset Quotes erd
+\end_inset
+
+ map.
+ This can lead to errors at the edges of steps where the hybrid map differs
+ from the pure binary map by approximately 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+ To correct this, we simply calculate the difference between the hybrid
+ map and the binary map at every point.
+ If 
+\begin_inset Formula $\left(hybrid-binary\right)>2^{N}$
+\end_inset
+
+, we subtract 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ from that value, and if 
+\begin_inset Formula $\left(hybrid-binary\right)<-2^{N}$
+\end_inset
+
+, we add 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ to that value.
+ Due to the periodic properties of the sine curve, these cases are the only
+ two that must be adjusted for; larger differences are precluded by the
+ fact that 
+\begin_inset Formula $-\frac{\pi}{2}<\arctan\left(x\right)<\frac{\pi}{2}$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\epsilon\Re$
+\end_inset
+
+.
 \end_layout
 
 \end_body

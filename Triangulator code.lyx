@@ -569,7 +569,7 @@ status open
 
 \begin_layout Plain Layout
 function 
-\begin_inset Formula $decodeCameraImage\left(I\right)$
+\begin_inset Formula $decodeCameraImage\left(\mathbf{I}\right)$
 \end_inset
 
 :
@@ -577,11 +577,11 @@ function
 
 \begin_layout Enumerate
 create an output matrix 
-\begin_inset Formula $E$
+\begin_inset Formula $\mathbf{E}$
 \end_inset
 
  with the same dimensions as 
-\begin_inset Formula $I$
+\begin_inset Formula $\mathbf{I}$
 \end_inset
 
 
@@ -624,7 +624,7 @@ loop
 \end_deeper
 \begin_layout Enumerate
 return 
-\begin_inset Formula $E$
+\begin_inset Formula $\mathbf{E}$
 \end_inset
 
 
@@ -637,7 +637,7 @@ return
 Pseudocode algorithm for converting a reflected binary-coded image to an
  ordinary binary-coded image.
  Argument 
-\begin_inset Formula $I$
+\begin_inset Formula $\mathbf{I}$
 \end_inset
 
  is a 
@@ -678,13 +678,10 @@ reference "fig:Diagram-of-binary"
 
  demonstrates how the algorithms, image capture, and output are correlated
  to produce a single binary-coded frame in a form suitable for triangulation.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -711,6 +708,224 @@ name "fig:Diagram-of-binary"
 Diagram of binary capture method.
  This workflow generates results for both the ordinary and reflected binary
  techniques, depending on the patterns selected for projection.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Phase recovery
+\end_layout
+
+\begin_layout Standard
+Algorithm describes the method we use to convert a series of intensity maps
+ to a single scaled phase map, where each entry in the matrix represents
+ 
+\begin_inset Formula $u_{p}\mod2^{N}$
+\end_inset
+
+.
+ Argument 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+ is a list of intensity maps, each phase-shifted by an equal amount from
+ the previous and covering the entire 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ period of the sine wave.
+ This algorithm uses the two-argument form of arctan to avoid discontinuities
+ at 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ intervals.
+ In C this function is implemented as 
+\begin_inset Formula $\mathtt{atan2(y,x)}$
+\end_inset
+
+.
+ Argument 
+\begin_inset Formula $Q$
+\end_inset
+
+ is a quality threshold, and only computes phase for elements where peak-to-peak
+ sinusoid magnitude is greater than 
+\begin_inset Formula $Q$
+\end_inset
+
+ in the camera's intensity units.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+function 
+\begin_inset Formula $computeScaledPhaseMap\left(\mathbf{L},N,Q\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+If the elements of 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+ are not all the same size, throw an error.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\alpha=\frac{2\pi}{length\left(\mathbf{L}\right)}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note: the use of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ here is different from its use in camera calibration.
+ The two are not related.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ be a matrix with dimensions the same as each element of 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{A}=\sum_{n=0}^{length\left(\mathbf{L}\right)-1}\begin{pmatrix}1 & \cos\left(\alpha n\right) & \sin\left(\alpha n\right)\\
+\cos\left(\alpha n\right) & \cos^{2}\left(\alpha n\right) & \cos\left(\alpha n\right)\sin\left(\alpha n\right)\\
+\sin\left(\alpha n\right) & \cos\left(\alpha n\right)\sin\left(\alpha n\right) & \sin^{2}\left(\alpha n\right)
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Looping through each 
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{b}=\sum_{n=0}^{length\left(\mathbf{L}\right)-1}\begin{pmatrix}\mathbf{L}_{vu}\\
+\mathbf{L}_{vu}\cos\left(\alpha n\right)\\
+\mathbf{L}_{vu}\sin\left(\alpha n\right)
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{X}=\mathbf{A}^{-1}\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $X_{1}\geq Q$
+\end_inset
+
+ (if the magnitude of intensity fluctuation is greater than the desired
+ threshold)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\mathbf{P}_{vu}=\frac{\arctan\left(X_{3},X_{2}\right)}{2\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\mathbf{P}_{vu}<0$
+\end_inset
+
+, let 
+\begin_inset Formula $\mathbf{P}_{vu}=\mathbf{P}_{vu}+1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Otherwise, let 
+\begin_inset Formula $\mathbf{P}_{vu}=\varnothing$
+\end_inset
+
+ (null entry).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Return 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+, the scaled phase mapping.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pseudocode algorithm for converting a series of intensity maps to a scaled
+ phase mapping.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:phase-map-algo"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

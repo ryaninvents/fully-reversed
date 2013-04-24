@@ -25,7 +25,7 @@
 \maintain_unincluded_children false
 \language american
 \language_package default
-\inputencoding auto
+\inputencoding default
 \fontencoding 
 \font_roman default
 \font_sans helvet
