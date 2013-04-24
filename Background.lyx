@@ -87,9 +87,9 @@ Photogrammetry is a passive technique that constructs a three-dimensional
  In order to achieve this, photogrammetry correlates features, colors, or
  patterns between photos.
  Photogrammetry techniques may take advantage of reflectivity, shading,
- and focus to recover shape information 
+ and focus to recover shape information
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Snavely"
 
 \end_inset
@@ -111,9 +111,9 @@ This method directly measures the time of flight of a light source, typically
  a laser.
  The amount of time between the light being emitted, reflected off the object,
  and then received by the sensor is used to calculate the distance from
- the camera to each point on the object 
+ the camera to each point on the object
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "doi:10.1117/1.602438"
 
 \end_inset
@@ -149,9 +149,9 @@ In its simplest form, a laser scanner operates by projecting a dot onto
  from its captured camera image.
  Typically, this process is accelerated through the use of a laser line
  instead of a dot, and occasionally multiple lines are used to speed the
- process further 
+ process further
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "doi:10.1117/1.602438"
 
 \end_inset
@@ -162,19 +162,19 @@ key "doi:10.1117/1.602438"
  greater than the thickness of the line would allow.
  Figure 
 \begin_inset CommandInset ref
-LatexCommand vref
+LatexCommand ref
 reference "fig:Laser-Scanner"
 
 \end_inset
 
- demonstrates a typical laser scanner setup.
+ shows the basics of a line scanner.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -192,9 +192,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Laser scanner 
+Laser scanner
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "LineScanner"
 
 \end_inset
@@ -240,9 +240,9 @@ Continuous coding
 
 \begin_layout Standard
 Continuously-coded images contain information about the projected pattern
- at every pixel of the camera image 
+ at every pixel of the camera image
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
@@ -278,31 +278,24 @@ Fourier transform profilometry is a method for calculating the wrapped phase
  The two remaining peaks are symmetric about the origin and contain the
  shape information.
  One of these peaks is masked out, and the remaining one is shifted by the
- carrier frequency to the origin 
+ carrier frequency to the origin.
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Takeda:83"
 
 \end_inset
 
-.
- The inverse fast-Fourier transform (FFT)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "FFT"
-description "fast Fourier transform"
-
-\end_inset
-
- is calculated and the phase data is separated from the contrast by taking
- the arc tangent of the imaginary components over the real components 
+ The inverse FFT is calculated and the phase data is separated from the
+ contrast by taking the arc tangent of the imaginary components over the
+ real components.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Zervas"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -339,9 +332,9 @@ flood-fill
 \end_inset
 
  method, through Fourier transformation, or through use of multiple fringe
- densities 
+ densities
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Zervas"
 
 \end_inset
@@ -353,15 +346,7 @@ key "Zervas"
 It is important when using either of these techniques that the fringes be
  as close to sinusoidal as possible.
  One technique to ensure accurate sinusoids is to use a digital light processor
- (DLP)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "DLP"
-description "digital light processor"
-
-\end_inset
-
- projector with a high frame rate.
+ (DLP) projector with a high frame rate.
  Such a system can rapidly project multiple binary patterns during the exposure
  of one frame of the camera and very accurately recreate a sinusoidal pattern.
  To reduce costs, other systems approximate sinusoidal fringes by using
@@ -369,13 +354,21 @@ description "digital light processor"
  This simplifies implementation, as the hardware need only be capable of
  projecting binary patterns, but introduces errors as the approximation
  deviates from a true sinusoid.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sinosoidal-Fringe-Projection"
+
+\end_inset
+
+ shows a sinosoidal fringes projected on a statue.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -395,7 +388,7 @@ status open
 \begin_layout Plain Layout
 Sinosoidal fringe projection 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "Zervas"
 
 \end_inset
@@ -433,15 +426,23 @@ Instead of a single fringe pattern being phase shifted between several pictures,
  three phase shifted patterns are projected simultaneously for single frame
  acquisition.
  These three patterns are different colors, typically red, green, and blue
- as these are the primary colors of any commercial projection system.
+ as these are the primary colors of any commercial projection system, as
+ seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Color-Coded-Fringes"
+
+\end_inset
+
+.
  The three patterns are separated and used to generate a wrapped phase map.
  The main limitation of this method is that it is sensitive to the transmittance
 , reflectivity, and absorption of the object being measured.
  To compensate for this the exact wavelengths used can be chosen based on
  the color and material of the object, or some form of coating can be applied
- to the object to improve the conditions 
+ to the object to improve the conditions
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "huang1999color"
 
 \end_inset
@@ -450,22 +451,11 @@ key "huang1999color"
  
 \end_layout
 
-\begin_layout Subparagraph
-Binary encoding
-\end_layout
-
-\begin_layout Standard
-A temporally-multiplexed binary method takes the binary value for each projector
- pixel and projects each bit in sequence.
- This is the primary technique used in our approach and will be used in
- later sections.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -483,9 +473,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Color coded fringes 
+Color coded fringes
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "huang1999color"
 
 \end_inset
@@ -505,13 +495,21 @@ name "fig:Color-Coded-Fringes"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subparagraph
+Binary encoding
+\end_layout
+
+\begin_layout Standard
+A temporally-multiplexed binary method takes the binary value for each projector
+ pixel and projects each bit in sequence.
+ This is the primary technique used in our approach and will be used in
+ later sections.
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -529,7 +527,7 @@ A continuous grayscale or color scale is projected onto the object.
  This method is extremely sensitive to shadowing and the color of the target
  object 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
@@ -554,9 +552,9 @@ Discrete coding consists of projecting non-continuous patterns onto an object.
  This displacement can be used to triangulate the distance to the object
  for each location, thus giving the 3-dimensional shape.
  The two methods of discrete coding are spatial multiplexing and time multiplexi
-ng 
+ng
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
@@ -582,9 +580,9 @@ codeword
  For a one-dimensional pattern this means the sequence of lines to either
  side of any given line are unique and thus identify that line.
  In a 2-D case it the surroundings in all directions within the plane are
- taken into account 
+ taken into account
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2004pattern"
 
 \end_inset
@@ -597,19 +595,27 @@ De Bruijn coding
 \end_layout
 
 \begin_layout Standard
-A pattern is constructed using a pseudo-random sequence known as a De Bruijn
+A pattern is constructed using a pseudorandom sequence known as a De Bruijn
  sequence.
  The properties of a De Bruijn sequence ensure that any projected line can
  be identified by the bordering lines, allowing for triangulation.
- This pattern can be binary (similar to bar code), grayscale, or color 
+ This pattern can be binary (similar to bar code), grayscale, or color.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2004pattern"
 
 \end_inset
 
 .
- 
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:De-Bruijn-Patterns"
+
+\end_inset
+
+ is an example of a De Bruijn pattern.
 \end_layout
 
 \begin_layout Standard
@@ -633,9 +639,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-De Bruijn patterns 
+De Bruijn patterns
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
@@ -670,19 +676,26 @@ M-arrays
 
 \begin_layout Standard
 M-arrays are a 2D equivalent to the 1-D De Bruijn patterns.
- An array of pseudo-random dots is projected onto the target object.
+ An array of pseudorandom dots is projected onto the target object.
  Any dot can be identified by the adjacent dots, allowing for triangulation.
  This method can utilize binary, color or grayscale.
  The codeword of the dot can be identified not only by the type of dots
- around it, but by the relative density of the dots as well 
+ around it, but by the relative density of the dots as well.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
 
+ An example M-array can be viewed in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:M-Array"
+
+\end_inset
+
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -707,9 +720,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-M-Array 
+M-array
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
@@ -748,14 +761,15 @@ g methods that use unique patterns for specific purposes.
  These patterns do not necessarily directly identify the line or pixel as
  the previous methods do.
  Instead non-formal coding usually serves a more specific purpose such as
- calibration patterns 
+ calibration patterns.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2004pattern"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Paragraph
@@ -768,15 +782,15 @@ Time multiplexing captures successive images with different patterns in
  The patterns are generated such that each location has a unique sequence
  of values throughout the series of images.
  Since multiple frames are needed to generate a 3D image, this method is
- not viable for high speed applications that require single frame acquisition
+ not viable for high speed applications that require single frame acquisition.
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -789,14 +803,15 @@ Binary codes function by projecting a series of binary patterns.
 , similar to a bar code.
  A single pattern alone does nothing, but by taking into account the binary
  value of each line or pixel over the entire series of projected patterns,
- uniqueness is established 
+ uniqueness is established.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2004pattern"
 
 \end_inset
 
-.
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -807,14 +822,15 @@ N-Array codes
 N-Array codes utilize the same basic concept as binary codes, except they
  are not restricted to binary patterns.
  They can utilize color or grayscale patterns to greatly reduce the number
- of frames necessary to uniquely identify each location in the image 
+ of frames necessary to uniquely identify each location in the image.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2004pattern"
 
 \end_inset
 
-.
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -826,14 +842,15 @@ Hybrid coding consists of a combination of spatial and time multiplexing.
  Several spatial multiplexing patterns are displayed in series so as to
  create a time multiplex.
  This method achieves the high accuracy of time multiplexing, while greatly
- reducing the number of patterns necessary 
+ reducing the number of patterns necessary.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "salvi2010state"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Subsection
@@ -850,15 +867,15 @@ ter.
  The interference between these two beams gives the phase difference of
  the lasers.
  The phases from all the points on the object are combined into a wrapped
- phase map image of the object 
+ phase map image of the object.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "doi:10.1117/1.602438"
 
 \end_inset
 
-.
- The phase maps are then unwrapped, giving the shape of the object.
+The phase maps are then unwrapped, giving the shape of the object.
  
 \end_layout
 
@@ -867,18 +884,19 @@ There are many advanced imaging techniques that use interferometry as a
  basis to generate absolute 3D measurements.
  One such technique is called laser speckle pattern sectioning.
  This method projects a speckle pattern on the target object which is measured
- using a charge-coupled device (CCD) array.
+ using a CCD array.
  The pattern is scanned through a range of wavelengths.
  Each wavelength corresponds to a 2D slice of the 3D object.
  By adding these slices together into a 3D data array, and then performing
- a 3D Fourier transform, the 3D shape can be found 
+ a 3D Fourier transform, the 3D shape can be found.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "doi:10.1117/1.602438"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -886,14 +904,14 @@ Interferometry has higher resolution and accuracy than many of the other
  techniques, and can be performed on a large range of object sizes depending
  on the setup.
  For this reason it can be used in a large variety fields, making it a versatile
- technique 
+ technique.
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "ZCorp"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Section
@@ -913,23 +931,38 @@ Kinect
 
 \begin_layout Standard
 The Kinect is a 3D imaging device made by Microsoft for use with their Xbox
- 360 gaming console.
- The Kinect works based on a fixed pseudo-random array of dots projected
+ 360 gaming console, shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:a)-Microsoft-Kinect"
+
+\end_inset
+
+-a.
+ The Kinect works based on a fixed pseudorandom array of dots projected
  on an infrared wavelength.
  The dots are formed by an array of small micro lenses, each with a slightly
  different focal length.
+ This pattern can be seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:a)-Microsoft-Kinect"
+
+\end_inset
+
+-b.
  The included infrared camera picks up the projection of these dots on their
  environment.
  Groups of dots are then compared against an image taken on a reference
  plane.
- Due to the pseudo-random nature of the dot array, each group is unique
- enough to allow identification of a particular dot based on the relative
- positions of neighboring dots.
+ Due to the pseudorandom nature of the dot array, each group is unique enough
+ to allow identification of a particular dot based on the relative positions
+ of neighboring dots.
  Furthermore, due to the different focal lengths of the micro lenses, the
  pattern itself will vary based on the distance between the camera and the
  object 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "KinectPatent"
 
 \end_inset
@@ -945,7 +978,7 @@ Microsoft has kept its specific algorithms for calculating the depth proprietary
  depth with about 10 mm accuracy along the optical axis, and position to
  about 3 mm perpendicular to the optical axis 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "OpenKinect:ImagingInfo"
 
 \end_inset
@@ -960,70 +993,22 @@ key "OpenKinect:ImagingInfo"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename img/kinect.jpg
-	lyxscale 20
+	display false
 	scale 25
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename img/kinect pattern.png
-	lyxscale 20
+	display false
 	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-(a)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-(b)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
 
 \end_inset
 
@@ -1042,22 +1027,21 @@ name "fig:a)-Microsoft-Kinect"
 
 \end_inset
 
-Microsoft Kinect.
- (a) image of its data acquisition device 
+a) Microsoft Kinect
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "KinectImg"
 
 \end_inset
 
-; (b) projected pattern as seen through an infrared camera 
+ b) Projected pattern as seen through an infrared camera
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "kinectPattern"
 
 \end_inset
 
-.
+
 \end_layout
 
 \end_inset
@@ -1075,42 +1059,35 @@ Next Engine
 \end_layout
 
 \begin_layout Standard
-The Next Engine is a device that projects multiple laser lines onto the
- target object.
+Next engine is a device that projects multiple laser lines onto the target
+ object.
  To construct a 3D image of an object it performs line scanning in both
  the vertical and horizontal directions.
  It takes about two minutes to create a single 3D point cloud of the object.
  The software that is bundled with this product has the capacity to stitch
  together multiple views to create full 3D images.
- The 3D images are in full color and can be output to several common computer-ai
-ded design (CAD)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "CAD"
-description "computer-aided design"
-
-\end_inset
-
+ The 3D images are in full color and can be output to several common CAD
  formats.
- The Next Engine Scanner is marketed for use in design, manufacturing, computer-
-generated imagery (CGI)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "CGI"
-description "computer-generated imagery"
-
-\end_inset
-
-, art, and medical applications.
- This system boasts accuracy to 0.005 inches in macro mode and to 0.015 inches
- in wide mode 
+ The Next Engine Scanner is marketed for use in design, manufacturing, CGI,
+ art, and medical applications.
+ This system boasts accuracy to 0.005inches in macro mode and to 0.015inches
+ in wide mode.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "NextEngine"
 
 \end_inset
 
 .
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Next-Engine-3D"
+
+\end_inset
+
+ displays this system.
 \end_layout
 
 \begin_layout Standard
@@ -1135,14 +1112,14 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Next Engine 3D scanner 
+Next Engine 3D scanner
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "NextEngine"
 
 \end_inset
 
-.
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Next-Engine-3D"
@@ -1175,16 +1152,17 @@ David 3D Laser Scanners come in two types.
  The other scanner is a sinusoidal fringe projection system.
  This scanner comes with calibration patterns and a software program capable
  of creating and stitching 3D point clouds.
- The scanner has a object size range from 10 to 600 millimeters with a accuracy
- up to 2 percent of the object size.
- It takes 2 to 4 seconds per scan and generates grayscale images  
+ The scanner has a object size range from 10mm-600mm with a accuracy up
+ to 2% of the object size.
+ It takes 2-4 seconds per scan and generates grayscale images.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "David3d"
 
 \end_inset
 
-.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1209,9 +1187,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-David 3D Laser scanners 
+David 3D Laser scanners
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "David3d"
 
 \end_inset
@@ -1256,15 +1234,24 @@ The Handy Scan 3D scanner is a portable line scanner.
  two cameras on the scanner.
  This allows the scanner to know its location relative to the object, making
  the freehand scanning possible.
- This product is marketed for reverse engineering, design, and part inspection
+ This product is marketed for reverse engineering, design, and part inspection.
  
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "HandyScan"
 
 \end_inset
 
 .
+ This product can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Handy-Scan-3D"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1289,9 +1276,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Handy Scan 3D scanner 
+Handy Scan 3D scanner
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand cite
 key "HandyScan"
 
 \end_inset

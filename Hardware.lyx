@@ -74,18 +74,26 @@ The projector was selected to be low cost, compact, and have a high resolution.
  of the projector.
  Additionally the spatial resolution is affected by the distance to the
  target object, so projectors with a short minimum throw distance were favored.
- In order to ensure a large field of view at the close range, the projector
- also needed to have a large throw ratio.
+ In order to ensure a high spatial resolution at the working dsitance, the
+ projector also needed to have a large throw ratio.
  Taking all of these parameters into account, the projector that was selected
- is the Optoma PK201 Pico Pocket Projector.
+ is the Optoma PK201 pico pocket projector, pictured in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Optima-PK201-Projector"
+
+\end_inset
+
+.
  See Appendix A for technical specifications of the projector.
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -131,12 +139,20 @@ Cameras
 \end_layout
 
 \begin_layout Standard
-The cameras for the scanning system were selected to be low cost and high
- resolution.
- The resolution of the cameras needs to be equal to or greater than the
- resolution of the projector.
+The cameras for the scanning system were selected to be low cost and high-resolu
+tion.
+ The spatial resolution of the cameras needs to be equal to or greater than
+ the spatial resolution of the projector at the working distance.
  Since cost was a main factor webcams were chosen for the cameras.
- The specific model selected is the Logitech C905 webcam.
+ The specific model selected is the Logitech C905 webcam, pictured in Figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Logitech-C905-Webcam"
+
+\end_inset
+
+.
  Full specifications on the cameras can be found in Appendix A.
 \end_layout
 
@@ -144,7 +160,7 @@ The cameras for the scanning system were selected to be low cost and high
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -219,13 +235,21 @@ Next the existing camera casings were removed so that only the lenses and
  The mounts had a hole on top for the new camera casings, which could pivot
  about the hole until tightened into place.
  The custom mounts and casings were then rapid prototyped.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Scanner-assembly"
+
+\end_inset
+
+ shows this setup.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -258,6 +282,62 @@ name "fig:Scanner-assembly"
 \end_inset
 
 Scanner assembly
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Light box
+\end_layout
+
+\begin_layout Standard
+In order to minimize stray light a light box was purchased for the setup.
+ This minimized the influence of noise on the system and improved results.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Setup-in-light"
+
+\end_inset
+
+ shows the scanning system inside the light box with the front flap open.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/light box.jpg
+	display false
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Setup in light box
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Setup-in-light"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
