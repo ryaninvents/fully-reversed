@@ -192,9 +192,9 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Laser scanner
+Laser scanner 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "LineScanner"
 
 \end_inset
@@ -388,7 +388,7 @@ status collapsed
 \begin_layout Plain Layout
 Sinosoidal fringe projection 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Zervas"
 
 \end_inset
@@ -473,9 +473,9 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Color coded fringes
+Color coded fringes 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "huang1999color"
 
 \end_inset
@@ -638,9 +638,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-De Bruijn patterns
+De Bruijn patterns 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "salvi2010state"
 
 \end_inset
