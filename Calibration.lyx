@@ -288,6 +288,53 @@ X & Y & Z & 1\end{array}\right)\label{eq:23-3d relationship}
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\alpha$"
+description "horizontal scaling factor"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\beta$"
+description "vertical scaling factor"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$u_c$"
+description "horizontal location of pixel in camera image"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$v_c$"
+description "vertical location of pixel in camera image"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$u_p$"
+description "horizontal location of pixel in projector image"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$v_p$"
+description "vertical location of pixel in projector image"
+
+\end_inset
+
 In this equation 
 \begin_inset Formula $s$
 \end_inset
@@ -357,6 +404,15 @@ In this equation
 LatexCommand citep
 key "Zhang2000"
 
+\end_inset
+
+.
+ For most cameras it is reasonable to assume 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+, and that 
+\begin_inset Formula $\gamma=0$
 \end_inset
 
 .

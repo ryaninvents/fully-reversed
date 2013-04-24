@@ -904,6 +904,13 @@ Otherwise, let
  (null entry).
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Note: in reality, the null entry is represented by a negative value, and
+ negative values are simply ignored during triangulation.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Return 

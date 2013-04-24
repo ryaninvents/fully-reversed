@@ -553,6 +553,14 @@ reference "fig:Triangulation-geometry."
 \end_inset
 
  shows the relationships between the vectors in this subsection.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\mathbf{D}$"
+description "distance vector between camera and projector"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -585,6 +593,14 @@ Let
 \end_inset
 
  is measured in the camera's coordinate space.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\mathbf{M}$"
+description "measured point"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \mathbf{\hat{M}}=\mathbf{\hat{X}}\left(u_{c},v_{c}\right)\label{eq:def-M-hat}
@@ -813,16 +829,6 @@ triangulation|)
 
 \begin_layout Subsection
 Converting to surfels
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-surfels
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard

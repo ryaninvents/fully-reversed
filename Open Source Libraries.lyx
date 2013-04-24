@@ -61,7 +61,7 @@
 \begin_body
 
 \begin_layout Chapter
-Open-source libraries and programs
+Open-source libraries and programs 
 \begin_inset CommandInset label
 LatexCommand label
 name "chap:Open-source-libraries-and"
@@ -102,17 +102,44 @@ Quantal Quetzal
 \end_layout
 
 \begin_layout Section
+
+\emph on
 OpenCV
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:OpenCV"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-OpenCV is an open source computer vision library created by Intel in 1999
- for the purpose of advancing the computer vision field.
- OpenCV has a BSD software license, which is a minimally restricting license.
- OpenCV source code is free to use for academic and commercial purposes
- so long as the proper acknowledgments and copyrights are used.
- The OpenCV library contains a vast amount of source code for various computer
- vision application, and is supported by a large open source community 
+
+\emph on
+OpenCV
+\emph default
+ is an open source computer vision library created by Intel in 1999 for
+ the purpose of advancing the computer vision field.
+ 
+\emph on
+OpenCV
+\emph default
+ has a BSD software license, which is a minimally restricting license.
+ 
+\emph on
+OpenCV
+\emph default
+ source code is free to use for academic and commercial purposes so long
+ as the proper acknowledgments and copyrights are used.
+ The 
+\emph on
+OpenCV
+\emph default
+ library contains a vast amount of source code for various computer vision
+ application, and is supported by a large open source community 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "opencv"
@@ -123,31 +150,73 @@ key "opencv"
 \end_layout
 
 \begin_layout Standard
-OpenCV code was used in this project as part of the scanning program.
- The main use of OpenCV is in the calibration software.
+
+\emph on
+OpenCV
+\emph default
+ code was used in this project as part of the scanning program.
+ The main use of 
+\emph on
+OpenCV
+\emph default
+ is in the calibration software.
  The camera calibration code for locating the corners on a checkerboard
- pattern was created using OpenCV source code.
+ pattern was created using 
+\emph on
+OpenCV
+\emph default
+ source code.
  The other optional calibration patterns supported by the software also
- use OpenCV code.
+ use 
+\emph on
+OpenCV
+\emph default
+ code.
  Additionally the solvePNP code used to match features for stereo calibration
- also utilizes OpenCV.
- The use of existing OpenCV source code to perform these complicated and
- vital tasks allowed for time to be focused on other areas of the development.
+ also utilizes 
+\emph on
+OpenCV
+\emph default
+.
+ The use of existing 
+\emph on
+OpenCV
+\emph default
+ source code to perform these complicated and vital tasks allowed for time
+ to be focused on other areas of the development.
  This of course freed up vital time and allowed for other areas of the software
  to be more robust.
- The OpenCV stereo calibration code was also modified and re-purposed for
- the projector calibration.
- In this way the OpenCV library is responsible for most of the calibration
- code.
- Additionally, OpenCV code is used for the photogrammetry tracking used
- to track the orientation of the object being measured.
- In this way the OpenCV libraries form a crucial backbone for our software,
- working in support of our triangulation algorithm and image processing
- code.
+ The 
+\emph on
+OpenCV
+\emph default
+ stereo calibration code was also modified and re-purposed for the projector
+ calibration.
+ In this way the 
+\emph on
+OpenCV
+\emph default
+ library is responsible for most of the calibration code.
+ Additionally, 
+\emph on
+OpenCV
+\emph default
+ code is used for the photogrammetry tracking used to track the orientation
+ of the object being measured.
+ In this way the 
+\emph on
+OpenCV
+\emph default
+ libraries form a crucial backbone for our software, working in support
+ of our triangulation algorithm and image processing code.
 \end_layout
 
 \begin_layout Standard
-The OpenCV community maintains a homepage at 
+The 
+\emph on
+OpenCV
+\emph default
+ community maintains a homepage at 
 \begin_inset Flex URL
 status collapsed
 
@@ -162,12 +231,26 @@ http://opencv.org
 \end_layout
 
 \begin_layout Section
-PCL
+
+\emph on
+Point Cloud Library
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:PCL"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Point Cloud Library (PCL) is a library for working with raw acquired 3D
- data.
+
+\emph on
+Point Cloud Library
+\emph default
+ (PCL) is a library for working with raw acquired 3D data.
  It allows users to align multiple scans, form meshes from point clouds,
  and smooth results.
  We planned to use PCL to prepare our data for export, but there was not
@@ -191,11 +274,26 @@ http://pointclouds.org
 \end_layout
 
 \begin_layout Section
+
+\emph on
 OpenGL
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:OpenGL"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-OpenGL is an open source library for developing 2D and 3D graphical applications.
+
+\emph on
+OpenGL
+\emph default
+ is an open source library for developing 2D and 3D graphical applications.
  It was created in 1992 and has become the industry standard for graphical
  programming.
  It is used in a variety of applications from animation to CAD software
@@ -210,8 +308,11 @@ key "opengl"
 \end_layout
 
 \begin_layout Standard
-In this project OpenGL was used to create the 3D viewing environment for
- the point cloud data.
+In this project 
+\emph on
+OpenGL
+\emph default
+ was used to create the 3D viewing environment for the point cloud data.
  This environment includes a coordinate system with the three major axes
  visible, as well as wire-frame models of the cameras and projector, located
  in their positions and orientations.
@@ -220,13 +321,41 @@ In this project OpenGL was used to create the 3D viewing environment for
 \end_layout
 
 \begin_layout Section
+
+\emph on
 Qt
+\emph default
+ and 
+\emph on
+Qt Creator
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Qt"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Qt is an extensive framework for object-to-object communication and user
- interface construction.
+
+\emph on
+Qt
+\emph default
+ is an extensive framework for object-to-object communication and user interface
+ construction.
  It was used for the user interface and workflow management in our software.
+ 
+\emph on
+Qt Creator
+\emph default
+ is a development environment designed for building 
+\emph on
+Qt
+\emph default
+ projects.
  For more information, visit 
 \begin_inset Flex URL
 status collapsed
@@ -242,7 +371,18 @@ http://qt-project.org
 \end_layout
 
 \begin_layout Section
+
+\emph on
 gnuplot
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:gnuplot"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -250,15 +390,27 @@ gnuplot
 \emph on
 Pico Scan
 \emph default
- is able to interface with the gnuplot program if it is installed on the
- user's system in order to plot cross-sectional data obtained through scans.
- If gnuplot is not installed, 
+ is able to interface with the 
+\emph on
+gnuplot 
+\emph default
+program if it is installed on the user's system in order to plot cross-sectional
+ data obtained through scans.
+ If 
+\emph on
+gnuplot
+\emph default
+ is not installed, 
 \emph on
 Pico Scan
 \emph default
  will work just fine, with the exception of an inability to produce graphs
  of this data.
- Documentation and downloads for gnuplot are available at 
+ Documentation and downloads for 
+\emph on
+gnuplot
+\emph default
+ are available at 
 \begin_inset Flex URL
 status collapsed
 
@@ -273,21 +425,60 @@ http://www.gnuplot.info
 \end_layout
 
 \begin_layout Section
-MeshLab and Blender
+
+\emph on
+MeshLab
+\emph default
+ and 
+\emph on
+Blender
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:MeshLab-and-Blender"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-MeshLab and Blender are two programs used for editing meshes.
- MeshLab is useful for initial cleaning of data, filling of small holes,
- and aligning multiple scans with a relatively automatic process.
- Blender is useful for manual cleaning and alignment, as well as for producing
- modified versions of meshes.
+
+\emph on
+MeshLab
+\emph default
+ and 
+\emph on
+Blender
+\emph default
+ are two programs used for editing meshes.
+ 
+\emph on
+MeshLab
+\emph default
+ is useful for initial cleaning of data, filling of small holes, and aligning
+ multiple scans with a relatively automatic process.
+ 
+\emph on
+Blender
+\emph default
+ is useful for manual cleaning and alignment, as well as for producing modified
+ versions of meshes.
  Both were used to post-process meshes generated by 
 \emph on
 Pico Scan
 \emph default
 .
- MeshLab and Blender are available at 
+ 
+\emph on
+MeshLab
+\emph default
+ and 
+\emph on
+Blender
+\emph default
+ are available at 
 \begin_inset Flex URL
 status collapsed
 
@@ -313,18 +504,37 @@ http://blender.org
 \end_layout
 
 \begin_layout Section
+
+\emph on
 POV-Ray
+\emph default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:POV-Ray"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-POV-Ray is a ray-tracing program that allows the user to write scripts that
- simulate scenes.
+
+\emph on
+POV-Ray
+\emph default
+ is a ray-tracing program that allows the user to write scripts that simulate
+ scenes.
  This greatly enhanced our ability to quickly simulate different hardware
  capabilities, and an early version of 
 \emph on
 Pico Scan
 \emph default
- used POV-Ray to test the validity of the binary method.
+ used 
+\emph on
+POV-Ray
+\emph default
+ to test the validity of the binary method.
 \end_layout
 
 \end_body
