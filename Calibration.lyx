@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -72,6 +72,15 @@ name "chap:Calibration"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+calibration|(
+\end_layout
+
+\end_inset
+
 The techniques outlined in the previous sections rely on calibration for
  accurate reconstruction of a single view.
  Calibration allows the system to measure both intrinsic parameters (such
@@ -81,6 +90,16 @@ The techniques outlined in the previous sections rely on calibration for
 
 \begin_layout Subsection
 Camera calibration
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+calibration!camera
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -90,17 +109,56 @@ Calibration process
 \begin_layout Standard
 Camera calibration consists of determining the intrinsic and extrinsic propertie
 s of the cameras.
- The intrinsic properties of the camera are the focal length, image format,
- principal point, and lens distortions.
- The focal length is the distance over which light initially collimated
- light is brought into focus.
+ The intrinsic properties
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+parameters!intrinsic
+\end_layout
+
+\end_inset
+
+ of the camera are the focal length, image format, principal point, and
+ lens distortions.
+ The focal length
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+focal length
+\end_layout
+
+\end_inset
+
+ is the distance over which initially collimated light
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+light!collimated
+\end_layout
+
+\end_inset
+
+ is brought into focus.
  The focal length is an important parameter to triangulation, so even if
  the manufacturer gives this value it still must be calculated during calibratio
 n in order to ensure accuracy.
  Correcting for lens distortions is critical for obtaining accurate input,
  and doing so removes distortions from the resulting mesh, vastly improving
  results.
- The extrinsic parameters are the location and orientation of the cameras.
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+parameters!extrinsic
+\end_layout
+
+\end_inset
+
+The extrinsic parameters are the location and orientation of the cameras.
  For simplicity the coordinate system is always defined such that the theoretica
 l pinhole of one of the cameras is at the origin, with the optical axis
  of that camera aligned with the 
@@ -179,7 +237,17 @@ name "fig:Camera-Calibration"
 \end_layout
 
 \begin_layout Subsubsection
-Calibration algorithms 
+Calibration algorithms
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+calibration!Zhang's method
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -286,7 +354,7 @@ In this equation
  is the skew of the camera, representing a shift from a rectangular pixel
  array to a parallelogram-shaped one 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Zhang2000"
 
 \end_inset
@@ -301,7 +369,7 @@ From this information it is possible to recover the non-distortion intrinsic
  Finally, all parameters are refined to minimize reprojection errors using
  a Levenberg-Marquardt method 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Zhang2000"
 
 \end_inset
@@ -310,7 +378,7 @@ key "Zhang2000"
  For more detailed information on the exact solution process please see
  
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "Zhang2000"
 
 \end_inset
@@ -319,11 +387,21 @@ key "Zhang2000"
 \end_layout
 
 \begin_layout Subsection
-Projector Calibration
+Projector calibration
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+calibration!projector
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
-Calibration Process
+Calibration process
 \end_layout
 
 \begin_layout Standard
@@ -349,7 +427,7 @@ In order to perform projector calibration the calibration board needs to
 \end_layout
 
 \begin_layout Subsubsection
-Calibration Algorithms
+Calibration algorithms
 \end_layout
 
 \begin_layout Standard
@@ -367,7 +445,7 @@ es are calculated using a captured image and the calibration parameters.
  The projector is treated as the inverse as a camera, and then calibrated
  through Zhang's method 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "falcao2008plane"
 
 \end_inset
@@ -378,6 +456,16 @@ key "falcao2008plane"
 \begin_layout Standard
 By the time of the conclusion of the project, projector calibration had
  not yet been implemented.
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+calibration|)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
