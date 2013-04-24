@@ -65,13 +65,9 @@ Results
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Scan Studio.lyx"
+filename "Simulation Results.lyx"
 
 \end_inset
 
@@ -81,7 +77,7 @@ filename "Scan Studio.lyx"
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "Simulation Results.lyx"
+filename "Scan Studio.lyx"
 
 \end_inset
 
