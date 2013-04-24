@@ -85,12 +85,19 @@ Once an encoded image has been captured, this encoding must be translated
 \end_layout
 
 \begin_layout Subsection
-Relating image coordinates to world coordinates
+Computing central angles of a pixel
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Computing-central-angles"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Solving the system requires knowledge of 
-\begin_inset Formula $\theta_{C}$
+\begin_inset Formula $\theta_{c}$
 \end_inset
 
 , the angle the incoming ray creates with the camera's optical axis.
@@ -151,11 +158,11 @@ Converting camera coordinates to real-world coordinates.
 
 \begin_layout Standard
 By itself, the camera can directly measure neither 
-\begin_inset Formula $x_{C}$
+\begin_inset Formula $x_{c}$
 \end_inset
 
  nor 
-\begin_inset Formula $z_{C}$
+\begin_inset Formula $z_{c}$
 \end_inset
 
 .
@@ -169,7 +176,7 @@ reference "fig:Converting-camera-coordinates"
  demonstrates that
 \begin_inset Formula 
 \begin{equation}
-\frac{x_{C}}{z_{C}}=\frac{x_{C}^{\star}}{f_{C}}\label{eq:x/z}
+\frac{x_{c}}{z_{c}}=\frac{x_{c}^{\star}}{f_{c}}\label{eq:x/z}
 \end{equation}
 
 \end_inset
@@ -178,13 +185,13 @@ reference "fig:Converting-camera-coordinates"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $f_{C}$
+\begin_inset Formula $f_{c}$
 \end_inset
 
  is the distance between the focal point and the camera sensor.
  The sensor is composed of many tiny pixel sensors.
  These sensors give the camera sensor a resolution 
-\begin_inset Formula $R_{C}$
+\begin_inset Formula $R_{c}$
 \end_inset
 
 , measured in 
@@ -196,7 +203,7 @@ reference "fig:Converting-camera-coordinates"
  relationship:
 \begin_inset Formula 
 \begin{equation}
-u_{C}^{\prime}=\frac{x_{C}^{\star}}{R_{C}}\label{eq:u-prime}
+u_{c}^{\prime}=\frac{x_{c}^{\star}}{R_{c}}\label{eq:u-prime}
 \end{equation}
 
 \end_inset
@@ -205,14 +212,14 @@ u_{C}^{\prime}=\frac{x_{C}^{\star}}{R_{C}}\label{eq:u-prime}
 \end_layout
 
 \begin_layout Standard
-We can express a normalized focal length 
-\begin_inset Formula $\bar{f}_{C}$
+We can express the camera's scaling factor 
+\begin_inset Formula $\alpha_{c}$
 \end_inset
 
  in terms of pixels with
 \begin_inset Formula 
 \begin{equation}
-\bar{f}_{C}\equiv\frac{f_{C}}{R_{C}}\label{eq:f-bar}
+\alpha_{c}\equiv\frac{f_{c}}{R_{c}}\label{eq:f-bar}
 \end{equation}
 
 \end_inset
@@ -245,7 +252,7 @@ reference "eq:f-bar"
 , we get
 \begin_inset Formula 
 \begin{equation}
-u_{C}^{\prime}=\bar{f}_{C}\frac{x_{C}}{z_{C}}\label{eq:u-prime-complete}
+u_{c}^{\prime}=\alpha_{c}\frac{x_{c}}{z_{c}}\label{eq:u-prime-complete}
 \end{equation}
 
 \end_inset
@@ -256,14 +263,14 @@ u_{C}^{\prime}=\bar{f}_{C}\frac{x_{C}}{z_{C}}\label{eq:u-prime-complete}
 \begin_layout Standard
 This means that, given the normalized focal length, we can easily calculate
  
-\begin_inset Formula $\theta_{C}$
+\begin_inset Formula $\theta_{c}$
 \end_inset
 
 :
 \begin_inset Formula 
 \begin{eqnarray}
-\tan\theta_{C} & = & \frac{x_{C}}{z_{C}}\\
-\tan\theta_{C} & = & \frac{u_{C}^{\prime}}{\bar{f}_{C}}\label{eq:tan-theta-c}
+\tan\theta_{c} & = & \frac{x_{c}}{z_{c}}\\
+\tan\theta_{c} & = & \frac{u_{c}^{\prime}}{\alpha_{c}}\label{eq:tan-theta-c}
 \end{eqnarray}
 
 \end_inset
@@ -275,9 +282,9 @@ This means that, given the normalized focal length, we can easily calculate
 Similarly,
 \begin_inset Formula 
 \begin{eqnarray}
-\tan\phi_{C} & = & \frac{v_{C}^{\prime}}{\bar{f}_{C}}\label{eq:tan-phi-c}\\
-\tan\theta_{P} & = & \frac{u_{P}^{\prime}}{\bar{f}_{P}}\label{eq:tan-theta-p}\\
-\tan\phi_{P} & = & \frac{v_{P}^{\prime}}{\bar{f}_{P}}\label{eq:tan-phi-p}
+\tan\phi_{c} & = & \frac{v_{c}^{\prime}}{\beta_{c}}\label{eq:tan-phi-c}\\
+\tan\theta_{p} & = & \frac{u_{p}^{\prime}}{\alpha_{p}}\label{eq:tan-theta-p}\\
+\tan\phi_{p} & = & \frac{v_{p}^{\prime}}{\beta_{p}}\label{eq:tan-phi-p}
 \end{eqnarray}
 
 \end_inset
@@ -285,15 +292,200 @@ Similarly,
 
 \end_layout
 
+\begin_layout Standard
+The values 
+\begin_inset Formula $u^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $v^{\prime}$
+\end_inset
+
+ may be computed with knowledge of the principal point 
+\begin_inset Formula $\left(u_{0},v_{0}\right)$
+\end_inset
+
+ through the relationships:
+\begin_inset Formula 
+\begin{eqnarray}
+u^{\prime} & = & u-u_{0}\label{eq:u-prime-def}\\
+v^{\prime} & = & v-v_{0}\label{eq:v-prime-def}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, given any pixel 
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+, we can compute a corresponding pair 
+\begin_inset Formula $\left(\theta,\phi\right)$
+\end_inset
+
+ of angles formed with the optical axis in the 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ planes.
+\end_layout
+
+\begin_layout Standard
+For simplicity, we assume 
+\begin_inset Formula $\alpha_{c}=\beta_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{p}=\beta_{p}$
+\end_inset
+
+.
+ This is acceptable for most commercially available cameras and projectors,
+ since they are typically manufactured with square pixels.
+\end_layout
+
 \begin_layout Subsection
-Recovering 3D information
+Defining a ray through a given pixel
+\end_layout
+
+\begin_layout Standard
+To simplify the explanation of reverse ray-tracing, we define a unit vector
+ function 
+\begin_inset Formula $\mathbf{\hat{X}}$
+\end_inset
+
+ such that, for a given optical device 
+\begin_inset Formula $d$
+\end_inset
+
+ at position 
+\begin_inset Formula $\mathbf{P}_{d}$
+\end_inset
+
+ and a given pixel 
+\begin_inset Formula $\left(u_{d},v_{d}\right)$
+\end_inset
+
+ from the device, the ray 
+\begin_inset Formula $\mathbf{R}\left(t\right)=\mathbf{P}_{d}+t\mathbf{\hat{X}}\left(u_{d},v_{d}\right)$
+\end_inset
+
+ describes all possible real-world points that may be imaged or illuminated
+ by that pixel, depending on if the device is a camera or projector, respectivel
+y.
+ The definition of 
+\begin_inset Formula $\mathbf{\hat{X}}\left(u,v\right)$
+\end_inset
+
+ is used for both the camera and the projector, as both may be modeled with
+ the pinhole model.
+ 
+\end_layout
+
+\begin_layout Standard
+We begin with the definition that 
+\begin_inset Formula $\mathbf{\hat{X}}$
+\end_inset
+
+ is unit length, and can be described in local coordinate space using 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ as described in Subsection 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sub:Computing-central-angles"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+1 & = & \hat{X}_{x}^{2}+\hat{X}_{y}^{2}+\hat{X}_{z}^{2}\label{eq:m-hat-unit}\\
+\hat{X}_{z} & = & \left[\tan^{2}\theta+\tan^{2}\phi+1\right]^{-\frac{1}{2}}\\
+\mathbf{\hat{X}} & = & \left(\begin{array}{c}
+\hat{X}_{z}\tan\theta\\
+\hat{X}_{z}\tan\phi\\
+\hat{X}_{z}
+\end{array}\right)\label{eq:m-hat}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\tan\theta$
+\end_inset
+
+ and 
+\begin_inset Formula $\tan\phi$
+\end_inset
+
+ are themselves functions of 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+, we can define: 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\hat{X}}\left(u,v\right)=\begin{pmatrix}\hat{X}_{z}\frac{u-u_{0}}{\alpha}\\
+\hat{X}_{z}\frac{v-v_{0}}{\beta}\\
+\hat{X}_{z}
+\end{pmatrix}\label{eq:x-hat-mess}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{equation}
+\hat{X}_{z}=\left(\left[\frac{u-u_{0}}{\alpha}\right]+\left[\frac{v-v_{0}}{\beta}\right]^{2}+1\right)^{-\frac{1}{2}}\label{eq:x-hat-z-full}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The definition of 
+\begin_inset Formula $\mathbf{\hat{X}}$
+\end_inset
+
+ allows us to compute a ray through any pixel of the camera and, by extension,
+ to form a parametric plane representing a column of pixels from the projector.
+\end_layout
+
+\begin_layout Subsection
+Intersecting a camera pixel ray with a projection plane
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -311,6 +503,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Triangulation-geometry."
+
+\end_inset
+
 Triangulation geometry.
 \end_layout
 
@@ -319,52 +517,32 @@ Triangulation geometry.
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
-\end_layout
+All 3D work in this section is performed using the camera's coordinate system.
+ We start by assuming a distance vector 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ measured from the camera to the projector.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:Triangulation-geometry."
 
 \end_inset
 
-
+ shows the relationships between the vectors in this subsection.
 \end_layout
 
 \begin_layout Standard
-All 3D work in this section is performed using the camera's coordinate system.
- We start by assuming a distance vector measured from the camera to the
- projector.
- 
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 \mathbf{D} & = & \left(\begin{array}{c}
 D_{x}\\
 D_{y}\\
 D_{z}
-\end{array}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbf{\hat{M}}$
-\end_inset
-
- is the unit vector pointing from the camera to the measured point 
-\begin_inset Formula $\mathbf{M}$
-\end_inset
-
-.
-\begin_inset Formula 
-\begin{eqnarray}
-1 & = & \hat{M}_{x}^{2}+\hat{M}_{y}^{2}+\hat{M}_{z}^{2}\label{eq:m-hat-unit}\\
-\hat{M}_{z} & = & \left[\tan^{2}\theta_{C}+\tan^{2}\phi_{C}+1\right]^{-\frac{1}{2}}\\
-\mathbf{\hat{M}} & = & \left(\begin{array}{c}
-\hat{M}_{z}\tan\theta_{C}\\
-\hat{M}_{z}\tan\phi_{C}\\
-\hat{M}_{z}
-\end{array}\right)\label{eq:m-hat}
+\end{array}\right)\label{eq:def-D-vec}
 \end{eqnarray}
 
 \end_inset
@@ -373,11 +551,36 @@ D_{z}
 \end_layout
 
 \begin_layout Standard
-Even though the fringe appears as a contour where it illuminates a surface,
- it may be conceptualized as a plane extending from the projector through
- every possible point of illumination.
- Any point on the fringe plane may be identified uniquely and parametrically
- as a linear combination of two vectors 
+Let 
+\begin_inset Formula $\mathbf{\hat{M}}$
+\end_inset
+
+ be the unit vector pointing from the camera to the measured point 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ is measured in the camera's coordinate space.
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\hat{M}}=\mathbf{\hat{X}}\left(u_{c},v_{c}\right)\label{eq:def-M-hat}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To relate the projector coordinates, we can use the fact that if the projector
+ were to project a single column of light, there exists a plane in space
+ representing all possible locations that that column could illuminate.
+ Any point in this illuminated plane may be identified uniquely and parametrical
+ly as a linear combination of two vectors 
 \begin_inset Formula $\mathbf{F_{1}}$
 \end_inset
 
@@ -398,19 +601,20 @@ Even though the fringe appears as a contour where it illuminates a surface,
 \end_layout
 
 \begin_layout Standard
-Vertical fringes will always pass through the projector's local 
+Vertical columns, such as we use, will always pass through the projector's
+ local 
 \begin_inset Formula $y$
 \end_inset
 
 -axis, meaning 
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 \mathbf{F_{1}} & = & \left(\begin{array}{c}
 0\\
 1\\
 0
-\end{array}\right)
-\end{eqnarray*}
+\end{array}\right)\label{eq:F1}
+\end{eqnarray}
 
 \end_inset
 
@@ -418,51 +622,25 @@ Vertical fringes will always pass through the projector's local
 \end_layout
 
 \begin_layout Standard
-To define the other vector, we can use an angle 
-\begin_inset Formula $\psi$
-\end_inset
-
-, defined as
-\begin_inset Formula 
-\[
-\psi\equiv\pi+\theta_{P}-\beta
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The physical significance of 
-\begin_inset Formula $\psi$
-\end_inset
-
- is that it is the angle formed in the 
-\begin_inset Formula $y=0$
-\end_inset
-
- plane by the fringe plane's trace and the camera's optical axis 
-\begin_inset Formula $\left(x=y=0\right)$
+To define the other vector, we can use the fact that it passes through 
+\begin_inset Formula $u_{p}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-We can now relate 
-\begin_inset Formula $\mathbf{F_{2}}$
+ Since the plane passes through all possible values of 
+\begin_inset Formula $v_{p}$
 \end_inset
 
- to the projector's image coordinates: 
+, we can select any constant value of 
+\begin_inset Formula $v_{p}$
+\end_inset
+
+ to calculate the vector.
+ We arbitrarily choose 0 for this value.
 \begin_inset Formula 
-\begin{eqnarray*}
-\mathbf{F_{2}} & = & \left(\begin{array}{c}
-\sin\psi\\
-0\\
-\cos\psi
-\end{array}\right)
-\end{eqnarray*}
+\begin{equation}
+\mathbf{F_{2}}=\mathbf{\hat{X}}\left(u_{p},0\right)\label{eq:F2}
+\end{equation}
 
 \end_inset
 
@@ -475,15 +653,19 @@ Now we have three vectors which sum to
 \end_inset
 
  in some linear combination.
- 
+ We select constants 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+, 
 \begin_inset Formula $k_{1}$
 \end_inset
 
- and 
+, and 
 \begin_inset Formula $k_{2}$
 \end_inset
 
- are not necessarily positive.
+ to solve.
  Combining this with the projector's arbitrary rotation 
 \begin_inset Formula $\mathbf{R}_{p}$
 \end_inset
@@ -492,14 +674,39 @@ Now we have three vectors which sum to
 \begin_inset Formula $\mathbf{R}_{c}$
 \end_inset
 
- allows for triangulation of any relative positioning of camera and projector.
+ allows us to solve for triangulation of any arbitrary positioning of camera
+ and projector
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Note that this does not mean that arbitrary positioning is necessarily the
+ best---factors such as device resolution, occlusion, and surface characteristic
+s of the subject mean that the choice of positions is constrained.
+ The significance of arbitrary positioning is that the mathematics is not
+ a constraining factor in selecting a configuration.
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbf{R}_{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{R}_{c}$
+\end_inset
+
+ are typical rotation matrices, that will produce a rotated vector when
+ multiplied by a vector.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-k_{0}\mathbf{R}_{c}\mathbf{\hat{M}}+k_{1}\mathbf{R}_{p}\mathbf{F_{1}}+k_{2}\mathbf{R}_{p}\mathbf{F_{2}}=\mathbf{D}
-\]
+\begin{equation}
+k_{0}\mathbf{R}_{c}\mathbf{\hat{M}}+k_{1}\mathbf{R}_{p}\mathbf{F_{1}}+k_{2}\mathbf{R}_{p}\mathbf{F_{2}}=\mathbf{D}\label{eq:solve-me}
+\end{equation}
 
 \end_inset
 
@@ -509,22 +716,22 @@ k_{0}\mathbf{R}_{c}\mathbf{\hat{M}}+k_{1}\mathbf{R}_{p}\mathbf{F_{1}}+k_{2}\math
 \begin_layout Standard
 This may be solved by using the equation
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 \left(\begin{array}{ccc}
 \mathbf{R_{c}\hat{M}} & \mathbf{R_{p}F_{1}} & \mathbf{R_{p}F_{2}}\end{array}\right)\left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
 k_{2}
 \end{array}\right) & = & \left(\begin{array}{c}
-\mathbf{D}\end{array}\right)\\
+\mathbf{D}\end{array}\right)\label{eq:solving-1}\\
 \left(\begin{array}{ccc}
 \mathbf{R_{c}\hat{M}} & \mathbf{R_{p}F_{1}} & \mathbf{R_{p}F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
 \mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
 k_{2}
-\end{array}\right)
-\end{eqnarray*}
+\end{array}\right)\label{eq:solving-2}
+\end{eqnarray}
 
 \end_inset
 
@@ -545,6 +752,33 @@ Now that we have our constants, the point
 \end_inset
 
 with the system origin defined as the origin of the camera's pinhole model.
+ Aligning the global coordinate system with the camera means
+\begin_inset Formula 
+\begin{equation}
+\mathbf{R}_{c}=\begin{pmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}\label{eq:def-Rc-identity}
+\end{equation}
+
+\end_inset
+
+and Equation 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "eq:M-equals-k0-M-hat-c"
+
+\end_inset
+
+ simplifies to
+\begin_inset Formula 
+\begin{equation}
+\mathbf{M}=k_{0}\mathbf{\hat{M}}\label{eq:measured-point-final}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -553,7 +787,7 @@ Converting to surfels
 
 \begin_layout Standard
 Applying the above techniques to an input image results in a two-dimensional
- sparse matrix of three-dimensional points.
+ matrix where each element is a three-dimensional point.
  This group of points may be immediately exported as a point cloud for quick
  verification and visualization of results.
  However, to be most useful in a CAD package, these points must be merged
@@ -585,6 +819,15 @@ el
 ement, represents a small patch of the object's surface in much the same
  way that a pixel represents a small patch of a computer screen.
  A surfel stores location, normal, color, and size.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:A-surfel,-with"
+
+\end_inset
+
+ shows a simple visual representation of a surfel.
+ 
 \begin_inset Float figure
 wide false
 sideways false
@@ -594,7 +837,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename svg/surfel.svg
-	width 25col%
+	lyxscale 33
+	width 15col%
 
 \end_inset
 
@@ -605,6 +849,12 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-surfel,-with"
+
+\end_inset
+
 A surfel, with location 
 \begin_inset Formula $\mathbf{p}$
 \end_inset
@@ -641,6 +891,15 @@ A surfel, with location
 \begin_layout Standard
 There exist many methods and software packages capable of translating surfels
  into a fully healed mesh.
+ Appendix 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "chap:Open-source-libraries-and"
+
+\end_inset
+
+ lists some freely available software libraries and packages that speed
+ this process.
 \end_layout
 
 \end_body
