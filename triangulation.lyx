@@ -122,10 +122,39 @@ reference "fig:Converting-camera-coordinates"
 \end_layout
 
 \begin_layout Standard
+By itself, the camera can directly measure neither 
+\begin_inset Formula $x_{c}$
+\end_inset
+
+ nor 
+\begin_inset Formula $z_{c}$
+\end_inset
+
+.
+ (If it could, this project would be rather pointless.) However, figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Converting-camera-coordinates"
+
+\end_inset
+
+ demonstrates that
+\begin_inset Formula 
+\begin{equation}
+\frac{x_{c}}{z_{c}}=\frac{x_{c}^{\star}}{f_{c}}\label{eq:x/z}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -156,38 +185,6 @@ Converting camera coordinates to real-world coordinates.
 
 
 \end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-By itself, the camera can directly measure neither 
-\begin_inset Formula $x_{c}$
-\end_inset
-
- nor 
-\begin_inset Formula $z_{c}$
-\end_inset
-
-.
- (If it could, this project would be rather pointless.) However, figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Converting-camera-coordinates"
-
-\end_inset
-
- demonstrates that
-\begin_inset Formula 
-\begin{equation}
-\frac{x_{c}}{z_{c}}=\frac{x_{c}^{\star}}{f_{c}}\label{eq:x/z}
-\end{equation}
 
 \end_inset
 

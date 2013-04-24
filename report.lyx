@@ -16,7 +16,6 @@
 \cfoot{\thepage}
 \rfoot{}
 \renewcommand\refname{References}
-\usepackage{flafter}
 \widowpenalty=10000
 \clubpenalty=10000
 \end_preamble
@@ -42,7 +41,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement t
+\float_placement H
 \paperfontsize 12
 \spacing double
 \use_hyperref true

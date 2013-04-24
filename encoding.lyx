@@ -643,5 +643,143 @@ stepped
 .
 \end_layout
 
+\begin_layout Standard
+For a more visual idea of what's going on, refer to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:A-visualization-of-hybrid"
+
+\end_inset
+
+.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Ideal
+\begin_inset Quotes erd
+\end_inset
+
+ line represents the ideal result.
+ The binary scan approximates this, but has too much noise to be truly useful
+ on its own.
+ See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparison-of-scans"
+
+\end_inset
+
+ (a) 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "fig:Comparison-of-scans"
+
+\end_inset
+
+ for a sample of the low quality of the binary scan.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Truncated binary
+\begin_inset Quotes erd
+\end_inset
+
+ line represents the noisy binary input, rounded down to the nearest multiple
+ of 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Phase map
+\begin_inset Quotes erd
+\end_inset
+
+ line represents the highly accurate response of the phase-shifted encoding.
+ Adding the phase map and truncated binary results, in most cases, in the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Ideal
+\begin_inset Quotes erd
+\end_inset
+
+ response shown in the graph.
+ In real life, sometimes the phase map is shifted a bit relative to the
+ truncated binary, and so at the edge of each 
+\begin_inset Quotes eld
+\end_inset
+
+step
+\begin_inset Quotes erd
+\end_inset
+
+ there is a value that is off by roughly 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+.
+ To correct this, a multiple of 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ is added or subtracted so that the resulting value is within 
+\begin_inset Formula $2^{N}$
+\end_inset
+
+ of the rough binary value.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/hybrid-demo.png
+	width 4in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A visualization of the workings of the hybrid method.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:A-visualization-of-hybrid"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
