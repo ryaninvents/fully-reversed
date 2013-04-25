@@ -24,6 +24,7 @@
 \patchcmd{\@caption}{\csname the#1\endcsname}{\csname fnum@#1\endcsname:\,}{}{}
 \renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{5.5em}} % default for 3rd arg: 2.3em
 \let\l@table\l@figure % as in article.cls
+\let\l@algorithm\l@figure
 \makeatother
 
 \usepackage{caption}
