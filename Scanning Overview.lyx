@@ -239,8 +239,19 @@ Data capture can be broken into three distinct steps; data acquisition,
  view.
  Once the data is squired the images are correct for distortions using the
  calibration data and are then processed using the triangulation algorithm.
- Once each pixel is processed a point cloud is constructed using the x,
- y, and z information obtained from the calibration and processing.
+ Once each pixel is processed a point cloud is constructed using the 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Formula $z$
+\end_inset
+
+ information obtained from the calibration and processing.
  Each pixel in the picture equates to one point in the point cloud.
  Background points can be filtered out either before or after the processing
  into point cloud form.
@@ -254,7 +265,14 @@ Repositioning
 After each data capture view is complete it is necessary to reposition the
  target object to capture another view.
  Photogrammetry tracking using ORB matching algorithms is employed to automatica
-lly rotate the point cloud to match the object rotation.
+lly rotate the point cloud to match the object rotation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rublee2011orb"
+
+\end_inset
+
+.
  In this way the next point cloud can be added to the existing in proper
  alignment.
  The process of data capture and repositioning is repeated until the point
@@ -295,7 +313,7 @@ intelligence
  of the part in any regions that lacked data, such as the insides of holes.
  Additionally changes can be made to specific aspects of the part, and new
  features can be added.
- Finally analysis software such as FEA can be used with the CAD model.
+ Finally, analysis software such as FEA can be used with the CAD model.
 \end_layout
 
 \begin_layout Subsection
