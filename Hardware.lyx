@@ -105,7 +105,7 @@ hardware!projector
 \end_layout
 
 \begin_layout Standard
-The projector was selected to be low cost, compact, and have a high resolution.
+The projector was selected to be low-cost, compact, and have a high resolution.
  The spatial resolution of the scanning system is limited by the resolution
  of the projector.
  Additionally the spatial resolution is affected by the distance to the
@@ -244,10 +244,6 @@ name "fig:Logitech-C905-Webcam"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -428,10 +424,6 @@ name "fig:Setup-in-light"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 

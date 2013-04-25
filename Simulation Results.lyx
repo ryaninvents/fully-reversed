@@ -304,7 +304,14 @@ One of the first pieces of information this data reveals is that the results
  the sampling size for the cross sections.
  This in turn produced inaccurate radii for those cross sections.
  In order to more accurately analyze the data, the erroneous points were
- removed using Chauvenet's criterion.
+ removed using Chauvenet's criterion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "taylor1997introduction"
+
+\end_inset
+
+.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
