@@ -73,8 +73,9 @@ There are many different optical techniques for three-dimensional shape
  measurement.
  The techniques vary in range and applicability, and consequently are used
  in different professional fields.
- This section will give a brief overview of the most common techniques available
+ This Section gives a brief overview of the most common techniques available
  for three-dimensional shape measurement.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -383,14 +384,14 @@ reference "fig:Sinosoidal-Fringe-Projection"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/Zervas Fringe.png
 	display false
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -471,14 +472,14 @@ key "huang1999color"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/color coded sinusoidal.png
 	display false
-	scale 40
+	scale 50
 
 \end_inset
 
