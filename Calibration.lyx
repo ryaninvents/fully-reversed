@@ -200,7 +200,7 @@ reference "fig:Camera-Calibration"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -217,7 +217,8 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Camera Calibration 
+Camera Calibration.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Camera-Calibration"

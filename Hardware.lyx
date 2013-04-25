@@ -97,7 +97,8 @@ The projector was selected to be low cost, compact, and have a high resolution.
  In order to ensure a high spatial resolution at the working distance, the
  projector also needed to have a large throw ratio.
  Taking all of these parameters into account, the projector that was selected
- is the Optoma PK201 pico pocket projector, pictured in Figure 
+ is the Optoma PK201 pico pocket projector, pictured in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Optima-PK201-Projector"
@@ -113,7 +114,7 @@ reference "fig:Optima-PK201-Projector"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -137,7 +138,7 @@ name "fig:Optima-PK201-Projector"
 
 \end_inset
 
-Optoma PK201 Pico Pocket Projector
+Optoma PK201 Pico Pocket Projector.
 \end_layout
 
 \end_inset
@@ -174,7 +175,7 @@ tion.
  The spatial resolution of the cameras needs to be equal to or greater than
  the spatial resolution of the projector at the working distance.
  Since cost was a main factor webcams were chosen for the cameras.
- The specific model selected is the Logitech C905 webcam, pictured in Figure
+ The specific model selected is the Logitech C905 webcam, pictured in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -197,7 +198,7 @@ reference "chap:Equipment-used"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -215,7 +216,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Logitech C905 webcam
+Logitech C905 webcam.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Logitech-C905-Webcam"
@@ -308,7 +309,7 @@ reference "chap:CAD-Drawings"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -340,7 +341,7 @@ name "fig:Scanner-assembly"
 
 \end_inset
 
-Scanner assembly
+Scanner assembly.
 \end_layout
 
 \end_inset
@@ -399,7 +400,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Setup in light box
+Setup in light box.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Setup-in-light"

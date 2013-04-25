@@ -117,7 +117,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Downscaled image of point cloud
+Downscaled image of point cloud.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Downscaled-Image-of"
@@ -162,7 +162,8 @@ reference "fig:a)-Cross-Sectional"
 
 \end_inset
 
- shows the calculated radii, while Figure 
+ shows the calculated radii, while Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Standard-Deviation-of"
@@ -309,7 +310,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Radii after outlier removal
+Radii after outlier removal.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Radii-after-outlier"
@@ -564,7 +565,7 @@ All
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Simulated results
+Simulated results.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Simulated-results"
