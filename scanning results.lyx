@@ -75,13 +75,28 @@ reference "fig:Comparison-of-quality"
 \end_inset
 
  displays a pair of encodings.
- The red line was generated using the pure binary method; the green line
- was generated using the hybrid method.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+Binary
+\begin_inset Quotes erd
+\end_inset
+
+ line was generated using the pure binary method; the 
+\begin_inset Quotes eld
+\end_inset
+
+Hybrid
+\begin_inset Quotes erd
+\end_inset
+
+ line was generated using the hybrid method.
  Note how much smoother the hybrid data is than the binary data.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -145,8 +160,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
+<lyxtabular version="3" rows="2" columns="3">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <row>
@@ -182,6 +198,22 @@ status open
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Last Bit/babyface.jpg
+	lyxscale 20
+	width 33text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
@@ -198,6 +230,15 @@ status open
 
 \begin_layout Plain Layout
 (b)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(c)
 \end_layout
 
 \end_inset
@@ -219,6 +260,7 @@ Comparison of scanning methods.
 rapped fringe projection.
  This demonstrates qualitatively the superiority of our developed hybrid
  method.
+ Image (c) shows the original statue.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison-of-scans"
@@ -261,11 +303,61 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="3">
+<lyxtabular version="3" rows="3" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Last Bit/proud-goat.jpg
+	lyxscale 20
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Last Bit/head.jpg
+	lyxscale 20
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Last Bit/shard.jpg
+	lyxscale 20
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
 <row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
@@ -360,7 +452,8 @@ Sample meshes generated from
 \emph on
 Pico Scan
 \emph default
- and post-processed.
+ and post-processed, along with photos of the objects from which they were
+ generated.
  (a) WPI's 
 \begin_inset Quotes eld
 \end_inset

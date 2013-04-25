@@ -71,7 +71,7 @@ name "chap:Equipment-used"
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Section
 Camera
 \end_layout
 
@@ -89,6 +89,7 @@ reference "tab:Camera-properties."
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -234,7 +235,7 @@ Camera properties.
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Section
 Projector
 \end_layout
 
@@ -252,6 +253,7 @@ reference "tab:Projector-properties."
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
