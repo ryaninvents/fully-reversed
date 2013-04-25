@@ -872,16 +872,12 @@ el
 ement, represents a small patch of the object's surface in much the same
  way that a pixel represents a small patch of a computer screen.
  A surfel stores location, normal, color, and size 
-\series bold
-
 \begin_inset CommandInset citation
 LatexCommand citep
 key "weise2009hand"
 
 \end_inset
 
-
-\series default
 .
  Figure 
 \begin_inset CommandInset ref

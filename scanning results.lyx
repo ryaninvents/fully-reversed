@@ -115,6 +115,11 @@ status open
 \begin_layout Plain Layout
 Comparison of quality of binary vs.
  hybrid method.
+ This scan is of a flat surface, and the ideal response would be a straight
+ line.
+ The binary data exhibits noise, while the hybrid data exhibits a smooth,
+ useable scan.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison-of-quality"
