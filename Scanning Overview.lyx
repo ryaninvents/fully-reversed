@@ -102,7 +102,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Scanning process overview
+Scanning process overview.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Scanning-Process-Overview"
@@ -134,7 +134,7 @@ Digitization
 Digitization refers to the process of converting the dimensions of the 3-dimensi
 onal object into data to be used by computer software.
  This process can be broken into three distinct sections; setup, data capture,
- and repositioning, as seen in Figure
+ and repositioning, as seen in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Digitization-Process-Overview"
@@ -166,7 +166,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Digitization process overview
+Digitization process overview.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Digitization-Process-Overview"

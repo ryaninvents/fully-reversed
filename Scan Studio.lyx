@@ -199,7 +199,8 @@ Pico Scan
 \emph default
 .
  This displays the various coded frames and allows the user to create plots
- similar to Figure 
+ similar to Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Comparison-of-quality"
@@ -207,7 +208,8 @@ reference "fig:Comparison-of-quality"
 \end_inset
 
  directly in the software.
- The data shown is the data used to generate the mesh in Figure 
+ The data shown is the data used to generate the mesh in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:A-screenshot-of-3D-view"
@@ -343,7 +345,8 @@ renders point cloud data in a virtual three-dimensional environment.
  calibration.
  Object view utilizes OpenGL, which is an open source library for rendering
  2D and 3D graphics.
- Refer to Figures 
+ Refer to Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:A-screenshot-of-3D-view"
