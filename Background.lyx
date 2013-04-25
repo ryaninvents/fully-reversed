@@ -181,7 +181,7 @@ status collapsed
 \begin_inset Graphics
 	filename img/line scanner.gif
 	display false
-	scale 50
+	width 4in
 
 \end_inset
 
@@ -390,7 +390,7 @@ status collapsed
 \begin_inset Graphics
 	filename img/Zervas Fringe.png
 	display false
-	scale 40
+	width 4.5in
 
 \end_inset
 
@@ -471,14 +471,14 @@ key "huang1999color"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/color coded sinusoidal.png
 	display false
-	scale 40
+	width 4.5in
 
 \end_inset
 

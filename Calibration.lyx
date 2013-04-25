@@ -81,7 +81,7 @@ calibration|(
 
 \end_inset
 
-The techniques outlined in the previous sections rely on calibration for
+The techniques outlined in the previous Sections rely on calibration for
  accurate reconstruction of a single view.
  Calibration allows the system to measure both intrinsic parameters (such
  as focal length) and extrinsic parameters (such as relative position and
@@ -108,7 +108,14 @@ Calibration process
 
 \begin_layout Standard
 Camera calibration consists of determining the intrinsic and extrinsic propertie
-s of the cameras.
+s of the cameras 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "faugeras1993three"
+
+\end_inset
+
+.
  The intrinsic properties
 \begin_inset Index idx
 status collapsed
@@ -200,7 +207,7 @@ reference "fig:Camera-Calibration"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -217,7 +224,8 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Camera Calibration 
+The stereo calibration dialog in our software.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Camera-Calibration"
@@ -252,7 +260,15 @@ calibration!Zhang's method
 \end_layout
 
 \begin_layout Standard
-The technique used for camera calibration is known as Zhang's method.
+The technique we used for camera calibration is based on Zhang's method
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Zhang2000"
+
+\end_inset
+
+.
  This technique relies on observing a plane from multiple orientations.
  Simply translating the plane does not provide any new information for calculati
 ons, and thus is useless for calibration.
@@ -260,14 +276,7 @@ ons, and thus is useless for calibration.
  plane.
  Then the transformations of the points between images in 3D space are calculate
 d.
- The relationship between the 2D points and 3D points is given by Equation
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:23-3d relationship"
-
-\end_inset
-
-.
+ The relationship between the 2D points and 3D points is given by:
 \end_layout
 
 \begin_layout Standard
@@ -280,15 +289,12 @@ u & v & 1\end{array}\right)^{T}=\left(\begin{array}{ccc}
 0 & 0 & 1
 \end{array}\right)\left(\begin{array}{cc}
 \mathbf{R} & \mathbf{t}\end{array}\right)\left(\begin{array}{cccc}
-X & Y & Z & 1\end{array}\right)\label{eq:23-3d relationship}
+X & Y & Z & 1\end{array}\right),\label{eq:23-3d relationship}
 \end{equation}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "$\\alpha$"
@@ -336,7 +342,7 @@ description "vertical location of pixel in projector image"
 
 \end_inset
 
-In this equation 
+where equation 
 \begin_inset Formula $s$
 \end_inset
 
@@ -368,13 +374,12 @@ In this equation
 
  is the translation matrix for the same relation.
  The remaining variables are the intrinsic parameters, excluding distortion
- which, due to its nonlinear nature, must be modeled separately.
- 
+ which, due to its nonlinear nature, must be modeled separately; 
 \begin_inset Formula $\alpha$
 \end_inset
 
  and 
-\begin_inset Formula $\beta$
+\begin_inset Formula $\beta\,$
 \end_inset
 
  are the scale factors for 
@@ -385,8 +390,7 @@ In this equation
 \begin_inset Formula $v$
 \end_inset
 
- respectively.
- 
+, respectively; 
 \begin_inset Formula $u_{0}$
 \end_inset
 
@@ -409,10 +413,10 @@ key "Zhang2000"
 
 .
  For most cameras it is reasonable to assume 
-\begin_inset Formula $\alpha=\beta$
+\begin_inset Formula $\alpha=\beta,\,$
 \end_inset
 
-, and that 
+ and that 
 \begin_inset Formula $\gamma=0$
 \end_inset
 

@@ -60,7 +60,7 @@
 
 \begin_body
 
-\begin_layout Chapter*
+\begin_layout Chapter
 Executive Summary
 \end_layout
 
@@ -236,10 +236,18 @@ Before implementation, to prove the viability of our scanning method we
 
 \begin_layout Standard
 Our most significant result is the implementation of the software itself.
- Our software package, Pico Scan, allows the user to generate a point cloud
- of one side of an object with a single click.
+ Our software package, 
+\emph on
+Pico Scan
+\emph default
+, allows the user to generate a point cloud of one side of an object with
+ a single click.
  The point cloud is displayed in 3D within the software itself.
- Pico Scan exports into the popular STL mesh format.
+ 
+\emph on
+Pico Scan
+\emph default
+ exports into the popular STL mesh format.
 \end_layout
 
 \begin_layout Standard
@@ -282,7 +290,7 @@ Despite the fact that the software is not yet capable to realizing the full
  just not in an automated manner.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Future Work
 \end_layout
 

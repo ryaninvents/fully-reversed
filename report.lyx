@@ -18,6 +18,13 @@
 \renewcommand\refname{References}
 \widowpenalty=10000
 \clubpenalty=10000
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@caption}{\csname the#1\endcsname}{\csname fnum@#1\endcsname: }{}{}
+\renewcommand*\l@figure{\@dottedtocline{1}{2em}{4.5em}} % default for 3rd arg: 2.3em
+\let\l@table\l@figure % as in article.cls
+\makeatother
 \end_preamble
 \options super,sort&compress
 \use_default_options true
@@ -112,6 +119,22 @@ pagenumbering{roman}
 setcitestyle{authoryear,square}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{secnumdepth}{-1}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+contentsname{Table of Contents}
+\end_layout
+
 \end_inset
 
 
@@ -150,6 +173,29 @@ filename "exec summary.lyx"
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{secnumdepth}{4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{chapter}{0}
+\end_layout
 
 \end_inset
 
@@ -283,6 +329,16 @@ filename "Open Source Libraries.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "Triangulator code.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Using Pico Scan.lyx"
 
 \end_inset
 
