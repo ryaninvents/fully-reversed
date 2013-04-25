@@ -200,7 +200,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Laser scanner scan area and scan line 
+a) Laser scanner scan area; b) Laser scanner scan line 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "LineScanner"
