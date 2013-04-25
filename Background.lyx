@@ -188,7 +188,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename img/line scanner.gif
-	display false
 	width 4in
 
 \end_inset
@@ -200,7 +199,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-a) Laser scanner scan area; b) Laser scanner scan line 
+Laser scanner (a) scanning volume; (b) scan line 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "LineScanner"
