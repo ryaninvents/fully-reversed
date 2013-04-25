@@ -137,7 +137,14 @@ ct a three-dimensional object as a computer model.
  from a different angle as it deforms on the object.
  Using the focal lengths of the camera and projector as well as their relative
  positions and orientations, such a system can recover the original shape
- through processing of the distorted pattern.
+ through processing of the distorted pattern 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "hartley1997triangulation"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -175,7 +182,7 @@ reference "fig:Laser-Scanner"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -193,7 +200,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Laser scanner 
+Laser scanner scan area and scan line 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "LineScanner"
@@ -233,6 +240,16 @@ Structured light techniques use a coded pattern of projected light in conjunctio
 n with a camera to quickly perform full field-of-view triangulation.
  Depending on the patterns used, a technique may be classified as either
  continuous or discrete.
+ Continuous coding techniques include sinusoidal fringe projection and color
+ coded fringe projection, while discrete techniques include spatial multiplexing
+, and time multiplexing 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "salvi2004pattern"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -240,7 +257,11 @@ Continuous coding
 \end_layout
 
 \begin_layout Standard
-Continuously-coded images contain information about the projected pattern
+Continuous coding is a term for any structured light technique that projects
+ a continuous pattern in order to code the shape data into an image.
+ Most continuous coding techniques utilize a sinusoidal pattern, but there
+ are some that use other forms of continuous information.
+ Continuously-coded images contain information about the projected pattern
  at every pixel of the camera image 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -518,18 +539,6 @@ name "fig:Color-Coded-Fringes"
 \end_layout
 
 \begin_layout Subparagraph
-Binary encoding
-\end_layout
-
-\begin_layout Standard
-A temporally-multiplexed binary method takes the binary value for each projector
- pixel and projects each bit in sequence.
- This is the primary technique used in our approach and will be used in
- later sections.
- 
-\end_layout
-
-\begin_layout Subparagraph
 Continuous spatial grading
 \end_layout
 
@@ -605,6 +614,18 @@ key "salvi2004pattern"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subparagraph
+Binary encoding
+\end_layout
+
+\begin_layout Standard
+A temporally-multiplexed binary method takes the binary value for each projector
+ pixel and projects each bit in sequence.
+ This is the primary technique used in our approach and will be used in
+ later sections.
+ 
 \end_layout
 
 \begin_layout Subparagraph
