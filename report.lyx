@@ -21,10 +21,13 @@
 
 \usepackage{etoolbox}
 \makeatletter
-\patchcmd{\@caption}{\csname the#1\endcsname}{\csname fnum@#1\endcsname: }{}{}
-\renewcommand*\l@figure{\@dottedtocline{1}{2em}{4.5em}} % default for 3rd arg: 2.3em
+\patchcmd{\@caption}{\csname the#1\endcsname}{\csname fnum@#1\endcsname:\,}{}{}
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{5.5em}} % default for 3rd arg: 2.3em
 \let\l@table\l@figure % as in article.cls
 \makeatother
+
+\usepackage{caption}
+\usepackage{placeins}
 \end_preamble
 \options super,sort&compress
 \use_default_options true
@@ -130,9 +133,7 @@ setcounter{secnumdepth}{-1}
 
 
 \backslash
-renewcommand
-\backslash
-contentsname{Table of Contents}
+captionsetup{width=11cm,justification=centering,singlelinecheck=off}
 \end_layout
 
 \end_inset
@@ -164,6 +165,24 @@ filename "acknowledgments.lyx"
 \begin_inset CommandInset include
 LatexCommand input
 filename "exec summary.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+contentsname{Table of Contents}
+\end_layout
 
 \end_inset
 
@@ -230,22 +249,6 @@ setcounter{chapter}{0}
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 set_width "auto"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagenumbering{arabic}
-\end_layout
 
 \end_inset
 

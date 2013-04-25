@@ -742,23 +742,22 @@ Note that this does not mean that arbitrary positioning will necessarily
 \begin_inset Formula $\mathbf{R}_{c}$
 \end_inset
 
- are typical rotation matrices, that will produce a rotated vector when
- multiplied by a vector.
+ are rotation matrices as used in geometric transformations.
+\end_layout
+
+\begin_layout Standard
+We express this linear combination with
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-k_{0}\mathbf{R}_{c}\mathbf{\hat{M}}+k_{1}\mathbf{R}_{p}\mathbf{F_{1}}+k_{2}\mathbf{R}_{p}\mathbf{F_{2}}=\mathbf{D}\label{eq:solve-me}
+k_{0}\mathbf{R}_{c}\mathbf{\hat{M}}+k_{1}\mathbf{R}_{p}\mathbf{F_{1}}+k_{2}\mathbf{R}_{p}\mathbf{F_{2}}=\mathbf{D},\label{eq:solve-me}
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-This may be solved as follows:
+which we solve by computing
 \begin_inset Formula 
 \begin{eqnarray}
 \left(\begin{array}{ccc}
@@ -767,14 +766,14 @@ k_{0}\\
 k_{1}\\
 k_{2}
 \end{array}\right) & = & \left(\begin{array}{c}
-\mathbf{D}\end{array}\right)\label{eq:solving-1}\\
+\mathbf{D}\end{array}\right)\mbox{, and}\label{eq:solving-1}\\
 \left(\begin{array}{ccc}
 \mathbf{R_{c}\hat{M}} & \mathbf{R_{p}F_{1}} & \mathbf{R_{p}F_{2}}\end{array}\right)^{-1}\left(\begin{array}{c}
 \mathbf{D}\end{array}\right) & = & \left(\begin{array}{c}
 k_{0}\\
 k_{1}\\
 k_{2}
-\end{array}\right)\label{eq:solving-2}
+\end{array}\right).\label{eq:solving-2}
 \end{eqnarray}
 
 \end_inset
@@ -787,7 +786,7 @@ Now that we have our constants, the point
 \begin_inset Formula $\mathbf{M}$
 \end_inset
 
- is simply
+ may be expressed as
 \begin_inset Formula 
 \begin{equation}
 \mathbf{M}=k_{0}\mathbf{R_{c}\hat{M}},\label{eq:M-equals-k0-M-hat-c}
@@ -872,7 +871,18 @@ el
 \emph default
 ement, represents a small patch of the object's surface in much the same
  way that a pixel represents a small patch of a computer screen.
- A surfel stores location, normal, color, and size.
+ A surfel stores location, normal, color, and size 
+\series bold
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "weise2009hand"
+
+\end_inset
+
+
+\series default
+.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand vref

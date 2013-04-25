@@ -956,7 +956,7 @@ key "ZCorp"
 \end_layout
 
 \begin_layout Section
-Existing Commercial Products 
+Existing commercial products 
 \end_layout
 
 \begin_layout Standard
@@ -1035,7 +1035,7 @@ key "OpenKinect:ImagingInfo"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1191,7 +1191,7 @@ status open
 \begin_inset Graphics
 	filename img/Next Engine.png
 	display false
-	width 60col%
+	width 12cm
 
 \end_inset
 
@@ -1265,7 +1265,7 @@ status open
 \begin_inset Graphics
 	filename img/david3d.png
 	display false
-	scale 60
+	width 12cm
 
 \end_inset
 
@@ -1363,7 +1363,7 @@ status open
 \begin_inset Graphics
 	filename img/handyscan.png
 	display false
-	scale 60
+	width 12cm
 
 \end_inset
 

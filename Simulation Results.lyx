@@ -67,23 +67,39 @@ Simulation Results
 \begin_layout Standard
 In order to prove the viability of our scanning method, simulated testing
  was performed.
- For this testing the software POV-Ray was utilized.
- POV-Ray is capable of generating images that simulate the camera and projector
+ For this testing the software 
+\emph on
+POV-Ray
+\emph default
+ was utilized.
+ 
+\emph on
+POV-Ray
+\emph default
+ is capable of generating images that simulate the camera and projector
  in our system.
  By giving the software the series of patterns to project and the specifications
  of the camera, projector, and target object, the images can be produced.
 \end_layout
 
 \begin_layout Standard
-For our testing we modeled a theoretically perfect sphere within POV-Ray,
- which had a diameter of 30 centimeters.
+For our testing we modeled a theoretically perfect sphere within 
+\emph on
+POV-Ray
+\emph default
+, which had a diameter of 30 centimeters.
  The center of the sphere was located exactly 40 centimeters from the pinhole
  of the camera.
  The modeled camera had a focal length of 8 centimeters, a resolution of
  1080p, and a sensor cell size of 7.9 micrometers.
  After the simulated images were produced, they were analyzed into a point
  cloud.
- This point cloud was exported as an .obj file and further analyzed in Matlab.
+ This point cloud was exported as a Wavefront Object (OBJ) file and further
+ analyzed in 
+\emph on
+Matlab
+\emph default
+.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -91,7 +107,7 @@ reference "fig:Downscaled-Image-of"
 
 \end_inset
 
- contains a downscaled image of the point cloud so that individual points
+ contains a downsampled image of the point cloud so that individual points
  can be distinguished visually.
 \end_layout
 
@@ -117,7 +133,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Downscaled image of point cloud.
+Downsampled image of point cloud.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Downscaled-Image-of"
@@ -142,17 +158,28 @@ name "fig:Downscaled-Image-of"
 \end_layout
 
 \begin_layout Standard
-A Matlab script was written to take cross sections of data from various
- angles.
+A 
+\emph on
+Matlab
+\emph default
+ script was written to take cross sections of data from various angles.
  All of the cross sections passed through the center of the sphere, so theoretic
 ally they should all have a radius of 15cm.
  Cross sections were taken by rotating the sphere around each of the three
  major axis, at an interval of every 5 degrees.
  Since the point cloud is composed of discrete points the cross sections
- needed to have a tolerance of 1/2 the spatial resolution in order to ensure
- data points would fall in the cross section.
- An existing Matlab function was incorporated into the script to calculate
- the radii of the cross sections.
+ needed to have a tolerance of 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ the spatial resolution in order to ensure data points would fall in the
+ cross section.
+ An existing 
+\emph on
+Matlab
+\emph default
+ function was incorporated into the script to calculate the radii of the
+ cross sections.
  Additionally the standard deviation of the data points within each cross
  section was calculated.
  Figure 
@@ -590,8 +617,8 @@ name "tab:Simulated-results"
 \end_layout
 
 \begin_layout Standard
-This reveals that the system has an overall accuracy of around +/- 3.2µm
- and a precision of +/- 20.7µm.
+This reveals that the system has an overall accuracy of around +/- 3.2 micrometer
+s and a precision of +/- 20.7 micrometers.
  These results are suitable for many engineering applications, and thus
  the method has merit to continue developing.
  It should be noted that no decimals were dropped for significant figures

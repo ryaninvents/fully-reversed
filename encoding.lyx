@@ -202,7 +202,14 @@ binary encoding!ordinary
  Finally, for each bit, the two frames are subtracted.
  A positive difference indicates a binary zero; a negative difference indicates
  a binary one.
- These bits are summed for all frames to recover the encoded frame.
+ These bits are summed for all frames to recover the encoded frame 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "scharstein2003high"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
