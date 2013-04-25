@@ -212,11 +212,8 @@ Sometimes there are situations where a part is damaged and a replacement
  is not readily available.
  In these scenarios it is often unclear as to whether or not it is safe
  to continue using the damaged part.
- A well trained engineer will air on the side of caution and choose to wait
- for a replacement even if it means delays and lose of profit.
- However sometimes the opposite choice is made which can have disastrous
- consequences.
- However, rapid-digitization techniques can be used to alleviate this problem.
+ Using such a part without proper knowledge of its structural integrity
+ could lead to catastrophic failure, injury, and even death.
  By digitizing a damaged part with extensive detail on the damaged portion
  it is possible to create a CAD file with the damaged geometry.
  Finite element analysis (FEA)
@@ -260,8 +257,8 @@ digitization!use in art conservation
 \begin_layout Standard
 Artwork is often created without any special attention paid to making it
  resistant to the flow of time.
- Even when preserved in museums with controlled conditions it is impossible
- to completely stop the slow deterioration of paintings and sculptures.
+ Even when preserved in museums with controlled conditions paintings and
+ sculptures still undergo slow deterioration.
  With digitization technology it is possible to preserve sculptures in digital
  archives for viewing online by future patrons.
  Additionally having a record of the current state of artwork would allow
@@ -349,7 +346,7 @@ key "WeatherTech"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset

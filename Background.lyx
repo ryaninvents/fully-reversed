@@ -464,7 +464,8 @@ Instead of a single fringe pattern being phase shifted between several pictures,
  acquisition.
  These three patterns are different colors, typically red, green, and blue
  as these are the primary colors of any commercial projection system, as
- seen in Figure 
+ seen in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Color-Coded-Fringes"
@@ -617,18 +618,6 @@ key "salvi2004pattern"
 \end_layout
 
 \begin_layout Subparagraph
-Binary encoding
-\end_layout
-
-\begin_layout Standard
-A temporally-multiplexed binary method takes the binary value for each projector
- pixel and projects each bit in sequence.
- This is the primary technique used in our approach and will be used in
- later sections.
- 
-\end_layout
-
-\begin_layout Subparagraph
 De Bruijn coding 
 \end_layout
 
@@ -725,7 +714,8 @@ key "salvi2010state"
 
 \end_inset
 
- An example M-array can be viewed in Figure 
+ An example M-array can be viewed in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:M-Array"
@@ -848,6 +838,16 @@ key "salvi2004pattern"
 \end_inset
 
  .
+ This is the primary technique used in our approach and will be discussed
+ further in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Encoding"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -963,7 +963,7 @@ Existing Commercial Products
 There are many different commercial scanners currently on the market.
  Most of them cater to different professional fields and have specifications
  that fit their application.
- A few of these products will be discussed in this section.
+ A selected products are discussed in this Section.
 \end_layout
 
 \begin_layout Subsection
@@ -984,7 +984,8 @@ reference "fig:a)-Microsoft-Kinect"
  on an infrared wavelength.
  The dots are formed by an array of small micro lenses, each with a slightly
  different focal length.
- This pattern can be seen in Figure 
+ This pattern can be seen in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:a)-Microsoft-Kinect"
@@ -1034,7 +1035,7 @@ key "OpenKinect:ImagingInfo"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1124,7 +1125,7 @@ key "KinectImg"
 
 \end_inset
 
-; (b) projected pattern as seen through an infrared camera 
+.; (b) projected pattern as seen through an infrared camera 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "kinectPattern"
@@ -1190,7 +1191,7 @@ status open
 \begin_inset Graphics
 	filename img/Next Engine.png
 	display false
-	scale 25
+	width 60col%
 
 \end_inset
 
@@ -1215,7 +1216,7 @@ name "fig:Next-Engine-3D"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -1264,7 +1265,7 @@ status open
 \begin_inset Graphics
 	filename img/david3d.png
 	display false
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -1289,7 +1290,7 @@ name "fig:David-3D-Laser"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -1339,7 +1340,8 @@ key "HandyScan"
 \end_inset
 
 .
- This product can be seen in figure 
+ This product is shown in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Handy-Scan-3D"
@@ -1361,7 +1363,7 @@ status open
 \begin_inset Graphics
 	filename img/handyscan.png
 	display false
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -1386,7 +1388,7 @@ name "fig:Handy-Scan-3D"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
