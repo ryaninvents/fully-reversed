@@ -76,8 +76,7 @@ name "chap:Open-source-libraries-and"
 \emph on
 Pico Scan
 \emph default
- was made possible by the many excellent open-source projects available
- today.
+ was made possible by the many open-source projects available today.
  Using these projects meant we didn't have to invest time writing, for instance,
  matrix multiplication algorithms or camera drivers, allowing us to more
  quickly develop our novel method for digitization.
@@ -340,6 +339,7 @@ name "sec:Qt"
 \end_layout
 
 \begin_layout Standard
+
 \emph on
 Qt
 \emph default
