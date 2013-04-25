@@ -78,7 +78,7 @@ Engineers are constantly seeking new tools to allow them to innovate more
 g.
  However, there does not presently exist a low cost solution for rapid-digitizat
 ion of existing objects.
- Therefore the goal of this project is to create a cost effective system
+ Therefore, the goal of this project is to create a cost effective system
  for rapid digitization that is easily integrable with existing CAD packages
  and 3D printers.
 \end_layout
@@ -147,8 +147,9 @@ The second technique, called phase-shifted fringe projection, uses patterns
 
 \begin_layout Standard
 To solve these problems, we implemented phase-shifting with a higher number
- of samples, allowing us to correct for signal noise by averaging.
- Once our algorithm has collected the phase information, it uses the faster
+ of samples than the standard four images, allowing us to correct for signal
+ noise by averaging.
+ Once our algorithm has collected the phase information, it uses the quick
  binary scan to “unwrap” the periodic phase map into a smooth representation
  of the distortions of the projected pattern on the object.
 \end_layout
@@ -199,7 +200,7 @@ The setup process for scanning is the preparation of the equipment.
  object and the desired accuracy and precision.
  Calibration is then used to determine both the intrinsic and extrinsic
  parameters of the cameras and projector.
- First the cameras are calibrated, followed by the projector.
+ First the cameras are calibrated, followed by the projector calibration.
 \end_layout
 
 \begin_layout Standard
@@ -210,8 +211,8 @@ Our data capture technique involves first capturing images of patterns projected
  “hybrid” algorithm, we reconstruct the object as a computer model.
  This computer model is represented by a point cloud, where each point represent
 s a pixel from the camera image.
- To export to the popular STL format, we use a simple meshing technique
- where points are connected based on their adjacency in the captured image.
+ To export to the popular STL format, we use a meshing technique where points
+ are connected based on their adjacency in the captured image.
  After export, the STL model may be used in many popular software packages
  for the purposes previously discussed.
 \end_layout
@@ -221,15 +222,15 @@ Results
 \end_layout
 
 \begin_layout Standard
-Before implementation, to prove the viability of our scanning method we
+Before implementation, to prove the viability of our scanning method, we
  simulated the binary technique using POV-Ray raytracing software.
- This allowed us to specify hardware characteristics and tell the computer
- to generate an image as if we had used a particular camera and projector.
+ This allowed us to specify hardware characteristics and generate an image
+ as if we had used a particular camera and projector.
  A theoretically perfect 15 centimeter radius sphere was modeled and processed
  into a point cloud.
  Cross sections of the point cloud were taken and radii were fitted to the
  cross sections.
- The average radius was off by 3.2 micrometers with a standard deviation
+ The average radius 3.2 micrometers less than expected, with a standard deviation
  of 20.75 micrometers.
  The data also revealed that the system was resistant to directional influence.
 \end_layout
@@ -237,7 +238,7 @@ Before implementation, to prove the viability of our scanning method we
 \begin_layout Standard
 Our most significant result is the implementation of the software itself.
  Our software package, Pico Scan, allows the user to generate a point cloud
- of one side of an object with a single click.
+ of a single view of an object with a single click.
  The point cloud is displayed in 3D within the software itself.
  Pico Scan exports into the popular STL mesh format.
 \end_layout
@@ -259,7 +260,7 @@ Conclusions
 \begin_layout Standard
 This project set out to create a low cost system to digitize existing objects
  in full 3D for the purpose of enhancing the engineering design cycle.
- At the end the results we achieved showed that this is indeed possible
+ At the end the results we achieved proved that this is indeed possible
  with current technology and that with only a little more work these goals
  could have been fully satisfied.
  The hardware that was selected met the needs of the system and were sufficient
@@ -275,9 +276,9 @@ This project set out to create a low cost system to digitize existing objects
 \begin_layout Standard
 Despite the fact that the software is not yet capable to realizing the full
  goal of the project, the theory is sound.
- The project was still an amazing success because it proved that low cost
- hardware was in fact capable of achieving measurements that could be used
- for engineering design or analysis.
+ The project was still a success because it proved that relatively low cost
+ hardware was capable of producing scans that could be used for engineering
+ design or analysis.
  Additionally the current system is capable of producing the desired results,
  just not in an automated manner.
 \end_layout
