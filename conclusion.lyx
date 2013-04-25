@@ -68,7 +68,7 @@ Conclusions
 This project set out to create a low cost system to digitize existing objects
  in full 3D for the purpose of enhancing the engineering design cycle.
  At the end the results we achieved showed that this is indeed possible
- with current technology and that with only a little more work these goals
+ with commercially available technology and that with more time these goals
  could have been fully satisfied.
  The hardware that was selected met the needs of the system and were sufficient
  to achieve engineering quality scans.
@@ -90,9 +90,9 @@ This project set out to create a low cost system to digitize existing objects
 \begin_layout Standard
 Despite the fact that the software is not yet capable to realizing the full
  goal of the project, the theory is sound.
- The project was still an amazing success because it proved that low cost
- hardware was in fact capable of achieving measurements that could be used
- for engineering design or analysis.
+ The project was still a success because it proved that low cost hardware
+ was in fact capable of achieving measurements that could be used for engineerin
+g design or analysis.
  Additionally the current system is capable of producing the desired results,
  just not in an automated manner.
  Through careful measurements of the projector location accurate scans can
