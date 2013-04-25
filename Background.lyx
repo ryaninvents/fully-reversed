@@ -1035,7 +1035,7 @@ key "OpenKinect:ImagingInfo"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1125,7 +1125,7 @@ key "KinectImg"
 
 \end_inset
 
-.; (b) projected pattern as seen through an infrared camera 
+; (b) projected pattern as seen through an infrared camera 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "kinectPattern"
