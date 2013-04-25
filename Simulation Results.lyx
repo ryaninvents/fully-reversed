@@ -122,7 +122,7 @@ status open
 \begin_inset Graphics
 	filename img/simulation point cloud.png
 	display false
-	width 25col%
+	width 50col%
 
 \end_inset
 
@@ -133,7 +133,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Downsampled image of point cloud.
+Downsampled image of point cloud calculated from simulation data.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Downscaled-Image-of"
@@ -222,7 +222,15 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Cross sectional radii of the sphere.
+Cross sectional radii of Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Downscaled-Image-of"
+
+\end_inset
+
+ showing erroneous data near the edges.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -269,7 +277,9 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Standard deviation of cross sections.
+Standard deviations of Fig.
+ 2 showing high deviation near edges.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Standard-Deviation-of"
