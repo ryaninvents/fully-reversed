@@ -114,7 +114,7 @@ reference "fig:Optima-PK201-Projector"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -382,14 +382,14 @@ reference "fig:Setup-in-light"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/light box.jpg
 	display false
-	width 75text%
+	width 50text%
 
 \end_inset
 
