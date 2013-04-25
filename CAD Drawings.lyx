@@ -93,14 +93,14 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Camera case - front
+Camera case---front
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Camera-case--"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -135,14 +135,14 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Camera case -back
+Camera case---back
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Camera-case--back"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -177,7 +177,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Camera-beam mount
+Camera---beam mount
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Camera-mount"

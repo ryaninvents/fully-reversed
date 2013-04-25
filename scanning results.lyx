@@ -98,7 +98,8 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Comparison of quality of scanning methods.
+Comparison of quality of binary vs.
+ hybrid method.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison-of-quality"
@@ -139,7 +140,7 @@ reference "fig:Comparison-of-scans"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -216,6 +217,8 @@ status collapsed
 Comparison of scanning methods.
  Scan (a) was performed with only the binary technique; scan (b) used binary-unw
 rapped fringe projection.
+ This demonstrates qualitatively the superiority of our developed hybrid
+ method.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Comparison-of-scans"

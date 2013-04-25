@@ -29,6 +29,7 @@
 
 \usepackage{caption}
 \usepackage{placeins}
+\usepackage{geometry}
 \end_preamble
 \options super,sort&compress
 \use_default_options true
@@ -83,7 +84,7 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1.5in
+\leftmargin 1in
 \topmargin 1in
 \rightmargin 1in
 \bottommargin 1in
@@ -108,6 +109,47 @@
 \begin_layout Standard
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename cover.svg
+	display false
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{0}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
 
 \begin_layout Plain Layout
 
