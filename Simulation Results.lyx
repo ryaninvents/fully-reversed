@@ -33,7 +33,7 @@
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine basic
+\cite_engine natbib_authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -309,7 +309,7 @@ One of the first pieces of information this data reveals is that the results
  This is expected and there are two reasons for it.
  From the camera's perspective the edges of the scan appear to be at nearly
  a 0 degree angle, greatly reducing the accuracy of the triangulation.
- To compensate for this a quality map was used to remove extraneous points--if
+ To compensate for this, a quality map was used to remove extraneous points---if
  illumination of a point did not increase its brightness by a specified
  amount, then that point was assumed to be noise.
  However, this reduced the point cloud density at the edges, which in turn
@@ -318,7 +318,7 @@ One of the first pieces of information this data reveals is that the results
  In order to more accurately analyze the data, the erroneous points were
  removed using Chauvenet's criterion 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "taylor1997introduction"
 
 \end_inset
@@ -636,8 +636,15 @@ name "tab:Simulated-results"
 \end_layout
 
 \begin_layout Standard
-This reveals that the system has an overall accuracy of around +/- 3.2 micrometer
-s and a precision of +/- 20.7 micrometers.
+This reveals that the system has an overall accuracy of around 
+\begin_inset Formula $\pm$
+\end_inset
+
+3.2 micrometers and a precision of 
+\begin_inset Formula $\pm$
+\end_inset
+
+20.7 micrometers.
  These results are suitable for many engineering applications, and thus
  the method has merit to continue developing.
  It should be noted that no decimals were dropped for significant figures
