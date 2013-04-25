@@ -135,6 +135,7 @@ Digitization refers to the process of converting the dimensions of the 3-dimensi
 onal object into data to be used by computer software.
  This process can be broken into three distinct sections; setup, data capture,
  and repositioning, as seen in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Digitization-Process-Overview"
@@ -266,9 +267,20 @@ Meshing
 \end_layout
 
 \begin_layout Standard
-The point cloud obtained during digitization needs to be converted into
- a mesh in order to be used by other software and for manufacturing.
- 
+The scanning process outputs a 
+\begin_inset Quotes eld
+\end_inset
+
+point cloud,
+\begin_inset Quotes erd
+\end_inset
+
+ which is a collection of disconnected points in space that all lie on the
+ surface of the object.
+ However, in order to function, CAD programs require a mathematical description
+ of the surface that those points represent, meaning that the points within
+ the cloud must be joined to their neighbors to show their topographical
+ relationships.
 \end_layout
 
 \begin_layout Subsection
